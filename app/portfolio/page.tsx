@@ -6,6 +6,7 @@ import { Header } from '@/components/header'
 import { PortfolioGrid } from '@/components/portfolio-grid'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
+import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Portfólio OxBrand | Logotipos, Redes Sociais e Sites',
@@ -30,6 +31,10 @@ const WhatsAppIcon = () => (
 export default function PortfolioPage() {
   return (
     <main>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Portfólio', url: '/portfolio' }])) }}
+      />
       <Header />
 
       {/* Hero */}
