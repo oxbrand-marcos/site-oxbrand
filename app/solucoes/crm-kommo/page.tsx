@@ -82,12 +82,11 @@ const kommoExtraTestimonial = {
   quote: 'Conhecemos a Ox através dos parceiros Kommo. Além da implementação comercial, tivemos a ajuda deles para colocar o nosso marketing no caminho certo da clareza.',
   name: 'Mary Festa',
   role: 'CEO · Eco Máquinas',
-  logo: '/images/clients/eco-maquinas.webp',
 }
 const kommoTestimonials = [
   ...testimonials
     .filter((t) => t.author === 'Jennifer Soares' || t.author === 'Chris Richard')
-    .map((t) => ({ quote: t.quote, name: t.author, role: t.role, logo: t.logo ?? null })),
+    .map((t) => ({ quote: t.quote, name: t.author, role: t.role })),
   kommoExtraTestimonial,
 ]
 
@@ -515,22 +514,7 @@ export default function CrmKommoLP() {
                       <span className="text-primary text-sm font-bold">{t.name[0]}</span>
                     </div>
                     <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                        {/* Logotipo da empresa como elemento secundário, quando disponível */}
-                        {t.logo && (
-                          <div className="relative h-4 w-auto shrink-0">
-                            <Image
-                              src={t.logo}
-                              alt=""
-                              height={16}
-                              width={48}
-                              className="h-4 w-auto object-contain opacity-60"
-                              unoptimized
-                            />
-                          </div>
-                        )}
-                      </div>
+                      <p className="text-sm font-semibold text-foreground">{t.name}</p>
                       <p className="mono-tag text-muted-foreground/50">{t.role}</p>
                     </div>
                   </div>
