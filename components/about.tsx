@@ -81,12 +81,7 @@ export function About() {
                   />
                 </div>
                 <div className="flex flex-col gap-0.5 min-w-0">
-                  <span
-                    className={`text-sm font-bold stat-number text-primary leading-none ${
-                      i > 0 && timeline[i - 1].year === item.year ? 'invisible' : ''
-                    }`}
-                    aria-hidden={i > 0 && timeline[i - 1].year === item.year ? true : undefined}
-                  >
+                  <span className="text-sm font-bold stat-number text-primary leading-none">
                     {item.year}
                   </span>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.event}</p>
