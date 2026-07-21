@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
+import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Materiais Gratuitos de Marketing Digital | OxBrand',
@@ -13,5 +14,15 @@ export const metadata: Metadata = {
 }
 
 export default function MateriaisLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Materiais Gratuitos', url: '/materiais-gratuitos' }])),
+        }}
+      />
+      {children}
+    </>
+  )
 }
