@@ -32,7 +32,7 @@ const solutions = [
     icon: Cpu,
     title: 'CRM Kommo',
     description:
-      'Funil estruturado, canais unificados e automações que respondem em segundos. Menos lead perdido, mais previsibilidade. Somos Top 5% Kommo no Brasil.',
+      'Funil estruturado, canais unificados e automações que respondem em segundos. Menos lead perdido, mais previsibilidade. Somos Top 5% dos parceiros Kommo no Brasil.',
     size: 'normal',
     tag: '02',
     href: '/solucoes/crm-kommo',
@@ -120,7 +120,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
             {[
               'Reuniões objetivas com indicadores e metas claras',
               'Integração real entre marketing e comercial para vender mais',
-              'Rede de parceiros e certificações premium (Google, Meta, Kommo Top 5%, ActiveCampaign Platinum)',
+              'Rede de parceiros e certificações premium: Google, Meta, ActiveCampaign Platinum e Top 5% dos parceiros Kommo no Brasil',
               'Suporte ágil via WhatsApp com direcionamento prático',
               'Diagnóstico gratuito como porta de entrada',
             ].map((item, i, arr) => (
