@@ -3,22 +3,23 @@ import Image from 'next/image'
 
 // brand: true = mudança de marca (ponto preenchido); false = marco regular (ponto vazado)
 const timeline = [
-  { year: '2014', event: 'Marcos Blaustein inicia a operação, ainda como MB', brand: true },
+  { year: '2014', event: 'Nasce a MB', brand: true },
   { year: '2016', event: 'Estruturação da operação em Mogi das Cruzes, SP', brand: false },
   { year: '2018', event: 'Primeiros 50 clientes e expansão nacional', brand: false },
   { year: '2020', event: 'A MB se transforma na Agência Chuva Digital', brand: true },
-  { year: '2022', event: 'Chuva Digital passa a se chamar OxBrand', brand: true },
+  { year: '2021', event: 'Chuva Digital passa a se chamar OxBrand', brand: true },
   { year: '2023', event: 'Primeiros projetos internacionais, EUA e Europa', brand: false },
   { year: '2024', event: '+450 marcas atendidas e R$258M+ em faturamento gerado', brand: false },
-  { year: '2025', event: 'Inauguração da sede própria no Edifício Office', brand: false },
-  { year: '2026', event: 'Certificação Kommo Top 5% Brasil e nova plataforma digital', brand: false },
+  { year: '2025', event: 'Inauguração da Sede Própria Edifício Helbor Concept', brand: false },
+  { year: '2025', event: 'Parceiro Oficial Kommo e certificação Top 5% Brasil', brand: false },
+  { year: '2026', event: 'Consolidação do método OX Growth Engineering e lançamento da nova plataforma digital', brand: false },
 ]
 
 const pillars = [
-  { label: 'Metodologia validada', desc: 'Metodologia validada em projetos reais' },
-  { label: 'Análise semanal', desc: 'Rotina de análise e otimização semanal' },
-  { label: 'Atuação global', desc: 'Atuação no Brasil e em projetos internacionais' },
-  { label: 'Time completo', desc: 'Time completo com especialistas por frente' },
+  { label: 'Metodologia validada', desc: 'Metodologia OX Growth Engineering, validada em mais de 450 projetos' },
+  { label: 'Análise semanal', desc: 'Ciclo semanal de análise, teste e otimização por métrica de performance' },
+  { label: 'Atuação global', desc: 'Sede em Mogi das Cruzes, com entregas para mercados internacionais' },
+  { label: 'Time completo', desc: 'Especialistas dedicados em tráfego, criação, tecnologia e conversão' },
 ]
 
 export function About() {
@@ -70,7 +71,7 @@ export function About() {
             <p className="mono-tag text-muted-foreground/50 mb-6">Histórico</p>
             {timeline.map((item, i) => (
               <div
-                key={item.year}
+                key={`${item.year}-${i}`}
                 className={`flex gap-4 items-start py-4 w-full ${i < timeline.length - 1 ? 'border-b border-border' : ''}`}
               >
                 {/* Indicador visual — preenchido para mudanças de marca, vazado para os demais */}
@@ -80,7 +81,12 @@ export function About() {
                   />
                 </div>
                 <div className="flex flex-col gap-0.5 min-w-0">
-                  <span className="text-sm font-bold stat-number text-primary leading-none">
+                  <span
+                    className={`text-sm font-bold stat-number text-primary leading-none ${
+                      i > 0 && timeline[i - 1].year === item.year ? 'invisible' : ''
+                    }`}
+                    aria-hidden={i > 0 && timeline[i - 1].year === item.year ? true : undefined}
+                  >
                     {item.year}
                   </span>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.event}</p>

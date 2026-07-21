@@ -6,8 +6,7 @@ import Image from 'next/image'
 import type { BlogPost } from '@/lib/db/schema'
 import { NewsletterSignup } from '@/components/newsletter-signup'
 import { readingTime } from '@/lib/utils'
-import { ARTICLE_CONTENT as LEADS_CONTENT } from '@/app/blog/leads-do-trafego-pago-como-transformar-em-vendas/content'
-import { ARTICLE_CONTENT as CONTEUDO_CONTENT } from '@/app/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais/content'
+import { STATIC_POSTS } from '@/lib/blog-static'
 
 // Categorias canônicas — a fonte da verdade para labels e slugs
 const CATEGORY_DEFS = [
@@ -41,40 +40,6 @@ function formatDate(date: Date | string) {
   }).format(new Date(date))
 }
 
-// Posts estáticos (hardcoded como page.tsx) que não vêm do banco
-// mas devem aparecer no listing e nos filtros.
-const STATIC_POSTS: BlogPost[] = [
-  {
-    id: -1,
-    slug: 'leads-do-trafego-pago-como-transformar-em-vendas',
-    title: 'Leads do tráfego pago: como transformar cliques em vendas no WhatsApp',
-    excerpt: 'Você investe em tráfego pago, o anúncio performa, os leads chegam. As vendas não acontecem. O erro está em tratar o clique como o fim da estratégia.',
-    content: LEADS_CONTENT,
-    tag: 'Tráfego & Aquisição',
-    author: 'OxBrand',
-    coverUrl: '/blog/leads-trafego-pago-cover.png',
-    coverAlt: 'Leads do tráfego pago: funil digital e WhatsApp',
-    published: true,
-    userId: 'static',
-    createdAt: new Date('2026-06-03'),
-    updatedAt: new Date('2026-06-03'),
-  },
-  {
-    id: -2,
-    slug: 'foco-em-marketing-de-conteudo-como-gerar-resultados-reais',
-    title: 'Foco em marketing de conteúdo: como gerar resultados reais',
-    excerpt: "Conteúdo sem estratégia gera métricas de vaidade. Conheça o método Conteúdo Pro: 5 Q's + 3 Pq's, que conecta cada publicação à conversão.",
-    content: CONTEUDO_CONTENT,
-    tag: 'Conversão',
-    author: 'OxBrand',
-    coverUrl: '/blog/marketing-conteudo-cover.png',
-    coverAlt: 'Foco em marketing de conteúdo: estratégia e resultados',
-    published: true,
-    userId: 'static',
-    createdAt: new Date('2026-01-15'),
-    updatedAt: new Date('2026-01-15'),
-  },
-]
 
 
 
@@ -86,11 +51,16 @@ export function InsightsGrid({ posts }: Props) {
   const [activeSlug, setActiveSlug] = useState('todos')
 
   // Mescla posts do banco com estáticos, evitando duplicatas por slug.
-  // Posts do banco têm prioridade: se um slug estático já existe no banco, usa a versão do banco.
+  //
+  // Os posts estáticos têm prioridade sobre os do banco quando o slug coincide.
+  // Motivo: a página do artigo (app/blog/[slug]/page.tsx) renderiza a partir do
+  // ARTICLE_CONTENT do arquivo content.ts, e não do banco. Se o card do listing
+  // lesse a versão do banco, os dois divergiriam — era o que fazia o card exibir
+  // "1 min de leitura" enquanto o artigo exibia "6 min". Uma fonte de verdade só.
   const allPosts = useMemo(() => {
-    const dbSlugs = new Set(posts.map((p) => p.slug))
-    const staticOnly = STATIC_POSTS.filter((p) => !dbSlugs.has(p.slug))
-    return [...staticOnly, ...posts].sort(
+    const staticSlugs = new Set(STATIC_POSTS.map((p) => p.slug))
+    const dbOnly = posts.filter((p) => !staticSlugs.has(p.slug))
+    return [...STATIC_POSTS, ...dbOnly].sort(
       (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     )
   }, [posts])

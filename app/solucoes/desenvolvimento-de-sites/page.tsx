@@ -19,7 +19,7 @@ export default function DesenvolvimentoDeSitesPage() {
       breadcrumb="Desenvolvimento de Sites"
       slug="desenvolvimento-de-sites"
       metaDescription="Criação de sites e landing pages de alta performance para o seu projeto. Mais velocidade, mais conversão e a melhor experiência para o seu cliente, do planejamento ao lançamento."
-      tag="OxBrand · Desenvolvimento de Sites"
+      tag="Performance e conversão"
       headline="Sites e Landing Pages de"
       headlineHighlight="Alta Performance."
       subheadline="Mais velocidade, mais conversão e a melhor experiência para o seu cliente. Criação de sites e páginas de alta performance para o seu projeto, do planejamento ao lançamento, sem cobranças extras."

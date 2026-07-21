@@ -19,7 +19,7 @@ export default function GestaoDeTrafegoPagoPage() {
       breadcrumb="Gestão de Tráfego Pago"
       slug="gestao-de-trafego-pago"
       metaDescription="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final, com rastreio, mensuração e otimização contínua."
-      tag="OxBrand · Gestão de Tráfego Pago"
+      tag="Aquisição com método"
       headline="Tráfego Pago com"
       headlineHighlight="Resultados Mensuráveis."
       subheadline="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final. Tráfego Pago é sobre pessoas."

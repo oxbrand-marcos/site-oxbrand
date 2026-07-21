@@ -7,6 +7,7 @@ import { Clients } from '@/components/clients'
 import { ClientGrid } from '@/components/client-grid'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
+import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Nossos Clientes | Cases de Sucesso, OxBrand',
@@ -28,6 +29,10 @@ const WhatsAppIcon = () => (
 export default function ClientesPage() {
   return (
     <main>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Nossos Clientes', url: '/nossos-clientes' }])) }}
+      />
       <Header />
 
       {/* Hero — mesmo efeito visual da Home */}

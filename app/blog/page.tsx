@@ -6,6 +6,8 @@ import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { getAllPublishedPosts } from '@/app/actions/blog'
 import { InsightsGrid } from '@/components/insights-grid'
+import { blogListingSchema, breadcrumbSchema, jsonLd } from '@/lib/jsonld'
+import { STATIC_POSTS } from '@/lib/blog-static'
 
 export const metadata: Metadata = {
   title: 'Insights | OxBrand, Marketing de Performance',
@@ -24,6 +26,28 @@ export default async function InsightsPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(
+            blogListingSchema(
+              [...STATIC_POSTS, ...posts.filter((p) => !STATIC_POSTS.some((s) => s.slug === p.slug))]
+                .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+                .map((p) => ({
+                  slug: p.slug,
+                  title: p.title,
+                  datePublished: new Date(p.createdAt).toISOString(),
+                })),
+            ),
+          ),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Insights', url: '/blog' }])),
+        }}
+      />
       <Header />
       <main>
         {/* Hero */}

@@ -150,7 +150,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
             <p className="text-sm text-foreground/70 leading-relaxed">
               Sede: Mogi das Cruzes / SP<br />
               Av. Narciso Yague Guimarães, Nº 1.145<br />
-              Sala 1303 – Edifício Office<br />
+              Sala 1303 – Edifício Helbor Concept - Torre Office<br />
               CEP 08780-500
             </p>
             <a

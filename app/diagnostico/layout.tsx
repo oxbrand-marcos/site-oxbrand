@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
+import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 const TITLE = 'Diagnóstico Digital Gratuito · OxBrand'
 const DESCRIPTION =
@@ -17,5 +18,15 @@ export const metadata: Metadata = {
 }
 
 export default function DiagnosticoLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Diagnóstico', url: '/diagnostico' }])),
+        }}
+      />
+      {children}
+    </>
+  )
 }

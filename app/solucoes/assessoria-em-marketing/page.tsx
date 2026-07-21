@@ -19,7 +19,7 @@ export default function AssessoriaEmMarketingPage() {
       breadcrumb="Assessoria em Marketing"
       slug="assessoria-em-marketing"
       metaDescription="Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas que geram resultados de verdade, com performance digital, inteligência de dados e criatividade."
-      tag="OxBrand · Assessoria de Marketing"
+      tag="Direção, não mais tarefas"
       headline="Assessoria de Marketing que entrega direção,"
       headlineHighlight="não mais tarefas."
       subheadline="Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas de marketing que geram resultados de verdade, com performance digital, inteligência de dados e criatividade, fortalecendo o branding da sua marca."

@@ -92,18 +92,18 @@ export default function ContatoPage() {
         </section>
 
         {/* Bloco "e um café?" — escritório e dados de contato */}
-        <section className="py-20 bg-section-light" aria-labelledby="cafe-heading">
+        <section className="py-20 section-light" aria-labelledby="cafe-heading">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Imagem do escritório */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/helbor-concept.webp"
-                  alt="Escritório OxBrand, Helbor Concept, Mogi das Cruzes"
+                  src="/images/helbor.webp"
+                  alt="Entrada do Edifício Helbor Concept, sede da OxBrand em Mogi das Cruzes"
                   fill
                   loading="lazy"
-                  className="object-cover"
+                  className="object-cover object-[center_60%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -122,7 +122,7 @@ export default function ContatoPage() {
                 <address className="not-italic flex flex-col gap-1 text-sm text-gray-700 leading-relaxed border-l-2 pl-4" style={{ borderColor: '#5c36eb' }}>
                   <span className="font-semibold text-gray-900">Mogi das Cruzes / SP</span>
                   <span>Av. Narciso Yague Guimarães, Nº 1.145 – Sala 1303</span>
-                  <span>Edifício Office · CEP 08780-500</span>
+                  <span>Edifício Helbor Concept - Torre Office · CEP 08780-500</span>
                 </address>
 
                 {/* Horário */}
