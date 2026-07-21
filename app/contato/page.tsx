@@ -97,13 +97,13 @@ export default function ContatoPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
               {/* Imagem do escritório */}
-              <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm">
                 <Image
                   src="/images/helbor-concept.webp"
                   alt="Entrada do Edifício Helbor Concept, sede da OxBrand em Mogi das Cruzes"
                   fill
                   loading="lazy"
-                  className="object-cover"
+                  className="object-cover object-[center_60%]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
