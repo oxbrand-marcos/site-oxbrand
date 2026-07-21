@@ -5,6 +5,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { FAQ } from '@/components/faq'
+import { breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 
 const candidateFAQ = [
   {
@@ -75,6 +76,14 @@ const vagas = [
 export default function CarreirasPage() {
   return (
     <>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Carreiras', url: '/carreiras-em-marketing-digital' }])) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(faqPageSchema(candidateFAQ)) }}
+      />
       <Header />
       <main>
         {/* Hero */}
