@@ -99,7 +99,7 @@ export default function ContatoPage() {
               {/* Imagem do escritório */}
               <div className="relative aspect-[3/4] sm:aspect-[4/5] overflow-hidden rounded-sm">
                 <Image
-                  src="/images/helbor-concept.webp"
+                  src="/images/helbor.webp"
                   alt="Entrada do Edifício Helbor Concept, sede da OxBrand em Mogi das Cruzes"
                   fill
                   loading="lazy"
