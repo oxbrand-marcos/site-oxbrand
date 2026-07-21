@@ -8,6 +8,7 @@ import { Differentials } from '@/components/differentials'
 import { Footer } from '@/components/footer'
 import { About } from '@/components/about'
 import DotsCanvas from '@/components/dots-canvas'
+import { aboutPageSchema, breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Sobre a OxBrand | Agência de Marketing de Performance',
@@ -29,6 +30,14 @@ const WhatsAppIcon = () => (
 export default function SobrePage() {
   return (
     <main>
+            <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(aboutPageSchema({ name: 'Sobre a OxBrand', description: 'Agência de marketing digital em Mogi das Cruzes. Operação desde 2014 e 25 anos de experiência combinada entre os sócios.' })) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([{ name: 'OxBrand', url: '/' }, { name: 'Sobre', url: '/sobre' }])) }}
+      />
       <Header />
 
       {/* Hero — mesmo efeito visual da Home */}
