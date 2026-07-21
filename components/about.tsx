@@ -11,7 +11,7 @@ const timeline = [
   { year: '2023', event: 'Primeiros projetos internacionais, EUA e Europa', brand: false },
   { year: '2024', event: '+450 marcas atendidas e R$258M+ em faturamento gerado', brand: false },
   { year: '2025', event: 'Inauguração da Sede Própria Edifício Helbor Concept', brand: false },
-  { year: '2025', event: 'Parceiro Oficial Kommo e certificação Top 5% Brasil', brand: false },
+  { year: '2025', event: 'Parceiro Oficial Kommo, Top 5% dos parceiros no Brasil', brand: false },
   { year: '2026', event: 'Consolidação do método OX Growth Engineering e lançamento da nova plataforma digital', brand: false },
 ]
 
