@@ -85,7 +85,7 @@ export function Differentials() {
               <blockquote className="flex flex-col gap-4 items-center sm:items-start">
                 <div className="w-8 h-px bg-primary" aria-hidden="true" />
                 <p className="text-xl sm:text-2xl font-medium text-foreground leading-relaxed">
-                  &ldquo;Antes da Ox, eu não tinha noção do quão importante é trabalhar o posicionamento e a imagem. Hoje meu trabalho foi supervalorizado, foi um verdadeiro &ldquo;divisor de águas.&rdquo;&rdquo;
+                  &ldquo;Antes da Ox, eu não tinha noção do quão importante é trabalhar o posicionamento e a imagem. Hoje meu trabalho foi supervalorizado, foi um verdadeiro divisor de águas.&rdquo;
                 </p>
                 <footer className="mono-tag text-muted-foreground/60">
                   Chris Richard · Chris Tattoo · REALISMO PRETO E CINZA · SP
