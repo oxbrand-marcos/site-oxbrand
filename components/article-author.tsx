@@ -12,7 +12,7 @@ export const AUTHORS: Record<string, AuthorData> = {
     name: 'OxBrand',
     role: 'Equipe de Marketing',
     linkedin: 'https://www.linkedin.com/company/oxbrand-br/',
-    avatar: '/images/oxbrand-avatar.png',
+    avatar: '/images/ox-avatar.png',
   },
 }
 
