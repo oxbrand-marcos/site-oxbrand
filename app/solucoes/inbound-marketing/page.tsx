@@ -19,7 +19,7 @@ export default function InboundMarketingPage() {
       breadcrumb="Inbound Marketing"
       slug="inbound-marketing"
       metaDescription="Estratégia de inbound marketing que atrai o público certo, converte visitantes em leads qualificados e nutre até a venda, reduzindo dependência de mídia paga ao longo do tempo."
-      tag="OxBrand · Inbound Marketing"
+      tag="Tráfego que não depende de verba"
       headline="Inbound Marketing que"
       headlineHighlight="atrai, converte e vende."
       subheadline="Uma estratégia complexa e poderosa que exige a inteligência de profissionais especializados. Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até que estejam prontos para comprar."
