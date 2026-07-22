@@ -306,3 +306,28 @@ html.high-contrast a:not([class*="bg-primary"]) { text-decoration: underline; te
 html.high-contrast .section-light { background: #000000 !important; --foreground: #ffffff; --muted-foreground: #ffffff; --border: #ffffff; }
 html.high-contrast .section-light [class*="text-"]:not([class*="primary-foreground"]) { color: #ffffff !important; }
 html.high-contrast .section-light .text-glow { color: #ffffff !important; }
+
+/* ---- Campo de telefone internacional (react-phone-number-input) ---- */
+/* A "caixa" (borda/fundo/padding) vem das classes do próprio formulário via
+   wrapperClassName; aqui só ajustamos o layout interno pra herdar o tema. */
+.oxphone { display: flex; align-items: center; }
+.oxphone .PhoneInput { display: flex; align-items: center; width: 100%; }
+.oxphone .PhoneInputInput {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+.oxphone .PhoneInputInput::placeholder { color: currentColor; opacity: 0.4; }
+.oxphone .PhoneInputCountry { margin-right: 10px; }
+.oxphone .PhoneInputCountryIcon { width: 24px; height: 18px; box-shadow: none; background: transparent; }
+.oxphone .PhoneInputCountryIcon--border { box-shadow: none; }
+.oxphone .PhoneInputCountryIconImg { display: block; width: 100%; height: 100%; }
+.oxphone .PhoneInputCountrySelectArrow { color: currentColor; opacity: 0.5; }
+.oxphone:focus-within { border-color: #5c36eb; }
+
+/* reCAPTCHA v3: badge escondido — exibimos o aviso legal em texto sob o botão */
+.grecaptcha-badge { visibility: hidden !important; }
