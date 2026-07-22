@@ -88,6 +88,10 @@ export default function DiagnosticoPage() {
       })
       const data = await res.json()
       if (!data.ok) throw new Error(data.error ?? 'Erro ao enviar')
+      // GTM: evento de conversão de formulário
+      const w = window as any
+      w.dataLayer = w.dataLayer || []
+      w.dataLayer.push({ event: 'form_success', lead_email: body['Seu melhor e-mail'], lead_phone: phone, lead_name: body['Seu nome'] })
       setSent(true)
     } catch {
       setErro('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
