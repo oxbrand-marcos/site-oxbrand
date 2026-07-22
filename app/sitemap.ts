@@ -3,7 +3,7 @@ import { db } from '@/lib/db'
 import { blogPosts } from '@/lib/db/schema'
 import { eq } from 'drizzle-orm'
 
-const BASE = 'https://oxbrand.com.br'
+const BASE = 'https://www.oxbrand.com.br'
 
 // Páginas estáticas públicas com prioridade e changeFrequency
 const staticPages: MetadataRoute.Sitemap = [

@@ -22,10 +22,10 @@ const jetbrainsMono = JetBrains_Mono({
   preload: true,
 })
 
-const _homeOgImage = 'https://oxbrand.com.br/og?title=OxBrand%20%C2%B7%20Marketing%20de%20Performance&subtitle=Agência%20de%20Marketing%20de%20Performance'
+const _homeOgImage = 'https://www.oxbrand.com.br/og?title=OxBrand%20%C2%B7%20Marketing%20de%20Performance&subtitle=Agência%20de%20Marketing%20de%20Performance'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://oxbrand.com.br'),
+  metadataBase: new URL('https://www.oxbrand.com.br'),
   title: 'OxBrand | Agência de Marketing de Performance em Mogi das Cruzes',
   description:
     'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OxBrand · Marketing de Performance',
     description: 'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
-    url: 'https://oxbrand.com.br',
+    url: 'https://www.oxbrand.com.br',
     siteName: 'OxBrand',
     locale: 'pt_BR',
     type: 'website',
@@ -71,7 +71,7 @@ export default function RootLayout({
           rel="alternate"
           type="application/rss+xml"
           title="OxBrand Insights · RSS"
-          href="https://oxbrand.com.br/blog/rss.xml"
+          href="https://www.oxbrand.com.br/blog/rss.xml"
         />
       </head>
       <body className="antialiased font-sans">

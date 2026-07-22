@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin/', '/api/', '/obrigado'],
       },
     ],
-    sitemap: 'https://oxbrand.com.br/sitemap.xml',
-    host: 'https://oxbrand.com.br',
+    sitemap: 'https://www.oxbrand.com.br/sitemap.xml',
+    host: 'https://www.oxbrand.com.br',
   }
 }
