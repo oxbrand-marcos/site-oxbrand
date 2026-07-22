@@ -67,7 +67,7 @@ export function Differentials() {
                 <div key={item.step} className={`bg-background p-7 flex flex-col gap-5 group card-lift items-center text-center lg:items-start lg:text-left${idx === 4 ? ' col-span-2 lg:col-span-1' : ''}`}>
                   <span
                     className="text-5xl font-bold stat-number leading-none"
-                    style={{ color: 'rgb(92 54 235 / 0.2)' }}
+                    style={{ color: 'rgb(166 140 255 / 0.75)' }}
                     aria-hidden="true"
                   >
                     {item.step}
