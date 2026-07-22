@@ -120,9 +120,9 @@ export default function ContatoPage() {
 
                 {/* Endereço */}
                 <address className="not-italic flex flex-col gap-1 text-sm text-gray-700 leading-relaxed border-l-2 pl-4" style={{ borderColor: '#5c36eb' }}>
-                  <span className="font-semibold text-gray-900">Mogi das Cruzes / SP</span>
-                  <span>Av. Narciso Yague Guimarães, Nº 1.145 – Sala 1303</span>
-                  <span>Edifício Helbor Concept - Torre Office · CEP 08780-500</span>
+                  <span className="font-semibold text-gray-900">Mogi das Cruzes - SP</span>
+                  <span>Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1303</span>
+                  <span>Torre Office (Helbor Concept) - Socorro · CEP 08780-500</span>
                 </address>
 
                 {/* Horário */}
