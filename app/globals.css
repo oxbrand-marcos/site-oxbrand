@@ -215,7 +215,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgb(92 54 235 / 0.85);   /* #5c36eb com leve transparência */
+  color: #a68cff;   /* violeta claro — contraste AA (>=4.5) em fundo escuro; .section-light usa #1a007c */
 }
 
 /* ── Texto com glow ──────────────────────────────────────── */
