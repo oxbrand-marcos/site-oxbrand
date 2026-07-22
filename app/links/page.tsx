@@ -189,7 +189,7 @@ export default function LinksPage() {
         <div className="w-full flex flex-col items-center gap-1 text-center">
           <span className="mono-tag text-muted-foreground/40">Onde estamos</span>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Av.+Narciso+Yague+Guimar%C3%A3es+1145+Mogi+das+Cruzes"
+            href="https://www.google.com/maps/search/?api=1&query=Av.+Ver.+Narciso+Yague+Guimar%C3%A3es%2C+1145+-+Sala+1303%2C+Torre+Office+%28Helbor+Concept%29%2C+Socorro%2C+Mogi+das+Cruzes+-+SP%2C+08780-500"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-muted-foreground hover:text-primary transition-colors leading-relaxed"
