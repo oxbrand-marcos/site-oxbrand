@@ -15,7 +15,7 @@ import { readingTime } from '@/lib/utils'
 import { ARTICLE_CONTENT } from './content'
 
 export const metadata: Metadata = {
-  title: 'Leads do tráfego pago: como transformar cliques em vendas no WhatsApp | OxBrand Insights',
+  title: 'Leads do tráfego pago em vendas no WhatsApp | OxBrand',
   description: 'Você investe em tráfego pago, o anúncio performa, os leads chegam. As vendas não acontecem. Entenda por que e como fechar o funil.',
   ...articleOg({
     title: 'Leads do tráfego pago: como transformar cliques em vendas no WhatsApp',
