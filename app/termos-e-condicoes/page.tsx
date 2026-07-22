@@ -7,6 +7,7 @@ import DotsCanvas from '@/components/dots-canvas'
 export const metadata: Metadata = {
   title: 'Termos e Condições de Uso | OxBrand Agência de Marketing',
   description: 'Leia os Termos e Condições de uso do site e dos serviços da OxBrand.',
+  alternates: { canonical: '/termos-e-condicoes' },
 }
 
 const sections = [
