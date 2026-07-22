@@ -1,9 +1,13 @@
 'use client'
 
 import { useState } from 'react'
+import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
+import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
 const inputCls =
   'border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors w-full font-mono'
+
+const Req = () => <span className="text-primary ml-1">*</span>
 
 export function Contact() {
   const [form, setForm] = useState({ name: '', email: '', phone: '', segment: '', message: '', whatsappOptin: false })
@@ -13,15 +17,21 @@ export function Contact() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setLoading(true)
     setError('')
+    if (!form.phone || !isValidPhoneNumber(form.phone)) {
+      setError('Informe um telefone válido, incluindo o DDD.')
+      return
+    }
+    setLoading(true)
     try {
+      const token = await getRecaptchaToken('contato')
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           source: 'contato',
           _pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          _recaptcha: token,
           'Nome': form.name,
           'E-mail': form.email,
           'Telefone': form.phone,
@@ -76,7 +86,7 @@ export function Contact() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="name" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Nome</label>
+                    <label htmlFor="name" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Nome<Req /></label>
                     <input
                       id="name"
                       type="text"
@@ -88,7 +98,7 @@ export function Contact() {
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="email" className="mono-tag text-muted-foreground/50 text-center sm:text-left">E-mail</label>
+                    <label htmlFor="email" className="mono-tag text-muted-foreground/50 text-center sm:text-left">E-mail<Req /></label>
                     <input
                       id="email"
                       type="email"
@@ -102,21 +112,20 @@ export function Contact() {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="phone" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Telefone</label>
-                    <input
+                    <label htmlFor="phone" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Telefone<Req /></label>
+                    <PhoneField
                       id="phone"
-                      type="tel"
-                      placeholder="(11) 9 2142-5351"
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className={inputCls}
+                      onChange={(v) => setForm({ ...form, phone: v })}
+                      wrapperClassName={inputCls}
                     />
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <label htmlFor="segment" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Segmento</label>
+                    <label htmlFor="segment" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Segmento<Req /></label>
                     <input
                       id="segment"
                       type="text"
+                      required
                       placeholder="Ex: E-commerce, Saúde..."
                       value={form.segment}
                       onChange={(e) => setForm({ ...form, segment: e.target.value })}
@@ -125,17 +134,18 @@ export function Contact() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="message" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Mensagem</label>
+                  <label htmlFor="message" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Mensagem<Req /></label>
                   <textarea
                     id="message"
                     rows={5}
+                    required
                     placeholder="Conte sobre seu negócio e o que espera alcançar..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className={`${inputCls} resize-none`}
                   />
                 </div>
-                {/* Opt-in WhatsApp */}
+                {/* Opt-in WhatsApp (consentimento — opcional) */}
                 <label className="flex items-start gap-3 cursor-pointer group">
                   <div className="relative mt-0.5 shrink-0">
                     <input
@@ -178,6 +188,13 @@ export function Contact() {
 
                 <p className="text-xs text-muted-foreground/50 leading-relaxed">
                   Ao enviar, você autoriza nosso contato para agendar o diagnóstico e tirar dúvidas sobre as soluções.
+                </p>
+                <p className="text-[11px] text-muted-foreground/40 leading-relaxed">
+                  Protegido por reCAPTCHA. Aplicam-se a{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Política de Privacidade</a>{' '}
+                  e os{' '}
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Termos de Serviço</a>{' '}
+                  do Google.
                 </p>
               </form>
             )}
