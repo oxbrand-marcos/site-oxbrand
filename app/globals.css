@@ -278,3 +278,31 @@
     padding-bottom: 6rem;
   }
 }
+
+
+/* ════════════════════════════════════════════════════════════
+   ALTO CONTRASTE — acionado pelo widget de acessibilidade
+   (html.high-contrast). Fundo preto puro, texto branco, bordas
+   visíveis e links sublinhados. Máxima legibilidade WCAG AAA.
+   ═══════════════════════════════════════════════════════════ */
+html.high-contrast {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #000000;
+  --card-foreground: #ffffff;
+  --muted: #000000;
+  --muted-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #ffffff;
+}
+html.high-contrast body { background: #000000; }
+html.high-contrast [class*="text-muted-foreground"],
+html.high-contrast [class*="text-foreground"] { color: #ffffff !important; }
+html.high-contrast .mono-tag { color: #ffffff !important; }
+html.high-contrast [class*="border-border"] { border-color: #ffffff !important; }
+html.high-contrast .text-glow { text-shadow: none !important; color: #ffffff !important; }
+html.high-contrast a:not([class*="bg-primary"]) { text-decoration: underline; text-underline-offset: 3px; }
+/* seções claras invertem para preto/branco também */
+html.high-contrast .section-light { background: #000000 !important; --foreground: #ffffff; --muted-foreground: #ffffff; --border: #ffffff; }
+html.high-contrast .section-light [class*="text-"]:not([class*="primary-foreground"]) { color: #ffffff !important; }
+html.high-contrast .section-light .text-glow { color: #ffffff !important; }
