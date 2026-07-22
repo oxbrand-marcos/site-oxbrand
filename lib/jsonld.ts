@@ -1,4 +1,4 @@
-const BASE_URL = 'https://oxbrand.com.br'
+const BASE_URL = 'https://www.oxbrand.com.br'
 
 /* ─── Dados canônicos da organização ─────────────────────── */
 

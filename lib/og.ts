@@ -1,4 +1,4 @@
-const BASE = 'https://oxbrand.com.br'
+const BASE = 'https://www.oxbrand.com.br'
 
 /**
  * Gera o bloco openGraph + twitter para páginas estáticas.
