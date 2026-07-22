@@ -64,7 +64,7 @@ const clientLogos = [
 function CTAButton({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
     <a
-      href="https://wa.me/+5511921425351?text=Quero%20saber%20mais%20sobre%20o%20CRM%20Kommo"
+      href="https://wa.me/5511921425351?text=Quero%20saber%20mais%20sobre%20o%20CRM%20Kommo"
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-primary text-primary-foreground text-sm font-bold tracking-widest uppercase hover:bg-primary/85 active:scale-[0.98] transition-all ${className}`}
