@@ -158,7 +158,7 @@ export function Hero() {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                 <a
-                  href="https://wa.me/+5511921425351"
+                  href="https://wa.me/5511921425351"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors"

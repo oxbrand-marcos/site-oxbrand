@@ -56,7 +56,7 @@ export function FAQ({
                 </p>
               </div>
               <a
-                href="https://wa.me/+5511921425351"
+                href="https://wa.me/5511921425351"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center lg:justify-start gap-2 rounded-sm bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-90 transition-opacity"

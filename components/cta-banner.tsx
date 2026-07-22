@@ -9,7 +9,7 @@ export function CTABanner() {
           <span className="text-primary">Fale com a OxBrand.</span>
         </p>
         <a
-          href="https://wa.me/+5511921425351"
+          href="https://wa.me/5511921425351"
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors"
