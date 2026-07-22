@@ -134,7 +134,7 @@ export default function VagaGestorTrafego() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Local</span>
-                    <span className="text-foreground font-medium text-right">Mogi das Cruzes / SP<br /><span className="text-xs text-muted-foreground font-normal">Edifício Helbor Concept - Torre Office – CEP 08780-500</span></span>
+                    <span className="text-foreground font-medium text-right">Mogi das Cruzes - SP<br /><span className="text-xs text-muted-foreground font-normal">Torre Office (Helbor Concept) - Socorro - CEP 08780-500</span></span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Área</span>
