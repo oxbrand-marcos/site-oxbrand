@@ -68,10 +68,36 @@ function buildHtml(title: string, fields: Record<string, string>, pageUrl: strin
 </html>`
 }
 
+async function verifyRecaptcha(secret: string, token: string | undefined, req: NextRequest): Promise<boolean> {
+  if (!token) return false
+  try {
+    const params = new URLSearchParams({ secret, response: token })
+    const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    if (ip) params.set('remoteip', ip)
+    const r = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params,
+    })
+    const j = (await r.json()) as { success: boolean; score?: number }
+    if (!j.success) return false
+    if (typeof j.score === 'number' && j.score < 0.5) return false
+    return true
+  } catch {
+    return false
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
-    const { source, _pageUrl, ...fields } = body as { source: string; _pageUrl?: string; [k: string]: string }
+    const body = (await req.json()) as Record<string, string>
+    const source = body.source
+    const _pageUrl = body._pageUrl
+    const _recaptcha = body._recaptcha
+    const fields: Record<string, string> = { ...body }
+    delete fields.source
+    delete fields._pageUrl
+    delete fields._recaptcha
 
     const titles: Record<string, string> = {
       contato: 'Formulário de Contato',
@@ -83,6 +109,15 @@ export async function POST(req: NextRequest) {
     const nome = fields['Nome'] ?? fields['nome'] ?? 'Lead'
     const pageUrl = _pageUrl || req.headers.get('referer') || ''
     const dataHora = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+
+    // reCAPTCHA v3: só verifica se a chave secreta estiver configurada
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
+    if (recaptchaSecret) {
+      const okCaptcha = await verifyRecaptcha(recaptchaSecret, _recaptcha, req)
+      if (!okCaptcha) {
+        return NextResponse.json({ ok: false, error: 'Falha na verificação anti-spam. Recarregue a página e tente novamente.' }, { status: 400 })
+      }
+    }
 
     const { error } = await resend.emails.send({
       from: FROM,
