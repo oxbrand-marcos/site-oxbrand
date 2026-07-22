@@ -7,6 +7,7 @@ import DotsCanvas from '@/components/dots-canvas'
 export const metadata: Metadata = {
   title: 'Política de Privacidade | OxBrand e Proteção de Dados LGPD',
   description: 'Saiba como a OxBrand coleta, usa e protege seus dados pessoais, em conformidade com a LGPD.',
+  alternates: { canonical: '/politica-de-privacidade' },
 }
 
 const sections = [
