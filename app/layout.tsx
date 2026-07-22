@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   title: 'OxBrand | Agência de Marketing de Performance em Mogi das Cruzes',
   description:
     'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
-  alternates: { canonical: '/' },
   openGraph: {
     title: 'OxBrand · Marketing de Performance',
     description: 'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',

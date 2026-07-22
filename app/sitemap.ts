@@ -23,7 +23,6 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/carreiras-em-marketing-digital`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
   { url: `${BASE}/contato`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.6 },
   { url: `${BASE}/diagnostico`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
-  { url: `${BASE}/trafego-pago-com-previsibilidade`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/politica-de-privacidade`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   { url: `${BASE}/termos-e-condicoes`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
 ]

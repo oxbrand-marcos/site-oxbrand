@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { About } from '@/components/about'
@@ -23,6 +24,10 @@ const homeFaq = [
   { q: 'A OxBrand cria o conteúdo das campanhas também?', a: 'Sim: criativos, copy, landing pages e conteúdo estratégico. Mas conteúdo aqui não serve para engajar; serve para reduzir objeção e acelerar decisão. Cada peça tem função dentro do funil.' },
   { q: 'O que diferencia a OxBrand de outras agências?', a: 'Enquanto vendem execução, nós entregamos direção. Operamos com método próprio (OX Growth Engineering), time com especialista por frente, rotina de otimização semanal e integração real entre marketing e comercial. Não é presença. É engenharia de resultado.' },
 ]
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 export default function Home() {
   return (
