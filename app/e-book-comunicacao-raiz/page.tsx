@@ -34,9 +34,36 @@ export default function EbookComunicacaoRaizPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    if (!form.aceito) return
+
+    try {
+      await fetch('/api/leads/materiais', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: form.nome,
+          email: form.email,
+          whatsapp: form.telefone,
+          material: 'comunicacao-raiz',
+        }),
+      })
+    } catch {
+      // falha silenciosa — não bloqueia o download
+    }
+
     setSubmitted(true)
+
+    // dispara download do e-book
+    setTimeout(() => {
+      const a = document.createElement('a')
+      a.href = '/api/download/comunicacao-raiz'
+      a.download = 'ebook-comunicacao-raiz.pdf'
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+    }, 800)
   }
 
   return (
@@ -139,7 +166,7 @@ export default function EbookComunicacaoRaizPage() {
                     <span className="text-glow">método exclusivo.</span>
                   </h2>
                   <p className="text-sm text-zinc-500 leading-relaxed mt-1">
-                    Preencha o formulário e o e-book será enviado no seu e-mail. Sem spam, sem compromisso.
+                    Preencha o formulário e o download começa na hora. Sem spam, sem compromisso.
                   </p>
                 </div>
 
@@ -148,8 +175,8 @@ export default function EbookComunicacaoRaizPage() {
                     <span className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                       <Check size={20} className="text-primary" />
                     </span>
-                    <h3 className="text-xl font-bold text-zinc-900">E-book enviado!</h3>
-                    <p className="text-sm text-zinc-500">Verifique seu e-mail. Em breve nossa equipe pode entrar em contato para entender como ajudar ainda mais.</p>
+                    <h3 className="text-xl font-bold text-zinc-900">Download iniciado!</h3>
+                    <p className="text-sm text-zinc-500">Seu e-book <strong>Comunicação Raiz</strong> está sendo baixado. Se não iniciar, <a href="/api/download/comunicacao-raiz" download className="text-primary underline">clique aqui</a>. Em breve nossa equipe pode entrar em contato para ajudar ainda mais.</p>
                     <Link href="/materiais-gratuitos" className="mono-tag text-primary/60 hover:text-primary transition-colors">← Ver mais materiais</Link>
                   </div>
                 ) : (
@@ -241,7 +268,7 @@ export default function EbookComunicacaoRaizPage() {
                     </button>
 
                     <ul className="flex flex-col gap-2 pt-2">
-                      {['100% gratuito', 'Enviado direto no seu e-mail', 'Método aplicado por +450 marcas'].map((item) => (
+                      {['100% gratuito', 'Download imediato', 'Método aplicado por +450 marcas'].map((item) => (
                         <li key={item} className="flex items-center gap-2 text-xs text-zinc-400">
                           <Check size={12} className="text-primary shrink-0" />
                           {item}
