@@ -25,6 +25,10 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
         body: JSON.stringify({ name: name.trim(), email: email.trim() }),
       })
       if (!res.ok) throw new Error()
+      // GTM: evento de conversão de formulário
+      const w = window as any
+      w.dataLayer = w.dataLayer || []
+      w.dataLayer.push({ event: 'form_success', lead_email: email.trim(), lead_name: name.trim() })
       setStatus('success')
     } catch {
       setStatus('error')

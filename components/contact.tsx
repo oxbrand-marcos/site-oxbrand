@@ -42,6 +42,10 @@ export function Contact() {
       })
       const data = await res.json()
       if (!data.ok) throw new Error(data.error ?? 'Erro ao enviar')
+      // GTM: evento de conversão de formulário
+      const w = window as any
+      w.dataLayer = w.dataLayer || []
+      w.dataLayer.push({ event: 'form_success', lead_email: form.email, lead_phone: form.phone, lead_name: form.name })
       setSent(true)
     } catch {
       setError('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
