@@ -143,7 +143,7 @@ export default function ClientesPage() {
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 w-full sm:w-auto justify-center lg:justify-start">
                 <a
-                  href="https://wa.me/+5511921425351"
+                  href="https://wa.me/5511921425351"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors"
