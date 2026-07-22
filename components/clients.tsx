@@ -147,12 +147,17 @@ export function Clients() {
                     key={i}
                     onClick={() => scrollTo(i)}
                     aria-label={`Ir para vídeo ${i + 1}`}
-                    className={`rounded-full transition-all ${
-                      i === activeIdx
-                        ? 'w-4 h-1.5 bg-primary'
-                        : 'w-1.5 h-1.5 bg-border hover:bg-primary/40'
-                    }`}
-                  />
+                    aria-current={i === activeIdx ? 'true' : undefined}
+                    className="group/dot grid place-items-center w-6 h-6 rounded-full transition-all"
+                  >
+                    <span
+                      className={`block rounded-full transition-all ${
+                        i === activeIdx
+                          ? 'w-4 h-1.5 bg-primary'
+                          : 'w-1.5 h-1.5 bg-border group-hover/dot:bg-primary/40'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
               <button

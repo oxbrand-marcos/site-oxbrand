@@ -1,10 +1,24 @@
 'use client'
 
-import PhoneInput from 'react-phone-number-input'
-import flags from 'react-phone-number-input/flags'
-import 'react-phone-number-input/style.css'
+import dynamic from 'next/dynamic'
 
+// isValidPhoneNumber é uma função leve — mantida em import estático p/ validação nos forms
 export { isValidPhoneNumber } from 'react-phone-number-input'
+
+// O PhoneInput carrega bandeiras (245 países) + <select> pesado.
+// Lazy-load (ssr:false) tira isso do HTML inicial e reduz DOM/JS não usado.
+const LazyPhoneInput = dynamic(() => import('./phone-input-inner'), {
+  ssr: false,
+  loading: () => (
+    <input
+      type="tel"
+      inputMode="tel"
+      placeholder="(11) 98995-4992"
+      className="w-full bg-transparent outline-none"
+      aria-label="Telefone"
+    />
+  ),
+})
 
 type Props = {
   id?: string
@@ -17,22 +31,11 @@ type Props = {
 /**
  * Campo de telefone com seletor de país (bandeira) e DDI.
  * Retorna o valor em formato E.164, ex: +5511989954992.
- * O estilo da "caixa" vem de wrapperClassName (mesmas classes dos outros inputs
- * de cada formulário), e o input interno herda cor/fonte pra casar com o tema.
  */
 export function PhoneField({ id, value, onChange, wrapperClassName, placeholder }: Props) {
   return (
     <div className={`oxphone ${wrapperClassName ?? ''}`}>
-      <PhoneInput
-        id={id}
-        international
-        defaultCountry="BR"
-        countryCallingCodeEditable={false}
-        flags={flags}
-        value={value}
-        onChange={(v) => onChange(v ?? '')}
-        placeholder={placeholder ?? '(11) 98995-4992'}
-      />
+      <LazyPhoneInput id={id} value={value} onChange={onChange} placeholder={placeholder} />
     </div>
   )
 }
