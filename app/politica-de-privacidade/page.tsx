@@ -120,7 +120,7 @@ export default function PoliticaPrivacidadePage() {
                   Termos e Condições →
                 </Link>
                 <a
-                  href="https://wa.me/+5511921425351"
+                  href="https://wa.me/5511921425351"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors"
