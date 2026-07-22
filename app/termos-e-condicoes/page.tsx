@@ -128,7 +128,7 @@ export default function TermosCondicoesPage() {
                 <span className="mono-tag text-zinc-500">Dúvidas sobre os termos?</span>
                 <p className="text-sm text-zinc-600 leading-relaxed">Fale diretamente com o nosso time. Estamos aqui para esclarecer qualquer questão.</p>
                 <a
-                  href="https://wa.me/+5511921425351"
+                  href="https://wa.me/5511921425351"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-fit flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors mt-2"
