@@ -26,7 +26,7 @@ export const organizationSchema = {
   taxID: '46.696.465/0001-20', // CNPJ
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Av. Ver. Narciso Yague Guimarães, 1145 – Sala 1303, Torre Office (Helbor Concept)',
+    streetAddress: 'Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1303, Torre Office (Helbor Concept) - Socorro',
     addressLocality: 'Mogi das Cruzes',
     addressRegion: 'SP',
     postalCode: '08780-500',
