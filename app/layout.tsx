@@ -28,6 +28,14 @@ const GTM_ID = 'GTM-TKVR6WRK'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.oxbrand.com.br'),
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-96.png', type: 'image/png', sizes: '96x96' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+  },
   title: 'OxBrand | Agência de Marketing de Performance em Mogi das Cruzes',
   description:
     'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
