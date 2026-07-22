@@ -4,6 +4,7 @@ import './globals.css'
 import { FloatingActions } from '@/components/floating-actions'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -22,7 +23,8 @@ const jetbrainsMono = JetBrains_Mono({
   preload: true,
 })
 
-const _homeOgImage = 'https://www.oxbrand.com.br/og?title=OxBrand%20%C2%B7%20Marketing%20de%20Performance&subtitle=Agência%20de%20Marketing%20de%20Performance'
+const _homeOgImage = 'https://www.oxbrand.com.br/og-home.jpg'
+const GTM_ID = 'GTM-TKVR6WRK'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.oxbrand.com.br'),
@@ -60,6 +62,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background`}>
       <head>
+        {/* Google Tag Manager */}
+        <Script id="gtm-base" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        {/* End Google Tag Manager */}
         {/* Preconnect para fontes e recursos externos críticos */}
         {/* DNS prefetch para YouTube (facade carregada sob demanda) */}
         <link rel="dns-prefetch" href="https://img.youtube.com" />
@@ -72,6 +79,16 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased font-sans">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <FloatingActions />
         <SpeedInsights />
