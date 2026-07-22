@@ -349,3 +349,7 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 /* rótulos brancos esmaecidos sobre fundo escuro */
 .text-white\/40 { color: rgba(255,255,255,.72) !important; }
 .text-white\/50 { color: rgba(255,255,255,.75) !important; }
+
+/* text-primary usado como TEXTO em fundo escuro: roxo claro p/ contraste AA.
+   (.section-light .text-primary continua #1a007c; bg-primary/botões não são afetados) */
+.text-primary { color: #a68cff; }
