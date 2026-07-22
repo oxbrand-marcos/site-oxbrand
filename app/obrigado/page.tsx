@@ -62,7 +62,7 @@ export default function ObrigadoPage() {
 
         {/* CTA WhatsApp */}
         <a
-          href="https://wa.me/5511999999999"
+          href="https://wa.me/5511921425351"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-primary text-white font-bold text-sm tracking-widest uppercase px-8 py-4 hover:bg-primary/85 transition-colors"
