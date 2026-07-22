@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
-const WA_LINK = 'https://wa.me/5511942191351?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito'
+const WA_LINK = 'https://wa.me/5511921425351?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito'
 
 const diferenciais = [
   { title: 'Metodologia Baseada em Dados', desc: 'Chega de "tentativa e erro". Analisamos o seu cenário antes de investir cada centavo do seu orçamento.' },
