@@ -15,7 +15,7 @@ import { readingTime } from '@/lib/utils'
 import { ARTICLE_CONTENT } from './content'
 
 export const metadata: Metadata = {
-  title: 'Foco em marketing de conteúdo: como gerar resultados reais | OxBrand Insights',
+  title: 'Marketing de conteúdo que gera resultados reais | OxBrand',
   description: 'Ter foco em marketing de conteúdo deixou de ser uma opção. Conheça o método Conteúdo Pro: 5 Q\'s + 3 Pq\'s, e como ele transforma estratégia em vendas.',
   ...articleOg({
     title: 'Foco em marketing de conteúdo: como gerar resultados reais',
