@@ -2,11 +2,13 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useRef } from 'react'
+import { useState, useRef, Fragment } from 'react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { CheckCircle2 } from 'lucide-react'
+import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
+import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0" aria-hidden="true">
@@ -24,9 +26,8 @@ const beneficios = [
 
 const campos = [
   { id: 'nome', label: 'Seu nome', type: 'text', placeholder: 'Nome completo', required: true },
-  { id: 'telefone', label: 'Telefone com WhatsApp', type: 'tel', placeholder: '(11) 9 2142-5351', required: true },
   { id: 'email', label: 'Seu melhor e-mail', type: 'email', placeholder: 'voce@empresa.com', required: true },
-  { id: 'instagram', label: 'O "@" do seu Instagram', type: 'text', placeholder: '@suaempresa', required: false },
+  { id: 'instagram', label: 'O "@" do seu Instagram', type: 'text', placeholder: '@suaempresa', required: true },
   { id: 'empresa', label: 'Nome da empresa', type: 'text', placeholder: 'Razão social ou nome fantasia', required: true },
 ]
 
@@ -60,6 +61,7 @@ const selects = [
 
 export default function DiagnosticoPage() {
   const [sent, setSent] = useState(false)
+  const [phone, setPhone] = useState('')
   const [loading, setLoading] = useState(false)
   const [erro, setErro] = useState('')
   const formRef = useRef<HTMLFormElement>(null)
@@ -68,9 +70,16 @@ export default function DiagnosticoPage() {
     e.preventDefault()
     setLoading(true)
     setErro('')
+    if (!phone || !isValidPhoneNumber(phone)) {
+      setErro('Informe um telefone válido, incluindo o DDD.')
+      setLoading(false)
+      return
+    }
     const fd = new FormData(e.currentTarget)
     const body: Record<string, string> = { source: 'diagnostico' }
     fd.forEach((v, k) => { body[k] = v.toString() })
+    body['Telefone com WhatsApp'] = phone
+    body._recaptcha = await getRecaptchaToken('diagnostico')
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -208,31 +217,48 @@ export default function DiagnosticoPage() {
               <form ref={formRef} className="flex flex-col gap-5" onSubmit={handleSubmit}>
 
                 {campos.map((campo) => (
-                  <div key={campo.id} className="flex flex-col gap-1.5">
-                    <label htmlFor={campo.id} className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">
-                      {campo.label}
-                      {campo.required && <span className="text-primary ml-1">*</span>}
-                    </label>
-                    <input
-                      id={campo.id}
-                      name={campo.label}
-                      type={campo.type}
-                      placeholder={campo.placeholder}
-                      required={campo.required}
-                      className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-primary transition-colors"
-                    />
-                  </div>
+                  <Fragment key={campo.id}>
+                    <div className="flex flex-col gap-1.5">
+                      <label htmlFor={campo.id} className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">
+                        {campo.label}
+                        {campo.required && <span className="text-primary ml-1">*</span>}
+                      </label>
+                      <input
+                        id={campo.id}
+                        name={campo.label}
+                        type={campo.type}
+                        placeholder={campo.placeholder}
+                        required={campo.required}
+                        className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-primary transition-colors"
+                      />
+                    </div>
+                    {campo.id === 'nome' && (
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="telefone" className="text-xs font-semibold text-zinc-500 uppercase tracking-widest">
+                          Telefone com WhatsApp<span className="text-primary ml-1">*</span>
+                        </label>
+                        <PhoneField
+                          id="telefone"
+                          value={phone}
+                          onChange={setPhone}
+                          wrapperClassName="w-full bg-white border border-zinc-200 px-4 py-3 text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-primary transition-colors"
+                        />
+                      </div>
+                    )}
+                  </Fragment>
                 ))}
 
                 {selects.map((sel) => (
                   <div key={sel.id} className="flex flex-col gap-1.5">
                     <label htmlFor={sel.id} className="text-xs font-semibold text-zinc-500 uppercase tracking-widest leading-relaxed">
                       {sel.label}
+                      <span className="text-primary ml-1">*</span>
                     </label>
                     <select
                       id={sel.id}
                       name={sel.label}
                       defaultValue=""
+                      required
                       className="w-full bg-white border border-zinc-200 px-4 py-3 text-sm text-zinc-900 focus:outline-none focus:border-primary transition-colors appearance-none"
                     >
                       <option value="" disabled>Selecione...</option>
@@ -264,6 +290,13 @@ export default function DiagnosticoPage() {
                 <p className="text-xs text-center text-zinc-400 leading-relaxed">
                   Ao clicar em enviar, você garante que nossa equipe de Marketing Digital em Mogi das Cruzes receberá
                   sua solicitação.
+                </p>
+                <p className="text-[11px] text-center text-zinc-400 leading-relaxed">
+                  Protegido por reCAPTCHA. Aplicam-se a{' '}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Política de Privacidade</a>{' '}
+                  e os{' '}
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Termos</a>{' '}
+                  do Google.
                 </p>
               </form>
               )}
