@@ -2,7 +2,7 @@ import { db } from '@/lib/db'
 import { blogPosts } from '@/lib/db/schema'
 import { eq, desc } from 'drizzle-orm'
 
-const BASE = 'https://oxbrand.com.br'
+const BASE = 'https://www.oxbrand.com.br'
 const FEED_TITLE = 'OxBrand Insights'
 const FEED_DESC = 'Estratégia, performance e marketing digital, direto da equipe OxBrand.'
 
