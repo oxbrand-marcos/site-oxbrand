@@ -62,8 +62,6 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background`}>
       <head>
         {/* Preconnect para fontes e recursos externos críticos */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         {/* DNS prefetch para YouTube (facade carregada sob demanda) */}
         <link rel="dns-prefetch" href="https://img.youtube.com" />
         <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />

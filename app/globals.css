@@ -166,11 +166,12 @@
   background-color: #5c36eb;
   box-shadow: 0 0 10px rgb(92 54 235 / 0.7);
   animation: pulse-dot 2.4s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; box-shadow: 0 0 10px rgb(92 54 235 / 0.7); }
-  50%       { opacity: 0.35; box-shadow: 0 0 4px rgb(92 54 235 / 0.25); }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.82); }
 }
 
 /* ── Borda com glow ──────────────────────────────────────── */
