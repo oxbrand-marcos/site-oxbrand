@@ -194,8 +194,8 @@ export default function LinksPage() {
             rel="noopener noreferrer"
             className="text-xs text-muted-foreground hover:text-primary transition-colors leading-relaxed"
           >
-            Av. Narciso Yague Guimarães, Nº 1.145 · Sala 1303<br />
-            Edifício Helbor Concept · Mogi das Cruzes / SP
+            Av. Ver. Narciso Yague Guimarães, 1145 · Sala 1303<br />
+            Torre Office (Helbor Concept) · Socorro · Mogi das Cruzes - SP, 08780-500
           </a>
         </div>
 
