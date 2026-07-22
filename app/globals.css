@@ -334,30 +334,34 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 .grecaptcha-badge { visibility: hidden !important; }
 
 /* =========================================================
-   A11y (WCAG AA) — contraste de rótulos/labels (definitivo v2)
-   Estratégia: padrões GLOBAIS otimizados p/ fundo escuro (sem !important);
-   dentro de QUALQUER container claro, regra :is() com !important escurece tudo.
+   A11y (WCAG AA) — contraste de rótulos/labels (definitivo v3)
+   GLOBAIS otimizados p/ fundo escuro (sem !important, p/ inline/section-light poderem sobrepor);
+   dentro de containers bg-* claros, :is() com !important escurece.
+   section-light é tratado à parte (SEM !important) por conter blocos escuros aninhados.
    ========================================================= */
 
-/* muted em opacidade reduzida -> opacidade cheia; cor via --muted-foreground (tema-aware) */
 .text-muted-foreground\/30,.text-muted-foreground\/40,.text-muted-foreground\/50,
 .text-muted-foreground\/60,.text-muted-foreground\/70 { color: var(--muted-foreground) !important; }
 
-/* brancos esmaecidos sobre escuro */
 .text-white\/40 { color: rgba(255,255,255,.72) !important; }
 .text-white\/50 { color: rgba(255,255,255,.75) !important; }
 
-/* roxo da marca como TEXTO em fundo escuro (base + variantes de opacidade) -> tom claro AA */
+/* roxo como TEXTO em fundo escuro (base + variantes de opacidade) -> tom claro AA */
 .text-primary, [class*="text-primary/"] { color: #a68cff; }
 .text-glow { color: #9d84ff; }
 
-/* ---- Containers CLAROS (section-light + várias classes bg-*) ---- */
-:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"],.section-light) { --muted-foreground:#555555; --foreground:#1d1d1d; --card:#dedad9; --card-foreground:#1d1d1d; }
-:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"],.section-light) :is(.mono-tag, .text-glow) { color:#1a007c !important; text-shadow:none; }
-:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"],.section-light) :is(.text-primary, [class*="text-primary/"]) { color:#1a007c !important; }
-:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"],.section-light) :is(.text-foreground, [class*="text-black"]) { color:#1d1d1d !important; }
-:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"],.section-light) :is(.text-zinc-400, .text-zinc-500) { color:#52525b !important; }
+/* section-light: acentos escuros (SEM !important -> inline dos blocos escuros aninhados prevalece) */
+.section-light :is(.text-primary, [class*="text-primary/"]) { color: #1a007c; }
+.section-light .text-glow { color: #1a007c; text-shadow: none; }
+.section-light .mono-tag  { color: #1a007c; }
+
+/* Containers bg-* claros (sem aninhamento escuro): força escuro com !important */
+:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"]) { --muted-foreground:#555555; --foreground:#1d1d1d; --card:#dedad9; --card-foreground:#1d1d1d; }
+:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"]) :is(.mono-tag, .text-glow) { color:#1a007c !important; text-shadow:none; }
+:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"]) :is(.text-primary, [class*="text-primary/"]) { color:#1a007c !important; }
+:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"]) :is(.text-foreground, [class*="text-black"]) { color:#1d1d1d !important; }
+:is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-gray-100"],[class~="bg-zinc-50"],[class~="bg-zinc-100"],[class~="bg-neutral-50"]) :is(.text-zinc-400, .text-zinc-500) { color:#52525b !important; }
 :is([class~="bg-white"],[class~="bg-gray-50"],[class~="bg-zinc-50"]) .text-\[\#25D366\] { color:#0e7a3a !important; }
 
-/* mono-tag sobre fundo roxo (breadcrumb): texto claro em qualquer variante */
+/* mono-tag sobre fundo roxo (breadcrumb) */
 .mono-tag[class*="text-primary-foreground"] { color:#eae6e6 !important; }
