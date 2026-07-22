@@ -349,7 +349,7 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 .text-glow    { color: #9d84ff; }
 
 /* 4) seções claras SEM .section-light (bg-white / bg-gray-50 / bg-gray-100): tratar como tema claro */
-[class~="bg-white"], [class~="bg-gray-50"], [class~="bg-gray-100"] {
+[class~="bg-white"], [class~="bg-gray-50"], [class~="bg-gray-100"], [class~="bg-zinc-50"] {
   --muted-foreground:#555555; --foreground:#1d1d1d; --card:#dedad9; --card-foreground:#1d1d1d;
 }
 [class~="bg-white"] .text-glow, [class~="bg-gray-50"] .text-glow, [class~="bg-gray-100"] .text-glow { color:#1a007c; text-shadow:none; }
@@ -359,6 +359,10 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 [class~="bg-white"] .text-black\/40, [class~="bg-white"] .text-black\/20,
 [class~="bg-gray-50"] .text-black\/40, [class~="bg-gray-50"] .text-black\/20 { color:#595959 !important; }
 [class~="bg-white"] .text-\[\#25D366\], [class~="bg-gray-50"] .text-\[\#25D366\] { color:#0e7a3a !important; }
+
+/* microcopy zinc em cards claros (forms): escurecer p/ AA */
+[class~="bg-white"] .text-zinc-400,[class~="bg-gray-50"] .text-zinc-400,[class~="bg-gray-100"] .text-zinc-400,[class~="bg-zinc-50"] .text-zinc-400 { color:#52525b !important; }
+[class~="bg-white"] .text-zinc-500,[class~="bg-gray-50"] .text-zinc-500,[class~="bg-gray-100"] .text-zinc-500,[class~="bg-zinc-50"] .text-zinc-500 { color:#3f3f46 !important; }
 
 /* 5) mono-tag sobre fundo roxo (breadcrumb): texto claro em qualquer variante de opacidade */
 .mono-tag[class*="text-primary-foreground"] { color:#eae6e6 !important; }
