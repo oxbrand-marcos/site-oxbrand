@@ -148,9 +148,9 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
           <div className="col-span-2 sm:col-span-1 flex flex-col gap-4 items-center sm:items-start text-center sm:text-left">
             <p className="text-sm font-bold text-foreground tracking-wide">Contato</p>
             <p className="text-sm text-foreground/70 leading-relaxed">
-              Sede: Mogi das Cruzes / SP<br />
-              Av. Narciso Yague Guimarães, Nº 1.145<br />
-              Sala 1303 – Edifício Helbor Concept - Torre Office<br />
+              Sede: Mogi das Cruzes - SP<br />
+              Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1303<br />
+              Torre Office (Helbor Concept) - Socorro<br />
               CEP 08780-500
             </p>
             <a
