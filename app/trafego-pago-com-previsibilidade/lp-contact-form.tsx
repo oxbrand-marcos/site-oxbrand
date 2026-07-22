@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
+import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
 const inputCls =
   'bg-background border border-border text-foreground placeholder:text-muted-foreground/40 text-sm px-4 py-3 outline-none focus:border-primary transition-colors w-full'
@@ -15,14 +17,21 @@ export function LpContactForm() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setLoading(true)
     setErro('')
+    if (!form.whatsapp || !isValidPhoneNumber(form.whatsapp)) {
+      setErro('Informe um WhatsApp válido, incluindo o DDD.')
+      return
+    }
+    setLoading(true)
     try {
+      const token = await getRecaptchaToken('lp_trafego')
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           source: 'lp_trafego',
+          _pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+          _recaptcha: token,
           'Nome': form.nome,
           '@ da Empresa (Instagram)': form.instagram,
           'WhatsApp': form.whatsapp,
@@ -65,32 +74,31 @@ export function LpContactForm() {
         <input
           type="text"
           required
-          placeholder="Seu Nome"
+          placeholder="Seu Nome *"
           value={form.nome}
           onChange={(e) => setForm({ ...form, nome: e.target.value })}
           className={inputCls}
         />
         <input
           type="text"
-          placeholder="@ da Empresa (Instagram)"
+          required
+          placeholder="@ da Empresa (Instagram) *"
           value={form.instagram}
           onChange={(e) => setForm({ ...form, instagram: e.target.value })}
           className={inputCls}
         />
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <input
-          type="tel"
-          required
-          placeholder="WhatsApp"
+        <PhoneField
           value={form.whatsapp}
-          onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-          className={inputCls}
+          onChange={(v) => setForm({ ...form, whatsapp: v })}
+          wrapperClassName={inputCls}
+          placeholder="WhatsApp *"
         />
         <input
           type="email"
           required
-          placeholder="Seu melhor E-Mail"
+          placeholder="Seu melhor E-Mail *"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className={inputCls}
@@ -98,7 +106,8 @@ export function LpContactForm() {
       </div>
       <textarea
         rows={4}
-        placeholder="Descreva brevemente sua demanda"
+        required
+        placeholder="Descreva brevemente sua demanda *"
         value={form.demanda}
         onChange={(e) => setForm({ ...form, demanda: e.target.value })}
         className={`${inputCls} resize-none`}
@@ -122,6 +131,13 @@ export function LpContactForm() {
       >
         {loading ? 'Enviando...' : 'Enviar'}
       </button>
+      <p className="text-[11px] text-muted-foreground/40 leading-relaxed">
+        Protegido por reCAPTCHA. Aplicam-se a{' '}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline">Política de Privacidade</a>{' '}
+        e os{' '}
+        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline">Termos</a>{' '}
+        do Google.
+      </p>
     </form>
   )
 }
