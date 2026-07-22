@@ -189,7 +189,7 @@ export default function DiagnosticoPage() {
                   Chame diretamente no nosso WhatsApp e resolva em poucos minutos com o time de especialistas.
                 </p>
                 <a
-                  href="https://wa.me/+5511921425351"
+                  href="https://wa.me/5511921425351"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-fit flex items-center justify-center gap-2 px-5 py-3 bg-[#25D366] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
