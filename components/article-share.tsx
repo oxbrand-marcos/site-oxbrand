@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-const SITE = 'https://oxbrand.com.br'
+const SITE = 'https://www.oxbrand.com.br'
 
 export function ArticleShare({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false)
