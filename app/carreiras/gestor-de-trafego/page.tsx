@@ -120,7 +120,7 @@ export default function VagaGestorTrafego() {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/+5511921425351?text=Ol%C3%A1%2C+tenho+interesse+na+vaga+de+Gestor+de+Tr%C3%A1fego+da+OxBrand!"
+                  href="https://wa.me/5511921425351?text=Ol%C3%A1%2C+tenho+interesse+na+vaga+de+Gestor+de+Tr%C3%A1fego+da+OxBrand!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors rounded-full"
@@ -160,6 +160,28 @@ export default function VagaGestorTrafego() {
                   <p className="text-xs text-black/60 leading-relaxed">{b.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Outras vagas abertas — cross-link */}
+        <section className="py-20 border-b border-border bg-white">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col gap-8">
+            <div className="flex flex-col gap-3">
+              <span className="mono-tag text-black/40">Essa não é pra você?</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-black">Outras vagas abertas</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-px bg-black/10 border border-black/10">
+              <Link href="/carreiras/social-media" className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
+                <span className="mono-tag text-black/40 group-hover:text-primary/60 transition-colors">Vaga</span>
+                <span className="text-xl font-bold text-black">Social Media Estratégico</span>
+                <span className="mono-tag text-muted-foreground/50 mt-2 group-hover:text-primary/60 transition-colors">Ver vaga ↗</span>
+              </Link>
+              <Link href="/carreiras-em-marketing-digital" className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
+                <span className="mono-tag text-black/40 group-hover:text-primary/60 transition-colors">Todas as vagas</span>
+                <span className="text-xl font-bold text-black">Trabalhe na OxBrand</span>
+                <span className="mono-tag text-muted-foreground/50 mt-2 group-hover:text-primary/60 transition-colors">Ver todas ↗</span>
+              </Link>
             </div>
           </div>
         </section>
