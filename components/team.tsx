@@ -120,7 +120,7 @@ export function Team() {
             style={{ background: '#1d1d1d', border: '1px solid rgb(92 54 235 / 0.30)' }}
           >
             <div className="flex flex-col gap-5 flex-1">
-              <span className="mono-tag" style={{ color: '#5c36eb' }}>Sobre nós</span>
+              <span className="mono-tag" style={{ color: '#a68cff' }}>Sobre nós</span>
               <p className="text-sm leading-relaxed" style={{ color: '#c8c4c4' }}>
                 Duas trajetórias, uma obsessão: transformar marketing em estrutura de crescimento.
               </p>
@@ -135,7 +135,7 @@ export function Team() {
               </p>
             </div>
             <p className="mt-8 text-sm font-bold tracking-wide pt-5"
-              style={{ color: '#5c36eb', borderTop: '1px solid rgb(92 54 235 / 0.25)' }}>
+              style={{ color: '#a68cff', borderTop: '1px solid rgb(92 54 235 / 0.25)' }}>
               Marcos e Walquiria
             </p>
           </div>
