@@ -183,10 +183,13 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
         </div>
         {/* Parceiros Certificados */}
         <div className="mt-20 border-t border-border pt-12">
-          <div className="flex flex-col sm:flex-row items-center gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-3">
             <span className="mono-tag text-muted-foreground/60">Parceiros Certificados</span>
             <div className="hidden sm:block flex-1 h-px bg-border" />
           </div>
+          <p className="text-sm text-muted-foreground/70 mb-10 max-w-2xl">
+            As principais entre mais de 50 parcerias e certificações do nosso ecossistema — selecionamos as que realmente sustentam a operação.
+          </p>
 
           <div
             className="grid grid-cols-3 lg:grid-cols-5 border-t border-l border-border"
