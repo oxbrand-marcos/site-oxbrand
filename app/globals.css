@@ -72,7 +72,7 @@
 
   /* ── Muted ───────────────────────────────────────────────── */
   --muted: #2d2d2d;
-  --muted-foreground: #888888;
+  --muted-foreground: #9a9a9a;
 
   /* ── Accent — mesmo primário ─────────────────────────────── */
   --accent: #5c36eb;
@@ -334,16 +334,18 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 .grecaptcha-badge { visibility: hidden !important; }
 
 /* =========================================================
-   A11y (WCAG AA) — contraste mínimo de etiquetas/rótulos
-   Escopo restrito p/ não afetar seções claras (section-light usa cor própria)
+   A11y (WCAG AA) — contraste mínimo de rótulos "muted"
+   Força opacidade cheia; a COR vem de --muted-foreground, que já é
+   ciente do tema (clara em fundo escuro, #555 dentro de .section-light).
+   Assim passa tanto em seções escuras quanto claras, sem hardcode.
    ========================================================= */
-.mono-tag.text-muted-foreground\/30,
-.mono-tag.text-muted-foreground\/40,
-.mono-tag.text-muted-foreground\/50,
-.mono-tag.text-muted-foreground\/60,
-.mono-tag.text-muted-foreground\/70 {
-  color: #a8a8a8 !important;
+.text-muted-foreground\/30,
+.text-muted-foreground\/40,
+.text-muted-foreground\/50,
+.text-muted-foreground\/60,
+.text-muted-foreground\/70 {
+  color: var(--muted-foreground) !important;
 }
 /* rótulos brancos esmaecidos sobre fundo escuro */
-.text-white\/40 { color: rgba(255,255,255,.70) !important; }
-.text-white\/50 { color: rgba(255,255,255,.72) !important; }
+.text-white\/40 { color: rgba(255,255,255,.72) !important; }
+.text-white\/50 { color: rgba(255,255,255,.75) !important; }
