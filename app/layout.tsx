@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
   },
-  title: 'OxBrand | Agência de Marketing de Performance em Mogi das Cruzes',
+  title: 'OxBrand | Marketing de Performance em Mogi das Cruzes',
   description:
-    'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
+    'Agência de marketing de performance em Mogi das Cruzes: tráfego pago, sites, CRM e SEO integrados para gerar crescimento previsível. +450 marcas atendidas.',
   openGraph: {
     title: 'OxBrand · Marketing de Performance',
-    description: 'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
+    description: 'Agência de marketing de performance em Mogi das Cruzes: tráfego pago, sites, CRM e SEO integrados para gerar crescimento previsível. +450 marcas atendidas.',
     url: 'https://www.oxbrand.com.br',
     siteName: 'OxBrand',
     locale: 'pt_BR',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'OxBrand · Marketing de Performance',
-    description: 'A OxBrand transforma dados em crescimento. Tráfego pago, criação de conteúdo, estratégia digital e tecnologia para marcas que querem dominar o mercado.',
+    description: 'Agência de marketing de performance em Mogi das Cruzes: tráfego pago, sites, CRM e SEO integrados para gerar crescimento previsível. +450 marcas atendidas.',
     images: [_homeOgImage],
     site: '@oxbrand_br',
   },
