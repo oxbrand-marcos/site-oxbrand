@@ -4,7 +4,7 @@ import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
   title: 'Copywriting e Redação Estratégica | OxBrand Performance',
-  description: 'Se o seu conteúdo não gera resultados, ele é apenas texto. Transformamos palavras em um ativo poderoso, capaz de atrair, engajar e converter com Copywriting e Redação Estratégica.',
+  description: 'Transformamos palavras em ativo de conversão: copywriting e redação estratégica que atraem, engajam e convertem, integrados ao seu funil.',
   ...pageOg({
     title: 'Copywriting e Redação Estratégica · OxBrand',
     description: 'Transformamos palavras em ativos de conversão. Copywriting integrado ao funil de marketing de performance.',
