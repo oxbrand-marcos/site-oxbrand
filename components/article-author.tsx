@@ -7,13 +7,30 @@ export interface AuthorData {
   avatar: string
 }
 
+const OX_AVATAR = '/images/ox-avatar.png'
+const OX_LINKEDIN = 'https://www.linkedin.com/company/oxbrand-br/'
+
 export const AUTHORS: Record<string, AuthorData> = {
-  oxbrand: {
-    name: 'OxBrand',
-    role: 'Equipe de Marketing',
-    linkedin: 'https://www.linkedin.com/company/oxbrand-br/',
-    avatar: '/images/ox-avatar.png',
-  },
+  oxbrand:               { name: 'OxBrand',             role: 'Equipe de Marketing', linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'marcos-blaustein':    { name: 'Marcos Blaustein',    role: 'Sócio-fundador',      linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'walquiria-blaustein': { name: 'Walquiria Blaustein', role: 'Sócia-fundadora',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'joane-guimaraes':     { name: 'Joane Guimarães',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'murilo-novaes':       { name: 'Murilo Novaes',       role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'breno-freire':        { name: 'Breno Freire',        role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'julia-rodrigues':     { name: 'Julia Rodrigues',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'maria-clara':         { name: 'Maria Clara',         role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'beatriz-soares':      { name: 'Beatriz Soares',      role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'gabriel-figueiredo':  { name: 'Gabriel Figueiredo',  role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+}
+
+/** Lista de nomes para popular o seletor de autor no editor. */
+export const AUTHOR_NAMES = Object.values(AUTHORS).map(a => a.name)
+
+/** Resolve um autor pelo nome (case-insensitive). Fallback: mesmo avatar/LinkedIn da OxBrand. */
+export function getAuthor(name?: string | null): AuthorData {
+  if (!name) return AUTHORS.oxbrand
+  const found = Object.values(AUTHORS).find(a => a.name.toLowerCase() === name.toLowerCase())
+  return found ?? { name, role: 'Redação OxBrand', linkedin: OX_LINKEDIN, avatar: OX_AVATAR }
 }
 
 export function ArticleAuthor({ author }: { author: AuthorData }) {
