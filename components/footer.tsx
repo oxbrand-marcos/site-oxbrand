@@ -160,7 +160,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
               className="group flex items-center gap-2 mono-tag text-foreground/70 hover:text-primary transition-colors w-fit"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-primary/50 group-hover:bg-primary transition-colors shrink-0" />
-              WhatsApp: (11) 9 2142-5351
+              WhatsApp: (11) 92142-5351
             </a>
             <a
               href="mailto:contato@oxbrand.com.br"
