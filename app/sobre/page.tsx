@@ -12,7 +12,7 @@ import { aboutPageSchema, breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Sobre a OxBrand | Agência de Marketing de Performance',
-  description: 'Conheça a OxBrand, agência de marketing digital em Mogi das Cruzes com operação desde 2014 e 25 anos de experiência combinada entre os sócios. Estratégia, criação e performance para transformar marketing em estrutura de crescimento.',
+  description: 'Agência de marketing digital em Mogi das Cruzes, desde 2014 e 25 anos de experiência combinada. Estratégia, criação e performance que viram crescimento.',
   ...pageOg({
     title: 'Sobre a OxBrand · Dois sócios, um método',
     description: 'Conheça a OxBrand: operação desde 2014, 25 anos de experiência combinada. Estratégia, criação e performance para transformar marketing em estrutura de crescimento.',
