@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Assessoria de Marketing e Gestão Estratégica | OxBrand',
+  title: 'Assessoria de Marketing Digital e Estratégia | OxBrand',
   description: 'Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade.',
   ...pageOg({
     title: 'Assessoria em Marketing · OxBrand',
