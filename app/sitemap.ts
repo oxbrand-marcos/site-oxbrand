@@ -1,3 +1,4 @@
+import { ARTICLES } from '@/lib/blog-articles'
 import { MetadataRoute } from 'next'
 import { db } from '@/lib/db'
 import { blogPosts } from '@/lib/db/schema'
@@ -29,18 +30,14 @@ const staticPages: MetadataRoute.Sitemap = [
 
 // Artigos estáticos que existem como arquivos de página (não criados pelo CMS)
 const staticPosts: MetadataRoute.Sitemap = [
-  {
-    url: `${BASE}/blog/leads-do-trafego-pago-como-transformar-em-vendas`,
-    lastModified: new Date('2026-06-03'),
-    changeFrequency: 'monthly',
+  ...ARTICLES.map((a) => ({
+    url: `${BASE}/blog/${a.slug}`,
+    lastModified: new Date(a.dateISO),
+    changeFrequency: 'monthly' as const,
     priority: 0.75,
-  },
-  {
-    url: `${BASE}/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais`,
-    lastModified: new Date('2026-01-15'),
-    changeFrequency: 'monthly',
-    priority: 0.75,
-  },
+  })),
+  { url: `${BASE}/blog/leads-do-trafego-pago-como-transformar-em-vendas`, lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.75 },
+  { url: `${BASE}/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais`, lastModified: new Date('2026-01-15'), changeFrequency: 'monthly', priority: 0.75 },
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
