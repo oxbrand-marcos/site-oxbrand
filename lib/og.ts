@@ -58,8 +58,10 @@ export function articleOg({
   authorName?: string
 }) {
   const path = `/blog/${slug}`
-  const ogImageUrl = coverUrl
-    ? coverUrl.startsWith('http') ? coverUrl : `${BASE}${coverUrl}`
+  // Preview social usa uma versao leve 1200x630 (-og.jpg) em vez da capa pesada.
+  const ogSrc = coverUrl ? coverUrl.replace(/-cover\.png$/i, '-og.jpg') : null
+  const ogImageUrl = ogSrc
+    ? ogSrc.startsWith('http') ? ogSrc : `${BASE}${ogSrc}`
     : `${BASE}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent('OxBrand Insights')}`
 
   return {
