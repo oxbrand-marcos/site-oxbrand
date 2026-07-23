@@ -125,6 +125,19 @@ export default function ContatoPage() {
                   <span>Torre Office (Helbor Concept) - Socorro · CEP 08780-500</span>
                 </address>
 
+                {/* Mapa da sede */}
+                <iframe
+                  title="Mapa da sede da OxBrand em Mogi das Cruzes"
+                  src="https://maps.google.com/maps?q=Av.%20Ver.%20Narciso%20Yague%20Guimar%C3%A3es%2C%201145%20-%20Socorro%2C%20Mogi%20das%20Cruzes%20-%20SP%2C%2008780-500&output=embed"
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, borderRadius: 8 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="w-full mt-1"
+                />
+
                 {/* Horário */}
                 <p className="text-xs font-medium tracking-widest uppercase" style={{ color: '#1a007c' }}>
                   Atendimento de segunda a sexta, das 9h às 18h
@@ -139,7 +152,7 @@ export default function ContatoPage() {
                     className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors w-fit"
                   >
                     <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: '#5c36eb' }} />
-                    WhatsApp: (11) 9 2142-5351
+                    WhatsApp: (11) 92142-5351
                   </a>
                   <a
                     href="mailto:contato@oxbrand.com.br"
