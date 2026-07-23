@@ -12,10 +12,10 @@ import { breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Soluções | OxBrand, Agência de Marketing de Performance',
-  description: 'Gestão de Tráfego Pago, CRM Kommo, Assessoria em Marketing, Desenvolvimento de Sites, Inbound Marketing e Copywriting. Um sistema completo de crescimento orientado por resultado.',
+  description: 'Tráfego Pago, CRM Kommo, Assessoria, Sites, Inbound e Copywriting: um sistema completo de crescimento orientado por resultado.',
   ...pageOg({
     title: 'Soluções OxBrand · Um sistema completo de crescimento',
-    description: 'Gestão de Tráfego Pago, CRM Kommo, Assessoria em Marketing, Desenvolvimento de Sites, Inbound Marketing e Copywriting. Um sistema completo de crescimento orientado por resultado.',
+    description: 'Tráfego Pago, CRM Kommo, Assessoria, Sites, Inbound e Copywriting: um sistema completo de crescimento orientado por resultado.',
     path: '/solucoes',
     subtitle: 'Soluções de Marketing',
   }),
