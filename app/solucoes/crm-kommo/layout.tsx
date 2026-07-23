@@ -5,7 +5,7 @@ import { CRM_KOMMO_NAME, CRM_KOMMO_DESCRIPTION, faqItems } from './data'
 
 export const metadata: Metadata = {
   title: 'CRM Kommo: implementação em 15 dias | OxBrand, Top 5% Brasil',
-  description: 'Pare de perder vendas no WhatsApp. Implementação completa do Kommo em 15 dias por parceiro certificado Top 5% no Brasil: funil personalizado, integração de canais, automações e treinamento da equipe.',
+  description: 'Implementação completa do CRM Kommo em 15 dias por parceiro certificado Top 5% no Brasil: funil, integração de canais, automações e treinamento.',
   ...pageOg({
     title: 'CRM Kommo · Implementação em 15 dias',
     description: 'Pare de perder vendas no WhatsApp. Parceiro Kommo certificado Top 5% no Brasil.',
