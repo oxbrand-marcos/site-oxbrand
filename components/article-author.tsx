@@ -12,14 +12,14 @@ const OX_LINKEDIN = 'https://www.linkedin.com/company/oxbrand-br/'
 
 export const AUTHORS: Record<string, AuthorData> = {
   oxbrand:               { name: 'OxBrand',             role: 'Equipe de Marketing', linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'marcos-blaustein':    { name: 'Marcos Blaustein',    role: 'Sócio-fundador',      linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'walquiria-blaustein': { name: 'Walquiria Blaustein', role: 'Sócia-fundadora',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'joane-guimaraes':     { name: 'Joane Guimarães',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'murilo-novaes':       { name: 'Murilo Novaes',       role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'breno-freire':        { name: 'Breno Freire',        role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'julia-rodrigues':     { name: 'Julia Rodrigues',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'maria-clara':         { name: 'Maria Clara',         role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
-  'beatriz-soares':      { name: 'Beatriz Soares',      role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
+  'marcos-blaustein':    { name: 'Marcos Blaustein',    role: 'Sócio-fundador',      linkedin: OX_LINKEDIN, avatar: '/images/authors/marcos-blaustein.jpg' },
+  'walquiria-blaustein': { name: 'Walquiria Blaustein', role: 'Sócia-fundadora',     linkedin: OX_LINKEDIN, avatar: '/images/authors/walquiria-blaustein.jpg' },
+  'joane-guimaraes':     { name: 'Joane Guimarães',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/joane-guimaraes.jpg' },
+  'murilo-novaes':       { name: 'Murilo Novaes',       role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/murilo-novaes.jpg' },
+  'breno-freire':        { name: 'Breno Freire',        role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/breno-freire.jpg' },
+  'julia-rodrigues':     { name: 'Julia Rodrigues',     role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/julia-rodrigues.jpg' },
+  'maria-clara':         { name: 'Maria Clara',         role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/maria-clara.jpg' },
+  'beatriz-soares':      { name: 'Beatriz Soares',      role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: '/images/authors/beatriz-soares.jpg' },
   'gabriel-figueiredo':  { name: 'Gabriel Figueiredo',  role: 'Redação OxBrand',     linkedin: OX_LINKEDIN, avatar: OX_AVATAR },
 }
 
