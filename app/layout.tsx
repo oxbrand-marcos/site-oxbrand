@@ -5,6 +5,7 @@ import { FloatingActions } from '@/components/floating-actions'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
+import { ConsentBanner } from '@/components/consent-banner'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -70,6 +71,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} bg-background`}>
       <head>
+        {/* Consent Mode v2 (opt-out): default concedido, negado se o usuario recusou antes */}
+        <Script id="consent-init" strategy="beforeInteractive">
+          {`window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};(function(){var m=document.cookie.match(/oxb_consent=(granted|denied)/);var s=m?m[1]:'granted';gtag('consent','default',{ad_storage:s,analytics_storage:s,ad_user_data:s,ad_personalization:s,security_storage:'granted'});})();`}
+        </Script>
         {/* Google Tag Manager */}
         <Script id="gtm-base" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
@@ -98,6 +103,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <ConsentBanner />
         <FloatingActions />
         <SpeedInsights />
         <Analytics />
