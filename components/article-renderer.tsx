@@ -6,9 +6,10 @@ import { NewsletterSignup } from '@/components/newsletter-signup'
 import DotsCanvas from '@/components/dots-canvas'
 import { ArticleAuthor, getAuthor } from '@/components/article-author'
 import { ArticleShare } from '@/components/article-share'
+import { ArticleRelated } from '@/components/article-related'
 import { blogPostingSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 import { readingTime } from '@/lib/utils'
-import { type Article, articleText, coverFor } from '@/lib/blog-articles'
+import { type Article, ARTICLES, articleText, coverFor } from '@/lib/blog-articles'
 
 function formatDate(iso: string) {
   return new Date(iso + 'T12:00:00').toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })
@@ -20,6 +21,19 @@ export function ArticleRenderer({ article }: { article: Article }) {
   const headings = Array.from(article.bodyHtml.matchAll(/<h2[^>]*>(.*?)<\/h2>/g)).map((m) => m[1].replace(/<[^>]+>/g, '').trim())
   let hIdx = 0
   const bodyWithIds = article.bodyHtml.replace(/<h2>/g, () => `<h2 id="sec-${hIdx++}" class="scroll-mt-28">`)
+  const relatedPosts = ARTICLES
+    .filter((a) => a.slug !== article.slug)
+    .sort((a, b) => {
+      const sameA = a.tag === article.tag ? 0 : 1
+      const sameB = b.tag === article.tag ? 0 : 1
+      if (sameA !== sameB) return sameA - sameB
+      return b.dateISO.localeCompare(a.dateISO)
+    })
+    .slice(0, 3)
+    .map((a) => ({ slug: a.slug, title: a.title, excerpt: a.subtitle, tag: a.tag, coverUrl: coverFor(a.slug) }))
+  const sortedByDate = [...ARTICLES].sort((a, b) => b.dateISO.localeCompare(a.dateISO))
+  const curIdx = sortedByDate.findIndex((a) => a.slug === article.slug)
+  const nextArticle = sortedByDate[(curIdx + 1) % sortedByDate.length]
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(blogPostingSchema({
@@ -119,9 +133,13 @@ export function ArticleRenderer({ article }: { article: Article }) {
                 <NewsletterSignup variant="article" />
                 <ArticleShare title={article.title} slug={article.slug} />
 
+                <ArticleRelated posts={relatedPosts} />
+
                 <div className="flex items-center justify-between pt-4 border-t border-zinc-200">
-                  <Link href="/blog" className="mono-tag text-zinc-400 hover:text-zinc-900 transition-colors">&#8592; Todos os Insights</Link>
-                  <Link href="/diagnostico" className="mono-tag text-primary/60 hover:text-primary transition-colors">Diagnóstico gratuito &#8594;</Link>
+                  <Link href="/blog" className="mono-tag text-zinc-400 hover:text-zinc-900 transition-colors">&#8592; Voltar para Insights</Link>
+                  {nextArticle && (
+                    <Link href={`/blog/${nextArticle.slug}`} className="mono-tag text-primary/60 hover:text-primary transition-colors">Próximo artigo &#8594;</Link>
+                  )}
                 </div>
               </div>
             </div>

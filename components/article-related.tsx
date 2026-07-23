@@ -19,12 +19,12 @@ export function ArticleRelated({ posts }: { posts: RelatedPost[] }) {
   return (
     <div className="flex flex-col gap-6 pt-8 border-t border-zinc-200">
       <span className="mono-tag text-zinc-400">Leia também</span>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-zinc-200 border border-zinc-200">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group bg-white hover:bg-zinc-50 transition-colors flex flex-col"
+            className="group bg-white hover:bg-zinc-50 transition-colors flex flex-col border border-zinc-200"
           >
             {post.coverUrl && (
               <div className="relative w-full aspect-[16/9] overflow-hidden border-b border-zinc-200">
@@ -33,7 +33,7 @@ export function ArticleRelated({ posts }: { posts: RelatedPost[] }) {
                   alt={post.title}
                   fill
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                  unoptimized
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
             )}
