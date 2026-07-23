@@ -4,7 +4,7 @@ import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
   title: 'Agência de Inbound Marketing e Conteúdo | OxBrand',
-  description: 'Sua empresa precisa de Inbound Marketing de verdade. Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até a venda com resultados reais e previsíveis.',
+  description: 'Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até a venda. Inbound Marketing com resultados reais e previsíveis.',
   ...pageOg({
     title: 'Inbound Marketing · OxBrand',
     description: 'Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até a venda com resultados reais e previsíveis.',
