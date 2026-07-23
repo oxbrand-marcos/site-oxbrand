@@ -17,6 +17,9 @@ function formatDate(iso: string) {
 export function ArticleRenderer({ article }: { article: Article }) {
   const cover = coverFor(article.slug)
   const mins = readingTime(articleText(article))
+  const headings = Array.from(article.bodyHtml.matchAll(/<h2[^>]*>(.*?)<\/h2>/g)).map((m) => m[1].replace(/<[^>]+>/g, '').trim())
+  let hIdx = 0
+  const bodyWithIds = article.bodyHtml.replace(/<h2>/g, () => `<h2 id="sec-${hIdx++}" class="scroll-mt-28">`)
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(blogPostingSchema({
@@ -66,38 +69,61 @@ export function ArticleRenderer({ article }: { article: Article }) {
         </div>
 
         <article className="py-20 bg-white border-b border-zinc-200">
-          <div className="max-w-3xl mx-auto px-6 flex flex-col gap-8">
-            <ArticleAuthor author={getAuthor('OxBrand')} />
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid lg:grid-cols-[260px_1fr] gap-16 items-start">
 
-            <div className="article-body" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />
+              {/* Sumario lateral + CTA */}
+              <aside className="hidden lg:flex flex-col gap-4 sticky top-24 self-start">
+                <span className="mono-tag text-zinc-400">Neste artigo</span>
+                <nav className="flex flex-col gap-2">
+                  {headings.map((h, i) => (
+                    <a key={i} href={`#sec-${i}`} className="text-xs text-zinc-500 border-l border-zinc-200 pl-3 py-1 hover:border-primary hover:text-zinc-900 transition-colors">
+                      {h}
+                    </a>
+                  ))}
+                </nav>
+                <div className="mt-6 border border-zinc-200 p-5 flex flex-col gap-3">
+                  <span className="mono-tag text-zinc-400">Diagnóstico gratuito</span>
+                  <p className="text-xs text-zinc-500 leading-relaxed">Quer aplicar esses insights no seu negócio?</p>
+                  <a href="/diagnostico" className="mono-tag text-primary/70 hover:text-primary transition-colors">Falar com especialistas &#8599;</a>
+                </div>
+              </aside>
 
-            {/* CTA */}
-            <div className="border border-primary/20 bg-primary/5 p-6 flex flex-col gap-4">
-              <span className="mono-tag text-primary/60">Diagnóstico gratuito</span>
-              <p className="text-zinc-900 font-bold">Quer saber o que faz sentido para o seu caso?</p>
-              <p className="text-sm text-zinc-600">Fazemos um diagnóstico gratuito da sua operação, sem compromisso e sem promessa vazia.</p>
-              <a href="https://wa.me/5511921425351" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors">Falar com a OxBrand ↗</a>
-            </div>
+              {/* Corpo do artigo */}
+              <div className="max-w-3xl flex flex-col gap-8">
+                <ArticleAuthor author={getAuthor('OxBrand')} />
 
-            {/* FAQ */}
-            {article.faq.length > 0 && (
-              <div className="flex flex-col gap-5 pt-4">
-                <h2 className="text-xl font-bold text-zinc-900 border-l-2 border-primary pl-4">Perguntas frequentes</h2>
-                {article.faq.map((f, i) => (
-                  <div key={i} className="border-b border-zinc-200 pb-4 flex flex-col gap-1.5">
-                    <h3 className="font-bold text-zinc-900 text-sm">{f.q}</h3>
-                    <p className="text-sm text-zinc-600 leading-relaxed">{f.a}</p>
+                <div className="article-body" dangerouslySetInnerHTML={{ __html: bodyWithIds }} />
+
+                {/* CTA */}
+                <div className="border border-primary/20 bg-primary/5 p-6 flex flex-col gap-4">
+                  <span className="mono-tag text-primary/60">Diagnóstico gratuito</span>
+                  <p className="text-zinc-900 font-bold">Quer saber o que faz sentido para o seu caso?</p>
+                  <p className="text-sm text-zinc-600">Fazemos um diagnóstico gratuito da sua operação, sem compromisso e sem promessa vazia.</p>
+                  <a href="https://wa.me/5511921425351" target="_blank" rel="noopener noreferrer" className="w-fit flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors">Falar com a OxBrand &#8599;</a>
+                </div>
+
+                {/* FAQ */}
+                {article.faq.length > 0 && (
+                  <div className="flex flex-col gap-5 pt-4">
+                    <h2 className="text-xl font-bold text-zinc-900 border-l-2 border-primary pl-4">Perguntas frequentes</h2>
+                    {article.faq.map((f, i) => (
+                      <div key={i} className="border-b border-zinc-200 pb-4 flex flex-col gap-1.5">
+                        <h3 className="font-bold text-zinc-900 text-sm">{f.q}</h3>
+                        <p className="text-sm text-zinc-600 leading-relaxed">{f.a}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
+
+                <NewsletterSignup variant="article" />
+                <ArticleShare title={article.title} slug={article.slug} />
+
+                <div className="flex items-center justify-between pt-4 border-t border-zinc-200">
+                  <Link href="/blog" className="mono-tag text-zinc-400 hover:text-zinc-900 transition-colors">&#8592; Todos os Insights</Link>
+                  <Link href="/diagnostico" className="mono-tag text-primary/60 hover:text-primary transition-colors">Diagnóstico gratuito &#8594;</Link>
+                </div>
               </div>
-            )}
-
-            <NewsletterSignup variant="article" />
-            <ArticleShare title={article.title} slug={article.slug} />
-
-            <div className="flex items-center justify-between pt-4 border-t border-zinc-200">
-              <Link href="/blog" className="mono-tag text-zinc-400 hover:text-zinc-900 transition-colors">← Todos os Insights</Link>
-              <Link href="/diagnostico" className="mono-tag text-primary/60 hover:text-primary transition-colors">Diagnóstico gratuito →</Link>
             </div>
           </div>
         </article>
