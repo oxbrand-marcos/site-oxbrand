@@ -4,7 +4,7 @@ import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
   title: 'Assessoria de Marketing e Gestão Estratégica | OxBrand',
-  description: 'Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas que geram resultados de verdade, com performance digital, inteligência de dados e criatividade.',
+  description: 'Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade.',
   ...pageOg({
     title: 'Assessoria em Marketing · OxBrand',
     description: 'Planejamento, execução e otimização de campanhas com performance digital, inteligência de dados e criatividade. Com responsabilidade sobre o resultado.',
@@ -18,7 +18,7 @@ export default function AssessoriaEmMarketingPage() {
     <SolutionPageTemplate
       breadcrumb="Assessoria em Marketing"
       slug="assessoria-em-marketing"
-      metaDescription="Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas que geram resultados de verdade, com performance digital, inteligência de dados e criatividade."
+      metaDescription="Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade."
       tag="Direção, não mais tarefas"
       headline="Assessoria de Marketing que entrega direção,"
       headlineHighlight="não mais tarefas."
