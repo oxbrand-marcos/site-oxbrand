@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Sites e Landing Pages de Alta Performance | OxBrand',
+  title: 'Desenvolvimento de Sites e Landing Pages | OxBrand',
   description: 'Mais velocidade, mais conversão e a melhor experiência para o seu cliente. Criação de sites e páginas de alta performance para o seu projeto.',
   ...pageOg({
     title: 'Desenvolvimento de Sites · OxBrand',
@@ -29,6 +29,10 @@ export default function DesenvolvimentoDeSitesPage() {
       stepsAlt="Método de desenvolvimento de sites da OxBrand em 5 etapas"
       ctaHeading="Site bonito que não converte é despesa, não ativo."
       faqItems={[
+        {
+          q: 'Vocês fazem criação de landing pages, não só sites?',
+          a: 'Sim. Além do desenvolvimento de sites institucionais, fazemos criação de landing pages focadas em conversão: página única, rápida e alinhada à campanha, do planejamento ao lançamento.',
+        },
         {
           q: 'Quanto tempo leva para o site ficar pronto?',
           a: 'Landing pages focadas em conversão ficam prontas em 2 a 3 semanas. Sites institucionais ou com mais páginas levam de 4 a 6 semanas, dependendo do escopo. O prazo começa a contar depois do briefing e da aprovação de arquitetura, não no dia da assinatura.',
