@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Gestão de Tráfego Pago e Performance | OxBrand Agência',
+  title: 'Agência de Tráfego Pago e Gestão de Performance | OxBrand',
   description: 'Gestão de Performance e Tráfego Pago: Resultados Mensuráveis para o seu Negócio em Google ADS, Meta ADS, TikTok ADS, LinkedIn ADS e outras plataformas.',
   ...pageOg({
     title: 'Gestão de Tráfego Pago · OxBrand',
@@ -29,6 +29,10 @@ export default function GestaoDeTrafegoPagoPage() {
       stepsAlt="Método de gestão de tráfego pago da OxBrand em 7 etapas"
       ctaHeading="Verba não é estratégia. Sem processo, tráfego pago é aposta."
       faqItems={[
+        {
+          q: 'Vocês oferecem consultoria de tráfego pago ou só gestão?',
+          a: 'Oferecemos os dois. Na consultoria de tráfego pago, orientamos e revisamos a operação do seu time; na gestão, a OxBrand executa ponta a ponta. No diagnóstico definimos qual formato faz mais sentido para o seu momento.',
+        },
         {
           q: 'Qual o investimento mínimo em mídia?',
           a: 'Depende do seu segmento, ticket médio e objetivo. Como regra, o valor precisa ser suficiente para gerar dados de decisão; abaixo disso, a campanha vira aposta. Definimos o piso no diagnóstico, com base no que faz sentido pro seu caso, não num pacote genérico.',
