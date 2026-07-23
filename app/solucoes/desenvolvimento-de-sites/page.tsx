@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Desenvolvimento de Sites e Landing Pages de Alta Performance | OxBrand',
+  title: 'Sites e Landing Pages de Alta Performance | OxBrand',
   description: 'Mais velocidade, mais conversão e a melhor experiência para o seu cliente. Criação de sites e páginas de alta performance para o seu projeto.',
   ...pageOg({
     title: 'Desenvolvimento de Sites · OxBrand',
