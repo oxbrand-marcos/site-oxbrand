@@ -60,7 +60,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
         <div className="w-full bg-white border-b border-zinc-100">
           <div className="max-w-7xl mx-auto px-6 pt-10">
             <div className="relative w-full aspect-[16/7] overflow-hidden border border-zinc-200">
-              <Image src={cover} alt={article.coverAlt} fill className="object-cover" priority unoptimized />
+              <Image src={cover} alt={article.coverAlt} fill className="object-cover" sizes="(max-width: 1280px) 100vw, 1232px" priority />
             </div>
           </div>
         </div>
