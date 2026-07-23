@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
   },
-  title: 'OxBrand | Marketing de Performance em Mogi das Cruzes',
+  title: 'OxBrand | Agência de Marketing em Mogi das Cruzes',
   description:
     'Agência de marketing de performance em Mogi das Cruzes: tráfego pago, sites, CRM e SEO integrados para gerar crescimento previsível. +450 marcas atendidas.',
   openGraph: {
