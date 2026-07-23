@@ -50,7 +50,7 @@ export function Team() {
               {/* Foto */}
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src={member.image}
+                  src={`${member.image}?v=2`}
                   alt={`${member.name}, ${member.role} na OxBrand`}
                   fill
                   className="object-cover object-top transition-all duration-500"
