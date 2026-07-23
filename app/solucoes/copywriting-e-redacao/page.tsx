@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Copywriting e Redação Estratégica | OxBrand Performance',
+  title: 'Copywriting e Redação Publicitária | OxBrand Performance',
   description: 'Transformamos palavras em ativo de conversão: copywriting e redação estratégica que atraem, engajam e convertem, integrados ao seu funil.',
   ...pageOg({
     title: 'Copywriting e Redação Estratégica · OxBrand',
@@ -29,6 +29,10 @@ export default function CopywritingERedacaoPage() {
       stepsAlt="Método de copywriting e redação da OxBrand em 4 etapas"
       ctaHeading="Conteúdo não serve para engajar. Serve para acelerar a decisão."
       faqItems={[
+        {
+          q: 'Qual a diferença entre copywriting e redação publicitária?',
+          a: 'Redação publicitária cria a peça que comunica a marca; copywriting é a escrita orientada à conversão, ligada ao funil e à oferta. Na OxBrand os dois andam juntos: texto que comunica e move o leitor à ação.',
+        },
         {
           q: 'Vocês escrevem para qualquer segmento?',
           a: 'Atendemos B2B, B2C, serviços de alto ticket, varejo e e-commerce. O que importa não é o segmento, mas a clareza da oferta e do público. Antes de escrever uma linha, entendemos o que o negócio vende, para quem e qual objeção precisa ser quebrada.',
