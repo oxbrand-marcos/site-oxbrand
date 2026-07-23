@@ -1,10 +1,28 @@
 import type { BlogPost } from '@/lib/db/schema'
 import { ARTICLE_CONTENT as LEADS_CONTENT } from '@/app/blog/leads-do-trafego-pago-como-transformar-em-vendas/content'
 import { ARTICLE_CONTENT as CONTEUDO_CONTENT } from '@/app/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais/content'
+import { ARTICLES, articleText, coverFor } from '@/lib/blog-articles'
 
-// Posts estáticos (hardcoded como page.tsx) que não vêm do banco
-// mas devem aparecer no listing e nos filtros.
+// Posts das matérias dinâmicas (renderizadas por /blog/[slug]).
+const dynamicPosts: BlogPost[] = ARTICLES.map((a, i) => ({
+  id: -100 - i,
+  slug: a.slug,
+  title: a.title,
+  excerpt: a.subtitle,
+  content: articleText(a),
+  tag: a.tag,
+  author: 'OxBrand',
+  coverUrl: coverFor(a.slug),
+  coverAlt: a.coverAlt,
+  published: true,
+  userId: 'static',
+  createdAt: new Date(a.dateISO),
+  updatedAt: new Date(a.dateISO),
+}))
+
+// Posts estáticos bespoke (páginas próprias) + os dinâmicos.
 export const STATIC_POSTS: BlogPost[] = [
+  ...dynamicPosts,
   {
     id: -1,
     slug: 'leads-do-trafego-pago-como-transformar-em-vendas',
