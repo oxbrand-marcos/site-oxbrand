@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createPost, updatePost } from '@/app/actions/blog'
 import type { BlogPost } from '@/lib/db/schema'
+import { AUTHOR_NAMES } from '@/components/article-author'
 
 const TAGS = ['Tráfego & Aquisição', 'Conversão', 'CRM & Comercial', 'Dados & Mensuração', 'Bastidores Ox']
 
@@ -175,13 +176,14 @@ export function PostEditor({ mode, post }: PostEditorProps) {
           {/* Autor */}
           <div className="flex flex-col gap-1.5">
             <label className="text-xs font-mono tracking-widest uppercase text-zinc-500">Autor *</label>
-            <input
+            <select
               required
               value={author}
               onChange={e => setAuthor(e.target.value)}
-              placeholder="Ex: João Silva"
-              className="bg-zinc-900 border border-zinc-800 text-white text-sm px-4 py-3 placeholder:text-zinc-700 focus:outline-none focus:border-primary transition-colors"
-            />
+              className="bg-zinc-900 border border-zinc-800 text-white text-sm px-4 py-3 focus:outline-none focus:border-primary transition-colors"
+            >
+              {AUTHOR_NAMES.map(n => <option key={n} value={n}>{n}</option>)}
+            </select>
           </div>
 
           {/* Cover Image Upload */}
