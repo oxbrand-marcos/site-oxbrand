@@ -6,7 +6,7 @@ export const ORG_ID = `${BASE_URL}/#organization`
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
-  '@type': ['Organization', 'LocalBusiness'],
+  '@type': ['Organization', 'LocalBusiness', 'ProfessionalService'],
   '@id': ORG_ID,
   name: 'OxBrand',
   legalName: 'OxBrand – Tecnologia e Marketing',
