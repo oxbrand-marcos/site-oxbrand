@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!author || !author.hasProfile) return {}
   const title = `${author.name}, ${author.role} na OxBrand`
   const description = author.headline
-  const og = `${BASE}/images/og/autor-${slug}.jpg`
+  const og = `${BASE}/og-home.jpg`
   return {
     title,
     description,
