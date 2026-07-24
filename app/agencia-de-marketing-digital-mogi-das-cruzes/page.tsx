@@ -18,7 +18,18 @@ export const metadata: Metadata = {
     description:
       'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas. Diagnóstico gratuito.',
     url: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
+    siteName: 'OxBrand',
+    locale: 'pt_BR',
     type: 'website',
+    images: [{ url: 'https://www.oxbrand.com.br/images/og/agencia-mogi.jpg', width: 1200, height: 630, alt: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
+    description:
+      'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas.',
+    images: ['https://www.oxbrand.com.br/images/og/agencia-mogi.jpg'],
+    site: '@oxbrand_br',
   },
 }
 
@@ -64,7 +75,7 @@ const etapas = [
 const faqs = [
   {
     q: 'Quanto custa uma agência de marketing digital em Mogi das Cruzes?',
-    a: 'Depende do escopo e do estágio do negócio. Por isso a porta de entrada é um diagnóstico gratuito: analisamos sua operação e devolvemos um plano com investimento recomendado — sem compromisso e sem pressão comercial.',
+    a: 'Depende do escopo e do estágio do negócio. Por isso a porta de entrada é um diagnóstico gratuito: analisamos sua operação e devolvemos um plano com investimento recomendado, sem compromisso e sem pressão comercial.',
   },
   {
     q: 'A OxBrand atende só Mogi das Cruzes?',
@@ -72,15 +83,15 @@ const faqs = [
   },
   {
     q: 'Posso visitar o escritório?',
-    a: 'Sim. Estamos na Av. Ver. Narciso Yague Guimarães, 1.145 — Sala 1303, Edifício Helbor Concept (Torre Office), Mogi das Cruzes. Agende pelo WhatsApp.',
+    a: 'Sim. Estamos na Av. Ver. Narciso Yague Guimarães, 1.145, Sala 1303, Edifício Helbor Concept (Torre Office), Mogi das Cruzes. Agende pelo WhatsApp.',
   },
   {
     q: 'Em quanto tempo vejo resultado?',
-    a: 'Tráfego pago tende a gerar sinais nas primeiras semanas; SEO e conteúdo, de 3 a 6 meses. O que garante o resultado não é promessa — é estrutura, mensuração e otimização semanal.',
+    a: 'Tráfego pago tende a gerar sinais nas primeiras semanas; SEO e conteúdo, de 3 a 6 meses. O que garante o resultado não é promessa, é estrutura, mensuração e otimização semanal.',
   },
   {
     q: 'Que tipo de empresa vocês atendem na região?',
-    a: 'Construção civil e imobiliário, clínicas e saúde, indústria e B2B, educação, serviços de alto ticket e e-commerce — os segmentos onde nosso método já foi validado.',
+    a: 'Construção civil e imobiliário, clínicas e saúde, indústria e B2B, educação, serviços de alto ticket e e-commerce, os segmentos onde nosso método já foi validado.',
   },
   {
     q: 'Qual a diferença entre a OxBrand e outras agências de marketing em Mogi?',
@@ -88,7 +99,7 @@ const faqs = [
   },
 ]
 
-// Schema JSON-LD — LocalBusiness + FAQPage
+// Schema JSON-LD, LocalBusiness + FAQPage
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -97,7 +108,7 @@ const localBusinessSchema = {
     'Agência de marketing digital em Mogi das Cruzes: tráfego pago, CRM Kommo, assessoria de marketing, sites e SEO.',
   url: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
   telephone: '+5511921425351',
-  email: 'gestao@oxbrand.com.br',
+  email: 'contato@oxbrand.com.br',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Av. Ver. Narciso Yague Guimarães, 1145, Sala 1303',
@@ -164,7 +175,7 @@ export default function LpMogiPage() {
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-              {/* Esquerda — copy */}
+              {/* Esquerda, copy */}
               <div className="flex flex-col gap-8">
                 {/* Breadcrumb */}
                 <nav aria-label="Breadcrumb" className="flex items-center gap-2">
@@ -182,7 +193,7 @@ export default function LpMogiPage() {
                     <span className="text-glow">Mogi das Cruzes</span>
                   </h1>
                   <p className="text-base text-muted-foreground leading-relaxed max-w-lg">
-                    Marketing não é presença. É estrutura de crescimento. A OxBrand nasceu em Mogi das Cruzes, atende o Brasil e o exterior — e opera a poucos minutos da sua empresa, com método, dados e um time de especialistas por frente.
+                    Marketing não é presença. É estrutura de crescimento. A OxBrand nasceu em Mogi das Cruzes, atende o Brasil e o exterior, e opera a poucos minutos da sua empresa, com método, dados e um time de especialistas por frente.
                   </p>
                 </div>
 
@@ -207,7 +218,7 @@ export default function LpMogiPage() {
                 </div>
               </div>
 
-              {/* Direita — formulário */}
+              {/* Direita, formulário */}
               <div className="bg-card border border-border p-8 flex flex-col gap-5">
                 <div className="flex flex-col gap-1">
                   <span className="mono-tag text-primary/60">Diagnóstico gratuito</span>
@@ -230,7 +241,7 @@ export default function LpMogiPage() {
               {[
                 { num: '+R$ 258M', label: 'em faturamento gerado para clientes' },
                 { num: '+450', label: 'marcas atendidas no Brasil e em 6 países' },
-                { num: '+16 anos', label: 'de experiência — sede em Mogi das Cruzes' },
+                { num: '+16 anos', label: 'de experiência, sede em Mogi das Cruzes' },
                 { num: 'Top 5%', label: 'parceiros Kommo no Brasil' },
               ].map((m) => (
                 <div key={m.label} className="flex flex-col gap-2">
@@ -256,24 +267,24 @@ export default function LpMogiPage() {
                   A maioria das empresas de Mogi das Cruzes e do Alto Tietê enfrenta o mesmo dilema: a agência local que não tem método, ou a agência de São Paulo que não tem tempo para você. A OxBrand existe para eliminar essa escolha.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Nossa sede fica na Av. Ver. Narciso Yague Guimarães, no Helbor Concept — dá para tomar um café e olhar a operação de perto. Mas o método é o mesmo que aplicamos em projetos nos Estados Unidos e na Europa: o OX Growth Engineering, validado em mais de 450 marcas.
+                  Nossa sede fica na Av. Ver. Narciso Yague Guimarães, no Helbor Concept, dá para tomar um café e olhar a operação de perto. Mas o método é o mesmo que aplicamos em projetos nos Estados Unidos e na Europa: o OX Growth Engineering, validado em mais de 450 marcas.
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Atendemos <strong className="text-foreground">Mogi das Cruzes, Suzano, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Arujá, Guararema, Santa Isabel</strong> e toda a região — além de projetos nacionais e internacionais.
+                  Atendemos <strong className="text-foreground">Mogi das Cruzes, Suzano, Itaquaquecetuba, Poá, Ferraz de Vasconcelos, Arujá, Guararema, Santa Isabel</strong> e toda a região, além de projetos nacionais e internacionais.
                 </p>
               </div>
 
               {/* Partners */}
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: 'Google Partner', icon: 'G' },
-                  { label: 'Meta Business Partner', icon: 'M' },
-                  { label: 'Kommo Top 5% Brasil', icon: 'K' },
-                  { label: 'ActiveCampaign Platinum', icon: 'AC' },
+                  { label: 'Google Partner', src: '/images/partners/google.webp' },
+                  { label: 'Meta Business Partner', src: '/images/partners/meta.webp' },
+                  { label: 'Kommo Top 5% Brasil', src: '/images/partners/kommo.webp' },
+                  { label: 'ActiveCampaign Platinum', src: '/images/partners/activecampaign.webp' },
                 ].map((p) => (
                   <div key={p.label} className="bg-card border border-border p-5 flex flex-col gap-3">
-                    <div className="w-10 h-10 bg-primary/10 border border-primary/20 flex items-center justify-center">
-                      <span className="font-mono text-xs font-bold text-primary">{p.icon}</span>
+                    <div className="w-10 h-10 bg-white rounded-sm flex items-center justify-center p-1.5 shrink-0">
+                      <Image src={p.src} alt={p.label} width={40} height={40} className="w-full h-full object-contain" />
                     </div>
                     <span className="text-sm font-semibold text-foreground">{p.label}</span>
                   </div>
@@ -367,20 +378,25 @@ export default function LpMogiPage() {
               </h2>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {testimonials.map((t) => (
-                <div key={t.author} className="bg-white border border-zinc-200 p-7 flex flex-col gap-5">
-                  <span className="mono-tag text-[#5c36eb]/80">{t.segment}</span>
-                  <p className="text-sm text-zinc-600 leading-relaxed flex-1 italic">
+            <div className="flex flex-col lg:grid lg:grid-cols-3 gap-px bg-border w-full">
+              {testimonials.map((t, i) => (
+                <div key={i} className="bg-background p-7 flex flex-col justify-between gap-6 card-lift group items-center text-center lg:items-start lg:text-left">
+                  <div className="flex items-center justify-center lg:justify-between w-full">
+                    <div className="hidden lg:block w-5 h-px bg-border group-hover:bg-primary transition-colors mt-3" aria-hidden="true" />
+                    <span className="text-2xl font-bold stat-number text-primary text-center lg:text-right">
+                      {t.metric}
+                    </span>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 text-center lg:text-left">
                     &ldquo;{t.text}&rdquo;
                   </p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                    <div className="w-8 h-8 bg-[#5c36eb] flex items-center justify-center shrink-0">
-                      <span className="font-bold text-white text-xs">{t.author[0]}</span>
+                  <div className="flex items-center gap-3 pt-4 border-t border-border justify-center lg:justify-start w-full">
+                    <div className="w-8 h-8 flex items-center justify-center border border-border text-xs font-bold text-muted-foreground shrink-0" aria-hidden="true">
+                      {t.author.charAt(0)}
                     </div>
-                    <div className="flex flex-col gap-0.5">
-                      <span className="font-semibold text-zinc-900 text-sm">{t.author}</span>
-                      <span className="mono-tag text-zinc-400">{t.company.toUpperCase()}</span>
+                    <div className="text-center lg:text-left">
+                      <p className="text-xs font-semibold text-foreground">{t.author}</p>
+                      <p className="mono-tag text-muted-foreground/50">{t.company}</p>
                     </div>
                   </div>
                 </div>
@@ -472,10 +488,10 @@ export default function LpMogiPage() {
               <div className="flex flex-col gap-6">
                 <span className="mono-tag text-primary/70">Nossa sede em Mogi das Cruzes</span>
                 <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-balance">
-                  Vizinhos da sua empresa — e de todas as oportunidades da região.
+                  Vizinhos da sua empresa, e de todas as oportunidades da região.
                 </h2>
                 <address className="not-italic flex flex-col gap-2 text-sm text-muted-foreground">
-                  <p className="font-semibold text-foreground">OxBrand — Tecnologia e Marketing</p>
+                  <p className="font-semibold text-foreground">OxBrand, Tecnologia e Marketing</p>
                   <p>Av. Ver. Narciso Yague Guimarães, 1.145, Sala 1303</p>
                   <p>Edifício Helbor Concept (Torre Office)</p>
                   <p>Mogi das Cruzes/SP · CEP 08780-500</p>
@@ -487,11 +503,11 @@ export default function LpMogiPage() {
                     </svg>
                     (11) 9 2142-5351
                   </a>
-                  <a href="mailto:gestao@oxbrand.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="mailto:contato@oxbrand.com.br" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                     <svg className="w-4 h-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    gestao@oxbrand.com.br
+                    contato@oxbrand.com.br
                   </a>
                 </div>
               </div>
@@ -499,7 +515,7 @@ export default function LpMogiPage() {
               {/* Google Maps embed */}
               <div className="aspect-video border border-border overflow-hidden">
                 <iframe
-                  title="Localização OxBrand — Mogi das Cruzes"
+                  title="Localização OxBrand, Mogi das Cruzes"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.3!2d-46.1854!3d-23.5208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMxJzE0LjkiUyA0NsKwMTEnMDcuNCJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
                   width="100%"
                   height="100%"
@@ -520,7 +536,7 @@ export default function LpMogiPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance leading-tight">
               Pronto para crescer com direção?
               <br />
-              <span className="text-glow">Agende agora — é gratuito.</span>
+              <span className="text-glow">Agende agora, é gratuito.</span>
             </h2>
             <p className="text-muted-foreground text-sm max-w-lg leading-relaxed">
               Nossos especialistas analisam sua operação digital e devolvem um diagnóstico completo de como aumentar sua visibilidade no digital. Sem compromisso, sem pressão.
@@ -545,7 +561,9 @@ export default function LpMogiPage() {
               </a>
             </div>
             <p className="text-xs text-muted-foreground/40 font-mono">
-              (11) 9 2142-5351 · gestao@oxbrand.com.br
+              <a href="tel:+5511921425351" className="hover:text-foreground transition-colors">(11) 9 2142-5351</a>
+              {' · '}
+              <a href="mailto:contato@oxbrand.com.br" className="hover:text-foreground transition-colors">contato@oxbrand.com.br</a>
             </p>
           </div>
         </section>
