@@ -5,7 +5,8 @@ export const runtime = 'edge'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  const title = searchParams.get('title') ?? 'OxBrand'
+  const rawTitle = searchParams.get('title') ?? 'OxBrand'
+  const title = rawTitle.replace(/\s*[|\u00b7\u2013\u2014-]\s*OxBrand\s*$/i, '').trim() || 'OxBrand'
   const subtitle = searchParams.get('subtitle') ?? 'Agência de Marketing de Performance'
 
   return new ImageResponse(
@@ -99,7 +100,7 @@ export async function GET(request: NextRequest) {
           </div>
 
           {/* Main content */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '900px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1, gap: '20px', maxWidth: '1000px', overflow: 'hidden' }}>
             {/* Subtitle / tag */}
             <div
               style={{
@@ -126,7 +127,7 @@ export async function GET(request: NextRequest) {
             <span
               style={{
                 color: '#ffffff',
-                fontSize: title.length > 50 ? '44px' : '56px',
+                fontSize: title.length <= 28 ? '60px' : title.length <= 42 ? '50px' : title.length <= 58 ? '42px' : title.length <= 78 ? '34px' : '30px',
                 fontWeight: 800,
                 lineHeight: 1.1,
                 letterSpacing: '-1.5px',
