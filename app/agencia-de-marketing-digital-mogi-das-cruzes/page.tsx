@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     siteName: 'OxBrand',
     locale: 'pt_BR',
     type: 'website',
-    images: [{ url: 'https://www.oxbrand.com.br/images/og/agencia-mogi.jpg', width: 1200, height: 630, alt: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand' }],
+    images: [{ url: 'https://www.oxbrand.com.br/og-home.jpg', width: 1200, height: 630, alt: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
     description:
       'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas.',
-    images: ['https://www.oxbrand.com.br/images/og/agencia-mogi.jpg'],
+    images: ['https://www.oxbrand.com.br/og-home.jpg'],
     site: '@oxbrand_br',
   },
 }
