@@ -20,6 +20,333 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'o-que-e-crm',
+    metaTitle: 'O que é CRM e para que serve (guia) | OxBrand',
+    metaDescription: 'O que é CRM, para que serve, tipos, benefícios e como escolher. O guia completo, sem jargão, de quem implementa CRM para vender mais.',
+    title: 'O que é CRM e para que serve (o guia sem jargão)',
+    subtitle: 'O que é, para que serve, os tipos, os benefícios e como escolher e implementar. O guia de CRM sem jargão de quem implementa para vender mais.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-25',
+    coverAlt: 'Tela de um sistema de CRM com funil de vendas e contatos organizados',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">CRM é a sigla de Customer Relationship Management, em português, gestão do relacionamento com o cliente. Na prática, é um sistema que organiza todos os contatos, conversas e oportunidades de venda da sua empresa em um só lugar, para que nenhum lead se perca e todo mundo saiba em que pé está cada negociação.</p>
+<p>Mas reduzir CRM a um programa de contatos é o erro que faz muita empresa comprar a ferramenta e abandonar em dois meses. CRM, bem entendido, é uma forma de organizar o processo comercial. A ferramenta é só onde esse processo vive. Este guia explica o conceito sem jargão e mostra quando ele realmente vale a pena.</p>
+<h2>Para que serve um CRM (o problema que ele resolve)</h2>
+<p>Imagine uma empresa que recebe leads por WhatsApp, Instagram, site e indicação. Sem CRM, cada vendedor anota do seu jeito, contatos ficam no celular pessoal e ninguém sabe quantas oportunidades entraram no mês. Resultado: lead esquecido, follow-up que não acontece e venda perdida sem ninguém perceber. O CRM resolve isso centralizando tudo. Ele serve para:</p>
+<ul>
+<li><strong>Não perder lead:</strong> todo contato entra no sistema com um responsável e um próximo passo.</li>
+<li><strong>Organizar o funil:</strong> você vê em que etapa cada negociação está e onde elas travam.</li>
+<li><strong>Padronizar o atendimento:</strong> o time segue o mesmo processo, não o improviso de cada um.</li>
+<li><strong>Medir de verdade:</strong> quantos leads entraram, quantos converteram, qual a taxa por etapa. Gestão com dado, não com achismo.</li>
+</ul>
+<h2>Os tipos de CRM</h2>
+<ul>
+<li><strong>CRM operacional:</strong> o mais comum. Organiza o dia a dia de vendas e atendimento: funil, contatos, automações. É o que a maioria das empresas precisa.</li>
+<li><strong>CRM analítico:</strong> foco em relatórios e análise de dados do cliente para decisões estratégicas.</li>
+<li><strong>CRM colaborativo:</strong> foco em integrar áreas (vendas, marketing, suporte) em torno do mesmo cliente.</li>
+</ul>
+<p>Na prática, as boas ferramentas hoje combinam os três. Para quem vende por WhatsApp e mensagem, a maioria no Brasil, o que importa é o operacional bem feito, e é aí que entra o Kommo, o CRM que mais implementamos. O guia completo dele está aqui: <a href="/blog/kommo-crm-guia-completo">Kommo CRM: o guia completo</a>.</p>
+<h2>Benefícios de usar um CRM</h2>
+<ul>
+<li><strong>Mais vendas do mesmo tráfego:</strong> parar de perder lead já aumenta a conversão sem gastar mais em anúncio.</li>
+<li><strong>Previsibilidade:</strong> com o funil organizado, dá para projetar quanto vai fechar, não só torcer.</li>
+<li><strong>Produtividade do time:</strong> menos tempo procurando informação, mais tempo vendendo.</li>
+<li><strong>Decisão baseada em dado:</strong> você para de discutir com achismo e passa a olhar números reais de conversão.</li>
+</ul>
+<h2>CRM e funil de vendas: a dupla que funciona</h2>
+<p>CRM e funil de vendas andam juntos. O funil é a lógica, as etapas que um lead percorre até virar cliente. O CRM é onde essa lógica vira operação do dia a dia. Um CRM sem um funil bem desenhado é uma agenda cara; um funil sem CRM é um desenho que ninguém segue. Se você ainda não tem o seu mapeado, comece por aqui: <a href="/blog/funil-de-vendas">o que é funil de vendas e como montar</a>.</p>
+<h2>Quando a sua empresa precisa de um CRM</h2>
+<p>Você precisa de CRM quando: recebe leads por mais de um canal, tem mais de um vendedor, e não consegue dizer com precisão quantos contatos entraram e converteram no último mês. Se você se reconheceu, cada dia sem CRM é oportunidade escapando. Quando ainda não precisa: se você recebe pouquíssimos contatos e uma pessoa dá conta com folga, o problema não é organização, é gerar demanda primeiro.</p>
+<h2>Como escolher e implementar um CRM</h2>
+<p>Na hora de escolher, o preço é o menor dos fatores. O que decide o resultado é a implementação: um CRM configurado para o seu processo real, com o time treinado para usar. A ferramenta mais cara mal implementada perde para a mais simples bem configurada. É por isso que tratamos CRM como estrutura comercial, não como software: no nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>, desenhamos o funil, configuramos e treinamos. Somos Top 5% dos parceiros Kommo no Brasil.</p>
+<div class="callout"><p>A OxBrand implementa CRM com método: funil desenhado para o seu processo, automações que fazem sentido e time treinado. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que significa CRM?', a: 'CRM significa Customer Relationship Management (gestão do relacionamento com o cliente). É um sistema que centraliza contatos, conversas e oportunidades de venda para organizar o processo comercial e não perder lead.' },
+      { q: 'Para que serve um CRM na prática?', a: 'Serve para centralizar todos os leads em um funil, com responsável e próximo passo definidos, padronizar o atendimento do time e medir a conversão real. Na prática, ajuda a vender mais com o mesmo volume de contatos.' },
+      { q: 'Qual a diferença entre CRM e planilha?', a: 'A planilha é estática e não avisa de nada: ninguém lembra de dar follow-up, e cada um preenche de um jeito. O CRM organiza o funil, automatiza tarefas e lembretes, centraliza os canais e mostra relatórios, coisas que a planilha não faz.' },
+      { q: 'Qual o melhor CRM?', a: 'Depende da sua operação. Para quem vende por WhatsApp e mensagem, a maioria no Brasil, o Kommo é uma das melhores opções pela integração nativa. Mas o melhor CRM é o que está bem implementado para o seu processo, não o de maior lista de recursos.' },
+    ],
+  },
+  {
+    slug: 'funil-de-vendas',
+    metaTitle: 'O que é funil de vendas e como montar | OxBrand',
+    metaDescription: 'O que é funil de vendas, as etapas, como montar o seu e os erros mais comuns. Guia prático de quem estrutura processos comerciais que vendem.',
+    title: 'Funil de vendas: o que é, etapas e como montar o seu',
+    subtitle: 'O que é, as etapas de topo, meio e fundo, o passo a passo para montar o seu e os erros mais comuns. O guia de quem estrutura processos comerciais que vendem.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'Vendas',
+    dateISO: '2026-07-25',
+    coverAlt: 'Diagrama de funil de vendas dividido em topo, meio e fundo',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Funil de vendas é a representação do caminho que uma pessoa percorre desde o primeiro contato com a sua empresa até virar cliente. Chama-se funil porque, como o objeto, ele é largo em cima e estreito embaixo: muita gente descobre a sua marca, uma parte demonstra interesse, e só uma fração fecha negócio.</p>
+<p>Mais do que um desenho bonito, o funil é a lógica que organiza todo o seu marketing e o seu comercial. Sem ele, você investe em anúncio, gera leads e não sabe por que a maioria não compra. Com ele, você enxerga exatamente onde as pessoas travam e conserta. Este guia mostra as etapas e como montar o seu na prática.</p>
+<h2>As etapas do funil de vendas</h2>
+<ul>
+<li><strong>Topo (descoberta):</strong> a pessoa acabou de perceber que tem um problema, mas ainda não busca solução. Aqui o objetivo é atrair e educar, não vender.</li>
+<li><strong>Meio (consideração):</strong> a pessoa já entende o problema e avalia caminhos. Aqui você constrói confiança: comparativos, provas, materiais que aprofundam.</li>
+<li><strong>Fundo (decisão):</strong> a pessoa está pronta para comprar e compara fornecedores. Aqui entram oferta, diagnóstico e prova social, para conduzir à decisão com o mínimo de risco percebido.</li>
+</ul>
+<h2>Funil de marketing x funil de vendas</h2>
+<p>Os dois termos se sobrepõem, mas há uma divisão prática: o funil de marketing cuida do topo e do meio (atrair e nutrir), e o funil de vendas cuida do fundo (converter a oportunidade em cliente). Na OxBrand tratamos os dois como um sistema único, porque separar marketing de vendas é justamente o que faz o lead esfriar no meio do caminho. O topo, aliás, é onde o inbound atua com força; se esse for o seu foco, vale entender <a href="/blog/o-que-e-inbound-marketing">o que é inbound marketing</a>.</p>
+<h2>Como montar o seu funil de vendas (passo a passo)</h2>
+<ul>
+<li><strong>Mapeie a jornada real do seu cliente:</strong> como ele realmente compra hoje? O funil sai daí, não de um modelo genérico da internet.</li>
+<li><strong>Defina as etapas com critério de avanço:</strong> cada etapa precisa de uma condição clara para o lead passar à próxima. Etapa sem critério é só enfeite.</li>
+<li><strong>Escolha o conteúdo ou a ação de cada etapa:</strong> o que atrai no topo, o que nutre no meio, o que converte no fundo.</li>
+<li><strong>Coloque o funil dentro de um CRM:</strong> é o que transforma o desenho em operação. Cada lead vira um card com etapa e responsável.</li>
+<li><strong>Meça e ajuste:</strong> acompanhe a taxa de conversão entre etapas e ataque onde mais vaza.</li>
+</ul>
+<p>O funil só sai do papel quando vira rotina dentro de uma ferramenta. É por isso que funil e CRM são inseparáveis, entenda o CRM aqui: <a href="/blog/o-que-e-crm">o que é CRM e para que serve</a>.</p>
+<h2>Os erros mais comuns no funil de vendas</h2>
+<ul>
+<li><strong>Etapas demais:</strong> funil com dez fases que ninguém acompanha. Menos e mais claro sempre vence.</li>
+<li><strong>Focar só no topo:</strong> gerar muito lead e não trabalhar o meio e o fundo é jogar dinheiro fora.</li>
+<li><strong>Não ter critério de avanço:</strong> mover o lead de etapa no achismo torna qualquer relatório inútil.</li>
+<li><strong>Marketing e vendas separados:</strong> o lead cai no vazio entre uma área e outra. É onde a maioria das oportunidades morre.</li>
+</ul>
+<h2>Do funil ao resultado: o método OxBrand</h2>
+<p>Na OxBrand, o funil é o esqueleto do método OX Growth Engineering, 70% inteligência e estratégia, 30% execução. Estruturamos demanda no topo (tráfego e conteúdo), decisão no meio (mensagem e prova) e resultado no fundo (CRM e comercial), com otimização semanal. O foco nunca é só gerar lead, é conduzir cada um até a venda. Se quiser o quadro completo da ferramenta, veja o <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> e o nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>.</p>
+<div class="callout"><p>A OxBrand estrutura funil e CRM como um sistema único, do primeiro clique à venda fechada. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é funil de vendas?', a: 'É a representação do caminho do cliente, do primeiro contato até a compra, dividido em topo (descoberta), meio (consideração) e fundo (decisão). Serve para enxergar onde as pessoas travam e converter mais em cada etapa.' },
+      { q: 'Quais são as etapas do funil de vendas?', a: 'No modelo clássico são três: topo (atrair e educar), meio (nutrir e construir confiança) e fundo (converter em cliente). Cada empresa detalha essas fases conforme a sua jornada real de compra.' },
+      { q: 'Como montar um funil de vendas?', a: 'Mapeie como o cliente compra hoje, defina etapas com critério claro de avanço, associe conteúdo ou ação a cada fase, coloque tudo dentro de um CRM e meça a conversão entre etapas para otimizar. O funil só funciona quando vira rotina em uma ferramenta.' },
+      { q: 'Funil de vendas precisa de um CRM?', a: 'Na prática, sim. O funil é a lógica; o CRM é onde ela vira operação do dia a dia, com cada lead registrado e acompanhado. Um funil sem CRM tende a virar um desenho que ninguém segue.' },
+    ],
+  },
+  {
+    slug: 'landing-page',
+    metaTitle: 'Landing page: o que é e como criar | OxBrand',
+    metaDescription: 'O que é uma landing page, para que serve, estrutura, exemplos e como criar uma que converte. Guia de quem faz LP com 90+ no PageSpeed.',
+    title: 'Landing page: o que é, para que serve e como criar uma que converte',
+    subtitle: 'O que é, para que serve, a estrutura de conversão e o passo a passo para criar uma landing page que vende, não só navega. O guia de quem faz LP com 90+ no PageSpeed.',
+    tag: 'Sites & Conversão',
+    breadcrumb: 'Sites',
+    dateISO: '2026-07-25',
+    coverAlt: 'Estrutura de uma landing page de alta conversão com título, prova e CTA',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Landing page é uma página com um único objetivo: converter o visitante em lead ou cliente. Diferente do seu site, que tem menu, várias seções e vários caminhos, a landing page tem foco total: uma oferta, uma mensagem, uma ação. É para onde você manda o tráfego quando quer resultado, não navegação.</p>
+<p>É por isso que uma boa landing page costuma vender mais que um site inteiro: ela elimina distração e conduz a pessoa a uma decisão. Este guia explica o que é, como se estrutura e como criar uma que realmente converte, sem cair nos erros que fazem a maioria das LPs desperdiçar tráfego caro.</p>
+<h2>Para que serve uma landing page</h2>
+<ul>
+<li><strong>Capturar leads:</strong> trocar um material, orçamento ou diagnóstico pelo contato do visitante.</li>
+<li><strong>Vender um produto ou serviço específico:</strong> foco em uma oferta, sem os desvios de um site completo.</li>
+<li><strong>Receber tráfego pago:</strong> é o destino ideal de um anúncio, porque conversa com o que a pessoa clicou. Mandar anúncio para a home é desperdiçar verba.</li>
+<li><strong>Divulgar um lançamento ou evento:</strong> uma página dedicada, com uma única chamada para ação.</li>
+</ul>
+<p>A regra é simples: uma landing page, um objetivo. No momento em que ela tenta fazer tudo, para de converter.</p>
+<h2>A estrutura de uma landing page que converte</h2>
+<ul>
+<li><strong>Título claro:</strong> em segundos, a pessoa precisa entender o que é, para quem e qual o benefício.</li>
+<li><strong>Subtítulo de apoio:</strong> reforça a promessa e responde ao porquê continuar lendo.</li>
+<li><strong>Prova:</strong> depoimentos, números, cases, logos. É o que reduz o risco percebido.</li>
+<li><strong>Benefícios (não só recursos):</strong> o que a pessoa ganha, traduzido na dor dela.</li>
+<li><strong>Uma chamada para ação clara:</strong> um único CTA, repetido ao longo da página.</li>
+<li><strong>Velocidade e mobile:</strong> página lenta derruba a conversão. Buscamos 90+ no PageSpeed em toda LP.</li>
+</ul>
+<h2>Landing page x site x hotsite</h2>
+<p>O site apresenta a empresa inteira, com várias páginas e caminhos, para presença e navegação. A landing page tem um objetivo só e foco em conversão, para campanha e captação. O hotsite é uma página temporária para uma ação específica, com prazo de validade. Não é um ou outro: o ideal é ter site para autoridade e landing pages para converter o tráfego das campanhas.</p>
+<h2>Como criar uma landing page (passo a passo)</h2>
+<ul>
+<li><strong>Defina o único objetivo:</strong> lead, venda ou inscrição. Tudo na página serve a ele.</li>
+<li><strong>Conheça o público e a oferta:</strong> a mensagem tem que falar a dor de quem vai chegar ali.</li>
+<li><strong>Escreva a copy antes do design:</strong> é o texto que vende; o design organiza o texto.</li>
+<li><strong>Monte a estrutura de conversão:</strong> título, prova, benefícios, CTA, na ordem que conduz à decisão.</li>
+<li><strong>Garanta velocidade e rastreamento:</strong> página rápida, responsiva e com medição desde o primeiro acesso.</li>
+<li><strong>Teste e otimize:</strong> troque título, CTA e ordem das seções e meça. A primeira versão quase nunca é a melhor.</li>
+</ul>
+<h2>Quanto custa e quais exemplos seguir</h2>
+<p>O custo de uma landing page varia com a complexidade, a integração e quem produz. A pergunta certa não é quanto custa, é quanto ela retorna. O detalhamento está no artigo <a href="/blog/quanto-custa-uma-landing-page">quanto custa uma landing page</a>. E para ver a teoria aplicada, reunimos referências em <a href="/blog/landing-page-exemplos">exemplos de landing page que convertem</a>, mostrando o que cada uma faz de certo.</p>
+<h2>Landing page e tráfego pago: a dupla inseparável</h2>
+<p>O anúncio traz a pessoa certa; a landing page converte. Uma campanha excelente que joga tráfego numa página ruim queima verba, e uma LP ótima sem tráfego não recebe ninguém. Por isso tratamos os dois como um sistema no nosso serviço de <a href="/solucoes/desenvolvimento-de-sites">desenvolvimento de sites e landing pages</a>, integrado à <a href="/solucoes/gestao-de-trafego-pago">gestão de tráfego pago</a>.</p>
+<div class="callout"><p>A OxBrand cria landing pages com foco em conversão e 90+ no PageSpeed, integradas ao seu tráfego e ao seu CRM. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é uma landing page?', a: 'É uma página com um único objetivo de conversão, capturar um lead ou vender algo específico. Diferente do site, ela elimina menu e distrações para conduzir o visitante a uma única ação.' },
+      { q: 'Para que serve uma landing page?', a: 'Serve para transformar visita em ação: capturar leads, vender uma oferta específica, receber tráfego pago ou divulgar um lançamento. É o destino ideal de um anúncio, porque conversa diretamente com o que a pessoa clicou.' },
+      { q: 'Qual a diferença entre landing page e site?', a: 'O site apresenta a empresa inteira, com vários caminhos; a landing page tem um objetivo só e foco total em conversão. O ideal é ter site para autoridade e landing pages para converter o tráfego das campanhas.' },
+      { q: 'Como fazer uma landing page que converte?', a: 'Defina um único objetivo, escreva a copy antes do design, monte a estrutura de conversão (título claro, prova, benefícios, CTA único), garanta velocidade e mobile, e teste continuamente. Estrutura e velocidade importam mais que a ferramenta usada.' },
+    ],
+  },
+  {
+    slug: 'quanto-custa-uma-landing-page',
+    metaTitle: 'Quanto custa uma landing page? (2026) | OxBrand',
+    metaDescription: 'Quanto custa uma landing page: o que faz o preço variar, faixas de referência e por que barato pode sair caro. Guia direto da OxBrand.',
+    title: 'Quanto custa uma landing page? (o que faz o preço variar)',
+    subtitle: 'O que faz o preço variar, as faixas de referência e por que o barato pode sair caro. Um guia para comparar orçamentos com critério, não pelo menor valor.',
+    tag: 'Sites & Conversão',
+    breadcrumb: 'Sites',
+    dateISO: '2026-07-25',
+    coverAlt: 'Comparativo de faixas de preço de uma landing page conforme a complexidade',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Se você está pesquisando quanto custa uma landing page, já entendeu que precisa de uma. A resposta honesta é: depende, e quem crava um preço fixo sem entender o seu objetivo provavelmente vai entregar um template genérico. O que dá para fazer aqui é mostrar o que faz o preço variar, para você comparar orçamentos com critério.</p>
+<p>Uma observação de transparência: valores mudam com o mercado e com quem produz. Trate qualquer número como faixa de referência e foque no que realmente importa, o quanto a página retorna, não só o quanto ela custa.</p>
+<h2>O que faz o preço de uma landing page variar</h2>
+<ul>
+<li><strong>Quem produz:</strong> freelancer, agência ou plataforma de template. Cada um tem um custo e um nível de resultado diferente.</li>
+<li><strong>A copy (o texto):</strong> página com copy estratégica, escrita para converter, custa mais que uma com texto genérico. E é o texto que vende.</li>
+<li><strong>O design:</strong> do template pronto ao design sob medida para a sua marca e oferta.</li>
+<li><strong>Integrações e rastreamento:</strong> conectar a LP ao CRM, ao WhatsApp, a pixels e ferramentas de medição agrega trabalho técnico.</li>
+<li><strong>Velocidade e otimização:</strong> uma página feita para 90+ no PageSpeed exige mais cuidado que uma montada no arrastar-e-soltar.</li>
+</ul>
+<h2>As faixas de investimento (referência)</h2>
+<ul>
+<li><strong>Template ou faça-você-mesmo:</strong> o mais barato. Serve para testar, mas costuma sofrer em copy, velocidade e conversão.</li>
+<li><strong>Freelancer:</strong> custo intermediário. Bom para uma página pontual, com a ressalva de depender de uma pessoa só.</li>
+<li><strong>Agência:</strong> o investimento maior, porque entrega o conjunto: estratégia, copy, design, velocidade, integração e otimização.</li>
+</ul>
+<p>O erro clássico é escolher pelo menor preço. Uma landing page barata que converte 1% desperdiça o tráfego caro que você manda para ela; uma bem feita que converte 4% se paga em uma campanha.</p>
+<h2>Por que o custo certo se mede pelo retorno</h2>
+<p>Uma landing page não é uma despesa de design, é uma ferramenta de venda. A pergunta útil não é quanto custa, é quanto ela me retorna. Se uma LP recebe tráfego pago, cada ponto percentual de conversão a mais significa mais clientes com a mesma verba. Ao comparar orçamentos, olhe além do valor: a página inclui copy estratégica? É otimizada para velocidade? Integra com o seu CRM e rastreamento? Se você ainda está entendendo o conceito, vale ler <a href="/blog/landing-page">o que é uma landing page</a>.</p>
+<div class="callout"><p>A OxBrand cria landing pages com copy estratégica, 90+ no PageSpeed e integração com o seu tráfego e CRM, feitas para retorno, não só para ficarem bonitas. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026; valores de mercado variam, confirme na cotação.</p></div>
+`,
+    faq: [
+      { q: 'Quanto custa uma landing page?', a: 'Depende de quem produz, da copy, do design, das integrações e do nível de otimização. Trate qualquer valor como faixa de referência e compare pelo que está incluso, sobretudo copy estratégica, velocidade e integração com CRM e rastreamento.' },
+      { q: 'Por que uma landing page é mais barata que um site?', a: 'Porque é uma página só, com um objetivo, enquanto o site tem várias páginas e caminhos. Mesmo assim, uma LP bem feita exige copy, design de conversão e otimização, o que faz o preço variar bastante.' },
+      { q: 'Vale a pena fazer landing page em plataforma de template?', a: 'Para testar uma ideia rápido, pode servir. Para receber tráfego pago com previsibilidade, geralmente não: templates costumam perder em copy, velocidade e integração, justamente o que define a conversão.' },
+      { q: 'O que encarece uma landing page?', a: 'Copy estratégica, design sob medida, integrações (CRM, WhatsApp, pixels), rastreamento e otimização de velocidade. São exatamente os itens que fazem a página converter mais.' },
+    ],
+  },
+  {
+    slug: 'landing-page-exemplos',
+    metaTitle: 'Exemplos de landing page que convertem | OxBrand',
+    metaDescription: 'Exemplos de landing page que convertem e o que cada uma faz de certo: título, prova, CTA e estrutura. Aprenda pelos modelos, guia da OxBrand.',
+    title: 'Exemplos de landing page que convertem (e o que aprender com cada uma)',
+    subtitle: 'Os tipos de landing page mais comuns e o que cada um acerta na estrutura. Um checklist por padrões de conversão, para aplicar na sua.',
+    tag: 'Sites & Conversão',
+    breadcrumb: 'Sites',
+    dateISO: '2026-07-25',
+    coverAlt: 'Coletânea de exemplos de landing pages de alta conversão',
+    author: 'Walquiria Blaustein',
+    bodyHtml: `
+<p class="lead">Olhar exemplos de landing page é uma das melhores formas de aprender a fazer a sua, desde que você olhe para o que importa. Não é sobre copiar o visual de uma marca famosa; é sobre entender por que aquela página converte. Abaixo, os tipos mais comuns e o que cada um acerta na estrutura. Use como checklist para a sua.</p>
+<p>Um aviso: página bonita não é sinônimo de página que converte. Muita LP premiada por design gera pouco resultado, e muita LP simples vende muito. O que separa as duas é estrutura, não estética.</p>
+<h2>1. Landing page de captura de leads</h2>
+<p>O tipo mais comum: oferece um material, diagnóstico ou orçamento em troca do contato. O que as boas fazem de certo: uma promessa clara no título, um formulário curto (quanto menos campos, mais conversão) e uma única chamada para ação. O erro comum é pedir informação demais, cada campo extra derruba a taxa de preenchimento.</p>
+<h2>2. Landing page de venda direta</h2>
+<p>Vende um produto ou serviço específico ali mesmo. As que convertem constroem o argumento na ordem certa: problema, solução, prova, oferta e CTA. Elas antecipam objeções ao longo da página e repetem o botão de ação em pontos estratégicos, para a pessoa decidir a qualquer momento.</p>
+<h2>3. Landing page de lançamento ou evento</h2>
+<p>Foco em uma data ou novidade. O que acertam: senso de contexto (o que é, quando, para quem) e uma ação única (inscrever-se, garantir vaga). As melhores usam prova de edições anteriores e mantêm a página enxuta, uma decisão, sem distração.</p>
+<h2>4. Landing page de nicho ou segmento</h2>
+<p>Fala com um público específico, um setor, uma profissão, uma região. O que as boas fazem: usam a linguagem e a dor exata daquele nicho. Uma LP que diz marketing para clínicas converte mais naquele público do que uma que diz marketing para todos. Especificidade vende.</p>
+<h2>O que todas as landing pages que convertem têm em comum</h2>
+<ul>
+<li><strong>Título que se entende em segundos:</strong> o que é, para quem, qual o benefício.</li>
+<li><strong>Um objetivo só:</strong> nada de página que tenta capturar lead e vender e divulgar ao mesmo tempo.</li>
+<li><strong>Prova visível:</strong> depoimento, número, case ou logo que reduz o risco percebido.</li>
+<li><strong>CTA claro e repetido:</strong> um único próximo passo, sem ambiguidade.</li>
+<li><strong>Velocidade e mobile:</strong> as que convertem carregam rápido e funcionam bem no celular.</li>
+</ul>
+<p>Nenhum desses pontos é sobre ser bonito. Beleza ajuda, mas é a estrutura que converte. Se você quer o passo a passo completo por trás desses padrões, ele está no <a href="/blog/landing-page">guia de landing page</a>.</p>
+<h2>Como usar esses exemplos na prática</h2>
+<p>Antes de montar a sua, defina o tipo (captura, venda, lançamento ou nicho) e use o exemplo correspondente como esqueleto. Depois, aplique os padrões comuns como checklist. E lembre: exemplo é ponto de partida, não modelo para copiar. Se estiver avaliando investir, veja também <a href="/blog/quanto-custa-uma-landing-page">quanto custa uma landing page</a>.</p>
+<div class="callout"><p>A OxBrand cria landing pages com copy estratégica, estrutura testada e 90+ no PageSpeed, para converter o seu tráfego, não só impressionar. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que faz uma landing page converter?', a: 'Estrutura, não estética: título claro, um único objetivo, prova visível, CTA repetido e boa velocidade no celular. Página bonita sem esses elementos gera pouco resultado; página simples com eles converte bem.' },
+      { q: 'Quais são os tipos de landing page?', a: 'Os mais comuns são: captura de leads, venda direta, lançamento ou evento e nicho ou segmento. Cada um tem uma estrutura própria, mas todos compartilham os mesmos fundamentos de conversão.' },
+      { q: 'Posso copiar uma landing page de exemplo?', a: 'Copie a estrutura e a lógica, nunca o conteúdo. A sua página precisa falar a dor do seu público e a sua oferta específica, uma cópia genérica converte mal, por melhor que seja o original.' },
+      { q: 'Quantos campos deve ter o formulário de uma landing page?', a: 'O mínimo necessário. Cada campo a mais reduz a taxa de preenchimento. Peça só o essencial para o próximo passo comercial; o resto você coleta depois, no atendimento.' },
+    ],
+  },
+  {
+    slug: 'calendario-editorial',
+    metaTitle: 'Calendário editorial: como montar o seu | OxBrand',
+    metaDescription: 'Calendário editorial: o que é, por que importa e como montar um que o time siga de verdade. Passo a passo e estrutura pronta da OxBrand.',
+    title: 'Calendário editorial: como montar um que o time realmente segue',
+    subtitle: 'O que é, por que importa e como montar um calendário editorial simples o suficiente para durar e estratégico o suficiente para dar resultado.',
+    tag: 'Conteúdo',
+    breadcrumb: 'Conteúdo',
+    dateISO: '2026-07-25',
+    coverAlt: 'Modelo de calendário editorial com temas, canais e datas organizados',
+    author: 'Walquiria Blaustein',
+    bodyHtml: `
+<p class="lead">Calendário editorial é o planejamento do que a sua marca vai publicar, quando e onde. Parece burocracia, mas é o que separa uma operação de conteúdo consistente de uma que posta quando lembra e para quando aperta. A diferença entre marcas que constroem audiência e marcas que somem é quase sempre consistência, e consistência vem de planejamento, não de inspiração.</p>
+<p>O problema é que a maioria dos calendários editoriais morre na segunda semana: viram planilhas complexas que ninguém abre. Este guia mostra como montar um que o time realmente segue.</p>
+<h2>Por que a sua marca precisa de um calendário editorial</h2>
+<ul>
+<li><strong>Consistência:</strong> publicar com regularidade é o que constrói audiência e autoridade.</li>
+<li><strong>Estratégia, não aleatoriedade:</strong> o calendário garante que você cubra os temas certos e equilibre o funil.</li>
+<li><strong>Antecipação:</strong> datas, campanhas e lançamentos entram com folga para produzir bem.</li>
+<li><strong>Visão de time:</strong> todo mundo enxerga o que vem, quem faz o quê e o que falta.</li>
+</ul>
+<h2>O que um calendário editorial precisa ter</h2>
+<ul>
+<li><strong>Data e canal:</strong> quando publica e onde (blog, Instagram, LinkedIn, e-mail).</li>
+<li><strong>Tema e palavra-chave:</strong> o assunto e, no caso de SEO, o termo-alvo.</li>
+<li><strong>Etapa do funil:</strong> topo, meio ou fundo, para equilibrar descoberta, consideração e conversão.</li>
+<li><strong>Formato:</strong> artigo, carrossel, Reels, e-mail. O mesmo tema pode virar vários formatos.</li>
+<li><strong>Responsável e status:</strong> quem produz e em que pé está.</li>
+</ul>
+<p>Calendário editorial com vinte colunas é calendário que ninguém preenche. Simples e vivo vence complexo e abandonado.</p>
+<h2>Como montar o seu, passo a passo</h2>
+<ul>
+<li><strong>Defina os pilares de conteúdo:</strong> 3 a 5 temas centrais que a sua marca vai defender. Todo post nasce de um pilar.</li>
+<li><strong>Parta das palavras-chave e das dores:</strong> o que o seu público busca e pergunta. É daí que saem as pautas que geram tráfego.</li>
+<li><strong>Equilibre o funil:</strong> misture topo, meio e fundo. Só topo gera audiência sem venda; só fundo cansa quem ainda não confia.</li>
+<li><strong>Defina a cadência realista:</strong> melhor 3 posts por semana que você sustenta do que 7 que travam em duas semanas.</li>
+<li><strong>Reaproveite cada peça:</strong> um artigo vira carrossel, Reels e e-mail. Um tema, vários formatos.</li>
+<li><strong>Revise toda semana:</strong> um horário fixo semanal para revisar o que saiu e ajustar o que vem mantém a máquina rodando.</li>
+</ul>
+<p>O calendário editorial é a execução da sua estratégia de conteúdo, se você ainda não tem a estratégia definida, comece por ela: <a href="/blog/estrategia-de-conteudo">estratégia de conteúdo do zero</a>.</p>
+<h2>O erro que faz calendário editorial morrer</h2>
+<p>O maior erro não é montar errado, é montar complexo demais. Planilha com abas, fórmulas e vinte campos parece profissional, mas ninguém mantém. O melhor calendário editorial é o mais simples que dá conta do recado: temas, canais, datas, responsável e status. Se o time consegue abrir e entender em dez segundos, ele sobrevive. O calendário também não vive sozinho: ele é a ponta de execução de uma estratégia maior. Se o seu foco é atrair com conteúdo, entenda <a href="/blog/o-que-e-inbound-marketing">o que é inbound marketing</a> e como o conteúdo se conecta ao resultado em <a href="/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais">marketing de conteúdo</a>.</p>
+<div class="callout"><p>A OxBrand estrutura conteúdo com método: pilares, calendário e produção conectados à estratégia e ao funil. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é um calendário editorial?', a: 'É o planejamento do que a sua marca vai publicar, quando e em quais canais. Ele organiza temas, formatos, datas e responsáveis para garantir consistência e alinhar o conteúdo à estratégia.' },
+      { q: 'Como montar um calendário editorial?', a: 'Defina 3 a 5 pilares de conteúdo, parta das palavras-chave e dores do público, equilibre o funil (topo, meio e fundo), estabeleça uma cadência realista, reaproveite cada peça em vários formatos e revise semanalmente.' },
+      { q: 'Qual a diferença entre calendário editorial e estratégia de conteúdo?', a: 'A estratégia define o porquê e o quê (objetivos, pilares, público); o calendário editorial é o quando e onde, a execução no tempo. Um calendário sem estratégia por trás vira só uma lista de posts sem direção.' },
+      { q: 'Com que frequência devo publicar?', a: 'A frequência que você consegue sustentar. É melhor uma cadência menor e constante do que um volume grande que trava em duas semanas. Consistência gera mais resultado que picos de produção.' },
+    ],
+  },
+  {
+    slug: 'estrategia-de-conteudo',
+    metaTitle: 'Estratégia de conteúdo do zero: guia | OxBrand',
+    metaDescription: 'Estratégia de conteúdo do zero: como definir objetivo, público, pilares e medir resultado. Passo a passo de quem cria conteúdo que vende.',
+    title: 'Estratégia de conteúdo do zero: o passo a passo',
+    subtitle: 'Como definir objetivo, público, pilares e medição antes de publicar. O passo a passo para sair da produção no escuro e criar conteúdo que vende.',
+    tag: 'Conteúdo',
+    breadcrumb: 'Conteúdo',
+    dateISO: '2026-07-25',
+    coverAlt: 'Planejamento de estratégia de conteúdo com objetivo, público e pilares',
+    author: 'Walquiria Blaustein',
+    bodyHtml: `
+<p class="lead">Estratégia de conteúdo é o plano que responde a três perguntas antes de você publicar qualquer coisa: por que estou criando conteúdo, para quem, e como vou medir se deu certo. Sem essas respostas, o que sobra é produção no escuro, muito esforço, post bonito, e nenhuma conexão com resultado de negócio.</p>
+<p>A boa notícia: montar uma estratégia de conteúdo do zero não é complicado. É mais sobre clareza do que sobre ferramenta. Este guia mostra o passo a passo, o mesmo raciocínio que usamos antes de escrever a primeira linha de qualquer projeto.</p>
+<h2>Passo 1: defina o objetivo de negócio</h2>
+<p>Conteúdo não é um fim, é um meio. Antes de tudo, defina o que ele precisa gerar: mais leads? autoridade em um nicho? apoiar as vendas com material? reduzir dúvidas no atendimento? O objetivo muda tudo, o tema, o formato, o canal e a métrica. Conteúdo sem objetivo de negócio é hobby caro.</p>
+<h2>Passo 2: conheça o público (de verdade)</h2>
+<p>Para quem você fala? Qual a dor, a dúvida, a objeção dessa pessoa? Quanto mais específico, melhor o conteúdo. Um erro comum é tentar falar com todo mundo e acabar não conectando com ninguém. Defina o público real, com dores concretas, e escreva para ele.</p>
+<h2>Passo 3: escolha os pilares de conteúdo</h2>
+<p>Pilares são os 3 a 5 grandes temas que a sua marca vai defender de forma recorrente. Eles dão foco e evitam o conteúdo aleatório. Para a OxBrand, por exemplo, os pilares giram em torno de método e estratégia, educação de nicho, serviço e prova. Todo conteúdo nasce de um pilar.</p>
+<h2>Passo 4: parta das buscas e das perguntas reais</h2>
+<p>As melhores pautas não vêm de inspiração, vêm do que o público de fato procura e pergunta. Palavras-chave, dúvidas do comercial, perguntas repetidas no atendimento: essa é a matéria-prima de conteúdo que gera tráfego e reduz objeção.</p>
+<h2>Passo 5: equilibre o funil e os formatos</h2>
+<p>Distribua o conteúdo entre topo (atrair), meio (nutrir) e fundo (converter). Só topo gera audiência que não compra; só fundo cansa quem ainda não confia. E reaproveite: um mesmo tema vira artigo, carrossel, Reels e e-mail.</p>
+<h2>Passo 6: defina como vai medir</h2>
+<p>Sem métrica, você não sabe se a estratégia funciona. Escolha indicadores ligados ao objetivo, tráfego qualificado, leads gerados, buscas pela marca, conteúdo salvo e compartilhado, e revise com regularidade. Fuja das métricas de vaidade: curtida não é resultado.</p>
+<h2>Da estratégia à execução</h2>
+<p>A estratégia define o rumo; a execução é onde a maioria falha. O elo entre os dois é o <a href="/blog/calendario-editorial">calendário editorial</a>, que transforma os pilares e as pautas em publicações no tempo. E a estratégia de conteúdo é parte de um todo maior: se o objetivo é atrair com conteúdo, ela vive dentro do <a href="/blog/o-que-e-inbound-marketing">inbound marketing</a>; se é entender como o conteúdo gera resultado, veja <a href="/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais">marketing de conteúdo</a>.</p>
+<h2>O erro que trava a estratégia de conteúdo</h2>
+<p>O erro mais comum é começar pela produção, abrir o Canva e postar, antes de definir objetivo, público e pilares. Isso gera volume sem direção: muito post, pouco resultado. A ordem certa é o contrário: primeiro a clareza estratégica, depois a produção. Uma hora de estratégia poupa meses de conteúdo que não leva a lugar nenhum.</p>
+<div class="callout"><p>A OxBrand define estratégia de conteúdo conectada ao negócio: objetivo, pilares, pauta por busca e medição real. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é estratégia de conteúdo?', a: 'É o plano que define por que você cria conteúdo, para quem, sobre o quê (pilares) e como vai medir o resultado. Ela dá direção à produção, conectando cada conteúdo a um objetivo de negócio.' },
+      { q: 'Como criar uma estratégia de conteúdo do zero?', a: 'Defina o objetivo de negócio, conheça o público e suas dores, escolha 3 a 5 pilares, parta das buscas e perguntas reais, equilibre o funil e os formatos, e defina como vai medir. Só então comece a produzir.' },
+      { q: 'Qual a diferença entre estratégia de conteúdo e calendário editorial?', a: 'A estratégia é o porquê e o quê (objetivo, público, pilares); o calendário editorial é o quando e onde (a execução no tempo). A estratégia orienta; o calendário coloca em prática.' },
+      { q: 'Preciso de muitas ferramentas para ter uma estratégia de conteúdo?', a: 'Não. Estratégia é sobre clareza, não sobre ferramenta. Objetivo, público e pilares bem definidos valem mais que qualquer aplicativo. A ferramenta só organiza a execução depois que a direção está clara.' },
+    ],
+  },
+  {
     slug: 'inteligencia-artificial-no-marketing',
     metaTitle: 'Inteligência Artificial no Marketing: o guia | OxBrand',
     metaDescription: 'Inteligência artificial no marketing: onde a IA ajuda de verdade, onde é só hype e como usar sem perder estratégia. O guia direto da OxBrand.',
