@@ -20,6 +20,193 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'inteligencia-artificial-no-marketing',
+    metaTitle: 'Inteligência Artificial no Marketing: o guia | OxBrand',
+    metaDescription: 'Inteligência artificial no marketing: onde a IA ajuda de verdade, onde é só hype e como usar sem perder estratégia. O guia direto da OxBrand.',
+    title: 'Inteligência Artificial no Marketing: onde ajuda de verdade (e onde é só hype)',
+    subtitle: 'Onde a IA move o ponteiro no marketing, onde é só hype e como usar sem terceirizar o que não pode ser terceirizado: a estratégia.',
+    tag: 'Automação & IA',
+    breadcrumb: 'Automação & IA',
+    dateISO: '2026-07-25',
+    coverAlt: 'Profissional de marketing usando inteligência artificial para análise de dados e criação de conteúdo',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Inteligência artificial virou a palavra mais repetida do marketing, e a mais mal usada. De um lado, quem promete que a IA vai substituir a estratégia e fazer tudo sozinha. Do outro, quem ignora e fica para trás. As duas posições erram. A IA não é mágica nem ameaça: é uma ferramenta poderosa que multiplica quem já tem método e expõe quem não tem.</p>
+<p>Na OxBrand, a régua é sempre a mesma: não operamos com achismo, operamos com dados. Este guia mostra onde a IA realmente move o ponteiro no marketing, onde ela é só hype e como usá-la sem terceirizar o que não pode ser terceirizado, a estratégia.</p>
+<h2>O que a IA faz bem no marketing (e você deveria usar)</h2>
+<ul>
+<li><strong>Análise de dados em escala:</strong> a IA lê volumes de dados de campanha, comportamento e vendas que nenhum humano processa na mão, e aponta padrões: qual público converte, qual criativo cansa, onde o funil vaza.</li>
+<li><strong>Otimização de mídia:</strong> plataformas como Google e Meta já usam IA no leilão e na entrega. Saber alimentar esses algoritmos com objetivo e sinal certos separa campanha eficiente de verba desperdiçada.</li>
+<li><strong>Produção assistida de conteúdo:</strong> a IA acelera rascunhos, variações de anúncio, roteiros e ideias. Não substitui o estrategista, mas devolve tempo para ele pensar em vez de digitar.</li>
+<li><strong>Atendimento e automação:</strong> chatbots e automações de CRM respondem na hora, qualificam lead e liberam o time comercial para o que exige gente de verdade.</li>
+</ul>
+<h2>Onde a IA é só hype (cuidado)</h2>
+<ul>
+<li><strong>Estratégia:</strong> a IA não define para onde o seu negócio deve crescer, qual é a sua oferta nem qual dor do cliente atacar. Ela executa direção; não cria direção.</li>
+<li><strong>Conteúdo sem curadoria:</strong> texto gerado no piloto automático soa genérico, repete o que todo mundo já diz e não reduz objeção nenhuma. Sem edição e contexto, é volume sem valor.</li>
+<li><strong>Ferramenta que resolve tudo:</strong> não existe. A IA é um conjunto de ferramentas para etapas específicas. Empilhar dez ferramentas sem processo por trás só cria confusão mais cara.</li>
+</ul>
+<h2>IA na criação de conteúdo: o ponto de equilíbrio</h2>
+<p>O uso mais popular da IA no marketing é a produção de conteúdo, e é onde mora o maior risco de cair no hype. Usada bem, a IA tira o marqueteiro da página em branco, gera variações para teste e organiza pesquisa. Usada mal, entope o blog e as redes de texto genérico que o Google e o público ignoram.</p>
+<p>A regra que seguimos: a IA rascunha, o humano decide. Ela acelera a primeira versão; a estratégia, a voz da marca e a checagem de fato continuam sendo trabalho de gente. Para o lado prático de manter qualidade usando IA na produção, vale a leitura complementar de <a href="https://oliveiraweb.com.br/como-usar-ia-para-criar-conteudo-sem-perder-qualidade/" target="_blank" rel="noopener">como usar IA para criar conteúdo sem perder qualidade</a>, um bom apanhado do lado ferramental que se encaixa na lógica estratégica que defendemos aqui.</p>
+<h2>Como a OxBrand usa IA (com método, não como muleta)</h2>
+<p>Aplicamos IA dentro do método OX Growth Engineering, 70% inteligência e estratégia, 30% execução. Na prática: IA para ler dados e acelerar a <a href="/solucoes/gestao-de-trafego-pago">otimização de tráfego</a>, <a href="/solucoes/crm-kommo">automações de CRM</a> que respondem e qualificam lead sem esfriar a conversa, e produção assistida de conteúdo que parte sempre da estratégia, dentro do nosso <a href="/solucoes/inbound-marketing">inbound marketing</a>, não da ferramenta.</p>
+<p>A diferença nunca está na ferramenta que se usa, está no processo por trás dela. IA nas mãos de quem tem método vira alavanca; nas mãos de quem não tem, vira só mais um custo com nome bonito.</p>
+<div class="callout"><p>A OxBrand aplica inteligência artificial e automação dentro de um sistema de crescimento: dados, otimização e integração com o comercial. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'A inteligência artificial vai substituir o marketing?', a: 'Não. A IA substitui tarefas, não estratégia. Ela acelera análise, otimização e produção, mas quem define direção, oferta e posicionamento continua sendo gente. O marketing que só aperta botão de IA sem estratégia tende a piorar, não melhorar.' },
+      { q: 'Como usar IA no marketing na prática?', a: 'Comece pelas etapas certas: análise de dados de campanha, otimização de mídia, rascunho de conteúdo e automação de atendimento. Mantenha a estratégia e a curadoria com o time. IA é para ganhar escala no que já funciona, não para substituir o pensamento.' },
+      { q: 'Conteúdo feito por IA prejudica o SEO?', a: 'Prejudica quando é publicado no piloto automático, genérico e sem revisão. O Google valoriza conteúdo útil e original, não volume. Conteúdo assistido por IA, editado por quem conhece o cliente e a estratégia, funciona bem. A diferença está na curadoria.' },
+      { q: 'A OxBrand usa IA nos projetos?', a: 'Sim, com método, em análise de dados, otimização de tráfego, automações de CRM e produção assistida de conteúdo. Sempre a serviço da estratégia, nunca no lugar dela.' },
+    ],
+  },
+  {
+    slug: 'trafego-pago-guia-definitivo',
+    metaTitle: 'Tráfego pago: o guia definitivo (2026) | OxBrand',
+    metaDescription: 'Tráfego pago: o que é, como funciona, quanto custa, Meta x Google e como ter previsibilidade. O guia definitivo de quem já gerou +R$ 258 mi para clientes.',
+    title: 'Tráfego pago: o guia definitivo (o que é, como funciona e como ter ROI)',
+    subtitle: 'O que é, como funciona, quanto custa, qual plataforma escolher e o que separa uma verba que retorna de uma que evapora. O guia de quem gerou mais de R$ 258 milhões para clientes.',
+    tag: 'Tráfego Pago',
+    breadcrumb: 'Tráfego Pago',
+    dateISO: '2026-07-25',
+    coverAlt: 'Painel de campanhas de tráfego pago no Meta Ads e Google Ads com métricas de ROI',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Tráfego pago é o caminho mais rápido para colocar a sua oferta na frente de quem tem intenção de comprar. Mas é também onde mais se queima dinheiro: campanha sem estrutura gera clique, não venda.</p>
+<p>Este guia reúne, em um lugar só, o que você precisa entender antes de investir: o que é, como funciona, quanto custa, qual plataforma escolher e o que separa uma verba que retorna de uma que evapora. Escrevemos como quem opera todo dia: a OxBrand já gerou mais de R$ 258 milhões em faturamento para clientes, e tráfego pago é o serviço-núcleo dessa engenharia.</p>
+<h2>O que é tráfego pago</h2>
+<p>Tráfego pago é toda visita que chega ao seu site, perfil ou landing page através de um anúncio que você pagou para exibir. Em vez de esperar o cliente te encontrar no orgânico, você paga para aparecer na frente dele, no Google, no Instagram, no Facebook, no YouTube ou em outras plataformas.</p>
+<p>A grande vantagem é a velocidade e o controle: você liga a campanha e começa a receber visitas qualificadas em horas, com poder de ajustar público, verba e mensagem em tempo real.</p>
+<h2>Como funciona o tráfego pago (o leilão)</h2>
+<p>Por trás de cada anúncio existe um leilão em tempo real. Você não paga um preço fixo, você concorre com outros anunciantes pela atenção do mesmo público. A plataforma decide quem aparece cruzando três fatores:</p>
+<ul>
+<li><strong>Lance:</strong> quanto você está disposto a pagar pelo resultado (clique, visualização, conversão).</li>
+<li><strong>Relevância:</strong> quão bom é o seu anúncio para aquele público. Anúncio relevante paga menos por mais resultado.</li>
+<li><strong>Segmentação:</strong> para quem você escolhe aparecer: interesse, comportamento, região, palavra-chave ou intenção de busca.</li>
+</ul>
+<p>É por isso que gastar mais nem sempre significa vender mais. Criativo forte e segmentação certa reduzem o custo por resultado, e é aí que a estratégia vale mais que a verba.</p>
+<h2>Meta Ads x Google Ads: qual escolher</h2>
+<ul>
+<li><strong>Google Ads (busca):</strong> captura demanda existente. A pessoa já está procurando e você aparece na hora. Intenção alta, ideal para fundo de funil.</li>
+<li><strong>Meta Ads (Instagram e Facebook):</strong> gera demanda. A pessoa não estava procurando, mas o seu anúncio desperta o interesse pela segmentação de perfil e comportamento. Ideal para descoberta e remarketing.</li>
+</ul>
+<p>A resposta quase nunca é um ou outro, é os dois, com papéis diferentes no funil. Estruturar essa combinação é parte do nosso serviço de <a href="/solucoes/gestao-de-trafego-pago">gestão de tráfego pago</a>.</p>
+<h2>Quanto custa investir em tráfego pago</h2>
+<p>Não existe valor mínimo mágico, existe verba coerente com o seu ticket e o seu objetivo. O custo se divide em dois: a verba de mídia (o que vai para a plataforma) e a gestão (estratégia, criativo e otimização). Investir pouco em mídia com uma boa gestão rende mais que investir muito sem estrutura.</p>
+<p>O erro clássico é olhar só o custo por clique. O que importa é o custo por aquisição: quanto você paga por cliente, não por visita. Uma campanha com clique mais caro pode ser muito mais lucrativa se converte melhor.</p>
+<h2>Onde anunciar: além do Meta e do Google</h2>
+<p>O Instagram é, para a maioria dos negócios brasileiros, o ponto de partida do Meta Ads, pela audiência e pelo formato visual. Como fazer certo (formatos, criativo, público e erros comuns) está no artigo <a href="/blog/trafego-pago-instagram">tráfego pago no Instagram</a>. Além dele, YouTube, TikTok, LinkedIn e Google Display cobrem outros momentos do funil; a escolha depende de onde o seu cliente decide, não da plataforma da moda.</p>
+<h2>Tráfego pago vale a pena?</h2>
+<p>Vale para quem tem uma oferta clara e uma estrutura mínima para receber o lead (site, WhatsApp organizado, alguém para atender). Nesse cenário, o tráfego pago é o canal mais mensurável que existe: você sabe exatamente quanto entrou, quanto saiu e qual campanha trouxe cada venda.</p>
+<p>Não vale (ainda) se a oferta não está definida ou não há como atender a demanda que chega. Anúncio bom que joga tráfego em página ruim só acelera o prejuízo. A gente diz isso antes de vender, porque tráfego sem estrutura de conversão é custo, não investimento.</p>
+<h2>O que separa uma campanha que dá ROI de uma que queima verba</h2>
+<p>Depois de gerar mais de R$ 258 milhões para clientes, a conclusão é sempre a mesma: o resultado do tráfego pago não vem do botão impulsionar, vem do sistema por trás. Oferta clara, criativo que interrompe o padrão, página de conversão rápida (90+ no PageSpeed), rastreamento configurado e um funil que acompanha o lead até a venda.</p>
+<p>Na OxBrand, tráfego é engenharia, 70% inteligência e estratégia, 30% execução, com otimização semanal baseada em dados. Se você quer entender quando faz sentido ter alguém cuidando disso profissionalmente, veja <a href="/blog/gestor-de-trafego">gestor de tráfego: quando contratar</a>.</p>
+<div class="callout"><p>A OxBrand estrutura tráfego pago como engenharia de resultado: oferta, criativo, página de conversão e mensuração operando como sistema. Somos parceiros oficiais de Google e Meta e uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é tráfego pago?', a: 'É toda visita que chega ao seu site ou perfil por meio de um anúncio pago, em plataformas como Google, Instagram e Facebook. Diferente do orgânico, ele traz resultado rápido e mensurável, com controle total de público e verba.' },
+      { q: 'Quanto preciso investir em tráfego pago?', a: 'Não há um mínimo universal, o investimento deve ser coerente com o seu ticket e objetivo. Mais importante que o valor da mídia é a estrutura: uma verba menor com boa gestão e página de conversão rende mais que uma verba grande sem estratégia.' },
+      { q: 'Meta Ads ou Google Ads?', a: 'Depende do momento do cliente. O Google captura quem já está procurando (intenção alta); o Meta gera interesse em quem ainda não decidiu. Na prática, a maioria das operações usa os dois, com papéis diferentes no funil.' },
+      { q: 'Tráfego pago funciona sem site?', a: 'Funciona com estrutura mínima, pode ser uma landing page ou até um WhatsApp bem organizado. O que não funciona é jogar tráfego para um destino ruim: página lenta ou confusa desperdiça a verba, por melhor que seja o anúncio.' },
+    ],
+  },
+  {
+    slug: 'trafego-pago-instagram',
+    metaTitle: 'Tráfego pago no Instagram: como fazer certo | OxBrand',
+    metaDescription: 'Tráfego pago no Instagram: como anunciar, formatos, público, verba e os erros que queimam dinheiro. Guia prático de quem gere campanhas de performance.',
+    title: 'Tráfego pago no Instagram: como fazer (sem queimar dinheiro)',
+    subtitle: 'Como anunciar do jeito que gera venda, não só curtida: impulsionar x Gerenciador, passo a passo, formatos e os erros que queimam verba.',
+    tag: 'Tráfego Pago',
+    breadcrumb: 'Tráfego Pago',
+    dateISO: '2026-07-25',
+    coverAlt: 'Anúncio de tráfego pago sendo configurado no Instagram via Meta Ads',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">O Instagram é onde a maioria dos negócios brasileiros começa a investir em anúncio, e também onde mais se desperdiça verba. O motivo é quase sempre o mesmo: apertar o botão impulsionar achando que isso é tráfego pago. Impulsionar é o modo mais caro e menos eficiente de anunciar.</p>
+<p>Este guia mostra como fazer certo, do jeito que gera venda, não só curtida. A OxBrand é parceira oficial da Meta e trata o Instagram como canal de aquisição, não como vitrine de vaidade.</p>
+<h2>Impulsionar x Gerenciador de Anúncios (a diferença que muda tudo)</h2>
+<ul>
+<li><strong>Impulsionar post:</strong> o botão azul dentro do app. Rápido, mas raso: pouca segmentação, pouco controle de objetivo e otimização fraca. Serve para alcance, não para conversão.</li>
+<li><strong>Gerenciador de Anúncios (Meta Ads):</strong> a ferramenta profissional. Permite escolher objetivo real (mensagem, conversão, cadastro), segmentar com precisão, testar criativos e otimizar por resultado.</li>
+</ul>
+<p>Regra simples: se o seu objetivo é vender, nunca use o botão impulsionar. Use o Gerenciador. A diferença de custo por resultado entre os dois costuma ser enorme.</p>
+<h2>Passo a passo para anunciar no Instagram</h2>
+<ul>
+<li><strong>Defina o objetivo real:</strong> mensagem no Direct ou WhatsApp, cadastro (lead) ou venda no site. O objetivo diz à plataforma quem procurar.</li>
+<li><strong>Conheça o público:</strong> comece por interesses e comportamento, mas o ouro está nos públicos personalizados: quem já te seguiu, visitou o site ou está na sua base.</li>
+<li><strong>Crie o criativo certo:</strong> vídeo curto e vertical (Reels e Stories) costuma render mais que imagem estática. O primeiro segundo precisa interromper o padrão.</li>
+<li><strong>Escreva uma legenda com oferta clara:</strong> diga o que é, para quem e qual o próximo passo. Uma boa oferta vende mais que um criativo bonito.</li>
+<li><strong>Meça o que importa:</strong> acompanhe custo por conversão, não curtidas. Curtida não paga boleto.</li>
+</ul>
+<h2>Os erros que queimam dinheiro no Instagram</h2>
+<ul>
+<li><strong>Impulsionar em vez de usar o Gerenciador:</strong> o erro número um, e o mais caro.</li>
+<li><strong>Falar para todo mundo:</strong> público amplo demais dilui a verba. Anúncio para todos não é para ninguém.</li>
+<li><strong>Mandar o clique para lugar nenhum:</strong> anúncio bom que leva para um perfil desorganizado ou um WhatsApp sem resposta desperdiça o investimento.</li>
+<li><strong>Trocar o criativo toda hora (ou nunca):</strong> sem dar tempo de a campanha aprender, ou deixando o mesmo anúncio até cansar o público. Os dois extremos custam caro.</li>
+</ul>
+<h2>Quanto investir no Instagram para começar</h2>
+<p>Não existe valor mágico, existe verba suficiente para a campanha sair da fase de aprendizado e gerar dados. Começar baixo demais faz a otimização nunca acontecer. Mais importante que o valor é ter para onde mandar o lead e alguém para atender. Tráfego pago no Instagram é um pedaço do quadro maior; a lógica completa de verba, plataformas e ROI está no nosso <a href="/blog/trafego-pago-guia-definitivo">guia de tráfego pago</a>.</p>
+<div class="callout"><p>A OxBrand estrutura tráfego pago no Instagram com método: objetivo, público, criativo e mensuração operando como sistema. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, parceira oficial da Meta, com atuação nacional.</p></div>
+`,
+    faq: [
+      { q: 'Como fazer tráfego pago no Instagram?', a: 'Use o Gerenciador de Anúncios da Meta (não o botão impulsionar), defina um objetivo real (mensagem, lead ou venda), segmente o público com precisão, crie um criativo em vídeo vertical com oferta clara e meça por custo de conversão. É isso que separa anúncio que vende de post impulsionado.' },
+      { q: 'Vale a pena impulsionar publicação no Instagram?', a: 'Para alcance pontual, até serve. Para vender, não: o botão impulsionar tem pouca segmentação e otimização fraca, o que encarece o resultado. O caminho profissional é o Gerenciador de Anúncios.' },
+      { q: 'Quanto custa anunciar no Instagram?', a: 'O custo é definido por leilão e varia com público, criativo e concorrência. Não olhe o custo por clique isolado, olhe o custo por cliente. Uma campanha bem estruturada reduz esse custo por resultado.' },
+      { q: 'Preciso de uma agência para anunciar no Instagram?', a: 'Para testar, dá para começar sozinho. Para escalar com previsibilidade, com segmentação, criativos e otimização contínua, uma agência de performance evita meses de verba desperdiçada. É o que fazemos como parceiros oficiais da Meta.' },
+    ],
+  },
+  {
+    slug: 'gestor-de-trafego',
+    metaTitle: 'Gestor de tráfego: quando contratar (e como) | OxBrand',
+    metaDescription: 'Gestor de tráfego: o que faz, quando contratar, freelancer x agência e quanto custa. O guia direto de quem gere performance para +450 marcas.',
+    title: 'Gestor de tráfego: o que faz e quando vale contratar',
+    subtitle: 'O que faz, quando vale contratar, freelancer ou agência e quanto custa. Um guia com critério para decidir certo, inclusive se a resposta for ainda não.',
+    tag: 'Tráfego Pago',
+    breadcrumb: 'Tráfego Pago',
+    dateISO: '2026-07-25',
+    coverAlt: 'Gestor de tráfego analisando métricas de campanhas no gerenciador de anúncios',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Se você chegou aqui, provavelmente já entendeu que impulsionar post não é estratégia e está pensando em colocar alguém para cuidar disso de verdade. A dúvida é prática: o que exatamente faz um gestor de tráfego, quando vale contratar e o que é melhor, um freelancer ou uma agência.</p>
+<p>Vamos direto, sem empurrar a resposta que nos favorece. Escrevemos como quem faz gestão de tráfego para mais de 450 marcas. A ideia é te dar critério para decidir certo, inclusive se a resposta for ainda não é hora.</p>
+<h2>O que um gestor de tráfego faz (de verdade)</h2>
+<ul>
+<li><strong>Estratégia antes do anúncio:</strong> define objetivo, público, oferta e em qual plataforma investir. O anúncio é a última etapa, não a primeira.</li>
+<li><strong>Estrutura de campanha:</strong> monta campanhas no Gerenciador de Anúncios e no Google Ads com segmentação, orçamento e objetivos corretos.</li>
+<li><strong>Criativo e copy:</strong> orienta ou produz os anúncios: o que falar, como falar e qual formato testar.</li>
+<li><strong>Otimização contínua:</strong> acompanha os números todos os dias, corta o que não performa, escala o que funciona e reduz o custo por resultado.</li>
+<li><strong>Mensuração e report:</strong> instala rastreamento, lê os dados e traduz em decisão: quanto entrou, quanto saiu, o que fazer a seguir.</li>
+</ul>
+<p>Repare: anunciar é só um pedaço. O valor do gestor está na estratégia e na otimização, é isso que transforma verba em retorno.</p>
+<h2>Quando vale a pena contratar</h2>
+<ul>
+<li>Quando você já investe (ou quer investir) com consistência e não tem tempo nem conhecimento para otimizar.</li>
+<li>Quando a operação tem estrutura para receber o lead: site, WhatsApp organizado, alguém para atender.</li>
+<li>Quando você quer previsibilidade: parar de depender de indicação e ter um canal de aquisição que você controla e escala.</li>
+</ul>
+<p>Quando ainda não vale: se a oferta não está definida ou o volume de venda não sustenta uma verba mínima com gestão. Nesse caso, primeiro estrutura, depois tráfego. Falamos isso antes de vender.</p>
+<h2>Freelancer ou agência? A comparação honesta</h2>
+<ul>
+<li><strong>Freelancer:</strong> costuma custar menos e ter contato direto. Bom para operações pequenas, com uma plataforma só e verba enxuta. O risco é a dependência de uma pessoa, e raramente cobre estratégia, criativo, CRM e dados ao mesmo tempo.</li>
+<li><strong>Agência:</strong> custa mais, mas entrega um time: estrategista, gestor, criativo e análise operando juntos, com processo e continuidade. Faz sentido quando a verba justifica e você quer o tráfego integrado ao resto (site, CRM, comercial).</li>
+</ul>
+<p>Não existe resposta universal. Para quem está começando e testando, um bom freelancer resolve. Para quem quer escalar com previsibilidade e integração, a estrutura de uma agência tende a pagar o próprio custo. O erro é contratar o mais barato sem olhar o que a sua operação realmente precisa.</p>
+<h2>Quanto custa um gestor de tráfego</h2>
+<p>O custo tem duas partes: o valor da gestão (o serviço do profissional ou da agência) e a verba de mídia (o que vai para a plataforma). São coisas separadas; cuidado com quem mistura as duas para parecer mais barato. O valor da gestão varia com a complexidade: número de plataformas, volume de campanhas e nível de integração com o resto do marketing.</p>
+<p>Mais importante que o preço da gestão é o retorno que ela gera. Uma gestão que custa mais e reduz o custo por cliente sai barata; uma gestão barata que deixa a verba render mal é o negócio mais caro que existe. A lógica completa de custo e ROI está no nosso <a href="/blog/trafego-pago-guia-definitivo">guia de tráfego pago</a>.</p>
+<div class="callout"><p>A OxBrand faz gestão de tráfego como engenharia de resultado: estratégia, criativo, mensuração e otimização semanal, integrados ao seu comercial. Somos parceiros oficiais de Google e Meta e uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional.</p></div>
+`,
+    faq: [
+      { q: 'O que faz um gestor de tráfego?', a: 'Define a estratégia, monta e otimiza campanhas no Meta e no Google, orienta criativo e copy, instala rastreamento e lê os dados para reduzir o custo por resultado. Anunciar é só uma parte, o valor está na estratégia e na otimização contínua.' },
+      { q: 'Quando devo contratar um gestor de tráfego?', a: 'Quando você quer investir com consistência, tem estrutura para atender os leads e não tem tempo ou conhecimento para otimizar sozinho. Se a oferta ainda não está clara ou não há como atender a demanda, primeiro estruture a operação.' },
+      { q: 'Gestor de tráfego freelancer ou agência?', a: 'Freelancer costuma servir para operações pequenas, com verba enxuta e uma plataforma. Agência faz sentido quando você quer escalar com previsibilidade e integrar o tráfego ao site, CRM e comercial. Decida pela necessidade da operação, não só pelo preço.' },
+      { q: 'Quanto custa contratar um gestor de tráfego?', a: 'O custo se divide entre a gestão e a verba de mídia, são separados. O valor da gestão varia com a complexidade da operação. O que decide não é o preço, é o retorno: gestão que reduz o custo por cliente se paga.' },
+    ],
+  },
+  {
     slug: 'kommo-crm-guia-completo',
     metaTitle: 'Kommo CRM: o guia completo (2026) | OxBrand',
     metaDescription: 'Kommo CRM: o que é, como funciona, planos, integração com WhatsApp e como implementar. O guia completo de quem é Top 5% parceiro Kommo no Brasil.',
