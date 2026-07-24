@@ -3,8 +3,8 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Assessoria de Marketing Digital e Estratégia | OxBrand',
-  description: 'Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade.',
+  title: 'Assessoria de Marketing Digital com Método | OxBrand',
+  description: 'Assessoria de marketing digital: estratégia, execução e integração com o comercial. Clareza e direção, não só mais tarefas. Diagnóstico gratuito na OxBrand.',
   ...pageOg({
     title: 'Assessoria em Marketing · OxBrand',
     description: 'Planejamento, execução e otimização de campanhas com performance digital, inteligência de dados e criatividade. Com responsabilidade sobre o resultado.',
@@ -20,15 +20,36 @@ export default function AssessoriaEmMarketingPage() {
       slug="assessoria-em-marketing"
       metaDescription="Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade."
       tag="Direção, não mais tarefas"
-      headline="Assessoria de Marketing que entrega direção,"
-      headlineHighlight="não mais tarefas."
+      headline="Assessoria de Marketing: direção estratégica"
+      headlineHighlight="e execução integrada."
       subheadline="Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas de marketing que geram resultados de verdade, com performance digital, inteligência de dados e criatividade, fortalecendo o branding da sua marca."
       introTitle="Assessoria completa"
       intro="Você já investiu em marketing, mas não vê o retorno? Tentou estruturar um time interno ou contratou agências que não entregavam o que prometiam? Você não precisa mais tentar sozinho. A OxBrand é a solução definitiva. Nossa assessoria vai além do plano de ação: o time executa, otimiza e gerencia todas as frentes, com metas claras e responsabilidade sobre o resultado."
       stepsImage="/images/solucoes/assessoria-processo.jpg"
       stepsAlt="Metodologia OxBrand: como trabalhamos em 4 etapas, Análise e Diagnóstico, Estratégia e Plano de Ação, Execução e Otimização, Relatórios e Alinhamento"
       ctaHeading="Você não precisa de mais tarefas. Precisa de direção."
+      relatedLinks={[
+        { label: 'Gestão de tráfego pago', href: '/solucoes/gestao-de-trafego-pago' },
+        { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },
+        { label: 'Inbound marketing', href: '/solucoes/inbound-marketing' },
+      ]}
       faqItems={[
+        {
+          q: 'O que é uma assessoria de marketing?',
+          a: 'É um serviço contínuo de estratégia e acompanhamento: planejamento, rotina de execução e alinhamento entre marketing e comercial. Para quem quer clareza e direção, não apenas mais uma lista de tarefas.',
+        },
+        {
+          q: 'Qual a diferença entre assessoria e gestão de tráfego?',
+          a: 'A gestão de tráfego cuida especificamente dos anúncios. A assessoria é o guarda-chuva estratégico: define para onde crescer, integra os canais (tráfego, conteúdo, CRM) e conecta tudo ao comercial. Uma orquestra a outra.',
+        },
+        {
+          q: 'Para quem a assessoria de marketing é indicada?',
+          a: 'Para empresas que já investem em marketing mas sentem falta de estrutura e direção, geram tarefas soltas sem clareza de resultado. A assessoria organiza a operação e conecta as ações a metas de negócio.',
+        },
+        {
+          q: 'Como funciona a assessoria da OxBrand?',
+          a: 'Seguimos o método OX Growth Engineering (70% estratégia, 30% execução): direção estratégica, estrutura de demanda, decisão e resultado, com reuniões objetivas e otimização semanal. Foco em avanço de negócio, não em relatório.',
+        },
         {
           q: 'Qual a diferença entre assessoria e contratar um serviço avulso?',
           a: 'Serviço avulso entrega uma peça ou campanha. Assessoria entrega direção: diagnóstico do negócio, priorização de canal, integração com o comercial e otimização contínua. A diferença está em quem decide o que fazer, não apenas quem executa.',
