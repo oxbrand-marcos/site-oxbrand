@@ -20,6 +20,100 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'kommo-crm-guia-completo',
+    metaTitle: 'Kommo CRM: o guia completo (2026) | OxBrand',
+    metaDescription: 'Kommo CRM: o que é, como funciona, planos, integração com WhatsApp e como implementar. O guia completo de quem é Top 5% parceiro Kommo no Brasil.',
+    title: 'Kommo CRM: o guia completo (o que é, como funciona e como implementar)',
+    subtitle: 'O que é, como funciona, quanto custa e o que faz a diferença entre um Kommo que vende e um abandonado no segundo mês. O guia de quem é Top 5% parceiro Kommo no Brasil.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-25',
+    coverAlt: 'Painel do Kommo CRM com funil de vendas integrado ao WhatsApp',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Se a sua empresa recebe leads pelo WhatsApp e você não consegue dizer com precisão quantos entraram, quem atendeu e quantos viraram venda no mês, o problema não é falta de esforço do time, é falta de sistema. O Kommo é o CRM que a OxBrand mais implementa para resolver exatamente isso.</p>
+<p>Este guia reúne, num lugar só, tudo o que você precisa saber antes de contratar: o que é, como funciona, quanto custa e o que faz a diferença entre um Kommo que vende e um Kommo abandonado. Escrevemos como quem implementa, não como quem só revende licença: a OxBrand é Top 5% dos parceiros Kommo no Brasil. Cada seção abaixo tem um artigo aprofundado, este é o mapa que conecta tudo.</p>
+<h2>O que é o Kommo CRM</h2>
+<p>O Kommo é um CRM de vendas construído em torno da conversa. Diferente de CRMs tradicionais pensados para e-mail e planilha, o Kommo nasceu para operações que vendem por mensagem: WhatsApp, Instagram, Facebook e outros canais caem todos dentro do mesmo funil, com histórico e responsável definidos.</p>
+<p>Na prática, ele transforma o WhatsApp da empresa, hoje uma caixa de entrada caótica, em um funil organizado, onde cada lead tem etapa, dono e próximo passo. É esse encaixe com o canal que o brasileiro mais usa para comprar que explica por que o Kommo cresceu tanto por aqui.</p>
+<h2>Como o Kommo funciona (os 4 pilares)</h2>
+<ul>
+<li><strong>Funil de vendas visual:</strong> cada lead é um card que percorre etapas (novo, em atendimento, proposta, fechamento). Você enxerga a operação inteira numa tela.</li>
+<li><strong>Multicanal em um só lugar:</strong> WhatsApp, Instagram Direct, Facebook, e-mail e webchat entram no mesmo funil. Nenhuma conversa fica perdida em um celular pessoal.</li>
+<li><strong>Automação (Salesbot):</strong> mensagens automáticas, distribuição de leads, lembretes e tarefas. O que é repetitivo o sistema faz; o vendedor foca em vender.</li>
+<li><strong>Relatórios e previsibilidade:</strong> quantos leads entraram, taxa de conversão por etapa, desempenho por vendedor. É o que tira a gestão do achismo.</li>
+</ul>
+<p>Para o passo a passo de configuração e uso, veja o artigo dedicado: <a href="/blog/como-funciona-o-crm-kommo">como funciona o CRM Kommo</a>.</p>
+<h2>Kommo e WhatsApp: o encaixe que importa</h2>
+<p>O maior motivo para escolher o Kommo, no Brasil, é a integração com o WhatsApp. Ele conecta a API oficial e centraliza todos os atendimentos no funil, com automação, múltiplos atendentes no mesmo número e histórico completo por contato. Isso acaba com o cenário clássico de lead perdido no celular de um vendedor que saiu de férias.</p>
+<p>Explicamos essa integração em detalhe, incluindo API oficial versus não oficial e os cuidados de cada uma, no artigo <a href="/blog/crm-integrado-ao-whatsapp">CRM integrado ao WhatsApp</a>.</p>
+<h2>Quanto custa o Kommo</h2>
+<p>O Kommo cobra por usuário, por mês, em dólar, com desconto no plano anual. São três planos (Base, Avançado e Empresarial), e o certo para a sua empresa depende do tamanho do time e do nível de automação que você precisa, não do preço de tabela.</p>
+<p>Como o câmbio e a política de preços variam, trabalhamos sempre com faixa de referência e confirmamos o valor vigente antes de decidir. O comparativo completo, com qual plano serve para quem, está no artigo <a href="/blog/kommo-planos-e-precos">Kommo: planos e preços</a>.</p>
+<h2>Kommo vale a pena? E quando não vale</h2>
+<p>Vale para um perfil claro: empresas que recebem leads pelo WhatsApp, têm mais de um vendedor e hoje não conseguem medir quantos contatos entraram e converteram. Para esse perfil, o custo do Kommo é uma fração do que se perde em lead mal atendido.</p>
+<p>Não vale (ainda) se você recebe pouquíssimos contatos e uma pessoa dá conta com folga; aí o problema é gerar demanda antes, não organizar CRM. E se você está comparando com outras ferramentas, veja <a href="/blog/kommo-vs-rd-station">Kommo vs RD Station</a> para entender qual lógica serve melhor à sua operação.</p>
+<h2>O que separa um Kommo que vende de um abandonado</h2>
+<p>Depois de implementar Kommo em dezenas de operações, a conclusão é sempre a mesma: o que decide o resultado não é o plano contratado, é a implementação. Um Kommo Avançado com funil mal desenhado rende menos que um Base bem configurado.</p>
+<p>Os erros mais comuns: copiar um funil genérico em vez de desenhar o seu processo real; automatizar antes de entender a operação; e não treinar o time. Se a sua operação já rodou torto e você quer recomeçar do jeito certo, temos um guia específico: <a href="/blog/como-zerar-o-kommo-crm">como zerar o Kommo CRM</a>.</p>
+<h2>Como implementar o Kommo com método</h2>
+<p>Implementar Kommo não é ligar a ferramenta, é traduzir o seu processo comercial para dentro dela. Na OxBrand seguimos quatro passos: mapear o funil real da empresa, configurar canais e automações que fazem sentido, integrar o WhatsApp oficial e treinar o time até o uso virar rotina. Depois, otimização contínua com base nos relatórios.</p>
+<p>É esse o nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>: implementação com método, não só ativação de licença. Somos Top 5% dos parceiros Kommo no Brasil justamente porque tratamos o CRM como estrutura de vendas, não como software avulso.</p>
+<div class="callout"><p>A OxBrand implementa o Kommo com método: o plano certo, o funil desenhado para o seu processo e o time treinado para usar de verdade. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Conteúdo atualizado em julho de 2026; confira preços e planos vigentes no site oficial do Kommo.</p></div>
+`,
+    faq: [
+      { q: 'O que é o Kommo CRM?', a: 'É um CRM de vendas focado em conversa, que centraliza WhatsApp, Instagram e outros canais em um funil único, com automação e relatórios. Serve principalmente para empresas que vendem por mensagem e querem parar de perder lead.' },
+      { q: 'O Kommo é bom?', a: 'Para operações que vendem por WhatsApp com mais de um vendedor, é uma das melhores opções do mercado brasileiro, pela integração nativa com o WhatsApp e pela simplicidade do funil. O resultado, porém, depende mais da implementação do que da ferramenta em si.' },
+      { q: 'Qual a diferença do Kommo para um CRM tradicional?', a: 'O CRM tradicional foi pensado para e-mail e cadastro; o Kommo foi pensado para a conversa. Na prática, isso significa que ele encaixa melhor em operações que vendem por WhatsApp e mensagem, que são a maioria no Brasil.' },
+      { q: 'Preciso de uma agência para usar o Kommo?', a: 'Para usar o básico, não. Para extrair resultado, com funil desenhado para o seu processo, automações certas e time treinado, uma implementação parceira poupa meses de tentativa e erro. É o que fazemos como Top 5% dos parceiros Kommo no Brasil.' },
+    ],
+  },
+  {
+    slug: 'como-zerar-o-kommo-crm',
+    metaTitle: 'Como zerar o Kommo CRM (e recomeçar certo) | OxBrand',
+    metaDescription: 'Como zerar o Kommo CRM sem perder o que importa: limpar leads, funis e automações e recomeçar com um funil que vende. Passo a passo de quem é Top 5% parceiro Kommo.',
+    title: 'Como zerar o Kommo CRM (e recomeçar do jeito certo)',
+    subtitle: 'O que apagar, o que preservar e como recomeçar com um funil que realmente vende. O passo a passo de quem reconstrói operações de CRM toda semana.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-25',
+    coverAlt: 'Processo de reorganização e limpeza de um funil no Kommo CRM',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Chega um momento em que o Kommo vira bagunça: funil cheio de lead velho, etapas que ninguém segue, automações que disparam mensagem errada e um time que já não confia no que está na tela. A vontade é clicar em apagar tudo e recomeçar. Faz sentido, mas zerar sem critério é trocar uma bagunça por um vazio, e em duas semanas o problema volta.</p>
+<p>Este guia mostra como zerar o Kommo de forma organizada: o que apagar, o que preservar e, principalmente, como recomeçar com um funil que realmente vende. Escrevemos como quem reconstrói operações de CRM toda semana, a OxBrand é Top 5% dos parceiros Kommo no Brasil.</p>
+<h2>Antes de zerar: você precisa mesmo apagar tudo?</h2>
+<p>Na maioria dos casos, o problema não é o que está no Kommo, é a estrutura por trás. Antes de zerar, vale separar dois cenários:</p>
+<ul>
+<li><strong>Reset total:</strong> faz sentido quando o funil foi montado errado desde o início, os dados são lixo (leads de teste, importação furada) e recomeçar é mais rápido que consertar.</li>
+<li><strong>Reestruturação:</strong> faz sentido quando existe histórico e leads reais valiosos. Aí você não apaga tudo: reorganiza etapas, limpa o que é lixo e mantém o que tem valor comercial.</li>
+</ul>
+<p>Apagar dado real sem pensar é destruir patrimônio comercial. Um lead antigo bem trabalhado ainda vale uma venda. Decida o cenário antes de tocar em qualquer botão.</p>
+<h2>Passo 1: faça backup do que importa</h2>
+<p>Antes de qualquer exclusão, exporte. O Kommo permite exportar leads e contatos em planilha, faça isso mesmo que vá recomeçar do zero. Guardar o histórico de quem já comprou, telefones e e-mails é barato; recuperar depois é impossível. Backup primeiro, sempre.</p>
+<h2>Passo 2: limpe os leads (sem levar junto quem vale)</h2>
+<p>Filtre os leads por etapa e por data de última atividade. Leads de teste, duplicados e contatos frios de meses atrás podem sair. Clientes ativos, oportunidades em andamento e quem já comprou ficam. O Kommo permite seleção em massa e exclusão por filtro, use isso para não apagar no olho.</p>
+<p>Regra prática: se você não consegue justificar por que aquele lead está no funil, ele não deveria estar. Funil limpo é funil que o time confia.</p>
+<h2>Passo 3: refaça o funil a partir do seu processo real</h2>
+<p>Este é o passo que quase todo mundo pula, e é o único que importa de verdade. Não recrie o funil antigo nem copie um modelo pronto. Desenhe as etapas a partir de como a sua empresa vende de fato: quais são os estágios reais entre lead entrou e cliente fechou?</p>
+<p>Um bom funil tem poucas etapas, todas com um critério claro de avanço. Se uma etapa não tem critério, ela não é etapa, é enfeite. Menos e mais claro sempre vence mais e confuso. Se quiser revisar a lógica de funil e uso, vale reler <a href="/blog/como-funciona-o-crm-kommo">como funciona o CRM Kommo</a>.</p>
+<h2>Passo 4: recrie só as automações que fazem sentido</h2>
+<p>Ao zerar, aproveite para matar as automações herdadas que ninguém entende. Recrie apenas o essencial: distribuição de lead novo, mensagem de primeiro contato e lembrete de follow-up. Automação demais, cedo demais, é a causa número um de Kommo abandonado. Comece simples; adicione conforme a operação amadurece.</p>
+<h2>Passo 5: treine o time antes de reabrir o funil</h2>
+<p>Um Kommo zerado e reconfigurado só funciona se o time usar. Antes de voltar a operar, mostre para os vendedores o novo funil, o critério de cada etapa e onde registrar cada coisa. Sem esse alinhamento, em uma semana todo mundo volta para o WhatsApp solto e você zerou à toa.</p>
+<h2>O erro de zerar sem mudar a estrutura</h2>
+<p>Zerar o Kommo resolve o sintoma, não a causa. Se a operação bagunçou o CRM uma vez, vai bagunçar de novo, a menos que a estrutura por trás mude: processo comercial claro, funil desenhado para esse processo e time treinado.</p>
+<p>Para o quadro completo do Kommo, o nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> reúne tudo em um lugar. E se você quer recomeçar com a estrutura certa desde já, é isso que fazemos no serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>.</p>
+<div class="callout"><p>A OxBrand reestrutura o Kommo com método: funil desenhado para o seu processo, automações que fazem sentido e time treinado para usar. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional.</p></div>
+`,
+    faq: [
+      { q: 'Como zerar o Kommo CRM?', a: 'Exporte um backup dos leads e contatos, limpe os leads por filtro (mantendo clientes e oportunidades reais), refaça o funil a partir do seu processo de venda, recrie só as automações essenciais e treine o time antes de reabrir. Zerar sem essa reestruturação só adia o próximo caos.' },
+      { q: 'Dá para apagar todos os leads do Kommo de uma vez?', a: 'Dá, com a seleção em massa por filtro. Mas raramente é o certo: quase sempre há leads reais que valem uma venda. Exporte tudo antes e apague por critério, não no impulso.' },
+      { q: 'Zerar o Kommo apaga minha conta ou meu plano?', a: 'Não. Limpar leads e refazer funis é diferente de cancelar a conta; sua assinatura e configurações de acesso continuam. Ainda assim, faça backup antes de qualquer exclusão em massa.' },
+      { q: 'Vale a pena reconfigurar com ajuda de uma agência?', a: 'Se o Kommo já bagunçou uma vez, sim, o problema costuma estar na estrutura, e é isso que uma implementação parceira corrige. Somos Top 5% dos parceiros Kommo no Brasil e reconstruímos operações de CRM com método.' },
+    ],
+  },
+  {
     slug: 'kommo-planos-e-precos',
     metaTitle: 'Kommo: planos e preços, qual escolher | OxBrand',
     metaDescription: 'Kommo: planos, preços e qual escolher para a sua empresa. Comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem enrolação. Guia da OxBrand.',
@@ -38,6 +132,7 @@ export const ARTICLES: Article[] = [
     ],
     bodyHtml: `
 <p class="lead">Se você chegou aqui, provavelmente já entendeu que precisa de um CRM integrado ao WhatsApp e o Kommo apareceu como opção. A dúvida agora é prática: quanto custa, quais são os planos e qual deles faz sentido para o seu tamanho de operação. Como somos Top 5% dos parceiros Kommo no Brasil, este é o comparativo que fazemos numa reunião, direto, sem empurrar o plano mais caro.</p>
+<p>Se você ainda está mapeando a ferramenta como um todo, o nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> reúne o que é, como funciona e como implementar num lugar só.</p>
 <p>Um aviso de transparência: o Kommo reajusta preços periodicamente e cobra em dólar, por usuário e por mês (no plano anual). Então trate os valores abaixo como faixa de referência e confirme o preço vigente no site oficial antes de decidir. O que não muda é a lógica de qual plano serve para quem, e é nisso que este guia foca.</p>
 <h2>Como o Kommo cobra (o modelo, antes do preço)</h2>
 <ul>
@@ -134,6 +229,7 @@ export const ARTICLES: Article[] = [
     bodyHtml: `
 <p class="lead">Todo mês, empresas gastam milhares em anúncios para fazer o telefone tocar, ou, mais provável, para fazer o WhatsApp apitar. O lead chega, manda oi, quero saber mais, e aí começa o vazamento: alguém responde três horas depois, outro vendedor já tinha respondido, ninguém sabe se aquele contato virou proposta ou sumiu. O problema não é o tráfego. É que o WhatsApp virou o principal canal de vendas do Brasil e continua sendo tratado como aplicativo de recado.</p>
 <p>Um CRM integrado ao WhatsApp resolve exatamente esse buraco. E como somos Top 5% dos parceiros Kommo no Brasil, este texto é a explicação que a gente daria numa reunião, sem jargão, com processo.</p>
+<p>Para o quadro completo (o que é, planos, integração e implementação), veja o <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a>.</p>
 <h2>O que é um CRM integrado ao WhatsApp?</h2>
 <p>CRM é a sigla para gestão de relacionamento com o cliente. Na prática, é o sistema onde cada contato, cada conversa e cada oportunidade de venda ficam registrados e organizados em um funil, do primeiro oi até o fechamento. Quando esse CRM é integrado ao WhatsApp, as conversas do aplicativo entram automaticamente no sistema: viram cards em um funil, com histórico, responsável e etapa.</p>
 <p>A diferença é simples de sentir. Sem CRM, o WhatsApp é uma caixa de mensagens onde o lead se perde entre grupos da família e conversa de fornecedor. Com CRM integrado, cada lead é uma oportunidade rastreada: você sabe quantos entraram, em que etapa travaram e quanto tempo levou para responder cada um.</p>
@@ -411,6 +507,7 @@ export const ARTICLES: Article[] = [
     bodyHtml: `
 <p class="lead">Como funciona o CRM Kommo? De forma direta: ele é um CRM conversacional, um sistema de gestão de vendas construído em torno das conversas do WhatsApp, do Instagram e de outros mensageiros. Se a sua operação comercial acontece no chat, como a da maioria das empresas brasileiras, é exatamente para isso que ele foi desenhado.</p>
 <p>A OxBrand está entre os Top 5% parceiros Kommo do Brasil. Este guia mostra como a ferramenta funciona na prática, sem tela de vendas, com a visão de quem implanta e opera o sistema todos os dias.</p>
+<p>Este artigo faz parte do nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a>, que reúne o que é, planos, integração e implementação.</p>
 <h2>O que é o Kommo CRM</h2>
 <p>O Kommo (antigo amoCRM) é uma plataforma de CRM focada em vendas por conversa. A diferença central para CRMs tradicionais: em vez de organizar a operação em torno de e-mails e ligações, ele centraliza mensageiros (WhatsApp, Instagram Direct, Messenger, Telegram) em uma única caixa de entrada, conectada a um funil de vendas visual.</p>
 <p>Na prática, ele resolve o problema mais comum do comercial brasileiro: leads espalhados no WhatsApp pessoal de cada vendedor, sem histórico, sem padrão e sem gestão. Quando o vendedor sai da empresa, as conversas, e os clientes, vão embora com ele.</p>
@@ -728,6 +825,7 @@ export const ARTICLES: Article[] = [
     bodyHtml: `
 <p class="lead">Kommo vs RD Station é a comparação mais comum entre PMEs brasileiras escolhendo CRM, e quem pesquisa costuma receber argumentos de venda dos dois lados.</p>
 <p>Nossa posição é diferente: a OxBrand implanta os dois. Somos Top 5% parceiros Kommo no Brasil e parceiros RD Station. Não temos interesse em empurrar um ou outro: temos interesse em que o CRM funcione, porque somos cobrados pelo resultado da operação, não pela licença vendida.</p>
+<p>Se ainda está conhecendo o Kommo em si, o nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> reúne tudo num lugar só.</p>
 <p>A resposta curta: se a sua venda acontece no WhatsApp e no Instagram, o Kommo tende a vencer. Se a sua operação precisa de um ecossistema de marketing mais vendas em português, o RD Station entra forte. Agora, a resposta completa.</p>
 <p>Independente do CRM escolhido, a régua de aquisição precisa ser previsível. É o que estruturamos no trabalho de <a href="/trafego-pago-com-previsibilidade">tráfego pago com previsibilidade</a>, ligando mídia, funil e CRM ao resultado de vendas.</p>
 <h2>O que cada CRM é (de verdade)</h2>
