@@ -242,15 +242,15 @@ export function SolutionPageTemplate({
           <div className="overflow-hidden" aria-label="Clientes OxBrand">
             <div className="marquee-track flex items-center gap-20 w-max">
               {[...clientLogos, ...clientLogos].map((logo, i) => (
-                <div key={i} className="flex items-center justify-center w-36 h-16 shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+                <div key={i} className="flex items-center justify-center w-44 sm:w-52 h-20 shrink-0 opacity-60 hover:opacity-100 transition-opacity">
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={144}
-                    height={64}
+                    width={208}
+                    height={88}
                     loading="lazy"
-                    className="h-12 w-auto object-contain brightness-0 invert"
-                    sizes="144px"
+                    className="h-16 sm:h-[72px] w-auto object-contain brightness-0 invert"
+                    sizes="208px"
                   />
                 </div>
               ))}

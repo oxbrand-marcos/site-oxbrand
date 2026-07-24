@@ -78,16 +78,16 @@ export function Clients() {
               {[...clientLogos, ...clientLogos].map((logo, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center w-40 h-16 shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="flex items-center justify-center w-48 sm:w-56 h-20 shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.alt}
-                    width={160}
-                    height={64}
+                    width={224}
+                    height={88}
                     loading="lazy"
-                    className="h-12 w-auto object-contain brightness-0 invert"
-                    sizes="160px"
+                    className="h-16 sm:h-[72px] w-auto object-contain brightness-0 invert"
+                    sizes="224px"
                   />
                 </div>
               ))}
