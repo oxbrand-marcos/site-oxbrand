@@ -273,7 +273,7 @@ export default function MateriaisGratuitosPage() {
               {materials.map((mat) => (
                 <div
                   key={mat.slug}
-                  className="group flex flex-col md:grid md:grid-cols-[1fr_auto] bg-white"
+                  className="group flex flex-col-reverse md:grid md:grid-cols-[1fr_auto] bg-white"
                 >
                   {/* Info */}
                   <div className="p-8 sm:p-10 flex flex-col gap-5 md:border-r md:border-zinc-200 items-center text-center md:items-start md:text-left">
@@ -296,7 +296,7 @@ export default function MateriaisGratuitosPage() {
                   {/* Capa — clicável também */}
                   <button
                     onClick={() => setModalOpen(true)}
-                    className="hidden md:flex items-center justify-center bg-zinc-50 p-8 w-64 hover:bg-zinc-100 transition-colors group/img"
+                    className="flex items-center justify-center bg-zinc-50 p-8 w-full md:w-64 hover:bg-zinc-100 transition-colors group/img"
                     aria-label="Baixar e-book Comunicação Raiz"
                   >
                     <Image
@@ -304,7 +304,7 @@ export default function MateriaisGratuitosPage() {
                       alt="Capa do E-book Comunicação Raiz"
                       width={400}
                       height={380}
-                      className="w-full h-auto object-contain drop-shadow-lg group-hover/img:scale-105 transition-transform duration-500"
+                      className="w-full max-w-[220px] md:max-w-none h-auto mx-auto object-contain drop-shadow-lg group-hover/img:scale-105 transition-transform duration-500"
                     />
                   </button>
                 </div>
