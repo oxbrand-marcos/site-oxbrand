@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import Image from 'next/image'
 import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
@@ -147,10 +148,14 @@ export function PopupDiagnosticoBlog() {
 
         <div className="px-8 pt-8 pb-8">
           {/* Logo */}
-          <div className="flex items-center gap-2 mb-6">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/icon.svg" alt="OxBrand" className="w-7 h-7" />
-            <span className="font-mono text-[10px] tracking-[0.18em] text-zinc-500 uppercase">OxBrand</span>
+          <div className="mb-6">
+            <Image
+              src="/images/oxbrand-logo.webp"
+              alt="OxBrand, Marketing de Performance"
+              width={120}
+              height={34}
+              className="h-7 w-auto object-contain"
+            />
           </div>
 
           {sent ? (
