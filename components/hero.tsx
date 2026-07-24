@@ -128,8 +128,8 @@ export function Hero() {
                   style={{ background: 'rgb(92 54 235 / 0.08)' }}
                 >
                   <span className="status-dot shrink-0" aria-hidden="true" />
-                  <span className="hidden sm:inline">Mais de&nbsp;</span>
-                  <span className="font-bold text-foreground">{STATS.faturamentoGerado} milhões</span>
+                  <span>Mais de&nbsp;</span>
+                  <span className="font-bold text-foreground">{STATS.faturamentoGerado}<span className="sm:hidden">M</span><span className="hidden sm:inline">&nbsp;milhões</span></span>
                   <span>&nbsp;gerados</span>
                   <span className="hidden sm:inline">&nbsp;para&nbsp;<span className="underline underline-offset-2 decoration-primary/50 font-medium">nossos clientes</span></span>
                   <span className="text-muted-foreground group-hover:translate-x-0.5 transition-transform duration-150 ml-1" aria-hidden="true">›</span>
