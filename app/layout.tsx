@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
 import Script from 'next/script'
 import { ConsentBanner } from '@/components/consent-banner'
+import { PopupDiagnostico } from '@/components/popup-diagnostico'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -104,6 +105,7 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         {children}
         <ConsentBanner />
+        <PopupDiagnostico />
         <FloatingActions />
         <SpeedInsights />
         <Analytics />
