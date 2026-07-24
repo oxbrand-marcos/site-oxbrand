@@ -57,7 +57,7 @@ export default function TrafegoPrevisibilidadePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
 
-            {/* Esquerda — copy */}
+            {/* Esquerda, copy */}
             <div className="flex flex-col gap-8">
               {/* logo */}
               <div className="flex items-center gap-3">
@@ -100,7 +100,7 @@ export default function TrafegoPrevisibilidadePage() {
               </div>
             </div>
 
-            {/* Direita — formulário */}
+            {/* Direita, formulário */}
             <div className="bg-card border border-border p-8 flex flex-col gap-5">
               <div className="flex flex-col gap-1">
                 <span className="mono-tag text-primary/60">Formulário de contato</span>
@@ -152,7 +152,7 @@ export default function TrafegoPrevisibilidadePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
             {[
               { num: '200+', label: 'empresas atendidas ao redor do mundo' },
-              { num: '8+ anos', label: 'de experiência em marketing digital' },
+              { num: '16+ anos', label: 'de experiência em marketing digital' },
               { num: 'R$ 50M+', label: 'de faturamento gerado aos nossos clientes' },
               { num: '150+', label: 'parceiros estratégicos para nossos clientes' },
             ].map((m) => (
@@ -259,7 +259,7 @@ export default function TrafegoPrevisibilidadePage() {
             </p>
           </div>
 
-          {/* Depoimentos longos — consumidos de src/config/testimonials.ts */}
+          {/* Depoimentos longos, consumidos de src/config/testimonials.ts */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
             {testimonials.map((d) => (
               <div key={d.author} className="bg-white border border-zinc-200 p-7 flex flex-col gap-5">
@@ -278,7 +278,7 @@ export default function TrafegoPrevisibilidadePage() {
             ))}
           </div>
 
-          {/* Cards de resultado — 3 últimos (estilo das imagens) */}
+          {/* Cards de resultado, 3 últimos (estilo das imagens) */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
             {[
               {
@@ -339,7 +339,7 @@ export default function TrafegoPrevisibilidadePage() {
       <section className="py-20 grid-bg">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Esquerda — visual */}
+            {/* Esquerda, visual */}
             <div className="hidden lg:flex flex-col gap-6">
               <div className="border border-border bg-card p-8 flex flex-col gap-4">
                 <div className="flex items-center gap-3">
@@ -364,7 +364,7 @@ export default function TrafegoPrevisibilidadePage() {
               </div>
             </div>
 
-            {/* Direita — lista */}
+            {/* Direita, lista */}
             <div className="flex flex-col gap-7">
               <div className="flex flex-col gap-2">
                 <span className="mono-tag text-primary/60">Ideal para empresas que buscam escala real.</span>
