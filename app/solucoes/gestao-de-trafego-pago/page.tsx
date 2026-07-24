@@ -3,8 +3,8 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Agência de Tráfego Pago e Gestão de Performance | OxBrand',
-  description: 'Gestão de Performance e Tráfego Pago: Resultados Mensuráveis para o seu Negócio em Google ADS, Meta ADS, TikTok ADS, LinkedIn ADS e outras plataformas.',
+  title: 'Agência de Tráfego Pago: Google e Meta Ads | OxBrand',
+  description: 'Agência de tráfego pago com método: Google e Meta Ads geridos para ROI, não para curtida. +R$ 258 mi gerados para clientes. Diagnóstico gratuito.',
   ...pageOg({
     title: 'Gestão de Tráfego Pago · OxBrand',
     description: 'Google Ads, Meta Ads, TikTok Ads e LinkedIn Ads. Da estratégia ao resultado: rastreio, mensuração e otimização contínua.',
@@ -20,8 +20,8 @@ export default function GestaoDeTrafegoPagoPage() {
       slug="gestao-de-trafego-pago"
       metaDescription="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final, com rastreio, mensuração e otimização contínua."
       tag="Aquisição com método"
-      headline="Tráfego Pago com"
-      headlineHighlight="Resultados Mensuráveis."
+      headline="Agência de Tráfego Pago: campanhas geridas"
+      headlineHighlight="para resultado, não para alcance."
       subheadline="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final. Tráfego Pago é sobre pessoas."
       introTitle="Equipe dedicada ao seu resultado"
       intro="Atingir o público certo, na hora certa, é o segredo para o sucesso no ambiente digital. Nossa Gestão de Performance vai além de gerenciar campanhas: ela transforma o seu investimento em resultados concretos. Entregamos uma estratégia completa para gerar mais leads, vendas e visibilidade, com foco total em ROI e crescimento previsível. Não se trata apenas de aparecer, mas de aparecer para as pessoas certas, no momento certo, com a mensagem mais persuasiva."
@@ -30,8 +30,25 @@ export default function GestaoDeTrafegoPagoPage() {
       ctaHeading="Verba não é estratégia. Sem processo, tráfego pago é aposta."
       relatedLinks={[
         { label: 'Tráfego pago com previsibilidade', href: '/trafego-pago-com-previsibilidade' },
+        { label: 'Guia de tráfego pago', href: '/blog/trafego-pago-guia-definitivo' },
       ]}
       faqItems={[
+        {
+          q: 'O que faz uma agência de tráfego pago?',
+          a: 'Planeja, executa e otimiza campanhas de anúncios no Google e Meta com foco em custo por resultado. Cuida de estratégia, criativo, segmentação, rastreamento e otimização contínua, para a verba virar cliente, não só clique.',
+        },
+        {
+          q: 'Quanto custa contratar uma agência de tráfego pago?',
+          a: 'O custo se divide entre a gestão (o serviço da agência) e a verba de mídia (o que vai para a plataforma), são separados. O valor da gestão varia com a complexidade da operação; o que decide é o retorno que ela gera.',
+        },
+        {
+          q: 'Vale a pena terceirizar o tráfego pago?',
+          a: 'Vale quando você quer escalar com previsibilidade e integrar o tráfego ao site, CRM e comercial, em vez de deixar campanha rodando sozinha. Uma gestão profissional reduz o custo por cliente e evita verba desperdiçada.',
+        },
+        {
+          q: 'A OxBrand é parceira do Google e da Meta?',
+          a: 'Sim, somos parceiros oficiais de Google e Meta, além de Kommo (Top 5% no Brasil) e outras plataformas. Já geramos mais de R$ 258 milhões em faturamento para clientes.',
+        },
         {
           q: 'Vocês oferecem consultoria de tráfego pago ou só gestão?',
           a: 'Oferecemos os dois. Na consultoria de tráfego pago, orientamos e revisamos a operação do seu time; na gestão, a OxBrand executa ponta a ponta. No diagnóstico definimos qual formato faz mais sentido para o seu momento.',
