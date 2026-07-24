@@ -99,6 +99,11 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
           )}
         </div>
 
+        <p className="text-center sm:text-left text-sm text-muted-foreground mb-10 max-w-2xl">
+          Quer aquisição sem achismo? Conheça nosso método de{' '}
+          <Link href="/trafego-pago-com-previsibilidade" className="text-primary hover:underline font-medium">tráfego pago com previsibilidade</Link>.
+        </p>
+
         {/* Nossos Diferenciais */}
         <div className="grid lg:grid-cols-2 gap-px bg-border mb-px">
 

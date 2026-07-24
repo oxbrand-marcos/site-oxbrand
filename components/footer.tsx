@@ -13,6 +13,7 @@ const colInstitucional = {
     { label: 'Nossos Clientes', href: '/nossos-clientes' },
     { label: 'Portfólio', href: '/portfolio' },
     { label: 'Insights', href: '/blog' },
+    { label: 'Autores', href: '/blog/autor' },
     { label: 'Materiais Gratuitos', href: '/materiais-gratuitos' },
     { label: 'Carreiras', href: '/carreiras-em-marketing-digital' },
     { label: 'Contato', href: '/contato' },
@@ -30,6 +31,7 @@ const colSolucoes = {
     { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },
     { label: 'Marketing para Indústria', href: '/marketing-para-industria' },
     { label: 'Marketing para Advogados', href: '/marketing-para-advogados' },
+    { label: 'Tráfego Pago com Previsibilidade', href: '/trafego-pago-com-previsibilidade' },
     { label: 'Diagnóstico Gratuito', href: '/diagnostico' },
   ],
 }
