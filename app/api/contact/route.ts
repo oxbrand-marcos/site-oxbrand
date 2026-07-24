@@ -103,6 +103,9 @@ export async function POST(req: NextRequest) {
       contato: 'Formulário de Contato',
       diagnostico: 'Solicitação de Diagnóstico',
       lp_trafego: 'LP · Tráfego com Previsibilidade',
+      popup_institucional: 'PopUp · Diagnóstico Institucional',
+      popup_blog: 'PopUp · Diagnóstico Blog',
+      lp_mogi: 'LP · Mogi das Cruzes',
     }
 
     const title = titles[source] ?? 'Formulário do Site'
