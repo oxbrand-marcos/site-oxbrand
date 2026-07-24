@@ -25,7 +25,7 @@ export default function DesenvolvimentoDeSitesPage() {
       subheadline="Mais velocidade, mais conversão e a melhor experiência para o seu cliente. Criação de sites e páginas de alta performance para o seu projeto, do planejamento ao lançamento, sem cobranças extras."
       introTitle="A Tríade da Performance"
       intro="Não é sobre ter um site bonito, mas sobre ter um site que gera resultados. Nosso método é baseado em três pilares essenciais que chamamos de A Tríade da Performance: velocidade, SEO e experiência do usuário. A Experiência do Usuário guia o visitante até a conversão. A velocidade é uma vantagem competitiva, já que o Google recompensa sites rápidos. E com a OxBrand, seu site já nasce otimizado para o Google, integrado com as ferramentas de marketing que o seu negócio precisa para crescer."
-      stepsImage="/images/solucoes/desenvolvimento-sites-metodo.png"
+      stepsImage="/images/solucoes/desenvolvimento-processo.jpg"
       stepsAlt="Método de desenvolvimento de sites da OxBrand em 5 etapas"
       ctaHeading="Site bonito que não converte é despesa, não ativo."
       faqItems={[
