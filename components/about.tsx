@@ -72,16 +72,19 @@ export function About() {
             {timeline.map((item, i) => (
               <div
                 key={`${item.year}-${i}`}
-                className={`flex gap-4 items-start py-4 w-full ${i < timeline.length - 1 ? 'border-b border-border' : ''}`}
+                className={`flex flex-col items-center gap-1.5 lg:flex-row lg:items-start lg:gap-4 py-4 w-full ${i < timeline.length - 1 ? 'border-b border-border' : ''}`}
               >
-                {/* Indicador visual — preenchido para mudanças de marca, vazado para os demais */}
-                <div className="shrink-0 flex flex-col items-center pt-1.5 gap-1">
+                {/* Linha do ano: bullet + ano (centralizado no mobile; no desktop o bullet vira coluna a esquerda) */}
+                <div className="flex items-center gap-2 shrink-0 lg:pt-1.5">
                   <div
-                    className={`w-2.5 h-2.5 rounded-full border-2 border-primary ${item.brand ? 'bg-primary' : 'bg-transparent'}`}
+                    className={`w-2.5 h-2.5 rounded-full border-2 border-primary shrink-0 ${item.brand ? 'bg-primary' : 'bg-transparent'}`}
                   />
+                  <span className="text-sm font-bold stat-number text-primary leading-none lg:hidden">
+                    {item.year}
+                  </span>
                 </div>
-                <div className="flex flex-col gap-0.5 min-w-0">
-                  <span className="text-sm font-bold stat-number text-primary leading-none">
+                <div className="flex flex-col gap-0.5 min-w-0 items-center lg:items-start text-center lg:text-left">
+                  <span className="text-sm font-bold stat-number text-primary leading-none hidden lg:block">
                     {item.year}
                   </span>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.event}</p>

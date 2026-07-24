@@ -39,7 +39,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
   /* ── Variante footer — compacta, fundo escuro ── */
   if (variant === 'footer') {
     return (
-      <div className="flex flex-col gap-4 items-start">
+      <div className="flex flex-col gap-4 items-center sm:items-start text-center sm:text-left">
         <p className="text-sm font-bold text-foreground tracking-wide">Newsletter</p>
         <p className="text-xs text-foreground/60 leading-relaxed max-w-[220px]">
           Análises de tráfego, CRM e conversão direto da nossa operação. Sem spam, sem modinha.

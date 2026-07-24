@@ -124,15 +124,15 @@ export function Hero() {
               <div className="inline-flex items-center">
                 <Link
                   href="#clientes"
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-primary/30 bg-primary/8 text-sm text-foreground/80 hover:border-primary/60 hover:bg-primary/14 transition-all duration-200 group"
+                  className="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-2 rounded-full border border-primary/30 bg-primary/8 text-xs sm:text-sm text-foreground/80 hover:border-primary/60 hover:bg-primary/14 transition-all duration-200 group whitespace-nowrap max-w-full"
                   style={{ background: 'rgb(92 54 235 / 0.08)' }}
                 >
                   <span className="status-dot shrink-0" aria-hidden="true" />
-                  Mais de{' '}
-                  <span className="font-bold text-foreground">{STATS.faturamentoGerado} milhões</span>{' '}
-                  gerados para{' '}
-                  <span className="underline underline-offset-2 decoration-primary/50 font-medium">nossos clientes</span>
-                  <span className="text-muted-foreground group-hover:translate-x-0.5 transition-transform duration-150" aria-hidden="true">›</span>
+                  <span className="hidden sm:inline">Mais de&nbsp;</span>
+                  <span className="font-bold text-foreground">{STATS.faturamentoGerado} milhões</span>
+                  <span>&nbsp;gerados</span>
+                  <span className="hidden sm:inline">&nbsp;para&nbsp;<span className="underline underline-offset-2 decoration-primary/50 font-medium">nossos clientes</span></span>
+                  <span className="text-muted-foreground group-hover:translate-x-0.5 transition-transform duration-150 ml-1" aria-hidden="true">›</span>
                 </Link>
               </div>
 
