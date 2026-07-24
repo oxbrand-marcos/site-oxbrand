@@ -75,7 +75,7 @@ function CTAButton({ children, className = '' }: { children: React.ReactNode; cl
   )
 }
 
-/* ─── Depoimentos — consumidos de src/config/testimonials.ts ── */
+/* ─── Depoimentos, consumidos de src/config/testimonials.ts ── */
 // Os depoimentos de Jennifer e Chris vêm do arquivo central.
 // Mary Festa é exclusiva desta página (contexto Kommo).
 const kommoExtraTestimonial = {
@@ -90,7 +90,7 @@ const kommoTestimonials = [
   kommoExtraTestimonial,
 ]
 
-/* ─── FAQ items — importados de ./data.ts (também usados no layout.tsx
+/* ─── FAQ items, importados de ./data.ts (também usados no layout.tsx
        para gerar o schema FAQPage sem depender do bundle cliente) ──── */
 
 /* ═══════════════════════════════════════════════════════════ */
@@ -151,7 +151,7 @@ export default function CrmKommoLP() {
                 </p>
               </div>
 
-              {/* Direita — mockup de funil (só desktop) */}
+              {/* Direita, mockup de funil (só desktop) */}
               <div className="hidden lg:flex flex-col gap-3">
                 <div className="border border-border bg-card px-5 py-3 flex items-center justify-between">
                   <span className="mono-tag text-muted-foreground/50">funil de vendas · exemplo</span>
@@ -280,7 +280,7 @@ export default function CrmKommoLP() {
                   <span className="text-xs text-muted-foreground/60 leading-snug">{s.label}</span>
                 </div>
               ))}
-              {/* Badge estático — certificação Top 5% */}
+              {/* Badge estático, certificação Top 5% */}
               <div className="flex flex-col items-center justify-center gap-2 py-10 px-4 text-center">
                 <span className="text-lg font-bold text-primary leading-tight">Top 5%</span>
                 <span className="text-xs text-muted-foreground/60 leading-snug">Parceiros certificados no Brasil</span>
@@ -466,7 +466,7 @@ export default function CrmKommoLP() {
                 <CTAButton className="w-full sm:w-auto">Iniciar minha implementação</CTAButton>
               </div>
 
-              {/* Coluna direita — steps */}
+              {/* Coluna direita, steps */}
               <div className="flex flex-col">
                 {[
                   { n: '01', title: 'Diagnóstico Comercial', desc: 'Analisamos o seu processo de vendas atual, o fluxo de atendimento e os pontos de perda de leads. Mapeamos onde o dinheiro está sendo deixado na mesa antes de configurar qualquer coisa.' },
@@ -509,7 +509,7 @@ export default function CrmKommoLP() {
                   <span className="text-4xl text-primary/30 font-serif leading-none" aria-hidden="true">&ldquo;</span>
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t.quote}</p>
                   <div className="flex items-center gap-4 pt-4 border-t border-border">
-                    {/* Avatar com inicial — padrão único para todos os depoimentos */}
+                    {/* Avatar com inicial, padrão único para todos os depoimentos */}
                     <div className="w-10 h-10 shrink-0 bg-primary/10 border border-primary/20 flex items-center justify-center">
                       <span className="text-primary text-sm font-bold">{t.name[0]}</span>
                     </div>
@@ -670,6 +670,13 @@ export default function CrmKommoLP() {
         </section>
 
       </main>
+      <section className="bg-primary/5 border-y border-border py-6">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <Link href="/agencia-de-marketing-digital-mogi-das-cruzes" className="mono-tag text-primary hover:text-primary/70 transition-colors">
+            Atendemos Mogi das Cruzes e todo o Alto Tietê →
+          </Link>
+        </div>
+      </section>
       <Footer />
     </>
   )
