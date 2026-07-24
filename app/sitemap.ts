@@ -1,4 +1,5 @@
 import { ARTICLES } from '@/lib/blog-articles'
+import { PROFILE_AUTHORS } from '@/components/article-author'
 import { MetadataRoute } from 'next'
 import { db } from '@/lib/db'
 import { blogPosts } from '@/lib/db/schema'
@@ -24,6 +25,10 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/carreiras-em-marketing-digital`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
   { url: `${BASE}/contato`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.6 },
   { url: `${BASE}/diagnostico`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
+  { url: `${BASE}/agencia-de-marketing-digital-mogi-das-cruzes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
+  { url: `${BASE}/trafego-pago-com-previsibilidade`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE}/blog/autor`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+  ...PROFILE_AUTHORS.map((a) => ({ url: `${BASE}/blog/autor/${a.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 })),
   { url: `${BASE}/politica-de-privacidade`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   { url: `${BASE}/termos-e-condicoes`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
 ]
