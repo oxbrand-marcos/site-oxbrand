@@ -11,7 +11,7 @@ const dynamicPosts: BlogPost[] = ARTICLES.map((a, i) => ({
   excerpt: a.subtitle,
   content: articleText(a),
   tag: a.tag,
-  author: 'OxBrand',
+  author: a.author ?? 'OxBrand',
   coverUrl: coverFor(a.slug),
   coverAlt: a.coverAlt,
   published: true,

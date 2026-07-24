@@ -15,9 +15,107 @@ export interface Article {
   coverAlt: string
   bodyHtml: string
   faq: { q: string; a: string }[]
+  author?: string
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: 'o-que-e-copywriting',
+    metaTitle: 'O que é copywriting (e por que não é escrever bonito) | OxBrand',
+    metaDescription: 'O que é copywriting, o que faz um copywriter e por que copy bom reduz objeção e acelera decisão, não enfeita texto. Guia direto da OxBrand.',
+    title: 'O que é copywriting (e por que não é sobre escrever bonito)',
+    subtitle: 'Texto bonito que não move ninguém é enfeite. Copywriting é escrever para provocar uma decisão: clicar, responder, comprar. Veja o que é, o que faz um copywriter e onde ele muda o resultado.',
+    tag: 'Conteúdo & Copy',
+    breadcrumb: 'CONTEÚDO',
+    dateISO: '2026-07-24',
+    coverAlt: 'Copywriter escrevendo texto de vendas para uma agência de marketing',
+    author: 'Walquiria Blaustein',
+    faq: [
+      { q: 'O que é copywriting em palavras simples?', a: 'É escrever com o objetivo de fazer o leitor tomar uma decisão: clicar, responder ou comprar. Diferente de um texto que só informa, o copy conduz a uma ação.' },
+      { q: 'O que faz um copywriter?', a: 'Pesquisa o público e a oferta, identifica as objeções que travam a venda e escreve textos (anúncios, páginas, e-mails, roteiros) que reduzem essas objeções e levam à decisão.' },
+      { q: 'Copywriting serve para pequenas empresas?', a: 'Serve especialmente. Quanto menor o orçamento de mídia, mais cada palavra precisa trabalhar. Copy bom faz o mesmo investimento em anúncio render mais conversões.' },
+      { q: 'Qual a diferença entre copywriting e marketing de conteúdo?', a: 'Marketing de conteúdo é a estratégia de atrair e educar um público ao longo do tempo; copywriting é a técnica de escrita que, dentro dessa estratégia, converte atenção em ação. Andam juntos.' },
+    ],
+    bodyHtml: `
+<p class="lead">Existe um mal-entendido caro sobre copywriting: a ideia de que é a arte de escrever textos bonitos e criativos. Não é. Texto bonito que não move ninguém é enfeite. Copywriting é escrever para provocar uma decisão: clicar, responder, comprar, avançar. É a diferença entre um texto que as pessoas elogiam e um texto que faz as pessoas agirem.</p>
+<p>Na OxBrand, a gente resume assim: conteúdo não serve para engajar, serve para reduzir objeção e acelerar decisão. Copywriting é a ferramenta que faz isso com palavras. Vou explicar o que é, o que faz um copywriter e onde ele realmente muda o resultado de um negócio.</p>
+<h2>O que é copywriting?</h2>
+<p>Copywriting é a escrita estratégica com objetivo de conversão. Cada frase tem uma função: prender a atenção, construir desejo, quebrar uma objeção ou levar à ação. Não é sobre a palavra mais elegante, é sobre a palavra que faz o leitor dar o próximo passo.</p>
+<p>A origem do termo ajuda a entender. Copy, no jargão publicitário, é o texto de um anúncio. Copywriter é quem escreve esse texto com a intenção de vender. Hoje o copywriting está em todo lugar onde há uma decisão a ser tomada: no anúncio, no e-mail, na página de vendas, no roteiro de um vídeo, na legenda de um post.</p>
+<h2>O que faz um copywriter (e o que não faz)</h2>
+<p>Um copywriter faz: pesquisa o público e as suas dores, entende a oferta a fundo, e escreve textos que conduzem essa pessoa da dúvida à decisão. Antes de escrever, ele estuda quem lê, o que teme, o que já tentou e o que o faria dizer sim.</p>
+<p>Um copywriter não faz texto genérico para marcar presença. Ele não escreve para preencher espaço nem para agradar o chefe. Escreve para o leitor certo, com um objetivo medível. Se o texto não tem função dentro de uma jornada de compra, não é copywriting, é decoração.</p>
+<h2>Copywriting não é escrever bonito, é reduzir objeção</h2>
+<p>Toda venda trava em objeções: é caro, será que funciona para mim, não é o momento, não confio. O trabalho do copy é antecipar cada uma dessas dúvidas e respondê-las antes que elas virem um não. Quem entende melhor, decide mais rápido, e o copy é o que faz o leitor entender.</p>
+<p>Por isso um bom texto de vendas não é o mais criativo: é o mais claro. Clareza vende mais que criatividade. O leitor não compra o que não entende, e não confia no que soa exagerado. Copy que promete demais afasta; copy que explica com prova aproxima.</p>
+<h2>Copywriting para vendas: onde ele realmente muda o resultado</h2>
+<ul>
+<li><strong>No anúncio:</strong> a copy decide se a pessoa para de rolar o feed ou não. Os três primeiros segundos são copy.</li>
+<li><strong>Na landing page:</strong> é o texto que transforma o clique em contato. Um site rápido com copy fraca converte pouco; a estrutura de argumentos é o que fecha.</li>
+<li><strong>No e-mail e no WhatsApp:</strong> é o que faz o lead responder em vez de ignorar.</li>
+<li><strong>No conteúdo:</strong> é o que faz um artigo como este levar você até o próximo passo, em vez de só informar e ser esquecido.</li>
+</ul>
+<p>É essa lógica que sustenta o nosso trabalho de conteúdo e <a href="/solucoes/inbound-marketing">inbound marketing</a>: atrair quem já tem o problema que você resolve e conduzi-lo com texto até a decisão.</p>
+<h2>Copywriting é diferente de redação?</h2>
+<p>Sim, e a diferença é o objetivo. Redação informa e comunica com correção. Copywriting persuade e converte. Um bom redator escreve um texto claro e correto sobre um produto; um bom copywriter escreve um texto que faz esse produto ser comprado. Os dois são importantes, mas confundir um com o outro é o erro que faz empresas produzirem muito conteúdo e venderem pouco.</p>
+<h2>Quanto ganha um copywriter? (e por que isso importa para quem contrata)</h2>
+<p>A faixa varia muito: de iniciantes a especialistas seniores, a diferença é grande, e profissionais que dominam copy de resposta direta estão entre os mais bem pagos do marketing. Mas o ponto para quem contrata não é o custo: é o retorno. Um copywriter que aumenta a taxa de conversão de uma página em poucos pontos percentuais se paga muitas vezes.</p>
+<p>Por isso, mais do que contratar alguém que escreve, o que gera resultado é ter copy conectado à estratégia: a mesma lógica no anúncio, na página e no e-mail. É o que fazemos dentro do serviço de <a href="/solucoes/copywriting-e-redacao">copywriting e redação estratégica</a>.</p>
+<h2>Quer que suas palavras vendam mais?</h2>
+<p>A OxBrand faz copywriting e conteúdo com um único objetivo: gerar avanço real de negócio. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, com atuação nacional e método validado em mais de 450 marcas. Agende um <a href="/diagnostico">diagnóstico gratuito</a>.</p>
+`,
+  },
+  {
+    slug: 'crm-integrado-ao-whatsapp',
+    metaTitle: 'CRM integrado ao WhatsApp: pare de perder leads | OxBrand',
+    metaDescription: 'Como um CRM integrado ao WhatsApp (Kommo) organiza o atendimento, automatiza respostas e para de perder lead no meio da conversa. Guia da OxBrand, Top 5% Kommo no Brasil.',
+    title: 'CRM integrado ao WhatsApp: como parar de perder leads no meio da conversa',
+    subtitle: 'O WhatsApp virou o principal canal de vendas do Brasil e segue tratado como app de recado. Veja como um CRM integrado organiza o funil, automatiza a espera e para de perder lead.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-24',
+    coverAlt: 'Tela do Kommo CRM integrado ao WhatsApp em uma agência de marketing',
+    author: 'Marcos Blaustein',
+    faq: [
+      { q: 'O que é CRM no WhatsApp?', a: 'É a integração entre o aplicativo de mensagens e um sistema de gestão comercial: as conversas do WhatsApp viram oportunidades organizadas em um funil, com histórico, responsável e etapa, em vez de mensagens soltas na caixa de entrada.' },
+      { q: 'Qual o melhor CRM para WhatsApp?', a: 'O que a sua equipe usa de verdade. Tecnicamente, o Kommo se destaca pela integração nativa e estável com o WhatsApp e pela facilidade de automação. Mas o que garante o resultado é a implementação bem-feita, não a marca.' },
+      { q: 'Preciso de conhecimento técnico para usar?', a: 'Para operar, não. Para configurar bem (funil, automações e integrações), sim, e é aí que uma agência parceira poupa meses de tentativa e erro.' },
+      { q: 'Quanto custa?', a: 'Depende do plano do CRM e do escopo de implementação. Por isso a porta de entrada é um diagnóstico gratuito: analisamos seu processo comercial e mostramos o caminho, sem compromisso.' },
+    ],
+    bodyHtml: `
+<p class="lead">Todo mês, empresas gastam milhares em anúncios para fazer o telefone tocar, ou, mais provável, para fazer o WhatsApp apitar. O lead chega, manda oi, quero saber mais, e aí começa o vazamento: alguém responde três horas depois, outro vendedor já tinha respondido, ninguém sabe se aquele contato virou proposta ou sumiu. O problema não é o tráfego. É que o WhatsApp virou o principal canal de vendas do Brasil e continua sendo tratado como aplicativo de recado.</p>
+<p>Um CRM integrado ao WhatsApp resolve exatamente esse buraco. E como somos Top 5% dos parceiros Kommo no Brasil, este texto é a explicação que a gente daria numa reunião, sem jargão, com processo.</p>
+<h2>O que é um CRM integrado ao WhatsApp?</h2>
+<p>CRM é a sigla para gestão de relacionamento com o cliente. Na prática, é o sistema onde cada contato, cada conversa e cada oportunidade de venda ficam registrados e organizados em um funil, do primeiro oi até o fechamento. Quando esse CRM é integrado ao WhatsApp, as conversas do aplicativo entram automaticamente no sistema: viram cards em um funil, com histórico, responsável e etapa.</p>
+<p>A diferença é simples de sentir. Sem CRM, o WhatsApp é uma caixa de mensagens onde o lead se perde entre grupos da família e conversa de fornecedor. Com CRM integrado, cada lead é uma oportunidade rastreada: você sabe quantos entraram, em que etapa travaram e quanto tempo levou para responder cada um.</p>
+<h2>O problema que ninguém mede: o lead que morre no vou verificar e te retorno</h2>
+<p>Não operamos com achismo, operamos com dados, e o dado mais caro de uma operação comercial é o lead que chegou e não foi atendido a tempo. Estudos de mercado mostram que a chance de converter cai drasticamente depois dos primeiros minutos de resposta. No WhatsApp, onde a expectativa é de retorno imediato, esse relógio corre mais rápido ainda.</p>
+<p>O pior é que essa perda é invisível. Sem sistema, ninguém consegue dizer perdemos 30 leads este mês porque respondemos tarde, simplesmente não há registro. O CRM integrado transforma esse prejuízo invisível em número na tela. E o que vira número, vira decisão.</p>
+<h2>Qual o melhor CRM para WhatsApp?</h2>
+<p>A resposta honesta: o melhor CRM é o que a sua equipe realmente usa. Um sistema poderoso que o time abandona em duas semanas vale menos que uma planilha bem-feita. Por isso, mais do que a marca, o que importa é a implementação: funil desenhado para o seu processo, automações que fazem sentido e treinamento do time.</p>
+<p>Dito isso, trabalhamos com o Kommo por um motivo técnico: ele nasceu orientado a mensageria. A integração com o WhatsApp é nativa e estável, o funil é visual e a automação é acessível para quem não é programador. É o CRM que melhor equilibra potência e adoção pela equipe comercial, e é por isso que somos parceiros oficiais, entre os 5% melhores do Brasil.</p>
+<p>Se você quer entender como isso se aplica ao seu funil, essa é a conversa do nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>.</p>
+<h2>Como funciona a integração do Kommo com o WhatsApp, na prática</h2>
+<ol>
+<li><strong>Conecta o número:</strong> o WhatsApp da empresa passa a alimentar o CRM. Toda mensagem nova cria ou atualiza um contato.</li>
+<li><strong>Vira funil:</strong> cada conversa é um card que percorre etapas (novo lead, qualificação, proposta, fechamento), com responsável definido. Nada fica no limbo.</li>
+<li><strong>Distribui e cobra:</strong> o sistema distribui os leads entre os vendedores e avisa quando alguém está parado tempo demais em uma etapa.</li>
+<li><strong>Registra tudo:</strong> o histórico completo fica salvo. Se um vendedor sai, a conversa não vai embora com ele.</li>
+<li><strong>Mede:</strong> no fim do mês você tem os números: quantos leads entraram, taxa de conversão por etapa, tempo médio de resposta. Isso é a base de qualquer otimização.</li>
+</ol>
+<p>Repare que boa parte desses leads chega do tráfego pago. Por isso CRM e tráfego não são projetos separados: são o mesmo sistema. Um traz o lead certo, o outro garante que ele não se perca. Conheça a nossa <a href="/solucoes/gestao-de-trafego-pago">gestão de tráfego pago</a>.</p>
+<h2>Automação de WhatsApp: o que dá para automatizar, e o que você nunca deve</h2>
+<p>Automação de WhatsApp é o que faz o sistema responder em segundos, mesmo fora do horário comercial. Dá para automatizar com segurança: a primeira resposta (recebemos sua mensagem, um especialista já vai te atender), a qualificação inicial, lembretes de follow-up e o envio de materiais.</p>
+<p>O que você nunca deve automatizar: a relação. Automação existe para o vendedor chegar mais rápido e mais preparado na conversa, não para substituir o humano no momento da decisão. Robô que finge ser gente destrói confiança. A régua é simples: automatize a espera, humanize a venda.</p>
+<h2>Como saber se sua empresa precisa disso agora</h2>
+<ul>
+<li><strong>Faz sentido se:</strong> você já investe em anúncios e recebe leads pelo WhatsApp, tem mais de um vendedor, e não consegue dizer com precisão quantos leads entraram e converteram no último mês.</li>
+<li><strong>Ainda não é a hora se:</strong> você recebe pouquíssimos contatos por mês e um único responsável dá conta com folga. Nesse caso, primeiro gere demanda.</li>
+</ul>
+<h2>Pronto para parar de perder lead no WhatsApp?</h2>
+<p>A OxBrand estrutura CRM comercial com o Kommo (funil, automação e integração) para operações que querem previsibilidade, não mais tarefas. Somos Top 5% dos parceiros Kommo no Brasil e uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, com atuação nacional. Agende um <a href="/diagnostico">diagnóstico gratuito</a>.</p>
+`,
+  },
   {
     slug: 'quanto-custa-gestao-de-trafego-pago',
     metaTitle: 'Quanto Custa Tráfego Pago? Valores Reais 2026 | OxBrand',
