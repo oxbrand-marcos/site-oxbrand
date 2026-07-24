@@ -109,7 +109,7 @@ export default function ContatoPage() {
               </div>
 
               {/* Conteúdo */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 items-center text-center lg:items-start lg:text-left">
                 <span className="mono-tag text-primary" style={{ color: '#1a007c' }}>e um café?</span>
                 <h2 id="cafe-heading" className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
                   Venha até nós
@@ -119,7 +119,7 @@ export default function ContatoPage() {
                 </p>
 
                 {/* Endereço */}
-                <address className="not-italic flex flex-col gap-1 text-sm text-gray-700 leading-relaxed border-l-2 pl-4" style={{ borderColor: '#5c36eb' }}>
+                <address className="not-italic flex flex-col gap-1 text-sm text-gray-700 leading-relaxed lg:border-l-2 lg:pl-4" style={{ borderColor: '#5c36eb' }}>
                   <span className="font-semibold text-gray-900">Mogi das Cruzes - SP</span>
                   <span>Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1303</span>
                   <span>Torre Office (Helbor Concept) - Socorro · CEP 08780-500</span>
@@ -144,7 +144,7 @@ export default function ContatoPage() {
                 </p>
 
                 {/* Contatos diretos */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 items-center lg:items-start">
                   <a
                     href="https://wa.me/5511921425351"
                     target="_blank"
@@ -164,7 +164,7 @@ export default function ContatoPage() {
                 </div>
 
                 {/* Ícones de redes sociais */}
-                <div className="flex items-center gap-3 pt-2">
+                <div className="flex items-center justify-center lg:justify-start gap-3 pt-2 flex-wrap">
                   {[
                     { label: 'Instagram', href: 'https://www.instagram.com/oxbrand.br/', svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> },
                     { label: 'Facebook', href: 'https://www.facebook.com/oxbrand.oficial', svg: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> },
@@ -178,7 +178,7 @@ export default function ContatoPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-9 h-9 flex items-center justify-center rounded-sm border border-gray-200 bg-white text-gray-500 hover:border-primary hover:text-primary transition-colors"
+                      className="w-9 h-9 flex items-center justify-center rounded-sm border border-primary/20 bg-primary/10 text-primary hover:bg-primary hover:text-white hover:border-primary transition-colors"
                     >
                       {svg}
                     </a>
