@@ -25,7 +25,7 @@ export default function CopywritingERedacaoPage() {
       subheadline="Se o seu conteúdo não gera resultados, ele é apenas texto. Nós transformamos palavras em um ativo poderoso, capaz de atrair, engajar e, principalmente, converter. Descubra como o Copywriting e a Redação Estratégica alavancam seu Marketing de Performance."
       introTitle="Conteúdo que converte"
       intro="Muitas empresas focam apenas na quantidade, mas o que realmente importa é a qualidade. Enxergamos a comunicação como uma ferramenta de Marketing de Performance, onde cada frase tem um propósito: levar o seu cliente ideal à próxima etapa. Nosso trabalho de Redação vai muito além de gramática e concisão: ele constrói a autoridade da sua marca. Já o Copywriting é a arte de produzir textos persuasivos que geram ações imediatas, seja um clique, um cadastro ou uma venda. Juntos, esses dois pilares criam um ecossistema de conteúdo imbatível."
-      stepsImage="/images/solucoes/copywriting-metodo.png"
+      stepsImage="/images/solucoes/copywriting-processo.jpg"
       stepsAlt="Método de copywriting e redação da OxBrand em 4 etapas"
       ctaHeading="Conteúdo não serve para engajar. Serve para acelerar a decisão."
       faqItems={[
