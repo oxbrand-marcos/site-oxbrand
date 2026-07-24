@@ -150,11 +150,11 @@ export function PopupDiagnosticoBlog() {
           {/* Logo */}
           <div className="mb-6">
             <Image
-              src="/images/oxbrand-logo.webp"
+              src="/images/oxbrand-logo-inverse.png"
               alt="OxBrand, Marketing de Performance"
-              width={120}
-              height={34}
-              className="h-7 w-auto object-contain"
+              width={160}
+              height={45}
+              className="h-8 w-auto object-contain"
             />
           </div>
 
