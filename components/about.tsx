@@ -41,7 +41,7 @@ export function About() {
             </h2>
 
             <p className="text-muted-foreground leading-relaxed text-base">
-              Fundada em Mogi das Cruzes com atuação nacional e internacional, a OxBrand
+              Fundada em <Link href="/agencia-de-marketing-digital-mogi-das-cruzes" className="text-foreground underline decoration-primary/40 underline-offset-2 hover:text-primary transition-colors">Mogi das Cruzes</Link> com atuação nacional e internacional, a OxBrand
               une tráfego pago, criação e tecnologia num sistema único. Não vendemos
               pacotes, construímos operações de marketing que escalam junto com o seu negócio.
             </p>

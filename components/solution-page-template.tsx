@@ -432,7 +432,16 @@ export function SolutionPageTemplate({
         </section>
       )}
 
-      {/* ── Contato + Formulário ─────────────────────────── */}
+      {/* Atuação local */}
+      <section className="bg-zinc-50 border-y border-zinc-200 py-6">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <Link href="/agencia-de-marketing-digital-mogi-das-cruzes" className="mono-tag text-primary hover:text-primary/70 transition-colors">
+            Atendemos Mogi das Cruzes e todo o Alto Tietê →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── Contato + Formulário ───────────────── */}
       <Contact />
 
       {/* ── FAQ ─────────────────────────────────────────── */}

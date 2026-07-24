@@ -8,6 +8,7 @@ const colInstitucional = {
   items: [
     { label: 'Home', href: '/' },
     { label: 'Sobre Nós', href: '/sobre' },
+    { label: 'Agência em Mogi das Cruzes', href: '/agencia-de-marketing-digital-mogi-das-cruzes' },
     { label: 'Soluções', href: '/solucoes' },
     { label: 'Nossos Clientes', href: '/nossos-clientes' },
     { label: 'Portfólio', href: '/portfolio' },

@@ -67,10 +67,6 @@ function DropdownItem({ item }: { item: NavItem }) {
       // Devolve foco ao trigger
       containerRef.current?.querySelector<HTMLElement>('[data-trigger]')?.focus()
     }
-    if ((e.key === 'Enter' || e.key === ' ') && (e.target as HTMLElement).dataset.trigger !== undefined) {
-      e.preventDefault()
-      setOpen((v) => !v)
-    }
     if (e.key === 'ArrowDown' && open) {
       e.preventDefault()
       const items = containerRef.current?.querySelectorAll<HTMLElement>('[role="menuitem"]')
@@ -106,10 +102,10 @@ function DropdownItem({ item }: { item: NavItem }) {
       onBlur={handleBlur}
     >
       {/* Trigger com suporte a teclado */}
-      <button
+      <Link
+        href={item.href}
         data-trigger
-        onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1 mono-tag text-muted-foreground hover:text-foreground transition-colors bg-transparent border-none p-0 cursor-pointer"
+        className="flex items-center gap-1 mono-tag text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4"
         aria-expanded={open}
         aria-haspopup="menu"
         aria-controls={menuId}
@@ -120,7 +116,7 @@ function DropdownItem({ item }: { item: NavItem }) {
           className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
           aria-hidden="true"
         />
-      </button>
+      </Link>
 
       {/* Dropdown */}
       <div
