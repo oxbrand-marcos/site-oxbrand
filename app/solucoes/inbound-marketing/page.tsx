@@ -25,7 +25,7 @@ export default function InboundMarketingPage() {
       subheadline="Uma estratégia complexa e poderosa que exige a inteligência de profissionais especializados. Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até que estejam prontos para comprar."
       introTitle="O poder da atração"
       intro="Contratar uma ferramenta é fácil, mas gerar resultados consistentes e crescentes com Inbound Marketing é o nosso trabalho. Somos a OxBrand. Oferecemos o conhecimento e a experiência que a sua empresa precisa para transformar essa estratégia em vendas reais e previsíveis. Nossa equipe é formada por profissionais de cada área do marketing digital, experts em mídia paga, criação, conteúdo, SEO, redes sociais e copywriting, garantindo uma abordagem completa e integrada para o seu negócio."
-      stepsImage="/images/solucoes/inbound-marketing-metodo.png"
+      stepsImage="/images/solucoes/inbound-processo.jpg"
       stepsAlt="Método de inbound marketing da OxBrand em 6 etapas"
       ctaHeading="Tráfego que continua chegando quando você para de pagar."
       faqItems={[
