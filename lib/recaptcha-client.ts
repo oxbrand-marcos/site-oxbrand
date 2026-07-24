@@ -1,6 +1,6 @@
 // Carrega o reCAPTCHA v3 sob demanda e devolve um token por ação.
 // Se NEXT_PUBLIC_RECAPTCHA_SITE_KEY não estiver setado, retorna '' e o
-// servidor simplesmente não verifica — formulários seguem funcionando.
+// servidor simplesmente não verifica, formulários seguem funcionando.
 
 declare global {
   interface Window {
