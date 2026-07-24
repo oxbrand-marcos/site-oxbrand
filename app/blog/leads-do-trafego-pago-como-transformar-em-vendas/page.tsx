@@ -177,6 +177,8 @@ export default function LeadsTrafegoPage() {
                   <p>Tráfego pago bem feito gera oportunidade. O que transforma essa oportunidade em receita é o processo que vem depois.</p>
                 </div>
 
+                <p>É por isso que tratamos aquisição e conversão como um sistema único. Veja como estruturamos <Link href="/trafego-pago-com-previsibilidade" className="text-primary underline underline-offset-2 hover:no-underline">tráfego pago com previsibilidade</Link>, do primeiro clique ao fechamento.</p>
+
                 <p>Um lead que clicou num anúncio está no pico do interesse naquele momento. Ele quer uma resposta agora. Não amanhã, não em 2 horas, não quando o vendedor tiver um tempo.</p>
 
                 <div className="bg-zinc-50 border border-zinc-200 p-6 flex flex-col gap-2">
