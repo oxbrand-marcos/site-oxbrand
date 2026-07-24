@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Analytics } from '@vercel/analytics/next'
 import { DeferredGlobals } from '@/components/deferred-globals'
 import Script from 'next/script'
 
@@ -103,8 +101,6 @@ export default function RootLayout({
         {/* End Google Tag Manager (noscript) */}
         {children}
         <DeferredGlobals />
-        <SpeedInsights />
-        <Analytics />
       </body>
     </html>
   )
