@@ -26,7 +26,7 @@ export default function AssessoriaEmMarketingPage() {
       introTitle="Assessoria completa"
       intro="Você já investiu em marketing, mas não vê o retorno? Tentou estruturar um time interno ou contratou agências que não entregavam o que prometiam? Você não precisa mais tentar sozinho. A OxBrand é a solução definitiva. Nossa assessoria vai além do plano de ação: o time executa, otimiza e gerencia todas as frentes, com metas claras e responsabilidade sobre o resultado."
       stepsImage="/images/wp/metodologia.jpeg"
-      stepsAlt="Metodologia OxBrand: como trabalhamos em 4 etapas — Análise e Diagnóstico, Estratégia e Plano de Ação, Execução e Otimização, Relatórios e Alinhamento"
+      stepsAlt="Metodologia OxBrand: como trabalhamos em 4 etapas, Análise e Diagnóstico, Estratégia e Plano de Ação, Execução e Otimização, Relatórios e Alinhamento"
       ctaHeading="Você não precisa de mais tarefas. Precisa de direção."
       faqItems={[
         {
