@@ -608,6 +608,7 @@ export const ARTICLES: Article[] = [
     bodyHtml: `
 <p class="lead">Tráfego pago para imobiliárias tem uma regra que muda tudo: lead não é resultado. Visita agendada é resultado. E é exatamente nessa passagem, do formulário preenchido à visita marcada, que a maioria das operações do mercado imobiliário perde dinheiro.</p>
 <p>A OxBrand nasceu com forte atuação no setor imobiliário e de construção civil. Este guia mostra como estruturamos tráfego pago para imobiliárias, corretores e incorporadoras: canais, funil, qualificação e os números que realmente importam.</p>
+<p>Antes dos canais, um princípio: no imobiliário, verba sem processo vira desperdício. Trabalhamos com <a href="/trafego-pago-com-previsibilidade">tráfego pago com previsibilidade</a>, definindo o piso de investimento e o retorno esperado antes de escalar.</p>
 <h2>Por que o mercado imobiliário exige uma operação diferente</h2>
 <ul>
 <li><strong>Ciclo longo:</strong> da primeira pesquisa à compra, meses. Sem nutrição e CRM, o lead esfria e compra com o concorrente;</li>
@@ -728,6 +729,7 @@ export const ARTICLES: Article[] = [
 <p class="lead">Kommo vs RD Station é a comparação mais comum entre PMEs brasileiras escolhendo CRM, e quem pesquisa costuma receber argumentos de venda dos dois lados.</p>
 <p>Nossa posição é diferente: a OxBrand implanta os dois. Somos Top 5% parceiros Kommo no Brasil e parceiros RD Station. Não temos interesse em empurrar um ou outro: temos interesse em que o CRM funcione, porque somos cobrados pelo resultado da operação, não pela licença vendida.</p>
 <p>A resposta curta: se a sua venda acontece no WhatsApp e no Instagram, o Kommo tende a vencer. Se a sua operação precisa de um ecossistema de marketing mais vendas em português, o RD Station entra forte. Agora, a resposta completa.</p>
+<p>Independente do CRM escolhido, a régua de aquisição precisa ser previsível. É o que estruturamos no trabalho de <a href="/trafego-pago-com-previsibilidade">tráfego pago com previsibilidade</a>, ligando mídia, funil e CRM ao resultado de vendas.</p>
 <h2>O que cada CRM é (de verdade)</h2>
 <p><strong>Kommo</strong> é um CRM conversacional. Nasceu para operações que vendem por mensageiro: caixa de entrada unificada (WhatsApp, Instagram, Messenger, Telegram), funil de vendas visual e o Salesbot, construtor de automações de conversa sem código. É Meta Business Partner, com integração oficial de WhatsApp. Explicamos <a href="/blog/como-funciona-o-crm-kommo">como o Kommo funciona na prática</a> neste guia.</p>
 <p><strong>RD Station CRM</strong> é o braço de vendas do ecossistema RD Station, a plataforma de automação de marketing mais usada do Brasil. Sua força está na integração nativa com o RD Station Marketing: lead nutrido por e-mail e automação cai no funil de vendas com todo o histórico, em uma plataforma 100% em português com suporte local.</p>
