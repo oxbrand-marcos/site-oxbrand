@@ -109,6 +109,9 @@ export interface SolutionPageProps {
     isNotFor: string[]
   }
   faqItems?: { q: string; a: string }[]
+  pageUrl?: string
+  serviceType?: string
+  relatedLinks?: { label: string; href: string }[]
 }
 
 /* ─── Template principal ─────────────────────────────────── */
@@ -131,9 +134,12 @@ export function SolutionPageTemplate({
   ctaHeading,
   audience,
   faqItems,
+  pageUrl: pageUrlProp,
+  serviceType,
+  relatedLinks,
 }: SolutionPageProps) {
   const pageSlug = slug ?? breadcrumb.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-  const pageUrl = `/solucoes/${pageSlug}`
+  const pageUrl = pageUrlProp ?? `/solucoes/${pageSlug}`
   const pageDesc = metaDescription ?? `${breadcrumb} · serviço da OxBrand, agência de marketing de performance.`
 
   return (
@@ -145,18 +151,18 @@ export function SolutionPageTemplate({
             name: breadcrumb,
             description: pageDesc,
             url: pageUrl,
-            serviceType: breadcrumb,
+            serviceType: serviceType ?? breadcrumb,
           })),
         }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: jsonLd(breadcrumbSchema([
-            { name: 'OxBrand', url: '/' },
-            { name: 'Soluções', url: '/solucoes' },
-            { name: breadcrumb, url: pageUrl },
-          ])),
+          __html: jsonLd(breadcrumbSchema(
+            pageUrlProp
+              ? [{ name: 'OxBrand', url: '/' }, { name: breadcrumb, url: pageUrl }]
+              : [{ name: 'OxBrand', url: '/' }, { name: 'Soluções', url: '/solucoes' }, { name: breadcrumb, url: pageUrl }],
+          )),
         }}
       />
       {faqItems && faqItems.length > 0 && (
@@ -426,6 +432,21 @@ export function SolutionPageTemplate({
                   <h3 className="text-sm font-semibold text-zinc-900 leading-snug">{feature.title}</h3>
                   <p className="text-xs text-zinc-500 leading-relaxed">{feature.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {relatedLinks && relatedLinks.length > 0 && (
+        <section className="bg-white border-b border-zinc-200 py-14">
+          <div className="max-w-7xl mx-auto px-6 flex flex-col gap-6">
+            <span className="mono-tag text-zinc-400">Serviços que sustentam essa entrega</span>
+            <div className="flex flex-wrap gap-3">
+              {relatedLinks.map((l) => (
+                <Link key={l.href} href={l.href} className="flex items-center gap-2 border border-zinc-200 bg-white px-5 py-3 text-sm font-medium text-zinc-800 hover:border-primary hover:text-primary transition-colors">
+                  {l.label} <span aria-hidden="true">→</span>
+                </Link>
               ))}
             </div>
           </div>
