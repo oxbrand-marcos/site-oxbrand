@@ -254,6 +254,36 @@ export function blogPostingSchema(opts: {
 
 /* ─── Serializador seguro para <script> ───────────────────── */
 
+export function personSchema(opts: {
+  name: string
+  slug: string
+  jobTitle: string
+  description: string
+  image: string
+  sameAs: string[]
+  knowsAbout: string[]
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${BASE_URL}/blog/autor/${opts.slug}#person`,
+    name: opts.name,
+    url: `${BASE_URL}/blog/autor/${opts.slug}`,
+    jobTitle: opts.jobTitle,
+    description: opts.description,
+    image: opts.image.startsWith('http') ? opts.image : `${BASE_URL}${opts.image}`,
+    sameAs: opts.sameAs,
+    knowsAbout: opts.knowsAbout,
+    worksFor: { '@id': ORG_ID },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mogi das Cruzes',
+      addressRegion: 'SP',
+      addressCountry: 'BR',
+    },
+  }
+}
+
 export function jsonLd(schema: object) {
   return JSON.stringify(schema)
 }
