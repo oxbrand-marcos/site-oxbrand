@@ -15,7 +15,24 @@ export function pageOg({
   path: string
   subtitle?: string
 }) {
-  const ogImageUrl = `${BASE}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`
+  // Paginas com imagem OG estatica (WhatsApp/Telegram nao renderizam OG dinamico via /og).
+  const STATIC_OG: Record<string, string> = {
+    '/carreiras-em-marketing-digital': 'carreiras-em-marketing-digital',
+    '/diagnostico': 'diagnostico',
+    '/contato': 'contato',
+    '/materiais-gratuitos': 'materiais-gratuitos',
+    '/blog': 'blog',
+    '/portfolio': 'portfolio',
+    '/nossos-clientes': 'nossos-clientes',
+    '/solucoes/crm-kommo': 'crm-kommo',
+    '/solucoes/copywriting-e-redacao': 'copywriting-e-redacao',
+    '/solucoes/desenvolvimento-de-sites': 'desenvolvimento-de-sites',
+    '/solucoes/gestao-de-trafego-pago': 'gestao-de-trafego-pago',
+    '/solucoes/inbound-marketing': 'inbound-marketing',
+  }
+  const ogImageUrl = STATIC_OG[path]
+    ? `${BASE}/images/og/${STATIC_OG[path]}.jpg`
+    : `${BASE}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`
 
   return {
     alternates: { canonical: path },
