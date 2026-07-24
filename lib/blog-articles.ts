@@ -20,6 +20,55 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'kommo-planos-e-precos',
+    metaTitle: 'Kommo: planos e preços, qual escolher | OxBrand',
+    metaDescription: 'Kommo: planos, preços e qual escolher para a sua empresa. Comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem enrolação. Guia da OxBrand.',
+    title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
+    subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-24',
+    coverAlt: 'Comparativo de planos e preços do Kommo CRM',
+    author: 'Marcos Blaustein',
+    faq: [
+      { q: 'Quanto custa o Kommo?', a: 'O Kommo cobra por usuário/mês, em dólar, com desconto no plano anual. Como o câmbio e a política de preços variam, confirme o valor vigente no site oficial. Mais importante que o preço de tabela é qual plano serve para o seu tamanho de operação.' },
+      { q: 'Qual o melhor plano do Kommo?', a: 'Para a maioria das empresas que já vendem por WhatsApp, o plano Avançado é o ponto de equilíbrio entre automação e custo. Times pequenos começam bem no Base; operações grandes vão para o Empresarial.' },
+      { q: 'O Kommo tem plano gratuito?', a: 'O Kommo trabalha com teste gratuito por tempo limitado, não com um plano gratuito permanente. Dá para testar antes de decidir, e é o que recomendamos, para o time sentir a ferramenta antes de contratar.' },
+      { q: 'Vale a pena contratar com uma agência parceira?', a: 'Se você quer a configuração certa desde o início (funil, automações e integrações), sim. Uma implementação parceira poupa meses de tentativa e erro. Somos Top 5% dos parceiros Kommo no Brasil.' },
+    ],
+    bodyHtml: `
+<p class="lead">Se você chegou aqui, provavelmente já entendeu que precisa de um CRM integrado ao WhatsApp e o Kommo apareceu como opção. A dúvida agora é prática: quanto custa, quais são os planos e qual deles faz sentido para o seu tamanho de operação. Como somos Top 5% dos parceiros Kommo no Brasil, este é o comparativo que fazemos numa reunião, direto, sem empurrar o plano mais caro.</p>
+<p>Um aviso de transparência: o Kommo reajusta preços periodicamente e cobra em dólar, por usuário e por mês (no plano anual). Então trate os valores abaixo como faixa de referência e confirme o preço vigente no site oficial antes de decidir. O que não muda é a lógica de qual plano serve para quem, e é nisso que este guia foca.</p>
+<h2>Como o Kommo cobra (o modelo, antes do preço)</h2>
+<ul>
+<li><strong>Por usuário, por mês:</strong> o valor é multiplicado pelo número de pessoas do time que vão usar o sistema.</li>
+<li><strong>Em dólar:</strong> o preço final em real varia com o câmbio.</li>
+<li><strong>Mais barato no anual:</strong> o plano mensal custa bem mais caro por usuário que o anual. Para quem vai usar de verdade, o anual compensa.</li>
+</ul>
+<h2>Os planos do Kommo, na prática</h2>
+<ul>
+<li><strong>Base:</strong> o plano de entrada. Funil, integração com WhatsApp e canais, gestão de leads. Serve para times pequenos que querem organizar o atendimento e parar de perder lead. Para muita empresa iniciando no CRM, já resolve.</li>
+<li><strong>Avançado:</strong> adiciona automações mais robustas, funil de tarefas e recursos de produtividade para o time comercial. É o ponto ideal para a maioria das operações que já vendem por WhatsApp e querem escalar com processo.</li>
+<li><strong>Empresarial:</strong> foco em bases grandes de contatos, perfilamento e necessidades de operações maiores. Faz sentido para quem tem volume alto de leads e um time comercial estruturado.</li>
+</ul>
+<h2>Qual plano escolher? A regra simples</h2>
+<ul>
+<li><strong>Time pequeno, começando a organizar o WhatsApp:</strong> comece no Base. Ele já entrega o essencial: nenhum lead perdido e histórico registrado.</li>
+<li><strong>Já vende por WhatsApp e quer automatizar e escalar:</strong> o Avançado é o ponto certo. É onde a automação começa a devolver tempo para o time vender.</li>
+<li><strong>Operação grande, base extensa, vários vendedores:</strong> Empresarial.</li>
+</ul>
+<p>O erro mais comum não é escolher o plano errado, é escolher o plano certo e configurar mal. Um Kommo Avançado sem funil bem desenhado rende menos que um Base bem implementado. Preço é o menor dos fatores; implementação é o que define o resultado.</p>
+<h2>Kommo vale a pena?</h2>
+<p>Vale, para um perfil claro: empresas que recebem leads pelo WhatsApp, têm mais de um vendedor e hoje não conseguem dizer quantos contatos entraram e converteram no mês. Para esse perfil, o custo do Kommo é uma fração do que se perde em lead mal atendido.</p>
+<p>Não vale (ainda) se você recebe pouquíssimos contatos e uma pessoa dá conta com folga. Nesse caso, o problema não é CRM, é gerar demanda primeiro. A gente diz isso antes de vender, porque ferramenta parada é custo, não solução.</p>
+<h2>Preço não é o que decide o resultado</h2>
+<p>Depois de implementar Kommo em dezenas de operações, a conclusão é sempre a mesma: o que separa quem cresce de quem desiste não é o plano contratado, é a configuração. Funil desenhado para o seu processo, automações que fazem sentido e um time treinado valem mais que qualquer recurso extra do plano premium.</p>
+<p>É por isso que, mais do que contratar o Kommo, o que muda o jogo é implementá-lo bem. Se você quer entender qual plano e qual configuração servem para a sua operação, essa é a conversa do nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>. E se ainda está entendendo como o CRM se conecta ao WhatsApp, comece por <a href="/blog/crm-integrado-ao-whatsapp">este guia</a>.</p>
+<div class="callout"><p>Conteúdo atualizado em julho de 2026. Os planos e preços do Kommo mudam periodicamente; confira sempre os valores vigentes no site oficial do Kommo antes de decidir.</p></div>
+<p>A OxBrand implementa o Kommo com método: o plano certo para o seu tamanho e a configuração que faz o time realmente usar. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Agende um <a href="/diagnostico">diagnóstico gratuito</a>.</p>
+`,
+  },
+  {
     slug: 'o-que-e-copywriting',
     metaTitle: 'O que é copywriting (e por que não é escrever bonito) | OxBrand',
     metaDescription: 'O que é copywriting, o que faz um copywriter e por que copy bom reduz objeção e acelera decisão, não enfeita texto. Guia direto da OxBrand.',
