@@ -124,7 +124,7 @@ export default function VagaSocialMediaPage() {
                   </p>
                 </div>
                 <a
-                  href="https://wa.me/5511921425351?text=Ol%C3%A1%2C+tenho+interesse+na+vaga+de+Social+Media+da+OxBrand!"
+                  href="https://wa.me/5511921425351?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20vaga%20de%20Social%20Media%20da%20OxBrand!"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors rounded-full"
