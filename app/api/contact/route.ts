@@ -106,6 +106,7 @@ export async function POST(req: NextRequest) {
       popup_institucional: 'PopUp · Diagnóstico Institucional',
       popup_blog: 'PopUp · Diagnóstico Blog',
       lp_mogi: 'LP · Mogi das Cruzes',
+      whatsapp_widget: 'Botão WhatsApp (captura de lead)',
     }
 
     const title = titles[source] ?? 'Formulário do Site'
