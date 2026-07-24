@@ -1,12 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { FloatingActions } from '@/components/floating-actions'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/next'
+import { DeferredGlobals } from '@/components/deferred-globals'
 import Script from 'next/script'
-import { ConsentBanner } from '@/components/consent-banner'
-import { PopupDiagnostico } from '@/components/popup-diagnostico'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -104,9 +102,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
-        <ConsentBanner />
-        <PopupDiagnostico />
-        <FloatingActions />
+        <DeferredGlobals />
         <SpeedInsights />
         <Analytics />
       </body>
