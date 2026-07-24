@@ -7,7 +7,8 @@ import { testimonials } from '@/src/config/testimonials'
 export const metadata: Metadata = {
   title: 'Tráfego Pago com Previsibilidade Financeira | OxBrand',
   description: 'Pare de torcer e comece a lucrar. Na OxBrand, validamos os 5 pilares fundamentais antes de colocar qualquer campanha no ar. Escalamos o seu negócio com base em dados reais.',
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
+  alternates: { canonical: '/trafego-pago-com-previsibilidade' },
 }
 
 const WA_LINK = 'https://wa.me/5511921425351?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito'
