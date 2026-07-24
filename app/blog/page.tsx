@@ -11,10 +11,10 @@ import { STATIC_POSTS } from '@/lib/blog-static'
 
 export const metadata: Metadata = {
   title: 'Insights | OxBrand, Marketing de Performance',
-  description: 'Análises de tráfego pago, CRM e conversão direto da operação da OxBrand. Estratégias práticas e dados reais de quem executa — sem modinha, sem enrolação.',
+  description: 'Análises de tráfego pago, CRM e conversão direto da operação da OxBrand. Estratégias práticas e dados reais de quem executa, sem modinha, sem enrolação.',
   ...pageOg({
     title: 'OxBrand Insights · Marketing de Performance',
-    description: 'Análises de tráfego pago, CRM e conversão direto da operação da OxBrand. Estratégias práticas e dados reais de quem executa — sem modinha, sem enrolação.',
+    description: 'Análises de tráfego pago, CRM e conversão direto da operação da OxBrand. Estratégias práticas e dados reais de quem executa, sem modinha, sem enrolação.',
     path: '/blog',
     subtitle: 'Insights & Estratégia',
   }),
