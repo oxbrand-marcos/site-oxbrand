@@ -8,7 +8,7 @@ import { STATS } from '@/src/config/stats'
 
 const metrics = [
   { label: 'marcas atendidas', value: STATS.marcasAtendidas, suffix: '+', sub: 'Brasil e exterior' },
-  { label: 'anos de experiência', value: new Date().getFullYear() - STATS.anoFundacao, suffix: '+', sub: 'marketing e tecnologia' },
+  { label: 'anos de experiência', value: STATS.anosExperiencia, suffix: '+', sub: 'marketing e tecnologia' },
   { label: 'em faturamento gerado', value: STATS.faturamentoGerado, suffix: 'M+', sub: 'para clientes', prefix: 'R$' },
   { label: 'parceiros e certificações', value: STATS.parceiros, suffix: '+', sub: 'no ecossistema' },
 ]
