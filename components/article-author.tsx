@@ -46,7 +46,14 @@ function redator(slug: string, name: string): AuthorData {
 export const AUTHORS: Record<string, AuthorData> = {
   oxbrand: {
     slug: 'oxbrand', name: 'OxBrand', role: 'Equipe de Marketing', avatar: OX_AVATAR,
-    hasProfile: false, headline: '', bio: [], especialidades: [], linkedin: OX_LINKEDIN,
+    hasProfile: true,
+    headline: 'A equipe de marketing de performance da OxBrand: análises de tráfego pago, CRM, SEO e conversão direto de quem opera todos os dias.',
+    bio: [
+      'A OxBrand é uma agência de marketing digital de performance em Mogi das Cruzes, com atuação nacional. Os artigos assinados pela equipe reúnem o que aprendemos operando tráfego pago, CRM, sites e SEO para mais de 450 marcas.',
+      'Nosso foco não é métrica de vaidade, e sim crescimento previsível: estratégia, dados e integração entre marketing e comercial. Cada conteúdo aqui nasce da prática, não da teoria.',
+    ],
+    especialidades: ['Tráfego Pago', 'CRM e Automação', 'SEO e Conteúdo', 'Conversão'],
+    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
   },
   'marcos-blaustein': {
     slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO e Estrategista',

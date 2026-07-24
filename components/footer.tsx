@@ -31,6 +31,8 @@ const colSolucoes = {
     { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },
     { label: 'Marketing para Indústria', href: '/marketing-para-industria' },
     { label: 'Marketing para Advogados', href: '/marketing-para-advogados' },
+    { label: 'Marketing para Clínicas e Médicos', href: '/marketing-para-clinicas-e-medicos' },
+    { label: 'Marketing Imobiliário', href: '/marketing-imobiliario' },
     { label: 'Tráfego Pago com Previsibilidade', href: '/trafego-pago-com-previsibilidade' },
     { label: 'Diagnóstico Gratuito', href: '/diagnostico' },
   ],
