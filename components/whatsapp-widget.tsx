@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { X, MessageCircle, Send, ChevronDown } from 'lucide-react'
+import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
 const WHATSAPP_NUMBER = '+5511921425351'
 
@@ -56,6 +57,25 @@ export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {
     const message = encodeURIComponent(
       `Olá! Meu nome é ${form.nome}.\nE-mail: ${form.email}\nTelefone: ${form.telefone}\n\nGostaria de falar com um especialista OxBrand.`
     )
+
+    // Captura o lead por e-mail (mesmo endpoint dos demais formularios),
+    // para que o dado nao se perca caso a pessoa nao conclua no WhatsApp.
+    getRecaptchaToken('whatsapp_widget')
+      .then((token) => {
+        return fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            source: 'whatsapp_widget',
+            _pageUrl: typeof window !== 'undefined' ? window.location.href : '',
+            _recaptcha: token,
+            Nome: form.nome,
+            'E-mail': form.email,
+            Telefone: form.telefone,
+          }),
+        })
+      })
+      .catch(() => {})
 
     setTimeout(() => {
       setLoading(false)
