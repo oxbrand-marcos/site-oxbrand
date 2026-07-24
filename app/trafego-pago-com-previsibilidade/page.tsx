@@ -32,12 +32,16 @@ const pilares = [
 ]
 
 const parceiros = [
-  { nome: 'ActiveCampaign Platinum', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/ActiveCampaign_Logo.svg/320px-ActiveCampaign_Logo.svg.png' },
-  { nome: 'Adobe Solution Partner', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Adobe_Corporate_Logo.png/320px-Adobe_Corporate_Logo.png' },
-  { nome: 'Bing Partner', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Bing_logo_2016.svg/320px-Bing_logo_2016.svg.png' },
-  { nome: 'ClickUp Partner', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Clickup_logo.svg/320px-Clickup_logo.svg.png' },
-  { nome: 'Google Partner', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png' },
-  { nome: 'Kommo Partner', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png' },
+  { nome: 'Google Partner', logo: '/images/partners/google.webp' },
+  { nome: 'Meta Business Partner', logo: '/images/partners/meta.webp' },
+  { nome: 'LinkedIn Marketing Partner', logo: '/images/partners/linkedin.webp' },
+  { nome: 'TikTok Marketing Partner', logo: '/images/partners/tiktok.webp' },
+  { nome: 'RD Station Partner', logo: '/images/partners/rd.webp' },
+  { nome: 'Kommo Partner', logo: '/images/partners/kommo.webp' },
+  { nome: 'SEMrush Certified', logo: '/images/partners/semrush.webp' },
+  { nome: 'ActiveCampaign Platinum', logo: '/images/partners/activecampaign.webp' },
+  { nome: 'Adobe Solution Partner', logo: '/images/partners/adobe.webp' },
+  { nome: 'ClickUp Partner', logo: '/images/partners/clickup.webp' },
 ]
 
 const paraQuem = [
@@ -62,10 +66,7 @@ export default function TrafegoPrevisibilidadePage() {
             <div className="flex flex-col gap-8">
               {/* logo */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 relative shrink-0">
-                  <Image src="/icon.svg" alt="OxBrand" fill className="object-contain" />
-                </div>
-                <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">OxBrand</span>
+                <Image src="/images/oxbrand-logo.webp" alt="OxBrand, Marketing de Performance" width={120} height={34} className="h-8 w-auto object-contain" priority />
               </div>
 
               <div className="flex flex-col gap-5">
@@ -210,7 +211,7 @@ export default function TrafegoPrevisibilidadePage() {
             {[...parceiros, ...parceiros].map((p, i) => (
               <div key={i} className="flex items-center gap-3 px-4 shrink-0">
                 <div className="h-8 w-28 relative opacity-60 hover:opacity-100 transition-opacity">
-                  <Image src={p.logo} alt={p.nome} fill className="object-contain" unoptimized />
+                  <Image src={p.logo} alt={p.nome} fill className="object-contain" />
                 </div>
               </div>
             ))}
@@ -414,10 +415,8 @@ export default function TrafegoPrevisibilidadePage() {
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-7 h-7 relative shrink-0">
-              <Image src="/icon.svg" alt="OxBrand" fill className="object-contain" />
-            </div>
-            <span className="mono-tag text-muted-foreground/50">OxBrand Marketing de Performance</span>
+            <Image src="/images/oxbrand-logo.webp" alt="OxBrand, Marketing de Performance" width={120} height={34} className="h-6 w-auto object-contain" />
+            <span className="mono-tag text-muted-foreground/50">Marketing de Performance</span>
           </div>
           <Link href="/" className="mono-tag text-muted-foreground/40 hover:text-primary transition-colors">
             Conhecer o site completo ↗
