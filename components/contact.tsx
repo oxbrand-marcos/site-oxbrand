@@ -149,7 +149,7 @@ export function Contact() {
                     className={`${inputCls} resize-none`}
                   />
                 </div>
-                {/* Opt-in WhatsApp (consentimento — opcional) */}
+                {/* Opt-in WhatsApp (consentimento, opcional) */}
                 <label className="flex items-start gap-3 cursor-pointer group">
                   <div className="relative mt-0.5 shrink-0">
                     <input

@@ -42,7 +42,7 @@ export function Team() {
           </h2>
         </div>
 
-        {/* Grid — 3 colunas: Marcos | Walquíria | Manifesto */}
+        {/* Grid, 3 colunas: Marcos | Walquíria | Manifesto */}
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-px bg-border w-full">
           {members.map((member) => (
             <div key={member.name} className="bg-background group overflow-hidden card-lift flex flex-col">
@@ -114,7 +114,7 @@ export function Team() {
             </div>
           ))}
 
-          {/* 3º bloco — Manifesto */}
+          {/* 3º bloco, Manifesto */}
           <div
             className="flex flex-col justify-between p-8"
             style={{ background: '#1d1d1d', border: '1px solid rgb(92 54 235 / 0.30)' }}

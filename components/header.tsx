@@ -183,7 +183,7 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center">
 
-        {/* Logo — esquerda */}
+        {/* Logo, esquerda */}
         <Link href="/" className="flex items-center shrink-0">
           <Image
             src="/images/oxbrand-logo.webp"
@@ -195,14 +195,14 @@ export function Header() {
           />
         </Link>
 
-        {/* Nav — centro */}
+        {/* Nav, centro */}
         <nav className="hidden md:flex items-center gap-8 flex-1 justify-center" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <DropdownItem key={link.href} item={link} />
           ))}
         </nav>
 
-        {/* Status pill + CTA — direita */}
+        {/* Status pill + CTA, direita */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
           <div className="flex items-center gap-2 px-3 py-1 border border-border">
             <span className="status-dot" aria-hidden="true" />

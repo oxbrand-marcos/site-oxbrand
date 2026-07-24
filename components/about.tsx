@@ -10,7 +10,7 @@ const timeline = [
   { year: '2021', event: 'Chuva Digital passa a se chamar OxBrand', brand: true },
   { year: '2023', event: 'Primeiros projetos internacionais, EUA e Europa', brand: false },
   { year: '2024', event: '+450 marcas atendidas e R$258M+ em faturamento gerado', brand: false },
-  { year: '2025', event: 'Inauguração da Sede Própria — Torre Office (Helbor Concept), Socorro', brand: false },
+  { year: '2025', event: 'Inauguração da Sede Própria, Torre Office (Helbor Concept), Socorro', brand: false },
   { year: '2025', event: 'Parceiro Oficial Kommo, Top 5% dos parceiros no Brasil', brand: false },
   { year: '2026', event: 'Consolidação do método OX Growth Engineering e lançamento da nova plataforma digital', brand: false },
 ]
@@ -27,10 +27,10 @@ export function About() {
     <section id="sobre" className="py-24 border-b border-border section-light">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Main grid — label dentro do grid para alinhar com Histórico */}
+        {/* Main grid, label dentro do grid para alinhar com Histórico */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:items-start">
 
-          {/* Esquerda — label + texto */}
+          {/* Esquerda, label + texto */}
           <div className="flex flex-col gap-8 items-center text-center lg:items-start lg:text-left">
             <span className="mono-tag text-muted-foreground/60">A OxBrand</span>
 
@@ -55,7 +55,7 @@ export function About() {
               ))}
             </div>
 
-            {/* Foto do escritório — abaixo dos pilares, alinhada à coluna */}
+            {/* Foto do escritório, abaixo dos pilares, alinhada à coluna */}
             <div className="relative w-full h-[220px] sm:h-[280px] overflow-hidden border border-border shadow-lg">
               <Image
                 src="/images/escritorio-oxbrand.jpg"
@@ -66,7 +66,7 @@ export function About() {
             </div>
           </div>
 
-          {/* Direita — label alinhado + timeline */}
+          {/* Direita, label alinhado + timeline */}
           <div className="flex flex-col gap-0 items-center lg:items-start text-center lg:text-left">
             <p className="mono-tag text-muted-foreground/50 mb-6">Histórico</p>
             {timeline.map((item, i) => (
@@ -106,7 +106,7 @@ export function About() {
           </div>
         </div>
 
-        {/* CTAs — centralizados abaixo do grid */}
+        {/* CTAs, centralizados abaixo do grid */}
         <div className="mt-14 flex flex-col items-center gap-3">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link

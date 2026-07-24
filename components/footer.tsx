@@ -39,7 +39,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
   return (
     <footer className="border-t border-border">
 
-      {/* CTA banner — oculto em páginas de recrutamento */}
+      {/* CTA banner, oculto em páginas de recrutamento */}
       {!hideCta && <div className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6 text-center sm:text-left">
           <p className="text-2xl sm:text-3xl font-bold text-foreground">
@@ -144,7 +144,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
             </div>
           ))}
 
-          {/* Coluna Contato — largura total no mobile */}
+          {/* Coluna Contato, largura total no mobile */}
           <div className="col-span-2 sm:col-span-1 flex flex-col gap-4 items-center sm:items-start text-center sm:text-left">
             <p className="text-sm font-bold text-foreground tracking-wide">Contato</p>
             <p className="text-sm text-foreground/70 leading-relaxed">

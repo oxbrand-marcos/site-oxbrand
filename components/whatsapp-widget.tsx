@@ -21,7 +21,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 /**
- * WhatsAppWidget — pode ser usado de forma independente (fixed) ou
+ * WhatsAppWidget, pode ser usado de forma independente (fixed) ou
  * embutido dentro de um container posicionado externamente (embedded=true).
  */
 export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {

@@ -135,7 +135,7 @@ export function PopupDiagnostico() {
         aria-hidden="true"
       />
 
-      {/* Modal — fundo branco */}
+      {/* Modal, fundo branco */}
       <div className="relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
         {/* Barra decorativa no topo */}
         <div className="h-1 w-full bg-[#5c36eb]" />

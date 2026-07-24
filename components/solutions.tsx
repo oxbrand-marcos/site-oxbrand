@@ -102,7 +102,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
         {/* Nossos Diferenciais */}
         <div className="grid lg:grid-cols-2 gap-px bg-border mb-px">
 
-          {/* Coluna esquerda — título */}
+          {/* Coluna esquerda, título */}
           <div className="bg-background p-8 flex flex-col justify-center gap-3 items-center text-center lg:items-start lg:text-left">
             <span className="mono-tag text-muted-foreground/60">Por que a OxBrand</span>
             <h3 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
@@ -115,7 +115,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
             </p>
           </div>
 
-          {/* Coluna direita — lista */}
+          {/* Coluna direita, lista */}
           <div className="bg-background">
             {[
               'Reuniões objetivas com indicadores e metas claras',
@@ -188,7 +188,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
             <div className="hidden sm:block flex-1 h-px bg-border" />
           </div>
           <p className="text-sm text-muted-foreground/70 mb-10 max-w-2xl">
-            As principais entre mais de 50 parcerias e certificações do nosso ecossistema — selecionamos as que realmente sustentam a operação.
+            As principais entre mais de 50 parcerias e certificações do nosso ecossistema, selecionamos as que realmente sustentam a operação.
           </p>
 
           <div

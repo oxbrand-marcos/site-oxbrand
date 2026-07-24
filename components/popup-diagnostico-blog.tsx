@@ -120,7 +120,7 @@ export function PopupDiagnosticoBlog() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Diagnóstico gratuito — Blog"
+      aria-label="Diagnóstico gratuito, Blog"
       className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
     >
       {/* Backdrop */}
@@ -130,7 +130,7 @@ export function PopupDiagnosticoBlog() {
         aria-hidden="true"
       />
 
-      {/* Modal — fundo preto */}
+      {/* Modal, fundo preto */}
       <div className="relative bg-[#111111] w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl border border-zinc-800">
         {/* Linha decorativa no topo (violeta) */}
         <div className="h-1 w-full bg-[#5c36eb]" />

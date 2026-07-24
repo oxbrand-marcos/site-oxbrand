@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { WhatsAppWidget } from '@/components/whatsapp-widget'
 
 /**
- * FloatingActions — agrupa o widget de acessibilidade e o botão do WhatsApp
+ * FloatingActions, agrupa o widget de acessibilidade e o botão do WhatsApp
  * no canto inferior direito, evitando conflito de posicionamento.
  *
  * O botão "A" abre um painel com atalhos de acessibilidade:
@@ -116,7 +116,7 @@ export function FloatingActions() {
         <AccessibilityIcon />
       </button>
 
-      {/* WhatsApp widget embutido — posicionamento gerenciado por FloatingActions */}
+      {/* WhatsApp widget embutido, posicionamento gerenciado por FloatingActions */}
       <WhatsAppWidget embedded />
     </div>
   )

@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic'
 
-// isValidPhoneNumber é uma função leve — mantida em import estático p/ validação nos forms
+// isValidPhoneNumber é uma função leve, mantida em import estático p/ validação nos forms
 export { isValidPhoneNumber } from 'react-phone-number-input'
 
 // O PhoneInput carrega bandeiras (245 países) + <select> pesado.

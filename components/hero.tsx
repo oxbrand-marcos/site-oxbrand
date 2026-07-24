@@ -13,7 +13,7 @@ const metrics = [
   { label: 'parceiros e certificações', value: STATS.parceiros, suffix: '+', sub: 'no ecossistema' },
 ]
 
-// Items duplicados uma única vez — a animação cobre exatamente 50% da largura total,
+// Items duplicados uma única vez, a animação cobre exatamente 50% da largura total,
 // criando um loop perfeito sem artefato visual.
 const TICKER_ITEMS = ['TRÁFEGO PAGO', 'META ADS', 'GOOGLE ADS', 'SEO', 'CRM', 'ANALYTICS', 'CRIAÇÃO', 'AUTOMAÇÃO', 'LANDING PAGES', 'IDENTIDADE VISUAL']
 
@@ -70,7 +70,7 @@ export function Hero() {
         repelStrength={7}
       />
 
-      {/* Nuvens — imagem base */}
+      {/* Nuvens, imagem base */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
         <Image
           src="/images/hero-clouds.png"
@@ -83,7 +83,7 @@ export function Hero() {
           quality={75}
         />
 
-        {/* Blobs esquerda — camadas empilhadas como no original */}
+        {/* Blobs esquerda, camadas empilhadas como no original */}
         <div className="absolute -left-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
           style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 50%, transparent 75%)' }} />
         <div className="absolute -left-32 top-20 w-[500px] h-[500px] rounded-full blur-3xl"
@@ -93,7 +93,7 @@ export function Hero() {
         <div className="absolute left-10 top-64 w-72 h-72 rounded-full blur-xl"
           style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.09) 0%, transparent 68%)' }} />
 
-        {/* Blobs direita — espelhados */}
+        {/* Blobs direita, espelhados */}
         <div className="absolute -right-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
           style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 50%, transparent 75%)' }} />
         <div className="absolute -right-32 top-24 w-[500px] h-[500px] rounded-full blur-3xl"
@@ -103,7 +103,7 @@ export function Hero() {
         <div className="absolute right-10 top-72 w-72 h-72 rounded-full blur-xl"
           style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.09) 0%, transparent 68%)' }} />
 
-        {/* Vinheta central — preserva o fundo escuro no meio */}
+        {/* Vinheta central, preserva o fundo escuro no meio */}
         <div className="absolute inset-0"
           style={{ background: 'radial-gradient(ellipse at 50% 40%, transparent 25%, rgba(13,13,13,0.72) 68%)' }} />
       </div>
@@ -176,7 +176,7 @@ export function Hero() {
 
             </div>
 
-            {/* Coluna direita — painel de dados falso */}
+            {/* Coluna direita, painel de dados falso */}
             <div className="hidden lg:flex flex-col gap-3">
 
               {/* Card de status */}
@@ -227,7 +227,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Barra de métricas — full-width, mesmo nível do ticker */}
+      {/* Barra de métricas, full-width, mesmo nível do ticker */}
       <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4"
         style={{
           backdropFilter: 'blur(12px)',

@@ -7,7 +7,7 @@ const SITE = 'https://www.oxbrand.com.br'
 export function ArticleShare({ title, slug }: { title: string; slug: string }) {
   const [copied, setCopied] = useState(false)
 
-  // URL canônica derivada da constante do site — não depende de window.location,
+  // URL canônica derivada da constante do site, não depende de window.location,
   // então funciona igualmente no preview de dev e em produção.
   const canonicalUrl = `${SITE}/blog/${slug}`
   const encodedUrl   = encodeURIComponent(canonicalUrl)
@@ -22,7 +22,7 @@ export function ArticleShare({ title, slug }: { title: string; slug: string }) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // fallback silencioso — ex: HTTP sem permissão de clipboard
+      // fallback silencioso, ex: HTTP sem permissão de clipboard
     }
   }
 

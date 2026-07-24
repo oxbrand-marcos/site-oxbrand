@@ -21,7 +21,7 @@ export function YouTubeFacade({
   priority = false,
 }: YouTubeFacadeProps) {
   const [active, setActive] = useState(false)
-  // Shorts não têm maxresdefault — usa hqdefault como fallback universal
+  // Shorts não têm maxresdefault, usa hqdefault como fallback universal
   const thumbnailUrl = aspect === 'portrait'
     ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
     : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
@@ -50,7 +50,7 @@ export function YouTubeFacade({
       aria-label={`Reproduzir: ${title}`}
       className={`relative w-full ${aspectClass} ${className} group overflow-hidden bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
     >
-      {/* Thumbnail — lazy exceto quando explicitamente acima da dobra */}
+      {/* Thumbnail, lazy exceto quando explicitamente acima da dobra */}
       <Image
         src={thumbnailUrl}
         alt={title}

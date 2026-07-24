@@ -8,7 +8,7 @@ import { NewsletterSignup } from '@/components/newsletter-signup'
 import { readingTime } from '@/lib/utils'
 import { STATIC_POSTS } from '@/lib/blog-static'
 
-// Categorias canônicas — a fonte da verdade para labels e slugs
+// Categorias canônicas, a fonte da verdade para labels e slugs
 const CATEGORY_DEFS = [
   { slug: 'trafego-e-aquisicao',  label: 'Tráfego & Aquisição' },
   { slug: 'conversao',            label: 'Conversão' },
@@ -56,7 +56,7 @@ export function InsightsGrid({ posts }: Props) {
   // Os posts estáticos têm prioridade sobre os do banco quando o slug coincide.
   // Motivo: a página do artigo (app/blog/[slug]/page.tsx) renderiza a partir do
   // ARTICLE_CONTENT do arquivo content.ts, e não do banco. Se o card do listing
-  // lesse a versão do banco, os dois divergiriam — era o que fazia o card exibir
+  // lesse a versão do banco, os dois divergiriam, era o que fazia o card exibir
   // "1 min de leitura" enquanto o artigo exibia "6 min". Uma fonte de verdade só.
   const allPosts = useMemo(() => {
     const staticSlugs = new Set(STATIC_POSTS.map((p) => p.slug))
@@ -153,7 +153,7 @@ export function InsightsGrid({ posts }: Props) {
                   {/* Texto */}
                   <div className="p-8 sm:p-10 flex flex-col gap-5 flex-1">
                     {/* Exibe o label canônico se existir, senão exibe a tag diretamente */}
-                    {/* #3b1fae sobre branco = 5.3:1 — passa WCAG AA para texto normal */}
+                    {/* #3b1fae sobre branco = 5.3:1, passa WCAG AA para texto normal */}
                     <span className="mono-tag" style={{ color: '#3b1fae' }}>
                       {CATEGORY_DEFS.find((c) => c.slug === toSlug(post.tag))?.label ?? post.tag}
                     </span>
@@ -170,7 +170,7 @@ export function InsightsGrid({ posts }: Props) {
                           {post.author} · {mins} min de leitura
                         </span>
                       </div>
-                      {/* #3b1fae sobre branco = 5.3:1 — passa WCAG AA */}
+                      {/* #3b1fae sobre branco = 5.3:1, passa WCAG AA */}
                       <span className="mono-tag group-hover:text-primary transition-colors" style={{ color: '#3b1fae' }}>Ler artigo ↗</span>
                     </div>
                   </div>

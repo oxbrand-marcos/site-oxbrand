@@ -22,7 +22,7 @@ export default function DotsCanvas({
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
-    // Não inicia em dispositivos sem ponteiro (mobile/touch) — economiza CPU e bateria
+    // Não inicia em dispositivos sem ponteiro (mobile/touch), economiza CPU e bateria
     if (window.matchMedia('(pointer: coarse)').matches) return
 
     const canvas = canvasRef.current

@@ -95,7 +95,7 @@ export function Differentials() {
 
           </div>
 
-          {/* Vídeo do fundador — coluna direita, altura total */}
+          {/* Vídeo do fundador, coluna direita, altura total */}
           <div className="bg-background relative min-h-[400px]">
             <YouTubeFacade
               videoId="mbITWskDplc"

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { testimonials } from '@/src/config/testimonials'
 import { YouTubeFacade } from '@/components/youtube-facade'
 
-// 24 logos únicos — duplicados no marquee = 48 nós no DOM (antes: 106)
+// 24 logos únicos, duplicados no marquee = 48 nós no DOM (antes: 106)
 // Seleção baseada em reconhecimento de marca e diversidade de segmentos
 const clientLogos = [
   { src: '/images/clients/bravo.webp',        alt: 'Bravo' },
@@ -72,7 +72,7 @@ export function Clients() {
             <div className="flex-1 h-px bg-white/10" />
           </div>
 
-          {/* Marquee — logos brancos sobre fundo preto */}
+          {/* Marquee, logos brancos sobre fundo preto */}
           <div className="overflow-hidden" aria-label="Clientes OxBrand">
             <div className="marquee-track flex items-center gap-24 w-max">
               {[...clientLogos, ...clientLogos].map((logo, i) => (

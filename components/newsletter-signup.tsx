@@ -36,7 +36,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
     }
   }
 
-  /* ── Variante footer — compacta, fundo escuro ── */
+  /* ── Variante footer, compacta, fundo escuro ── */
   if (variant === 'footer') {
     return (
       <div className="flex flex-col gap-4 items-center sm:items-start text-center sm:text-left">
@@ -80,7 +80,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
     )
   }
 
-  /* ── Variante article — fundo branco, borda, inline no artigo ── */
+  /* ── Variante article, fundo branco, borda, inline no artigo ── */
   if (variant === 'article') {
     return (
       <div className="my-10 border border-zinc-200 bg-zinc-50 p-8 flex flex-col gap-5">
@@ -129,7 +129,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
     )
   }
 
-  /* ── Variante inline — para grid do /blog, fundo roxo ── */
+  /* ── Variante inline, para grid do /blog, fundo roxo ── */
   return (
     <div className="col-span-full bg-primary p-10 sm:p-12 flex flex-col gap-6">
       <div className="flex flex-col gap-2">
