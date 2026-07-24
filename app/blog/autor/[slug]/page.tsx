@@ -20,7 +20,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const author = getAuthorBySlug(slug)
   if (!author || !author.hasProfile) return {}
   const title = `${author.name}, ${author.role} na OxBrand`
-  const description = author.headline
+  // Meta description unica por autor (evita duplicidade): nome + cargo + temas.
+  const temas = author.especialidades && author.especialidades.length
+    ? author.especialidades.slice(0, 3).join(', ')
+    : 'marketing, conteúdo e vendas'
+  let description = `Artigos de ${author.name}, ${author.role} da OxBrand, sobre ${temas}. Marketing de performance, estratégia e resultado.`
+  if (description.length > 155) description = description.slice(0, 152).replace(/[ ,]+$/, '') + '...'
   const og = `${BASE}/og-home.jpg`
   return {
     title,
