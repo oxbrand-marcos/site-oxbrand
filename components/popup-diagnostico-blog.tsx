@@ -47,29 +47,18 @@ export function PopupDiagnosticoBlog() {
   }, [])
 
   useEffect(() => {
-    // Exit-intent: mouse sai pelo topo da janela (desktop)
+    // Gatilho 1, exit-intent: mouse sai pelo topo da janela (desktop)
     function handleMouseLeave(e: MouseEvent) {
       if (e.clientY <= 0) openPopup()
     }
 
-    // Após 80% de scroll na página (sinal de leitura completa)
-    function handleScroll() {
-      const scrolled = window.scrollY + window.innerHeight
-      const total = document.documentElement.scrollHeight
-      if (total > 0 && scrolled / total >= 0.8) {
-        openPopup()
-      }
-    }
-
-    // Fallback: 25 s de permanência
-    const timer = setTimeout(openPopup, 25000)
+    // Gatilho 2, tempo: 15 segundos na pagina
+    const timer = setTimeout(openPopup, 15000)
 
     document.addEventListener('mouseleave', handleMouseLeave)
-    window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave)
-      window.removeEventListener('scroll', handleScroll)
       clearTimeout(timer)
     }
   }, [openPopup])

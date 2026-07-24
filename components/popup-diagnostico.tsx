@@ -47,34 +47,18 @@ export function PopupDiagnostico() {
   }, [])
 
   useEffect(() => {
-    // Exit-intent: mouse sai pelo topo da janela (desktop)
+    // Gatilho 1, exit-intent: mouse sai pelo topo da janela (desktop)
     function handleMouseLeave(e: MouseEvent) {
       if (e.clientY <= 0) openPopup()
     }
 
-    // Mobile/tablet: após 20 s de permanência sem scroll
-    let timer: ReturnType<typeof setTimeout>
-    let lastScroll = 0
-
-    function handleScroll() {
-      lastScroll = Date.now()
-    }
-
-    function startTimer() {
-      clearTimeout(timer)
-      timer = setTimeout(() => {
-        const sinceScroll = Date.now() - lastScroll
-        if (sinceScroll > 8000) openPopup()
-      }, 20000)
-    }
+    // Gatilho 2, tempo: 15 segundos na pagina
+    const timer = setTimeout(openPopup, 15000)
 
     document.addEventListener('mouseleave', handleMouseLeave)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    startTimer()
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave)
-      window.removeEventListener('scroll', handleScroll)
       clearTimeout(timer)
     }
   }, [openPopup])
