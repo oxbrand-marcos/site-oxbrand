@@ -33,7 +33,7 @@ export default function ObrigadoPage() {
 
       <Header />
 
-      {/* Hero — mensagem principal */}
+      {/* Hero, mensagem principal */}
       <section className="relative z-10 flex-1 flex flex-col items-center justify-center px-6 py-20 text-center max-w-2xl mx-auto w-full gap-8">
 
         {/* Badge */}
@@ -81,7 +81,7 @@ export default function ObrigadoPage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
           {[
             { value: '+600', label: 'empresas atendidas ao redor do mundo' },
-            { value: '+7 anos', label: 'de experiência em marketing digital' },
+            { value: '+16 anos', label: 'de experiência em marketing digital' },
             { value: '+R$ 50M', label: 'de faturamento gerado aos nossos clientes' },
             { value: '+120', label: 'parceiros estratégicos para nossos clientes' },
           ].map((stat) => (
