@@ -74,9 +74,9 @@ export default function RootLayout({
         <Script id="consent-init" strategy="beforeInteractive">
           {`window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments);};(function(){var m=document.cookie.match(/oxb_consent=(granted|denied)/);var s=m?m[1]:'granted';gtag('consent','default',{ad_storage:s,analytics_storage:s,ad_user_data:s,ad_personalization:s,security_storage:'granted'});})();`}
         </Script>
-        {/* Google Tag Manager */}
-        <Script id="gtm-base" strategy="lazyOnload">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
+        {/* Google Tag Manager - carregado na 1a interacao (ou apos 5s) para nao bloquear a thread principal */}
+        <Script id="gtm-base" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){function g(){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);}var done=false;var ev=['scroll','mousemove','touchstart','keydown','click'];function load(){if(done)return;done=true;ev.forEach(function(e){w.removeEventListener(e,load);});g();}ev.forEach(function(e){w.addEventListener(e,load,{passive:true});});w.setTimeout(load,5000);})(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
         {/* End Google Tag Manager */}
         {/* Preconnect para fontes e recursos externos críticos */}
