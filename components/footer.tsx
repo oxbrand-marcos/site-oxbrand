@@ -28,6 +28,8 @@ const colSolucoes = {
     { label: 'Gestão de Tráfego Pago', href: '/solucoes/gestao-de-trafego-pago' },
     { label: 'Inbound Marketing', href: '/solucoes/inbound-marketing' },
     { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },
+    { label: 'Marketing para Indústria', href: '/marketing-para-industria' },
+    { label: 'Marketing para Advogados', href: '/marketing-para-advogados' },
     { label: 'Diagnóstico Gratuito', href: '/diagnostico' },
   ],
 }
