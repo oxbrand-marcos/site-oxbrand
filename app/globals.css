@@ -53,7 +53,7 @@
   color-scheme: dark;
 
   /* ── Base ────────────────────────────────────────────────── */
-  --background: #1d1d1d;            /* Quantum — nunca preto puro */
+  --background: #1d1d1d;            /* Quantum, nunca preto puro */
   --foreground: #eae6e6;            /* Branco Fumaça */
 
   /* ── Superfícies elevadas ────────────────────────────────── */
@@ -62,7 +62,7 @@
   --popover: #272727;
   --popover-foreground: #eae6e6;
 
-  /* ── Primário — Violeta Escuro OxBrand ───────────────────── */
+  /* ── Primário, Violeta Escuro OxBrand ───────────────────── */
   --primary: #5c36eb;
   --primary-foreground: #eae6e6;
 
@@ -74,7 +74,7 @@
   --muted: #2d2d2d;
   --muted-foreground: #9a9a9a;
 
-  /* ── Accent — mesmo primário ─────────────────────────────── */
+  /* ── Accent, mesmo primário ─────────────────────────────── */
   --accent: #5c36eb;
   --accent-foreground: #eae6e6;
 
@@ -215,7 +215,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #a68cff;   /* violeta claro — contraste AA (>=4.5) em fundo escuro; .section-light usa #1a007c */
+  color: #a68cff;   /* violeta claro, contraste AA (>=4.5) em fundo escuro; .section-light usa #1a007c */
 }
 
 /* ── Texto com glow ──────────────────────────────────────── */
@@ -282,7 +282,7 @@
 
 
 /* ════════════════════════════════════════════════════════════
-   ALTO CONTRASTE — acionado pelo widget de acessibilidade
+   ALTO CONTRASTE, acionado pelo widget de acessibilidade
    (html.high-contrast). Fundo preto puro, texto branco, bordas
    visíveis e links sublinhados. Máxima legibilidade WCAG AAA.
    ═══════════════════════════════════════════════════════════ */
@@ -330,11 +330,11 @@ html.high-contrast .section-light .text-glow { color: #ffffff !important; }
 .oxphone .PhoneInputCountrySelectArrow { color: currentColor; opacity: 0.5; }
 .oxphone:focus-within { border-color: #5c36eb; }
 
-/* reCAPTCHA v3: badge escondido — exibimos o aviso legal em texto sob o botão */
+/* reCAPTCHA v3: badge escondido, exibimos o aviso legal em texto sob o botão */
 .grecaptcha-badge { visibility: hidden !important; }
 
 /* =========================================================
-   A11y (WCAG AA) — contraste de rótulos/labels (definitivo v3)
+   A11y (WCAG AA), contraste de rótulos/labels (definitivo v3)
    GLOBAIS otimizados p/ fundo escuro (sem !important, p/ inline/section-light poderem sobrepor);
    dentro de containers bg-* claros, :is() com !important escurece.
    section-light é tratado à parte (SEM !important) por conter blocos escuros aninhados.

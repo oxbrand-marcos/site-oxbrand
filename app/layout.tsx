@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
   preload: true,
 })
 
-// JetBrains Mono — usada em .mono-tag e código; pré-carregada para evitar FOUT
+// JetBrains Mono, usada em .mono-tag e código; pré-carregada para evitar FOUT
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
