@@ -25,7 +25,7 @@ export default function GestaoDeTrafegoPagoPage() {
       subheadline="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final. Tráfego Pago é sobre pessoas."
       introTitle="Equipe dedicada ao seu resultado"
       intro="Atingir o público certo, na hora certa, é o segredo para o sucesso no ambiente digital. Nossa Gestão de Performance vai além de gerenciar campanhas: ela transforma o seu investimento em resultados concretos. Entregamos uma estratégia completa para gerar mais leads, vendas e visibilidade, com foco total em ROI e crescimento previsível. Não se trata apenas de aparecer, mas de aparecer para as pessoas certas, no momento certo, com a mensagem mais persuasiva."
-      stepsImage="/images/solucoes/trafego-pago-metodo.png"
+      stepsImage="/images/solucoes/trafego-processo.jpg"
       stepsAlt="Método de gestão de tráfego pago da OxBrand em 7 etapas"
       ctaHeading="Verba não é estratégia. Sem processo, tráfego pago é aposta."
       faqItems={[
