@@ -15,24 +15,7 @@ export function pageOg({
   path: string
   subtitle?: string
 }) {
-  // Paginas com imagem OG estatica (WhatsApp/Telegram nao renderizam OG dinamico via /og).
-  const STATIC_OG: Record<string, string> = {
-    '/carreiras-em-marketing-digital': 'carreiras-em-marketing-digital',
-    '/diagnostico': 'diagnostico',
-    '/contato': 'contato',
-    '/materiais-gratuitos': 'materiais-gratuitos',
-    '/blog': 'blog',
-    '/portfolio': 'portfolio',
-    '/nossos-clientes': 'nossos-clientes',
-    '/solucoes/crm-kommo': 'crm-kommo',
-    '/solucoes/copywriting-e-redacao': 'copywriting-e-redacao',
-    '/solucoes/desenvolvimento-de-sites': 'desenvolvimento-de-sites',
-    '/solucoes/gestao-de-trafego-pago': 'gestao-de-trafego-pago',
-    '/solucoes/inbound-marketing': 'inbound-marketing',
-  }
-  const ogImageUrl = STATIC_OG[path]
-    ? `${BASE}/images/og/${STATIC_OG[path]}.jpg`
-    : `${BASE}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(subtitle)}`
+  const ogImageUrl = `${BASE}/og-home.jpg`
 
   return {
     alternates: { canonical: path },
@@ -75,11 +58,7 @@ export function articleOg({
   authorName?: string
 }) {
   const path = `/blog/${slug}`
-  // Preview social usa uma versao leve 1200x630 (-og.jpg) em vez da capa pesada.
-  const ogSrc = coverUrl ? coverUrl.replace(/-cover\.png$/i, '-og.jpg') : null
-  const ogImageUrl = ogSrc
-    ? ogSrc.startsWith('http') ? ogSrc : `${BASE}${ogSrc}`
-    : `${BASE}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent('OxBrand Insights')}`
+  const ogImageUrl = `${BASE}/og-home.jpg`
 
   return {
     alternates: { canonical: path },
