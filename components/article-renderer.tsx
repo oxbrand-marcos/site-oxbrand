@@ -43,7 +43,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
         coverUrl: cover,
         datePublished: article.dateISO,
         dateModified: article.dateISO,
-        authorName: 'OxBrand',
+        authorName: article.author ?? 'OxBrand',
         tags: [article.tag],
       })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([
@@ -105,7 +105,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
 
               {/* Corpo do artigo */}
               <div className="max-w-3xl flex flex-col gap-8">
-                <ArticleAuthor author={getAuthor('OxBrand')} />
+                <ArticleAuthor author={getAuthor(article.author)} />
 
                 <div className="article-body" dangerouslySetInnerHTML={{ __html: bodyWithIds }} />
 
