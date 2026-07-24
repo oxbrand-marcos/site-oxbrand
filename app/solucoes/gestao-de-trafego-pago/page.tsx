@@ -28,6 +28,9 @@ export default function GestaoDeTrafegoPagoPage() {
       stepsImage="/images/solucoes/trafego-processo.jpg"
       stepsAlt="Método de gestão de tráfego pago da OxBrand em 7 etapas"
       ctaHeading="Verba não é estratégia. Sem processo, tráfego pago é aposta."
+      relatedLinks={[
+        { label: 'Tráfego pago com previsibilidade', href: '/trafego-pago-com-previsibilidade' },
+      ]}
       faqItems={[
         {
           q: 'Vocês oferecem consultoria de tráfego pago ou só gestão?',
