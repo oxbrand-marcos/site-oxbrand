@@ -154,7 +154,7 @@ export default function CrmKommoLP() {
               {/* Direita, mockup de funil (só desktop) */}
               <div className="hidden lg:flex flex-col gap-3">
                 <div className="border border-border bg-card px-5 py-3 flex items-center justify-between">
-                  <span className="mono-tag text-muted-foreground/50">funil de vendas · exemplo</span>
+                  <span className="mono-tag text-muted-foreground/50">O Seu Próximo Painel de vendas</span>
                 </div>
 
                 {[
