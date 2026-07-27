@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
+import { InstagramFeed } from '@/components/instagram-feed'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
@@ -118,6 +119,7 @@ export default function CopywritingERedacaoPage() {
           description: 'Comunicação persuasiva que nutre leads, os conduz pelo funil de vendas e os prepara para a compra.',
         },
       ]}
+      beforeFooter={<InstagramFeed />}
     />
   )
 }
