@@ -29,14 +29,22 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    // Formats modernos — avif tem melhor compressão; webp como fallback
-    formats: ['image/avif', 'image/webp'],
-    // Cache longo para assets estáticos (1 ano)
-    minimumCacheTTL: 31536000,
-    // Device sizes alinhados com breakpoints reais do site
-    deviceSizes: [375, 640, 750, 828, 1080, 1200, 1920],
-    // Image sizes para componentes com layout fill ou fixed
-    imageSizes: [16, 32, 48, 64, 96, 128, 144, 176, 256],
+    // 1 formato so (WebP): AVIF + WebP dobraria as transformacoes de imagem na Vercel.
+    formats: ['image/webp'],
+    // Uma unica qualidade permitida; cada valor extra de q multiplica as variacoes.
+    qualities: [75],
+    // Larguras responsivas reduzidas (de 7 para 4) para cortar variacoes por imagem.
+    deviceSizes: [640, 1080, 1920, 3840],
+    // Larguras para imagens de tamanho fixo (thumbs, avatares, cards).
+    imageSizes: [64, 128, 256, 384],
+    // Cache de 31 dias (maximo do CDN) para reduzir transformacoes STALE.
+    minimumCacheTTL: 2678400,
+    // Allowlist do que pode ser otimizado localmente (evita transformacoes acidentais).
+    localPatterns: [
+      { pathname: '/images/**', search: '' },
+      { pathname: '/blog/**', search: '' },
+      { pathname: '/clientes/**', search: '' },
+    ],
     remotePatterns: [
       {
         protocol: 'https',
