@@ -11,11 +11,25 @@ import { STATIC_POSTS } from '@/lib/blog-static'
 // Categorias canônicas, a fonte da verdade para labels e slugs
 const CATEGORY_DEFS = [
   { slug: 'trafego-e-aquisicao',  label: 'Tráfego & Aquisição' },
-  { slug: 'conversao',            label: 'Conversão' },
-  { slug: 'crm-e-comercial',      label: 'CRM & Comercial' },
-  { slug: 'dados-e-mensuracao',   label: 'Dados & Mensuração' },
-  { slug: 'bastidores-ox',        label: 'Bastidores Ox' },
+  { slug: 'sites-e-conversao',    label: 'Sites & Conversão' },
+  { slug: 'crm-e-vendas',         label: 'CRM & Vendas' },
+  { slug: 'conteudo-e-copy',      label: 'Conteúdo & Copy' },
+  { slug: 'estrategia-e-gestao',  label: 'Estratégia & Gestão' },
 ]
+
+// Variações de tag (por slug) que colapsam numa categoria canônica do filtro.
+const TAG_ALIASES: Record<string, string> = {
+  'trafego-pago': 'trafego-e-aquisicao',
+  'conversao': 'sites-e-conversao',
+  'conteudo': 'conteudo-e-copy',
+  'automacao-e-ia': 'estrategia-e-gestao',
+}
+
+// Slug canônico de categoria para uma tag qualquer.
+function catSlug(tag: string): string {
+  const s = toSlug(tag)
+  return TAG_ALIASES[s] ?? s
+}
 
 /**
  * Normaliza qualquer string de categoria para um slug estável.
@@ -68,7 +82,7 @@ export function InsightsGrid({ posts }: Props) {
 
   // Quais slugs de categoria têm pelo menos um post
   const categoriesWithPosts = useMemo(() => {
-    const set = new Set(allPosts.map((p) => toSlug(p.tag)))
+    const set = new Set(allPosts.map((p) => catSlug(p.tag)))
     return CATEGORY_DEFS.filter((c) => set.has(c.slug))
   }, [allPosts])
 
@@ -76,7 +90,7 @@ export function InsightsGrid({ posts }: Props) {
     () =>
       activeSlug === 'todos'
         ? allPosts
-        : allPosts.filter((p) => toSlug(p.tag) === activeSlug),
+        : allPosts.filter((p) => catSlug(p.tag) === activeSlug),
     [allPosts, activeSlug]
   )
 
@@ -155,7 +169,7 @@ export function InsightsGrid({ posts }: Props) {
                     {/* Exibe o label canônico se existir, senão exibe a tag diretamente */}
                     {/* #3b1fae sobre branco = 5.3:1, passa WCAG AA para texto normal */}
                     <span className="mono-tag" style={{ color: '#3b1fae' }}>
-                      {CATEGORY_DEFS.find((c) => c.slug === toSlug(post.tag))?.label ?? post.tag}
+                      {CATEGORY_DEFS.find((c) => c.slug === catSlug(post.tag))?.label ?? post.tag}
                     </span>
                     <h2 className="text-xl sm:text-2xl font-bold text-zinc-900 leading-snug group-hover:text-primary transition-colors text-balance text-center sm:text-left">
                       {post.title}
