@@ -52,5 +52,5 @@ export function getCase(slug: string): CaseStudy | undefined {
 }
 
 export function coverForCase(slug: string): string {
-  return `/clientes/${slug}-cover.png`
+  return `/nossos-clientes/${slug}-cover.png`
 }
