@@ -7,7 +7,7 @@ import { jsonLd, breadcrumbSchema } from '@/lib/jsonld'
 import { coverForCase, type CaseStudy } from '@/lib/clientes'
 
 export function CaseTemplate({ study }: { study: CaseStudy }) {
-  const hasCover = false // trocar para true quando houver /clientes/{slug}-cover.png
+  const hasCover = false // trocar para true quando houver /nossos-clientes/{slug}-cover.png
 
   return (
     <main>
@@ -17,8 +17,8 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           __html: jsonLd(
             breadcrumbSchema([
               { name: 'OxBrand', url: '/' },
-              { name: 'Cases', url: '/clientes' },
-              { name: study.client, url: `/clientes/${study.slug}` },
+              { name: 'Nossos Clientes', url: '/nossos-clientes' },
+              { name: study.client, url: `/nossos-clientes/${study.slug}` },
             ])
           ),
         }}
@@ -30,7 +30,7 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
         <DotsCanvas className="z-[1]" color="rgba(255,255,255,0.15)" dotRadius={1.2} spacing={30} />
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 flex flex-col gap-6 items-center text-center">
           <nav className="mono-tag text-muted-foreground/60">
-            <Link href="/clientes" className="hover:text-foreground transition-colors">Cases</Link>
+            <Link href="/nossos-clientes" className="hover:text-foreground transition-colors">Cases</Link>
             <span className="mx-2">/</span>
             <span className="text-foreground">{study.client}</span>
           </nav>
@@ -107,7 +107,7 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
             <Link href="/contato" className="px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors">
               Falar com a OxBrand
             </Link>
-            <Link href="/clientes" className="px-6 py-3 border border-black/20 text-black text-xs font-bold tracking-widest uppercase hover:bg-black/5 transition-colors">
+            <Link href="/nossos-clientes#cases" className="px-6 py-3 border border-black/20 text-black text-xs font-bold tracking-widest uppercase hover:bg-black/5 transition-colors">
               Ver outros cases
             </Link>
           </div>

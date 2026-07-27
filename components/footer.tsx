@@ -12,7 +12,7 @@ const colInstitucional = {
     { label: 'Agência em São Paulo', href: '/agencia-de-marketing-digital-sao-paulo' },
     { label: 'Soluções', href: '/solucoes' },
     { label: 'Nossos Clientes', href: '/nossos-clientes' },
-    { label: 'Cases de Sucesso', href: '/clientes' },
+    { label: 'Cases de Sucesso', href: '/nossos-clientes#cases' },
     { label: 'Portfólio', href: '/portfolio' },
     { label: 'Insights', href: '/blog' },
     { label: 'Autores', href: '/blog/autor' },

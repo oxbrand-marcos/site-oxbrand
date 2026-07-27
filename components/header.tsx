@@ -30,6 +30,7 @@ const navLinks: NavItem[] = [
     href: '/nossos-clientes',
     children: [
       { label: 'Nossos Clientes', href: '/nossos-clientes' },
+      { label: 'Cases de Sucesso', href: '/nossos-clientes#cases' },
       { label: 'Portfólio', href: '/portfolio' },
     ],
   },
