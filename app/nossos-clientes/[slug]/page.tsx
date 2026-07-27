@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { CASE_SLUGS, getCase } from '@/lib/clientes'
+import { CASES, getCase } from '@/lib/clientes'
 import { pageOg } from '@/lib/og'
 import { CaseTemplate } from '@/components/case-template'
 
 export function generateStaticParams() {
-  return CASE_SLUGS.map((slug) => ({ slug }))
+  return CASES.filter((c) => !c.customPage).map((c) => ({ slug: c.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
