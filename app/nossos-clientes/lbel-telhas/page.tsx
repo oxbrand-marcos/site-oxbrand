@@ -32,7 +32,7 @@ const videoSchema = {
   description:
     'Bruno Remonti, da LBEL Telhas, conta o case com a OxBrand: de R$ 0 a R$ 23 milhões em 48 meses, com site, CRM, social media e tráfego para WhatsApp (ROAS 54,12, ROI 12,27).',
   thumbnailUrl: `https://i.ytimg.com/vi/${VIDEO_ID}/hqdefault.jpg`,
-  uploadDate: '2026-02-25',
+  uploadDate: '2026-02-25T09:00:00-03:00',
   duration: 'PT1M32S',
   embedUrl: `https://www.youtube.com/embed/${VIDEO_ID}`,
   contentUrl: `https://www.youtube.com/watch?v=${VIDEO_ID}`,
