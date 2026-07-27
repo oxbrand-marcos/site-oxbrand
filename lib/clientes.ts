@@ -18,6 +18,7 @@ export interface CaseStudy {
   coverAlt: string
   dateISO: string
   published: boolean
+  customPage?: boolean
 }
 
 const draft = (client: string, slug: string, segment: string): CaseStudy => ({
@@ -37,7 +38,22 @@ const draft = (client: string, slug: string, segment: string): CaseStudy => ({
 })
 
 export const CASES: CaseStudy[] = [
-  draft('LBEL', 'lbel', ''),
+  {
+    slug: 'lbel-telhas',
+    client: 'LBEL Telhas',
+    metaTitle: 'Case LBEL Telhas: de R$ 0 a R$ 23 mi em 48 meses | OxBrand',
+    metaDescription: 'Como a OxBrand levou a LBEL Telhas de R$ 0 a R$ 23 milhoes em 48 meses: site, CRM, social e trafego para WhatsApp (ROAS 54,12). Case real de marketing de performance.',
+    segment: 'Construção civil',
+    headline: 'LBEL Telhas: de R$ 0 a R$ 23 milhões em 48 meses',
+    summary: '',
+    services: [],
+    metrics: [],
+    bodyHtml: '',
+    coverAlt: 'Bruno Remonti, da LBEL Telhas, em depoimento sobre o case com a OxBrand',
+    dateISO: '2026-02-25',
+    published: true,
+    customPage: true,
+  },
   draft('Mara Rocha', 'mara-rocha', ''),
   draft('Chris Tattoo', 'chris-tattoo', ''),
   draft('Motobras', 'motobras', ''),
