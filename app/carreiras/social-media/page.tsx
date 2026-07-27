@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
+import { CareerForm } from '@/components/career-form'
 
 export const metadata: Metadata = {
   title: 'Vaga Social Media Estratégico | Time OxBrand, Mogi das Cruzes',
@@ -111,23 +112,9 @@ export default function VagaSocialMediaPage() {
               </div>
 
               {/* Formulário candidatura */}
-              <div className="flex flex-col gap-6 border border-border p-8 bg-card/30 h-fit">
-                <div className="flex flex-col gap-2">
-                  <span className="mono-tag text-primary/60">Candidatura</span>
-                  <h3 className="text-xl font-bold text-foreground">Envie sua candidatura</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Preencha o formulário abaixo ou entre em contato diretamente via WhatsApp com o RH da OxBrand.
-                  </p>
-                </div>
-                <a
-                  href="https://wa.me/5511921425351?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20vaga%20de%20Social%20Media%20da%20OxBrand!"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors rounded-full"
-                >
-                  Candidatar via WhatsApp ↗
-                </a>
-                <div className="flex flex-col gap-3 border-t border-border pt-4">
+              <div className="flex flex-col gap-6 h-fit">
+                <CareerForm vaga="Social Media Estratégico" />
+                <div className="flex flex-col gap-3 border border-border p-6 bg-card/30">
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Modelo</span>
                     <span className="text-foreground font-medium">Híbrido</span>
