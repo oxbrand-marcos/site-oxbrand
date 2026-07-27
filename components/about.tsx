@@ -61,6 +61,7 @@ export function About() {
                 src="/images/escritorio-oxbrand.jpg"
                 alt="Escritório OxBrand · equipe em operação"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

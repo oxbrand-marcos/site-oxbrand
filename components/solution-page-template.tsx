@@ -185,7 +185,7 @@ export function SolutionPageTemplate({
         />
 
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
-          <Image src="/images/hero-clouds.png" alt="" fill className="object-cover opacity-20" priority />
+          <Image src="/images/hero-clouds.png" alt="" fill sizes="100vw" className="object-cover opacity-20" priority />
           <div className="absolute -left-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
             style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 50%, transparent 75%)' }} />
           <div className="absolute -right-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
@@ -255,6 +255,7 @@ export function SolutionPageTemplate({
                     width={300}
                     height={120}
                     loading="lazy"
+                    unoptimized
                     className="h-20 sm:h-24 w-auto max-w-full object-contain brightness-0 invert"
                     sizes="300px"
                   />
@@ -302,6 +303,7 @@ export function SolutionPageTemplate({
                       width={120}
                       height={60}
                       loading="lazy"
+                      unoptimized
                       className="h-10 w-auto object-contain"
                       sizes="(max-width: 640px) 25vw, 120px"
                     />

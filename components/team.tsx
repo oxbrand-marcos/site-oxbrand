@@ -53,6 +53,7 @@ export function Team() {
                   src={member.image}
                   alt={`${member.name}, ${member.role} na OxBrand`}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
                   className="object-cover object-top transition-all duration-500"
                 />
                 <div

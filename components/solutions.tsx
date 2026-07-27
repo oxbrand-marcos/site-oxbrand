@@ -218,6 +218,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
                     alt={p.alt}
                     width={p.span > 1 ? 320 : 180}
                     height={p.span > 1 ? 96 : 64}
+                    unoptimized
                     className={`w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 ${p.span > 1 ? 'h-20' : 'h-16'}`}
                   />
                   {isKommo && (

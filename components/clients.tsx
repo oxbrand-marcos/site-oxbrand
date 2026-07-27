@@ -86,8 +86,8 @@ export function Clients() {
                     width={300}
                     height={120}
                     loading="lazy"
+                    unoptimized
                     className="h-20 sm:h-24 w-auto max-w-full object-contain brightness-0 invert"
-                    sizes="300px"
                   />
                 </div>
               ))}
