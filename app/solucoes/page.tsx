@@ -62,6 +62,7 @@ export default function SolucoesPage() {
             src="/images/hero-clouds.png"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover opacity-20"
             priority
           />
