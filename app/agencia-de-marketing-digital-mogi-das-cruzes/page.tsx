@@ -284,7 +284,7 @@ export default function LpMogiPage() {
                 ].map((p) => (
                   <div key={p.label} className="bg-card border border-border p-5 flex flex-col gap-3">
                     <div className="w-10 h-10 bg-white rounded-sm flex items-center justify-center p-1.5 shrink-0">
-                      <Image src={p.src} alt={p.label} width={40} height={40} className="w-full h-full object-contain" />
+                      <Image src={p.src} alt={p.label} width={40} height={40} unoptimized className="w-full h-full object-contain" />
                     </div>
                     <span className="text-sm font-semibold text-foreground">{p.label}</span>
                   </div>
