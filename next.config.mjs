@@ -43,7 +43,7 @@ const nextConfig = {
     localPatterns: [
       { pathname: '/images/**', search: '' },
       { pathname: '/blog/**', search: '' },
-      { pathname: '/clientes/**', search: '' },
+      { pathname: '/nossos-clientes/**', search: '' },
     ],
     remotePatterns: [
       {
