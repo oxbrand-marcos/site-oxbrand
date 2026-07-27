@@ -21,7 +21,6 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/solucoes/crm-kommo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   { url: `${BASE}/portfolio`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/nossos-clientes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
-  { url: `${BASE}/clientes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
   { url: `${BASE}/materiais-gratuitos`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/carreiras-em-marketing-digital`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
@@ -51,7 +50,7 @@ const staticPosts: MetadataRoute.Sitemap = [
   { url: `${BASE}/blog/leads-do-trafego-pago-como-transformar-em-vendas`, lastModified: new Date('2026-06-03'), changeFrequency: 'monthly', priority: 0.75 },
   { url: `${BASE}/blog/foco-em-marketing-de-conteudo-como-gerar-resultados-reais`, lastModified: new Date('2026-01-15'), changeFrequency: 'monthly', priority: 0.75 },
   ...CASES.filter((c) => c.published).map((c) => ({
-    url: `${BASE}/clientes/${c.slug}`,
+    url: `${BASE}/nossos-clientes/${c.slug}`,
     lastModified: new Date(c.dateISO),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
