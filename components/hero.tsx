@@ -179,25 +179,27 @@ export function Hero() {
             {/* Coluna direita, painel de dados falso */}
             <div className="hidden lg:flex flex-col gap-3">
 
-              {/* Card de status */}
+              {/* Header do painel */}
+              <div className="flex items-center justify-between px-1">
+                <span className="mono-tag text-primary">O seu painel, em tempo real</span>
+              </div>
+
+              {/* Card principal: ROAS + previsibilidade */}
               <div className="border border-glow bg-card p-5 flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <span className="mono-tag">exemplo</span>
-                </div>
                 <div className="flex flex-col gap-1">
-                  <span className="mono-tag text-muted-foreground/50">Receita este mês</span>
-                  <span className="text-3xl font-bold text-foreground stat-number">
-                    R$ <AnimatedCounter target={84} />.<AnimatedCounter target={320} />
+                  <span className="mono-tag text-muted-foreground/50">Retorno sobre investimento</span>
+                  <span className="text-4xl font-bold text-foreground stat-number">
+                    <AnimatedCounter target={5} />.4<span className="text-primary text-2xl">x ROAS</span>
                   </span>
+                  <span className="mono-tag" style={{ color: '#34d399' }}>&#9650; +27% de crescimento no trimestre</span>
                 </div>
-                {/* Barra de progresso */}
                 <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between">
-                    <span className="mono-tag text-muted-foreground/50">Meta mensal</span>
-                    <span className="mono-tag">84%</span>
+                    <span className="mono-tag text-muted-foreground/50">Previsibilidade da meta</span>
+                    <span className="mono-tag text-primary"><AnimatedCounter target={92} />%</span>
                   </div>
                   <div className="h-1 bg-muted w-full">
-                    <div className="h-full w-[84%] bg-primary" style={{ transition: 'width 1.5s ease' }} />
+                    <div className="h-full w-[92%] bg-primary" style={{ transition: 'width 1.5s ease' }} />
                   </div>
                 </div>
               </div>
@@ -205,10 +207,10 @@ export function Hero() {
               {/* Mini cards de métricas */}
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { label: 'ROAS', value: '4.8x', sub: 'Google Ads' },
-                  { label: 'CTR', value: '3.2%', sub: 'Meta Ads' },
-                  { label: 'Conversões', value: '1.240', sub: 'este mês' },
-                  { label: 'Impressões', value: '2.8M', sub: 'alcance total' },
+                  { label: 'Receita / mês', value: 'R$ 168k', sub: 'rastreada' },
+                  { label: 'Custo por venda', value: '-22%', sub: 'vs. início' },
+                  { label: 'Conversões', value: '1.960', sub: 'este mês' },
+                  { label: 'Leads qualificados', value: '63%', sub: 'do total' },
                 ].map((item) => (
                   <div key={item.label} className="border border-border bg-card p-4 flex flex-col gap-1 card-lift">
                     <span className="mono-tag text-muted-foreground/50">{item.label}</span>
@@ -220,7 +222,7 @@ export function Hero() {
 
               {/* Rodapé do painel */}
               <div className="border border-border p-3 flex items-center gap-2 bg-card">
-                <span className="mono-tag text-muted-foreground/50">Exemplo ilustrativo de painel de performance</span>
+                <span className="mono-tag text-muted-foreground/50">Números ilustrativos · o seu vem dos dados reais da sua operação</span>
               </div>
             </div>
           </div>
