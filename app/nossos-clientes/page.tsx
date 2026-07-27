@@ -5,6 +5,7 @@ import { pageOg } from '@/lib/og'
 import { Header } from '@/components/header'
 import { Clients } from '@/components/clients'
 import { ClientGrid } from '@/components/client-grid'
+import { CASES } from '@/lib/clientes'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
@@ -99,6 +100,26 @@ export default function ClientesPage() {
               </span>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Cases de Sucesso */}
+      <section id="cases" className="py-16 section-light border-b border-border">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col gap-8">
+          <div className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left">
+            <span className="mono-tag text-black/40">Cases &amp; Resultados</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-black">Cases de sucesso</h2>
+            <p className="text-black/60 leading-relaxed max-w-2xl">Marcas reais que estruturaram aquisicao e passaram a crescer com previsibilidade ao lado da OxBrand.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10 border border-black/10">
+            {CASES.map((c) => (
+              <Link key={c.slug} href={`/nossos-clientes/${c.slug}`} className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
+                <span className="mono-tag text-black/40">{c.segment || 'Case'}</span>
+                <span className="text-xl font-bold text-black group-hover:text-primary transition-colors">{c.client}</span>
+                <span className="mono-tag text-primary/70 mt-auto">{c.published ? 'Ver case →' : 'Em breve'}</span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
