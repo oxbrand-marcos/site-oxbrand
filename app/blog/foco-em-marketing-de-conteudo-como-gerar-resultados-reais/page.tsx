@@ -94,6 +94,7 @@ export default function MarketingConteudoPage() {
                 src="/blog/marketing-conteudo-cover.png"
                 alt="Foco em marketing de conteúdo: estratégia e resultados"
                 fill
+                sizes="(max-width: 1280px) 100vw, 1232px"
                 className="object-cover"
                 priority
               />
