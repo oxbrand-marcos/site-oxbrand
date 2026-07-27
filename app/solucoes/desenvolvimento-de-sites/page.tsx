@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
+import { SitePerformanceTerminal } from '@/components/site-performance-terminal'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
@@ -124,6 +125,7 @@ export default function DesenvolvimentoDeSitesPage() {
           description: 'Seu site já nasce otimizado para o Google. Estrutura de código, URLs, hierarquia de títulos e velocidade pensados desde o início para ranquear.',
         },
       ]}
+      extraSection={<SitePerformanceTerminal />}
     />
   )
 }
