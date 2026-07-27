@@ -116,7 +116,7 @@ export default function DiagnosticoPage() {
         />
 
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
-          <Image src="/images/hero-clouds.png" alt="" fill className="object-cover opacity-20" priority />
+          <Image src="/images/hero-clouds.png" alt="" fill sizes="100vw" className="object-cover opacity-20" priority />
           <div className="absolute -left-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
             style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 50%, transparent 75%)' }} />
           <div className="absolute -right-32 top-24 w-[500px] h-[500px] rounded-full blur-3xl"
