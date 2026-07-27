@@ -5,6 +5,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { YouTubeFacade } from '@/components/youtube-facade'
+import { ClientMarquee } from '@/components/client-marquee'
 import { pageOg } from '@/lib/og'
 import { jsonLd, breadcrumbSchema } from '@/lib/jsonld'
 
@@ -144,7 +145,14 @@ export default function LbelTelhasCase() {
             </ul>
           </div>
         </div>
+        {/* Faixa inferior roxa */}
+        <div className="relative z-10 w-full bg-primary/90 px-6 py-3 flex items-center justify-center sm:justify-between gap-4">
+          <span className="mono-tag text-primary-foreground/80">Case de sucesso · LBEL Telhas</span>
+          <span className="hidden sm:block mono-tag text-primary-foreground/50">OxBrand | Case de sucesso</span>
+        </div>
       </section>
+
+      <ClientMarquee />
 
       {/* Números */}
       <section className="py-16 border-b border-border section-light">
