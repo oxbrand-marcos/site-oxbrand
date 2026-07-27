@@ -211,7 +211,7 @@ export default function TrafegoPrevisibilidadePage() {
             {[...parceiros, ...parceiros].map((p, i) => (
               <div key={i} className="flex items-center gap-3 px-4 shrink-0">
                 <div className="h-8 w-28 relative opacity-60 hover:opacity-100 transition-opacity">
-                  <Image src={p.logo} alt={p.nome} fill className="object-contain" />
+                  <Image src={p.logo} alt={p.nome} fill unoptimized className="object-contain" />
                 </div>
               </div>
             ))}
