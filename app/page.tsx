@@ -10,6 +10,7 @@ import { Clients } from '@/components/clients'
 import { FAQ } from '@/components/faq'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
+import { InstagramFeed } from '@/components/instagram-feed'
 import { organizationSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 
 const homeFaq = [
@@ -45,6 +46,7 @@ export default function Home() {
       <Clients />
       <FAQ />
       <Contact />
+      <InstagramFeed />
       <Footer />
     </main>
   )
