@@ -113,6 +113,7 @@ export interface SolutionPageProps {
   serviceType?: string
   relatedLinks?: { label: string; href: string }[]
   extraSection?: ReactNode
+  beforeFooter?: ReactNode
 }
 
 /* ─── Template principal ─────────────────────────────────── */
@@ -139,6 +140,7 @@ export function SolutionPageTemplate({
   serviceType,
   relatedLinks,
   extraSection,
+  beforeFooter,
 }: SolutionPageProps) {
   const pageSlug = slug ?? breadcrumb.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   const pageUrl = pageUrlProp ?? `/solucoes/${pageSlug}`
@@ -473,6 +475,8 @@ export function SolutionPageTemplate({
 
       {/* ── FAQ ─────────────────────────────────────────── */}
       <FAQ questions={faqItems} />
+
+      {beforeFooter}
 
       <Footer />
     </main>
