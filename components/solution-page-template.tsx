@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
@@ -112,6 +112,7 @@ export interface SolutionPageProps {
   pageUrl?: string
   serviceType?: string
   relatedLinks?: { label: string; href: string }[]
+  extraSection?: ReactNode
 }
 
 /* ─── Template principal ─────────────────────────────────── */
@@ -137,6 +138,7 @@ export function SolutionPageTemplate({
   pageUrl: pageUrlProp,
   serviceType,
   relatedLinks,
+  extraSection,
 }: SolutionPageProps) {
   const pageSlug = slug ?? breadcrumb.toLowerCase().replace(/\s+/g, '-').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   const pageUrl = pageUrlProp ?? `/solucoes/${pageSlug}`
@@ -439,6 +441,8 @@ export function SolutionPageTemplate({
           </div>
         </section>
       )}
+
+      {extraSection}
 
       {relatedLinks && relatedLinks.length > 0 && (
         <section className="bg-white border-b border-zinc-200 py-14">
