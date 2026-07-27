@@ -95,14 +95,15 @@ export async function POST(req: NextRequest) {
     const nome = String(formData.get('nome') || '').trim()
     const email = String(formData.get('email') || '').trim()
     const telefone = String(formData.get('telefone') || '').trim()
-    const instagram = String(formData.get('instagram') || '').trim()
+    const nascimento = String(formData.get('nascimento') || '').trim()
+    const descricao = String(formData.get('descricao') || '').trim()
     const linkedin = String(formData.get('linkedin') || '').trim()
-    const mensagem = String(formData.get('mensagem') || '').trim()
+    const instagram = String(formData.get('instagram') || '').trim()
     const pageUrl = String(formData.get('_pageUrl') || '') || req.headers.get('referer') || ''
     const recaptcha = String(formData.get('_recaptcha') || '')
     const file = formData.get('curriculo') as File | null
 
-    if (!nome || !email || !telefone || !instagram || !linkedin) {
+    if (!nome || !email || !telefone || !nascimento || !descricao || !linkedin || !instagram) {
       return NextResponse.json({ ok: false, error: 'Preencha todos os campos obrigatorios.' }, { status: 400 })
     }
     if (!file || typeof file === 'string' || file.size === 0) {
@@ -128,18 +129,19 @@ export async function POST(req: NextRequest) {
 
     const fields: Record<string, string> = {
       Nome: nome,
-      'E-mail': email,
       Telefone: telefone,
-      Instagram: instagram,
+      'E-mail': email,
+      'Data de nascimento': nascimento,
+      'Descricao da candidatura': descricao,
       LinkedIn: linkedin,
+      Instagram: instagram,
     }
-    if (mensagem) fields['Mensagem'] = mensagem
 
     const { error } = await resend.emails.send({
       from: FROM,
       to: TO,
       replyTo: email,
-      subject: `[Candidatura - ${vaga}] ${nome}`,
+      subject: `Candidatura para ${vaga}`,
       html: buildHtml(vaga, fields, file.name, pageUrl, dataHora),
       attachments: [{ filename: file.name, content: buffer }],
     })
