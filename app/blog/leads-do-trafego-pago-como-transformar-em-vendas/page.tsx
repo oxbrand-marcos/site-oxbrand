@@ -118,6 +118,7 @@ export default function LeadsTrafegoPage() {
                 src="/blog/leads-trafego-pago-cover.png"
                 alt="Leads do tráfego pago: funil digital e WhatsApp"
                 fill
+                sizes="(max-width: 1280px) 100vw, 1232px"
                 className="object-cover"
                 priority
               />
