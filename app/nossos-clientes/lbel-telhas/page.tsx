@@ -118,6 +118,13 @@ export default function LbelTelhasCase() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               De R$ 0 a R$ 23 milhões de faturamento em 48 meses, com marketing tratado como engenharia, não como arte.
             </p>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1">
+              <span className="mono-tag text-muted-foreground/50">O cliente:</span>
+              <a href="https://lbeltelhas.com.br/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Site &#8599;</a>
+              <a href="https://www.instagram.com/lbeltelhas/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Instagram &#8599;</a>
+              <a href="https://www.facebook.com/LBELTELHAS" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Facebook &#8599;</a>
+              <a href="https://www.linkedin.com/company/lbeltelhas/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">LinkedIn &#8599;</a>
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-8 items-start">
