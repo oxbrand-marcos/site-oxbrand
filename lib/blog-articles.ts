@@ -21,6 +21,81 @@ export interface Article {
 export const ARTICLES: Article[] = [
 
   {
+    slug: 'como-estruturar-uma-campanha',
+    metaTitle: 'Como estruturar uma campanha de tráfego que vende | OxBrand',
+    metaDescription: 'Como estruturar uma campanha de marketing antes de abrir o Meta Ads: negócio, público, oferta, criativo e funil. O passo a passo de quem faz na OxBrand.',
+    title: 'Como estruturar uma campanha: o que fazer antes de abrir o Meta Ads',
+    subtitle: 'Os 3 diagnósticos, os 7 elementos da estratégia, a estrutura do criativo e o funil. Campanha se estrutura antes de configurar, não dentro do Gerenciador.',
+    tag: 'Tráfego Pago',
+    breadcrumb: 'Tráfego',
+    dateISO: '2026-07-27',
+    coverAlt: 'Estrutura de uma campanha de tráfego pago: objetivo, público, oferta, criativo e destino',
+    author: 'Julia Rodrigues',
+    bodyHtml: `
+<p class="lead">A maior parte das campanhas de tráfego não fracassa dentro do Gerenciador de Anúncios. Fracassa antes, na hora em que alguém abre o Meta Ads sem ter estruturado a estratégia. Botão de "impulsionar" apertado no impulso, público no chute, oferta genérica, criativo sem lógica. Depois a culpa cai na plataforma, no algoritmo, na verba. Quase nunca é isso. É falta de estrutura.</p>
+<p>Este guia é o passo a passo que usamos na OxBrand para montar uma campanha antes de qualquer configuração. A regra que organiza tudo é simples: o Meta Ads potencializa uma estratégia, ele não cria uma. Quem pensa antes de agir larga na frente.</p>
+<h2>Operador x estrategista: o verdadeiro papel de quem gere tráfego</h2>
+<p>Existe uma diferença enorme entre operar tráfego e estruturar campanha, e ela define o resultado:</p>
+<ul>
+<li><strong>Operador:</strong> cria campanhas, configura públicos e publica anúncios. Executa a ferramenta. É a parte mecânica, e é a que a maioria confunde com "gestão de tráfego".</li>
+<li><strong>Estrategista:</strong> entende o negócio, faz as perguntas certas, define objetivos, cria hipóteses, analisa resultados e toma decisões. É quem constrói a estratégia que a ferramenta vai executar.</li>
+</ul>
+<p>O mercado está cheio de operador e carente de estrategista. Um bom <a href="/blog/gestor-de-trafego">gestor de tráfego</a> é, antes de tudo, um estrategista: o Gerenciador de Anúncios é só a ferramenta que executa uma estratégia bem construída.</p>
+<h2>Antes de abrir o Meta Ads: os 3 diagnósticos</h2>
+<p>Antes de configurar uma única campanha, três frentes precisam estar claras. Pular qualquer uma é começar a construir sem alicerce.</p>
+<ul>
+<li><strong>Entender o negócio:</strong> quem é o cliente, o que ele vende e como opera. Compreender o modelo de negócio é o ponto de partida de qualquer estratégia eficaz. Sem isso, você anuncia no escuro.</li>
+<li><strong>Definir objetivo e conhecer o público:</strong> o que a campanha precisa alcançar? Quem compra, qual é a dor e o desejo desse público? Objetivo claro e audiência bem definida vêm antes de qualquer configuração.</li>
+<li><strong>Avaliar a estrutura de recepção:</strong> WhatsApp, atendimento, página de destino, redes sociais e capacidade de dar conta. Uma campanha só performa quando a estrutura que recebe o lead está pronta. Não adianta gerar demanda que ninguém atende.</li>
+</ul>
+<p>Esse terceiro ponto é onde muita campanha "boa" morre: o anúncio funciona, o lead chega, e cai num atendimento lento ou numa <a href="/blog/landing-page">página que não converte</a>. Gerar interesse sem estrutura de decisão é desperdiçar verba.</p>
+<h2>Construindo a estratégia: os 7 elementos da campanha</h2>
+<p>Com o diagnóstico feito, a estratégia se monta encadeando sete elementos. Cada um responde a uma pergunta, e um puxa o outro:</p>
+<ul>
+<li><strong>Objetivo:</strong> o que queremos alcançar.</li>
+<li><strong>Público:</strong> quem compra.</li>
+<li><strong>Dor:</strong> o problema que ele quer resolver.</li>
+<li><strong>Desejo:</strong> o que ele realmente quer.</li>
+<li><strong>Oferta:</strong> a proposta irresistível.</li>
+<li><strong>Criativo:</strong> como a mensagem chega.</li>
+<li><strong>Destino:</strong> para onde o lead vai.</li>
+</ul>
+<h2>Exemplo prático: uma marcenaria sob medida</h2>
+<p>Objetivo: gerar leads qualificados e aumentar o volume de orçamentos por mês, com foco em apartamentos e casas em reforma. Público: homens e mulheres de 28 a 50 anos em processo de reforma. Dor: móveis genéricos que não cabem no espaço. Desejo: um ambiente personalizado, funcional e com acabamento de qualidade.</p>
+<p>Oferta: orçamento gratuito e visita técnica sem compromisso. Criativo: antes e depois de projetos reais, com depoimento de cliente. Destino: WhatsApp direto, para atendimento rápido e qualificado. Repare como cada peça se conecta: o criativo nasce da dor e do desejo, a oferta reduz o risco, o destino respeita a estrutura de atendimento.</p>
+<h2>A estrutura do criativo: 5 partes que convertem</h2>
+<p>Criativo que performa não é o mais bonito, é o mais bem estruturado. A sequência que funciona tem cinco partes:</p>
+<ul>
+<li><strong>Gancho:</strong> prende a atenção nos primeiros segundos. Sem isso, o resto não é lido.</li>
+<li><strong>Dor:</strong> identifica o problema do público, para a pessoa sentir que é com ela.</li>
+<li><strong>Solução:</strong> apresenta a oferta como a resposta àquela dor.</li>
+<li><strong>Prova:</strong> gera credibilidade com evidência (depoimento, resultado, antes e depois).</li>
+<li><strong>CTA:</strong> diz exatamente o que fazer a seguir, sem deixar dúvida.</li>
+</ul>
+<p>É a mesma lógica da boa copy: começar pela dor, entregar a solução e fechar com uma chamada clara. Se você quer se aprofundar na parte da escrita que ativa isso, vale o nosso guia de <a href="/blog/o-que-e-copywriting">copywriting</a>.</p>
+<h2>O funil de vendas: cada etapa pede um criativo diferente</h2>
+<p>Um erro comum é falar com todo mundo do mesmo jeito. Cada etapa do <a href="/blog/funil-de-vendas">funil de vendas</a> tem uma consciência diferente e exige uma abordagem de criativo diferente:</p>
+<ul>
+<li><strong>Topo (conscientização):</strong> atrair e gerar interesse no maior número de pessoas certas. Objetivo: visibilidade. Criativo de descoberta, que interrompe o padrão.</li>
+<li><strong>Meio (consideração):</strong> educar e engajar, gerando confiança e interesse. Objetivo: relacionamento. Criativo que ensina, mostra bastidor e prova.</li>
+<li><strong>Fundo (conversão):</strong> converter o lead em cliente e fidelizar. Objetivo: conversão. Criativo de oferta, urgência real e chamada direta.</li>
+</ul>
+<p>Rodar só criativo de fundo para quem nunca ouviu falar da marca é queimar verba. Rodar só topo e nunca convidar para a decisão é gerar audiência que não vira venda. A campanha completa cobre o funil, como mostramos no <a href="/blog/trafego-pago-guia-definitivo">guia definitivo de tráfego pago</a>.</p>
+<h2>Checklist: antes de publicar</h2>
+<p>Antes de apertar publicar, sete verificações fecham a estrutura. Se alguma estiver em aberto, a campanha ainda não está pronta: entender o negócio, conhecer o público, definir o objetivo, validar a oferta, revisar os criativos, definir o destino e definir a forma de mensuração.</p>
+<p>O sétimo item é o mais esquecido e o mais importante: se você não definiu como vai medir, não vai saber o que otimizar. E sem otimização contínua não há campanha que se sustente. Não operamos com achismo, operamos com dados.</p>
+<div class="callout"><p>A OxBrand estrutura tráfego pago com método, do diagnóstico do negócio ao criativo, ao destino e à mensuração. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional, especialista em <a href="/solucoes/gestao-de-trafego-pago">gestão de tráfego pago</a>. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'Como estruturar uma campanha de tráfego pago do zero?', a: 'Antes de abrir o Meta Ads, faça três diagnósticos: entenda o negócio, defina objetivo e público, e avalie a estrutura de recepção do lead (atendimento, WhatsApp, página). Depois monte a estratégia com sete elementos, objetivo, público, dor, desejo, oferta, criativo e destino, e só então configure a campanha.' },
+      { q: 'O que fazer antes de abrir o Meta Ads?', a: 'Entender quem é o cliente e como ele vende, definir o que a campanha precisa alcançar e quem é o público (dor e desejo), e garantir que a estrutura que recebe o lead está pronta. A ferramenta potencializa uma estratégia, ela não cria uma. Pensar antes de agir é o que separa campanha que performa de verba desperdiçada.' },
+      { q: 'Qual a diferença entre um operador e um estrategista de tráfego?', a: 'O operador cria campanhas, configura públicos e publica anúncios, executa a ferramenta. O estrategista entende o negócio, define objetivos, cria hipóteses, analisa resultados e toma decisões. Um bom gestor de tráfego é, antes de tudo, um estrategista; o Gerenciador de Anúncios só executa a estratégia que ele construiu.' },
+      { q: 'Como montar um criativo que converte?', a: 'Siga a estrutura de cinco partes: gancho (prende a atenção nos primeiros segundos), dor (identifica o problema), solução (apresenta a oferta como resposta), prova (gera credibilidade com evidência) e CTA (diz exatamente o que fazer). E adapte o criativo à etapa do funil, topo, meio ou fundo pedem abordagens diferentes.' },
+    ],
+  },
+
+
+  {
     slug: 'neuromarketing',
     metaTitle: 'Neuromarketing: como o cérebro decide comprar | OxBrand',
     metaDescription: 'O que é neuromarketing e como usar na prática: o cérebro decide na emoção e justifica na razão. Guia de quem aplica isso em copy, anúncio e landing page.',
