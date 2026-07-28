@@ -64,7 +64,7 @@ export const CASES: CaseStudy[] = [
   {
     slug: 'chris-tattoo',
     client: 'Chris Tattoo',
-    metaTitle: 'Case Chris Tattoo: marketing que deu direção à marca pessoal | OxBrand',
+    metaTitle: 'Case Chris Tattoo: marketing de marca pessoal | OxBrand',
     metaDescription: 'Case Chris Tattoo com a OxBrand: tráfego qualificado e CRM que deram direção a uma marca pessoal, atraindo o cliente ideal com previsibilidade. Marketing com norte, não com achismo.',
     segment: 'Tatuador e marca pessoal',
     headline: 'Chris Tattoo: um divisor de águas na carreira, com marketing que deu direção',
@@ -92,7 +92,7 @@ export const CASES: CaseStudy[] = [
   {
     slug: 'motobras',
     client: 'Motobras Premium',
-    metaTitle: 'Case Motobras Premium: a maior boutique e motocenter do RJ | OxBrand',
+    metaTitle: 'Case Motobras Premium: boutique e motocenter RJ | OxBrand',
     metaDescription: 'Case Motobras Premium com a OxBrand: de uma operação sem direção à maior boutique e motocenter multimarcas do Rio de Janeiro em 24 meses. Branding, social, tráfego e posicionamento.',
     segment: 'Motocenter e boutique premium',
     headline: 'Motobras Premium: a maior boutique e motocenter multimarcas do Rio de Janeiro',
