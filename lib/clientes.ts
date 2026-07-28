@@ -18,6 +18,7 @@ export interface CaseStudy {
   videoName?: string
   videoUploadDate?: string
   videoAspect?: 'portrait' | 'landscape'
+  videoPoster?: string
   videoDuration?: string
   services: string[]
   bodyHtml: string
@@ -83,6 +84,7 @@ export const CASES: CaseStudy[] = [
     bodyHtml: '',
     depoimentoResumo: 'No vídeo, o case do Chris Tattoo: marketing estratégico que deu direção a uma marca pessoal, com tráfego qualificado e CRM que trouxeram previsibilidade e o cliente ideal chegando.',
     videoId: 'EbfFj4KttlY',
+    videoPoster: '/images/depoimentos/chris-tattoo.webp',
     videoName: 'Marketing para tatuador: o case do Chris Tattoo',
     videoUploadDate: '2026-02-25T08:38:17-08:00',
     coverAlt: 'Case de sucesso Chris Tattoo com a OxBrand',
@@ -183,6 +185,7 @@ export const CASES: CaseStudy[] = [
     ],
     depoimentoResumo: 'No vídeo, o case da Truck Center Express: de não saber o que fazer a um crescimento real e mensurável, com mapeamento estratégico, branding alinhado ao setor de transportes e tráfego qualificado que ampliou a carteira de clientes em mais de 30%.',
     videoId: 'gNHf86huuYs',
+    videoPoster: '/images/depoimentos/truck-center-express.webp',
     videoName: 'Marketing para caminhões: +30% de clientes na Truck Center Express',
     videoUploadDate: '2026-02-25T09:45:26-08:00',
     services: [],
