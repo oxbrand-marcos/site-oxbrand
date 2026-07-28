@@ -51,6 +51,32 @@ export const AUTHORS: Record<string, AuthorData> = {
     hasProfile: true,
     headline: 'A equipe de marketing de performance da OxBrand: análises de tráfego pago, CRM, SEO e conversão direto de quem opera todos os dias.',
     bio: [
+      'A OxBrand é uma agência de marketing digital de performance em Mogi das Cruzes, com atuação nacional. Os artigos assinados pela equipe reúnem o que aprendemos operando tráfego pago, CRM, sites e SEO para mais de 450 marcas.',
+      'Nosso foco não é métrica de vaidade, e sim crescimento previsível: estratégia, dados e integração entre marketing e comercial. Cada conteúdo aqui nasce da prática, não da teoria.',
+    ],
+    especialidades: ['Tráfego Pago', 'CRM e Automação', 'SEO e Conteúdo', 'Conversão'],
+    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
+  },
+  'marcos-blaustein': {
+    slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO e Estrategista',
+    avatar: '/images/authors/marcos-blaustein.jpg', hasProfile: true,
+    headline: 'Sócio-fundador da OxBrand. Lidera estratégia, tecnologia e crescimento previsível para mais de 450 marcas.',
+    bio: [
+      'Sócio-fundador da OxBrand, lidera a direção estratégica, a inteligência de dados e a inovação da agência, conectando visão de negócio, performance e tecnologia. À frente de um time multidisciplinar, atua na construção de operações de marketing mais estruturadas, mensuráveis e orientadas ao crescimento.',
+      'Sua atuação une estratégia, tráfego pago, dados e capacidade de execução para transformar marketing em um sistema previsível de geração de resultado. Ao longo de sua trajetória, esteve por trás de estratégias que movimentaram dezenas de milhões de reais em vendas para empresas de diferentes segmentos.',
+      'Acredita que crescimento não acontece por acaso, mas pela combinação entre leitura de cenário, tomada de decisão, acompanhamento de indicadores e disciplina para executar o que precisa ser feito.',
+    ],
+    quote: 'Resultado não respeita discurso, intenção ou vaidade. Ele responde a dado, decisão e à coragem de fazer o que precisa ser feito.',
+    especialidades: ['Estratégia de Marketing', 'Tráfego Pago', 'CRM e Automação', 'Growth'],
+    linkedin: 'https://www.linkedin.com/in/marcos-blaustein-5302712a/',
+    instagram: 'https://www.instagram.com/marcosblaustein/',
+    email: OX_EMAIL, local: LOCAL,
+  },
+  'walquiria-blaustein': {
+    slug: 'walquiria-blaustein', name: 'Walquiria Blaustein', role: 'COO e Marketing',
+    avatar: '/images/authors/walquiria-blaustein.jpg', hasProfile: true,
+    headline: 'Sócia-fundadora da OxBrand. Lidera conteúdo, comunicação e operações, com forte atuação no mercado imobiliário.',
+    bio: [
       'Sócia-fundadora da OxBrand, lidera as áreas de conteúdo, comunicação e operações da agência, conectando estratégia, gestão e execução. Formada em Administração e Marketing, coordena um time multidisciplinar voltado à performance, ao fortalecimento de posicionamento e à consolidação de marcas.',
       'Sua atuação une visão de negócio, branding empresarial e capacidade operacional para transformar estratégia em presença, percepção e crescimento. Acredita que marcas fortes não são construídas apenas pela comunicação, mas pela consistência entre posicionamento, experiência, identidade e entrega.',
       'Como defende em seu e-book Comunicação Raiz: antes de comunicar para o mercado, uma marca precisa compreender com clareza quem é, o que defende e por que deseja ser lembrada.',
