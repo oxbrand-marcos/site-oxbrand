@@ -21,6 +21,14 @@ export default function Page() {
       headline="Marketing Digital para Clínicas e Médicos:"
       headlineHighlight="mais pacientes, dentro das regras"
       subheadline="Clínica não lota agenda com sorte. Lota com estrutura: aparecer para o paciente certo, na hora em que ele procura, e conduzir esse contato até a consulta, sempre dentro das regras do Conselho Federal de Medicina."
+      extraSection={
+        <section className="py-16 bg-white border-b border-zinc-200">
+          <div className="max-w-3xl mx-auto px-6 flex flex-col gap-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">Marketing digital para clínicas: agenda previsível, dentro do CFM</h2>
+            <p className="text-zinc-700 leading-relaxed">Fazer marketing digital para clínicas é diferente de vender qualquer produto: envolve confiança, uma jornada de decisão mais longa e as regras de publicidade do Conselho Federal de Medicina. Nossa estrutura de marketing digital para clínicas e consultórios une tráfego pago segmentado, páginas que convertem e um CRM que organiza a agenda, para atrair o paciente certo com previsibilidade, sempre dentro do que o CFM permite: educação e autoridade, não autopromoção.</p>
+          </div>
+        </section>
+      }
       introTitle="Marketing médico é diferente (e mais sensível)"
       intro="A OxBrand estrutura marketing digital para clínicas e médicos com a mesma engenharia que aplicamos em mais de 450 marcas: sistema, dados e integração com o comercial. Não vendemos postzinho de dica de saúde nem número de seguidor. Construímos um fluxo previsível de pacientes qualificados, com criativo e copy que respeitam o CFM. Atendemos clínicas médicas e consultórios, odontologia, dermatologia e estética, oftalmologia, ortopedia, ginecologia, clínicas de exames e diagnóstico, nutrição e psicologia. Se você depende de agenda cheia e hoje ela oscila conforme a indicação chega, o método se aplica."
       steps={[
