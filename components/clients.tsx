@@ -39,7 +39,7 @@ const clientVideos = [
   { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true, poster: '/images/depoimentos/truck-center-express.webp' },
   { id: 'tODEyWH6HvM', title: 'Depoimento cliente OxBrand 3', short: true },
   { id: 'EbfFj4KttlY', title: 'Depoimento cliente OxBrand 4', short: true, poster: '/images/depoimentos/chris-tattoo.webp' },
-  { id: 'sAnFkmpsakY', title: 'Depoimento cliente OxBrand 5', short: false },
+  { id: 'sAnFkmpsakY', title: 'Depoimento cliente OxBrand 5', short: false, poster: '/images/depoimentos/ral-truck.webp' },
 ]
 
 
