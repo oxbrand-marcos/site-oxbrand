@@ -106,7 +106,7 @@ export const AUTHORS: Record<string, AuthorData> = {
   },
   'murilo-novaes': { ...redator('murilo-novaes', 'Murilo Novaes'), email: undefined, linkedin: 'https://www.linkedin.com/in/murilo-novaes-de-oliveira-27a3191a2', instagram: 'https://www.instagram.com/murilo_novaesz', facebook: 'https://www.facebook.com/share/1D7ErKq5cP/' },
   'breno-freire': { ...redator('breno-freire', 'Breno Freire'), email: undefined, linkedin: 'https://www.linkedin.com/in/breno-freire-2a505a24b/', instagram: 'https://www.instagram.com/brenoofr_/' },
-  'julia-rodrigues': redator('julia-rodrigues', 'Julia Rodrigues'),
+  'julia-rodrigues': { ...redator('julia-rodrigues', 'Julia Rodrigues'), email: undefined, linkedin: 'https://www.linkedin.com/in/j%C3%BAlia-rodrigues-90219a173', instagram: 'https://www.instagram.com/julliarodriguez' },
   'maria-clara': { ...redator('maria-clara', 'Maria Clara'), email: undefined, linkedin: undefined, instagram: 'https://www.instagram.com/mariaclara_lecy', threads: 'https://www.threads.com/@mariaclara_lecy', twitter: 'https://x.com/clara_lecy' },
   'beatriz-soares': { ...redator('beatriz-soares', 'Beatriz Soares'), email: undefined, linkedin: 'https://www.linkedin.com/in/beatriz-soares-001823252', instagram: 'https://www.instagram.com/__beatrizsrm' },
   'gabriel-figueiredo': { ...redator('gabriel-figueiredo', 'Gabriel Figueiredo'), avatar: OX_AVATAR, email: undefined, linkedin: 'https://www.linkedin.com/in/ogabrielvitor', instagram: 'https://www.instagram.com/ogabrielvitor/' },
