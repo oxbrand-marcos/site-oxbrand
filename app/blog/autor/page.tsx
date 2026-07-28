@@ -8,7 +8,7 @@ import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Autores | OxBrand Insights',
+  title: 'Autores do Blog | Marketing de Performance | OxBrand',
   description: 'Conheça o time por trás dos conteúdos da OxBrand: estrategistas e redatores de marketing de performance em Mogi das Cruzes.',
   alternates: { canonical: '/blog/autor' },
   ...pageOg({
