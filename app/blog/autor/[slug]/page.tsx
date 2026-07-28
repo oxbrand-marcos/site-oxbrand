@@ -194,7 +194,7 @@ export default async function AutorPage({ params }: { params: Promise<{ slug: st
           <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center gap-6">
             <span className="mono-tag text-muted-foreground/60">Diagnóstico gratuito</span>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground text-balance">Quer resultado como os nossos clientes?</h2>
-            <p className="text-muted-foreground text-sm max-w-lg">Nossa equipe analisa sua operação digital e retorna com um diagnóstico completo e gratuito.</p>
+            <p className="text-muted-foreground text-sm max-w-lg">Nosso time analisa sua operação digital e retorna com um diagnóstico completo e gratuito.</p>
             <a href="/diagnostico" className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors">Falar com especialistas ↗</a>
           </div>
         </section>
