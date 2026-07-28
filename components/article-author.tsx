@@ -22,6 +22,8 @@ export interface AuthorData {
   facebook?: string
   threads?: string
   twitter?: string
+  youtube?: string
+  whatsapp?: string
   local?: string
 }
 
@@ -58,7 +60,7 @@ export const AUTHORS: Record<string, AuthorData> = {
       'Nosso foco não é métrica de vaidade, e sim crescimento previsível: estratégia, dados e integração entre marketing e comercial. Cada conteúdo aqui nasce da prática, não da teoria.',
     ],
     especialidades: ['Tráfego Pago', 'CRM e Automação', 'SEO e Conteúdo', 'Conversão'],
-    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
+    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, facebook: 'https://www.facebook.com/oxbrand.oficial', youtube: 'https://www.youtube.com/@oxbrand_br', whatsapp: 'https://wa.me/5511921425351', local: LOCAL,
   },
   'marcos-blaustein': {
     slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO e Estrategista',
