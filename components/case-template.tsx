@@ -23,6 +23,23 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           ),
         }}
       />
+      {study.videoId ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd({
+              '@context': 'https://schema.org',
+              '@type': 'VideoObject',
+              name: study.videoName ?? study.headline,
+              description: study.metaDescription,
+              thumbnailUrl: `https://i.ytimg.com/vi/${study.videoId}/hqdefault.jpg`,
+              uploadDate: study.videoUploadDate,
+              contentUrl: `https://www.youtube.com/shorts/${study.videoId}`,
+              embedUrl: `https://www.youtube.com/embed/${study.videoId}`,
+            }),
+          }}
+        />
+      ) : null}
       <Header />
 
       {/* Hero */}
@@ -45,6 +62,24 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           )}
         </div>
       </section>
+
+      {study.videoId ? (
+        <section className="py-14 border-b border-border section-light">
+          <div className="max-w-sm mx-auto px-6 flex flex-col gap-4 items-center text-center">
+            <span className="mono-tag text-black/50">O case em vídeo</span>
+            <div className="relative w-full aspect-[9/16] overflow-hidden border border-black/10 bg-black">
+              <iframe
+                src={`https://www.youtube.com/embed/${study.videoId}`}
+                title={study.videoName ?? study.headline}
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {hasCover ? (
         <section className="border-b border-border bg-white">
