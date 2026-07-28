@@ -19,6 +19,198 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: 'automacao-de-marketing',
+    metaTitle: 'Automação de marketing: o que é e como aplicar bem | OxBrand',
+    metaDescription: 'Automação de marketing não é robotizar o contato. Veja o que é, onde ela funciona de verdade (nutrição, CRM, follow-up) e como aplicar sem perder a relação. Guia OxBrand.',
+    title: 'Automação de marketing: o que é e como aplicar sem robotizar a relação',
+    subtitle: 'O que é, onde a automação funciona de verdade (nutrição, CRM e follow-up) e como aplicar sem robotizar a relação. O guia de quem estrutura automação sobre um CRM organizado.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-07-28',
+    coverAlt: 'Automação de marketing: fluxos que nutrem leads e organizam o follow-up',
+    author: 'OxBrand',
+    bodyHtml: `
+<p class="lead">Automação de marketing tem fama dividida. Para uns, é a solução mágica que faz vendas sozinha; para outros, é aquele robô que dispara mensagem genérica e afasta o cliente. As duas visões erram. Automação bem feita não substitui a relação, ela libera tempo para que a relação aconteça na hora certa, com a pessoa certa.</p>
+<p>Automação de marketing é usar tecnologia para executar tarefas repetitivas de comunicação e relacionamento de forma automática e personalizada: nutrir leads, organizar follow-up, responder rápido e mover o contato pelo funil sem depender de lembrar de tudo manualmente. Este guia mostra onde ela funciona de verdade e onde vira ruído.</p>
+<h2>O que a automação NÃO é</h2>
+<p>Antes do que ela é, o que ela não é, porque é aqui que a maioria erra:</p>
+<ul>
+<li><strong>Não é disparo em massa genérico:</strong> mandar a mesma mensagem para todo mundo é spam, não automação. Automação boa é segmentada e contextual.</li>
+<li><strong>Não é substituir gente:</strong> ela cuida do repetitivo (lembrar, organizar, responder o básico) para o humano cuidar do que exige humano: relação e decisão.</li>
+<li><strong>Não é ligar e esquecer:</strong> fluxo automático precisa de estratégia por trás e ajuste contínuo. Sem isso, automatiza o erro em escala.</li>
+</ul>
+<p>A régua é simples: se a automação melhora a experiência de quem recebe, é boa. Se só facilita a vida de quem envia à custa de quem recebe, é ruído.</p>
+<h2>Onde a automação de marketing funciona de verdade</h2>
+<p>Os ganhos reais aparecem em pontos específicos da operação:</p>
+<ul>
+<li><strong>Nutrição de leads:</strong> sequências de conteúdo que mantêm o lead aquecido e educado até o momento de compra, alinhadas à lógica do <a href="/solucoes/inbound-marketing">inbound marketing</a>.</li>
+<li><strong>Resposta e atendimento rápido:</strong> respostas automáticas para o primeiro contato (inclusive no <a href="/blog/crm-integrado-ao-whatsapp">WhatsApp</a>), reduzindo o tempo entre o interesse e a conversa. Lead atendido rápido converte mais.</li>
+<li><strong>Organização do funil e follow-up:</strong> o <a href="/blog/o-que-e-crm">CRM</a> move o lead de etapa, dispara lembretes e evita que a oportunidade caia no esquecimento.</li>
+<li><strong>Qualificação e roteamento:</strong> pontuar e direcionar cada lead para o caminho certo, entregando ao comercial quem está mais pronto.</li>
+</ul>
+<p>Repare o fio condutor: a automação sustenta a <a href="/blog/funil-de-vendas">jornada</a> entre um contato humano e outro, ela não tenta ser o contato humano.</p>
+<h2>O motor por trás: CRM e integração</h2>
+<p>Automação sem CRM é fogo de palha. É o CRM que guarda em que etapa cada lead está, o que já consumiu e qual o próximo passo, e é sobre essa base que os fluxos rodam. Por isso, na prática, estruturar automação começa por estruturar o CRM e integrá-lo aos canais.</p>
+<p>É o que fazemos com o <a href="/solucoes/crm-kommo">Kommo</a>, onde a OxBrand é parceira Top 5% do Brasil: funil organizado, automações de follow-up e atendimento, e integração com WhatsApp e anúncios. Entender <a href="/blog/como-funciona-o-crm-kommo">como o CRM opera</a> é o pré-requisito para automatizar sem virar bagunça.</p>
+<h2>Como começar sem robotizar</h2>
+<p>O caminho seguro é começar pequeno e por onde dói mais: mapeie as tarefas repetitivas que hoje se perdem (primeiro contato demorado, lead sem follow-up, nutrição que não acontece), automatize uma de cada vez, mantenha a personalização (nome, contexto, etapa) e revise os fluxos com os dados na mão.</p>
+<p>Automação é engenharia, não mágica: você desenha o processo, a ferramenta executa e você otimiza. Feita assim, ela não esfria a relação, ela garante que nenhum lead bom seja esquecido por falta de tempo. Não operamos com achismo; operamos com dados e processo.</p>
+<div class="callout"><p>A OxBrand estrutura automação de marketing sobre um CRM organizado: nutrição, follow-up e atendimento rápido, integrados ao seu funil. Somos parceira Kommo Top 5% do Brasil e uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é automação de marketing?', a: 'É usar tecnologia para executar tarefas repetitivas de comunicação e relacionamento de forma automática e personalizada, nutrir leads, organizar follow-up, responder rápido e mover o contato pelo funil. O objetivo é liberar tempo e garantir consistência, não substituir a relação humana.' },
+      { q: 'Automação de marketing é a mesma coisa que disparo em massa?', a: 'Não. Disparo em massa genérico é spam. Automação de marketing bem feita é segmentada e contextual: envia a mensagem certa para a pessoa certa no momento certo, com base na etapa do funil e no comportamento do lead. Personalização e estratégia são o que separam automação de ruído.' },
+      { q: 'Preciso de um CRM para automatizar o marketing?', a: 'Na prática, sim. O CRM é o motor: guarda em que etapa cada lead está, o que consumiu e o próximo passo, e é sobre essa base que os fluxos rodam. Automação sem CRM tende a virar disparo desorganizado. Estruturar o CRM é o primeiro passo para automatizar bem.' },
+      { q: 'Por onde começar na automação de marketing?', a: 'Comece pelas tarefas repetitivas que mais se perdem hoje: primeiro contato demorado, leads sem follow-up e nutrição que não acontece. Automatize uma de cada vez, mantenha a personalização e revise os fluxos com dados. Começar pequeno e por onde dói evita robotizar a relação.' },
+    ],
+  },
+  {
+    slug: 'inbound-marketing-b2b',
+    metaTitle: 'Inbound marketing B2B: como gerar demanda com método | OxBrand',
+    metaDescription: 'Inbound marketing B2B: como atrair e nutrir empresas com ciclo de compra longo e múltiplos decisores. O que muda em relação ao B2C e como aplicar. Guia OxBrand.',
+    title: 'Inbound marketing B2B: como gerar demanda em vendas de ciclo longo',
+    subtitle: 'Como atrair e nutrir empresas com ciclo de compra longo e múltiplos decisores, o que muda em relação ao B2C e como estruturar na prática. O guia de quem faz geração de demanda B2B.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Inbound',
+    dateISO: '2026-07-28',
+    coverAlt: 'Inbound marketing B2B: atrair, nutrir e converter empresas em ciclo de compra longo',
+    author: 'OxBrand',
+    bodyHtml: `
+<p class="lead">No B2B, ninguém compra por impulso. A decisão passa por mais de uma pessoa, envolve orçamento, comparação e tempo, às vezes meses. Por isso o inbound marketing, que atrai e educa em vez de interromper, encaixa tão bem em vendas complexas: ele constrói confiança ao longo do caminho, no ritmo em que a empresa decide.</p>
+<p>Inbound marketing B2B é atrair empresas certas com conteúdo relevante, nutrir esse interesse ao longo do ciclo de compra e entregar ao comercial um lead que já entende o problema e a solução. Este guia mostra o que muda em relação ao B2C e como estruturar na prática.</p>
+<h2>O que muda no inbound quando é B2B</h2>
+<p>O inbound B2B parte da mesma lógica do <a href="/blog/o-que-e-inbound-marketing">inbound em geral</a>, mas com quatro diferenças que mudam a execução:</p>
+<ul>
+<li><strong>Ciclo de compra longo:</strong> a decisão leva semanas ou meses. O conteúdo precisa sustentar o relacionamento por todo esse tempo, não só gerar um clique.</li>
+<li><strong>Múltiplos decisores:</strong> quem pesquisa nem sempre é quem assina. É preciso falar com o técnico, com o financeiro e com o gestor, cada um com sua objeção.</li>
+<li><strong>Ticket alto e risco percebido:</strong> a compra é cara e a escolha errada custa caro. Prova, autoridade e redução de risco pesam mais que urgência.</li>
+<li><strong>Volume menor, qualidade maior:</strong> no B2B não se busca milhares de leads, mas os poucos certos. <a href="/blog/geracao-de-leads-qualificados">Qualificação</a> vale mais que alcance.</li>
+</ul>
+<p>Traduzindo: no B2B, inbound não é gerar muitos cliques. É construir confiança com as empresas certas até a decisão amadurecer.</p>
+<h2>Conteúdo por etapa do funil B2B</h2>
+<p>Cada etapa do <a href="/blog/funil-de-vendas">funil</a> pede um tipo de conteúdo, porque a consciência do decisor muda ao longo da jornada:</p>
+<ul>
+<li><strong>Topo (descoberta):</strong> a empresa sente um problema mas não nomeia. Conteúdo educativo: artigos, guias, diagnósticos que ajudam a entender a dor.</li>
+<li><strong>Meio (consideração):</strong> já busca solução e compara caminhos. Conteúdo de aprofundamento: comparativos, cases, materiais ricos, webinars.</li>
+<li><strong>Fundo (decisão):</strong> avalia fornecedores. Conteúdo de prova: estudos de caso, ROI, demonstrações, proposta clara. É onde a autoridade fecha a decisão.</li>
+</ul>
+<p>Uma boa <a href="/blog/estrategia-de-conteudo">estratégia de conteúdo</a> mapeia esses estágios e produz para cada um, em vez de falar só de produto para quem ainda nem entendeu o problema.</p>
+<h2>Nutrição: manter o relacionamento até a hora certa</h2>
+<p>No B2B, a maioria dos leads não está pronta para comprar quando chega. Descartá-los é desperdício; abordá-los cedo demais afasta. A nutrição resolve isso: uma sequência de conteúdo e contato que mantém a empresa aquecida e educada até o momento de decisão.</p>
+<p>É aqui que o <a href="/blog/o-que-e-crm">CRM</a> vira peça central, organizando em que etapa cada lead está, o que já consumiu e quando faz sentido o comercial agir. Sem CRM, lead B2B nutrido vira lead esquecido.</p>
+<h2>Marketing e comercial: um SLA, não dois times</h2>
+<p>Ciclo longo só funciona se marketing e comercial operarem como um sistema. Isso exige acordo: o que é um lead pronto para vendas, como ele é passado, em quanto tempo é abordado e o que volta para nutrição quando ainda não está no ponto.</p>
+<p>Quando esse alinhamento existe, o inbound B2B deixa de ser gerar conteúdo e passa a ser uma máquina de geração de demanda previsível, que é o que o serviço de <a href="/solucoes/inbound-marketing">inbound da OxBrand</a> estrutura. Conteúdo, no fim, não serve para engajar. Serve para reduzir objeção e acelerar decisão.</p>
+<div class="callout"><p>A OxBrand estrutura inbound para negócios B2B de ciclo longo: conteúdo por etapa, nutrição, CRM e integração com o comercial. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional e forte atuação em indústria e B2B. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é inbound marketing B2B?', a: 'É a estratégia de atrair empresas certas com conteúdo relevante, nutrir esse interesse ao longo do ciclo de compra e entregar ao comercial um lead que já entende o problema e a solução. Foca em confiança e qualificação, adequando-se a vendas complexas, de ticket alto e múltiplos decisores.' },
+      { q: 'Qual a diferença entre inbound B2B e B2C?', a: 'No B2B o ciclo de compra é longo, a decisão passa por vários decisores, o ticket é alto e o risco percebido é maior, então prova e autoridade pesam mais que urgência, e busca-se qualidade de lead, não volume. No B2C a decisão é mais rápida, individual e emocional.' },
+      { q: 'Como aplicar inbound marketing em vendas de ciclo longo?', a: 'Produza conteúdo por etapa do funil (descoberta, consideração, decisão), estruture uma nutrição que mantém o lead aquecido até o momento certo, use um CRM para organizar em que estágio cada empresa está e alinhe um SLA entre marketing e comercial sobre o que é um lead pronto.' },
+      { q: 'Inbound marketing B2B dá resultado em quanto tempo?', a: 'Por ser construção de autoridade e demanda, o inbound B2B é cumulativo: os primeiros resultados costumam aparecer em alguns meses e crescem com consistência. É estratégia de previsibilidade a médio prazo, não de pico imediato, e por isso ritmo importa mais que intensidade pontual.' },
+    ],
+  },
+  {
+    slug: 'consultoria-de-marketing-digital',
+    metaTitle: 'Consultoria de marketing digital: o que é e quando ter | OxBrand',
+    metaDescription: 'Consultoria de marketing digital: o que é, quando contratar, o que uma boa entrega e como escolher sem cair em promessa vazia. Guia da OxBrand.',
+    title: 'Consultoria de marketing digital: o que é, quando contratar e como escolher',
+    subtitle: 'O que é, quando faz sentido contratar, a diferença entre consultoria, assessoria e agência e como escolher sem cair em promessa vazia. O guia de quem entrega direção, não só tarefa.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Estratégia',
+    dateISO: '2026-07-28',
+    coverAlt: 'Consultoria de marketing digital: direção estratégica antes da execução',
+    author: 'OxBrand',
+    bodyHtml: `
+<p class="lead">Muita empresa investe em marketing e mesmo assim não cresce. Faz tráfego, posta, tem site, mas os esforços não conversam e o faturamento não acompanha. Nesse ponto, o que falta quase nunca é mais execução. É direção. E é aí que entra a consultoria de marketing digital.</p>
+<p>Consultoria de marketing digital é o trabalho de diagnosticar, direcionar e estruturar a estratégia de marketing de uma empresa, para que cada ação tenha lógica e conexão com o resultado de negócio. Este guia explica o que ela é, quando faz sentido contratar e como escolher sem cair em promessa vazia.</p>
+<h2>O que faz uma consultoria de marketing digital</h2>
+<p>Uma boa consultoria não começa entregando tarefa, começa entendendo o negócio. O trabalho envolve, em geral:</p>
+<ul>
+<li><strong>Diagnóstico:</strong> leitura do cenário atual, identificação de gargalos e do que está travando o crescimento.</li>
+<li><strong>Direção estratégica:</strong> onde crescer, com qual lógica e em qual ordem de prioridade.</li>
+<li><strong>Estruturação:</strong> organização de aquisição, conversão e <a href="/blog/funil-de-vendas">funil</a>, com integração entre marketing e comercial.</li>
+<li><strong>Mensuração:</strong> definição de indicadores e rotina de análise para decidir com dados, não com achismo.</li>
+</ul>
+<p>Em uma frase: consultoria entrega direção. Ela responde o que fazer e por quê antes de qualquer como fazer.</p>
+<h2>Consultoria, assessoria ou agência: qual a diferença?</h2>
+<p>Os três termos se misturam, mas o papel muda. Entender isso evita contratar a coisa errada:</p>
+<ul>
+<li><strong>Consultoria:</strong> foca em diagnóstico e direção. Aponta o caminho; a execução costuma ficar com o time interno.</li>
+<li><strong>Assessoria:</strong> une direção e execução com acompanhamento contínuo. Planeja, executa e otimiza junto, na rotina.</li>
+<li><strong>Agência:</strong> foca na execução de frentes específicas (tráfego, conteúdo, site), nem sempre com direção estratégica integrada.</li>
+</ul>
+<p>Na prática, a maioria das empresas não precisa só de mais execução nem só de um diagnóstico que fica na gaveta, precisa de direção com execução acompanhada. É o que estruturamos na <a href="/solucoes/assessoria-em-marketing">assessoria de marketing</a>: estratégia e rotina no mesmo lugar.</p>
+<h2>Quando contratar uma consultoria de marketing digital</h2>
+<p>Não é questão de tamanho de empresa, é questão de sintoma. Costuma fazer sentido quando você: investe em marketing mas não enxerga retorno claro; gera leads que não convertem; tem marketing e comercial desalinhados; cresce por indicação e quer previsibilidade; ou já performa e quer escalar com eficiência sem aumentar o custo de aquisição.</p>
+<p>Se você reconhece um desses cenários, o gargalo provavelmente não é falta de ação, é falta de estrutura. E estrutura é justamente o que uma boa consultoria constrói.</p>
+<h2>Como escolher (e o que evitar)</h2>
+<p>O mercado tem muito discurso e pouca direção. Para escolher bem, procure:</p>
+<ul>
+<li><strong>Método claro:</strong> um processo estruturado, não improviso. Pergunte como a consultoria trabalha do diagnóstico ao resultado.</li>
+<li><strong>Prova real:</strong> cases, números e lógica, não só promessa. Desconfie de quem garante dobrar suas vendas em 30 dias.</li>
+<li><strong>Foco em negócio, não em vaidade:</strong> a conversa gira em torno de venda e previsibilidade, não de curtidas e alcance.</li>
+<li><strong>Integração com o comercial:</strong> marketing que não conversa com vendas não gera caixa.</li>
+</ul>
+<p>Fuja de pressão comercial, promessa sem prova e discurso genérico de ajudamos a crescer no digital. Direção séria se sustenta em dados e método, não em urgência fabricada. Se o seu foco é geração de demanda, entenda também <a href="/blog/o-que-e-inbound-marketing">o que é inbound marketing</a> e como o <a href="/solucoes/gestao-de-trafego-pago">tráfego pago</a> entra nessa estrutura.</p>
+<div class="callout"><p>A OxBrand estrutura marketing com método: diagnóstico, direção estratégica e execução acompanhada, com marketing e comercial integrados. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é consultoria de marketing digital?', a: 'É o trabalho de diagnosticar, direcionar e estruturar a estratégia de marketing de uma empresa, para que cada ação tenha lógica e conexão com o resultado de negócio. Ela responde o que fazer e por quê antes do como fazer, entrega direção, não apenas execução.' },
+      { q: 'Qual a diferença entre consultoria, assessoria e agência de marketing?', a: 'A consultoria foca em diagnóstico e direção, deixando a execução com o time interno. A assessoria une direção e execução com acompanhamento contínuo. A agência foca na execução de frentes específicas. A maioria das empresas precisa de direção com execução acompanhada.' },
+      { q: 'Quando vale a pena contratar uma consultoria de marketing digital?', a: 'Quando você investe em marketing sem ver retorno claro, gera leads que não convertem, tem marketing e comercial desalinhados, cresce só por indicação ou quer escalar com eficiência. O sinal comum é que o gargalo não é falta de ação, é falta de estrutura.' },
+      { q: 'Como escolher uma boa consultoria de marketing digital?', a: 'Procure método claro, prova real (cases e números), foco em negócio e não em métricas de vaidade, e integração com o comercial. Evite promessa sem prova, pressão comercial e discurso genérico. Direção séria se ancora em dados e método.' },
+    ],
+  },
+  {
+    slug: 'geracao-de-leads-qualificados',
+    metaTitle: 'Geração de leads qualificados: o guia para vender mais | OxBrand',
+    metaDescription: 'Geração de leads qualificados não é volume, é qualidade. O que é um lead qualificado, como gerar e como qualificar para o comercial vender mais. Guia da OxBrand.',
+    title: 'Geração de leads qualificados: como parar de gerar contato e começar a gerar venda',
+    subtitle: 'O que é um lead qualificado, como gerá-lo e como qualificá-lo para o comercial, MQL e SQL, os 4 pilares e a conta que importa. O guia de aquisição de quem entrega oportunidade, não volume.',
+    tag: 'Tráfego & Aquisição',
+    breadcrumb: 'Aquisição',
+    dateISO: '2026-07-28',
+    coverAlt: 'Geração de leads qualificados: do contato ao lead pronto para o comercial',
+    author: 'OxBrand',
+    bodyHtml: `
+<p class="lead">Gerar lead é fácil. Difícil é gerar lead que compra. A maioria das empresas mede o marketing pela quantidade de contatos e comemora um número que o comercial, na prática, não consegue transformar em venda. O problema quase nunca é falta de lead. É excesso de lead errado.</p>
+<p>Geração de leads qualificados é o oposto de encher o funil. É atrair a pessoa certa, no momento certo, com informação suficiente para o comercial agir com foco. Este guia mostra o que é um lead qualificado, como gerá-lo e como qualificá-lo, para o marketing parar de entregar volume e passar a entregar oportunidade.</p>
+<h2>O que é um lead qualificado (e o que não é)</h2>
+<p>Lead é qualquer pessoa que deixou um contato. Lead qualificado é aquela que tem perfil e intenção compatíveis com o que você vende, ou seja, pode e quer comprar. A diferença entre os dois é a diferença entre um comercial ocupado e um comercial produtivo.</p>
+<ul>
+<li><strong>MQL (lead qualificado por marketing):</strong> demonstrou interesse real (baixou material, pediu orçamento, respondeu a uma oferta) e tem perfil de cliente. Está pronto para ser trabalhado.</li>
+<li><strong>SQL (lead qualificado por vendas):</strong> já foi validado pelo comercial: tem a dor, o poder de decisão e o momento de compra. Está pronto para a proposta.</li>
+</ul>
+<p>A armadilha da vaidade é medir só o número bruto de leads. Cem contatos sem perfil valem menos que dez com intenção. Volume sem qualificação é custo, não resultado.</p>
+<h2>A conta que importa: não é CPL, é custo por venda</h2>
+<p>Muita operação otimiza pelo custo por lead (CPL) mais baixo e acha que está indo bem. Mas o CPL barato costuma vir de público amplo e oferta genérica, que enche o funil de curioso. O que importa é o custo de aquisição de cliente (CAC) e a taxa de conversão de lead em venda.</p>
+<p>Um lead 3x mais caro que converte 5x mais é um lead barato no fim do mês. Por isso, na OxBrand, o <a href="/solucoes/gestao-de-trafego-pago">tráfego pago</a> é otimizado por qualidade de lead e sinal de conversão, não por CPL isolado. Barato de verdade é o lead que vira caixa. Se quiser o quadro completo, veja o <a href="/blog/trafego-pago-guia-definitivo">guia de tráfego pago</a>.</p>
+<h2>Como gerar leads qualificados (os 4 pilares)</h2>
+<p>Qualidade de lead não é sorte, é estrutura. Quatro elementos determinam o perfil de quem entra no funil:</p>
+<ul>
+<li><strong>Oferta certa:</strong> uma oferta específica atrai quem tem a dor específica. Fale com a gente atrai qualquer um; orçamento de móveis planejados sob medida atrai quem está reformando. A oferta filtra.</li>
+<li><strong>Segmentação e mensagem:</strong> falar com o público certo, com a linguagem da dor real dele. Público amplo derruba a qualidade; público bem definido sobe.</li>
+<li><strong>Página de destino que qualifica:</strong> uma <a href="/blog/landing-page">landing page</a> com a proposta clara e um formulário com as perguntas certas já separa curioso de comprador antes do comercial.</li>
+<li><strong>Conteúdo que reduz objeção:</strong> antes de pedir o contato, o conteúdo educa e filtra. Quem chega já entendendo a solução chega mais qualificado. É a lógica do <a href="/solucoes/inbound-marketing">inbound</a>.</li>
+</ul>
+<p>Repare que os quatro atacam a mesma coisa: quem entra. É mais barato qualificar na entrada do que tentar consertar um funil cheio de lead errado.</p>
+<h2>Qualificar é filtrar antes de passar para o comercial</h2>
+<p>Gerar é metade do trabalho; qualificar é a outra. Qualificar é aplicar critérios claros para decidir quem avança: a pessoa tem o perfil (segmento, porte, região)? Tem a dor que você resolve? Tem poder de decisão? Tem momento de compra? Quanto mais desses critérios, mais quente o lead.</p>
+<p>Um formulário bem pensado, uma pergunta de qualificação no primeiro contato e um <a href="/blog/o-que-e-crm">CRM organizado</a> fazem esse filtro sem esforço manual. O objetivo é que o comercial gaste tempo com quem tem chance real, não com quem só estava curioso.</p>
+<h2>Marketing e comercial no mesmo funil</h2>
+<p>Lead qualificado é o ponto onde marketing e comercial se encontram, ou se desencontram. Se cada área define lead bom de um jeito, o marketing entrega o que o comercial descarta, e a conta não fecha. Alinhar o que é um lead qualificado, como ele é passado e em quanto tempo é abordado é o que transforma geração em venda.</p>
+<p>É exatamente isso que estruturamos: um <a href="/blog/funil-de-vendas">funil</a> em que a geração, a qualificação e o atendimento comercial conversam. Marketing não existe para gerar lead. Existe para gerar oportunidade de venda, e oportunidade tem nome, perfil e momento.</p>
+<div class="callout"><p>A OxBrand estrutura aquisição para gerar leads qualificados: da oferta ao criativo, da página ao CRM, com marketing e comercial no mesmo funil. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em julho de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é geração de leads qualificados?', a: 'É atrair contatos que têm perfil e intenção compatíveis com o que a empresa vende, pessoas que podem e querem comprar, em vez de apenas acumular volume de contatos. O foco é qualidade e potencial de conversão, não a quantidade bruta de leads.' },
+      { q: 'Como gerar leads qualificados?', a: 'Trabalhe quatro pilares: uma oferta específica (que filtra quem tem a dor certa), segmentação e mensagem alinhadas ao público, uma landing page que qualifica pelo formulário e conteúdo que reduz objeção antes do contato. Qualidade de lead se define na entrada do funil.' },
+      { q: 'Qual a diferença entre MQL e SQL?', a: 'MQL é o lead qualificado pelo marketing: demonstrou interesse real e tem perfil de cliente. SQL é o lead qualificado por vendas: já foi validado pelo comercial quanto à dor, ao poder de decisão e ao momento de compra. O MQL é passado ao comercial; o SQL está pronto para a proposta.' },
+      { q: 'Vale mais um lead barato ou um lead qualificado?', a: 'Um lead qualificado, quase sempre. O custo por lead (CPL) baixo costuma vir de público amplo e converte pouco. O que importa é o custo por venda (CAC) e a taxa de conversão: um lead mais caro que converte muito mais é, no fim do mês, o lead mais barato.' },
+    ],
+  },
 
   {
     slug: 'como-estruturar-uma-campanha',
