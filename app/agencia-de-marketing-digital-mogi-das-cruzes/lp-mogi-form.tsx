@@ -62,7 +62,7 @@ export function LpMogiForm() {
         </div>
         <h3 className="text-lg font-bold text-zinc-100">Pedido recebido!</h3>
         <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
-          Nossa equipe entrará em contato em até 1 hora útil para agendar o diagnóstico.
+          Nosso time entrará em contato em até 1 hora útil para agendar o diagnóstico.
         </p>
         <a
           href={`https://wa.me/${WA_NUMBER}?text=${WA_MSG}`}
