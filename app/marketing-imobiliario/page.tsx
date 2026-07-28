@@ -49,6 +49,7 @@ export default function Page() {
         ],
       }}
       relatedLinks={[
+        { label: 'Marketing para incorporadoras', href: '/marketing-para-incorporadoras' },
         { label: 'Gestão de tráfego pago', href: '/solucoes/gestao-de-trafego-pago' },
         { label: 'CRM Kommo para corretores', href: '/solucoes/crm-kommo' },
         { label: 'Landing pages e sites', href: '/solucoes/desenvolvimento-de-sites' },
