@@ -19,6 +19,9 @@ export interface AuthorData {
   linkedin?: string
   instagram?: string
   email?: string
+  facebook?: string
+  threads?: string
+  twitter?: string
   local?: string
 }
 
@@ -101,12 +104,12 @@ export const AUTHORS: Record<string, AuthorData> = {
     especialidades: ['Design Gráfico', 'Identidade Visual', 'Branding', 'Direção de Arte'],
     linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
   },
-  'murilo-novaes': redator('murilo-novaes', 'Murilo Novaes'),
+  'murilo-novaes': { ...redator('murilo-novaes', 'Murilo Novaes'), email: undefined, linkedin: 'https://www.linkedin.com/in/murilo-novaes-de-oliveira-27a3191a2', instagram: 'https://www.instagram.com/murilo_novaesz', facebook: 'https://www.facebook.com/share/1D7ErKq5cP/' },
   'breno-freire': redator('breno-freire', 'Breno Freire'),
   'julia-rodrigues': redator('julia-rodrigues', 'Julia Rodrigues'),
-  'maria-clara': redator('maria-clara', 'Maria Clara'),
-  'beatriz-soares': redator('beatriz-soares', 'Beatriz Soares'),
-  'gabriel-figueiredo': { ...redator('gabriel-figueiredo', 'Gabriel Figueiredo'), avatar: OX_AVATAR },
+  'maria-clara': { ...redator('maria-clara', 'Maria Clara'), email: undefined, linkedin: undefined, instagram: 'https://www.instagram.com/mariaclara_lecy', threads: 'https://www.threads.com/@mariaclara_lecy', twitter: 'https://x.com/clara_lecy' },
+  'beatriz-soares': { ...redator('beatriz-soares', 'Beatriz Soares'), email: undefined, linkedin: 'https://www.linkedin.com/in/beatriz-soares-001823252', instagram: 'https://www.instagram.com/__beatrizsrm' },
+  'gabriel-figueiredo': { ...redator('gabriel-figueiredo', 'Gabriel Figueiredo'), avatar: OX_AVATAR, email: undefined, linkedin: 'https://www.linkedin.com/in/ogabrielvitor', instagram: 'https://www.instagram.com/ogabrielvitor/' },
 }
 
 /** Lista de nomes para popular o seletor de autor no editor. */
