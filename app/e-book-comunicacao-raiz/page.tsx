@@ -176,7 +176,7 @@ export default function EbookComunicacaoRaizPage() {
                       <Check size={20} className="text-primary" />
                     </span>
                     <h3 className="text-xl font-bold text-zinc-900">Download iniciado!</h3>
-                    <p className="text-sm text-zinc-500">Seu e-book <strong>Comunicação Raiz</strong> está sendo baixado. Se não iniciar, <a href="/api/download/comunicacao-raiz" download className="text-primary underline">clique aqui</a>. Em breve nossa equipe pode entrar em contato para ajudar ainda mais.</p>
+                    <p className="text-sm text-zinc-500">Seu e-book <strong>Comunicação Raiz</strong> está sendo baixado. Se não iniciar, <a href="/api/download/comunicacao-raiz" download className="text-primary underline">clique aqui</a>. Em breve nosso time pode entrar em contato para ajudar ainda mais.</p>
                     <Link href="/materiais-gratuitos" className="mono-tag text-primary/60 hover:text-primary transition-colors">← Ver mais materiais</Link>
                   </div>
                 ) : (
@@ -256,7 +256,7 @@ export default function EbookComunicacaoRaizPage() {
                         className="mt-0.5 accent-primary shrink-0"
                       />
                       <span className="text-xs text-zinc-500 leading-relaxed">
-                        Aceito receber o contato da equipe da OxBrand.
+                        Aceito receber o contato do time da OxBrand.
                       </span>
                     </label>
 
