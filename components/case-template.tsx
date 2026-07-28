@@ -79,6 +79,7 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
                 <YouTubeFacade
                   videoId={study.videoId as string}
                   title={study.videoName ?? study.headline}
+                  poster={study.videoPoster}
                   aspect={vAspect}
                   priority
                   className="rounded-xl border border-border"

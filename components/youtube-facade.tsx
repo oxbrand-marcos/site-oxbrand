@@ -11,6 +11,8 @@ interface YouTubeFacadeProps {
   className?: string
   /** Passa priority=true apenas para vídeos acima da dobra */
   priority?: boolean
+  /** Poster customizado (ex.: capa vertical de Short). Substitui a thumbnail automática do YouTube. */
+  poster?: string
 }
 
 export function YouTubeFacade({
@@ -19,12 +21,15 @@ export function YouTubeFacade({
   aspect = 'landscape',
   className = '',
   priority = false,
+  poster,
 }: YouTubeFacadeProps) {
   const [active, setActive] = useState(false)
   // Shorts não têm maxresdefault, usa hqdefault como fallback universal
-  const thumbnailUrl = aspect === 'portrait'
-    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-    : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+  const thumbnailUrl = poster
+    ? poster
+    : aspect === 'portrait'
+      ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+      : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1`
   const aspectClass = aspect === 'portrait' ? 'aspect-[9/16]' : 'aspect-video'
 

@@ -35,10 +35,10 @@ const clientLogos = [
 ]
 
 const clientVideos = [
-  { id: 'oFTOtx3dzig', title: 'Depoimento cliente OxBrand 1', short: true },
-  { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true },
+  { id: 'oFTOtx3dzig', title: 'Depoimento cliente OxBrand 1', short: true, poster: '/images/depoimentos/lbel-telhas.webp' },
+  { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true, poster: '/images/depoimentos/truck-center-express.webp' },
   { id: 'tODEyWH6HvM', title: 'Depoimento cliente OxBrand 3', short: true },
-  { id: 'EbfFj4KttlY', title: 'Depoimento cliente OxBrand 4', short: true },
+  { id: 'EbfFj4KttlY', title: 'Depoimento cliente OxBrand 4', short: true, poster: '/images/depoimentos/chris-tattoo.webp' },
   { id: 'sAnFkmpsakY', title: 'Depoimento cliente OxBrand 5', short: false },
 ]
 
@@ -124,6 +124,7 @@ export function Clients() {
                   <YouTubeFacade
                     videoId={v.id}
                     title={v.title}
+                    poster={v.poster}
                     aspect="portrait"
                     className="rounded-sm"
                   />
