@@ -52,11 +52,11 @@ function redator(slug: string, name: string): AuthorData {
 
 export const AUTHORS: Record<string, AuthorData> = {
   oxbrand: {
-    slug: 'oxbrand', name: 'OxBrand', role: 'Equipe de Marketing', avatar: OX_AVATAR,
+    slug: 'oxbrand', name: 'OxBrand', role: 'Time de Marketing', avatar: OX_AVATAR,
     hasProfile: true,
-    headline: 'A equipe de marketing de performance da OxBrand: análises de tráfego pago, CRM, SEO e conversão direto de quem opera todos os dias.',
+    headline: 'O time de marketing de performance da OxBrand: análises de tráfego pago, CRM, SEO e conversão direto de quem opera todos os dias.',
     bio: [
-      'A OxBrand é uma agência de marketing digital de performance em Mogi das Cruzes, com atuação nacional. Os artigos assinados pela equipe reúnem o que aprendemos operando tráfego pago, CRM, sites e SEO para mais de 450 marcas.',
+      'A OxBrand é uma agência de marketing digital de performance em Mogi das Cruzes, com atuação nacional. Os artigos assinados pelo time reúnem o que aprendemos operando tráfego pago, CRM, sites e SEO para mais de 450 marcas.',
       'Nosso foco não é métrica de vaidade, e sim crescimento previsível: estratégia, dados e integração entre marketing e comercial. Cada conteúdo aqui nasce da prática, não da teoria.',
     ],
     especialidades: ['Tráfego Pago', 'CRM e Automação', 'SEO e Conteúdo', 'Conversão'],
@@ -78,7 +78,7 @@ export const AUTHORS: Record<string, AuthorData> = {
     email: OX_EMAIL, local: LOCAL,
   },
   'walquiria-blaustein': {
-    slug: 'walquiria-blaustein', name: 'Walquiria Blaustein', role: 'CEO, Comunicação e Branding',
+    slug: 'walquiria-blaustein', name: 'Walquiria Blaustein', role: 'COO, Comunicação e Branding',
     avatar: '/images/authors/walquiria-blaustein.jpg', hasProfile: true,
     headline: 'Sócia-fundadora da OxBrand. Lidera comunicação, branding e operações para transformar posicionamento em marcas fortes e consistentes.',
     bio: [
@@ -154,7 +154,7 @@ export const AUTHORS: Record<string, AuthorData> = {
     headline: 'Atua como Social Media, organizando processos e transformando estratégia em conteúdos consistentes para as marcas da OxBrand.',
     bio: [
       'Arquiteta de Conteúdo da OxBrand, atua na organização, construção e execução dos processos que transformam estratégia em comunicação. Iniciou sua trajetória na agência como jovem aprendiz e, desde então, evoluiu de forma consistente, ampliando responsabilidades, dominando etapas da operação e conquistando um papel relevante dentro do time.',
-      'Mesmo sendo a integrante mais jovem da equipe, desenvolveu uma postura profissional marcada por organização, comprometimento e capacidade analítica. Seu crescimento foi sustentado pela dedicação ao aprendizado, pela atenção aos detalhes e pela maturidade com que conduz cada entrega.',
+      'Mesmo sendo a integrante mais jovem do time, desenvolveu uma postura profissional marcada por organização, comprometimento e capacidade analítica. Seu crescimento foi sustentado pela dedicação ao aprendizado, pela atenção aos detalhes e pela maturidade com que conduz cada entrega.',
       'Atualmente, concilia o último ano do ensino médio com o início de sua formação em Marketing, conectando o conhecimento acadêmico à experiência prática construída dentro da agência. Ao longo desse percurso, recebeu treinamento, acompanhamento e confiança para compreender o processo de conteúdo de forma completa.',
       'Hoje, não ocupa mais uma posição de aprendizagem inicial. É uma profissional que conhece a operação, compreende a responsabilidade por trás de cada etapa e se tornou uma peça importante para a consistência do time e dos projetos da OxBrand.',
     ],
@@ -177,7 +177,7 @@ export const AUTHORS: Record<string, AuthorData> = {
     email: undefined, linkedin: 'https://www.linkedin.com/in/beatriz-soares-001823252', instagram: 'https://www.instagram.com/__beatrizsrm',
   },
   'gabriel-figueiredo': {
-    ...redator('gabriel-figueiredo', 'Gabriel Figueiredo'), avatar: OX_AVATAR,
+    ...redator('gabriel-figueiredo', 'Gabriel Figueiredo'), avatar: '/images/authors/gabriel-figueiredo.jpg',
     role: 'Arquiteto de Negócios',
     headline: 'Conecta desafios empresariais a soluções de marketing, conduzindo relações comerciais com visão consultiva e estratégica.',
     bio: [
