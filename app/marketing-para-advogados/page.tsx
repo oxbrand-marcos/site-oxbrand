@@ -21,6 +21,14 @@ export default function Page() {
       headline="Marketing para Advogados: autoridade e clientes,"
       headlineHighlight="dentro das regras da OAB"
       subheadline="Nem tímido a ponto de não gerar cliente, nem agressivo a ponto de expor o escritório. Marketing jurídico com autoridade e segurança ética, dentro do Provimento 205/2021 da OAB."
+      extraSection={
+        <section className="py-16 bg-white border-b border-zinc-200">
+          <div className="max-w-3xl mx-auto px-6 flex flex-col gap-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">Marketing para advogados dentro das regras da OAB</h2>
+            <p className="text-zinc-700 leading-relaxed">Marketing jurídico não é propaganda de serviço nem promessa de resultado. O marketing para advogados que estruturamos é baseado em autoridade e informação: conteúdo que esclarece dúvidas reais, presença digital sóbria e captação por relevância, sempre dentro do Provimento 205/2021 da OAB, sem mercantilização da advocacia nem captação indevida de clientela.</p>
+          </div>
+        </section>
+      }
       introTitle="Autoridade, não mercantilização"
       intro="Todo advogado sabe que precisa ser encontrado, e todo advogado tem medo de cruzar a linha da OAB. É aí que a maioria das agências erra: ou faz um marketing tímido demais, que não gera cliente, ou agressivo demais, que expõe o escritório a um processo ético. A OxBrand respeita o Provimento 205/2021: nada de mercantilização, sensacionalismo ou promessa de resultado. A régua é simples: construímos autoridade, não vendemos ações. Todo conteúdo passa por essa lente antes de ir ao ar, e a estratégia é revisada com você para que o escritório fique protegido."
       steps={[
