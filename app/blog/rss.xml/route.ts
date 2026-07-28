@@ -4,7 +4,7 @@ import { eq, desc } from 'drizzle-orm'
 
 const BASE = 'https://www.oxbrand.com.br'
 const FEED_TITLE = 'OxBrand Insights'
-const FEED_DESC = 'Estratégia, performance e marketing digital, direto da equipe OxBrand.'
+const FEED_DESC = 'Estratégia, performance e marketing digital, direto do time OxBrand.'
 
 function escapeXml(str: string): string {
   return str
