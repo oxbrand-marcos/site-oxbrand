@@ -8,6 +8,7 @@ import DotsCanvas from '@/components/dots-canvas'
 import { ArticleAuthor, AUTHORS } from '@/components/article-author'
 import { ArticleShare } from '@/components/article-share'
 import { ArticleRelated, type RelatedPost } from '@/components/article-related'
+import { ArticleSidebar } from '@/components/article-sidebar'
 import { blogPostingSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 import { articleOg } from '@/lib/og'
 import { readingTime } from '@/lib/utils'
@@ -132,33 +133,17 @@ export default function LeadsTrafegoPage() {
             <div className="grid lg:grid-cols-[260px_1fr] gap-16 items-start">
 
               {/* Sumário lateral */}
-              <aside className="hidden lg:flex flex-col gap-4 sticky top-20">
-                <span className="mono-tag text-zinc-400">Neste artigo</span>
-                <nav className="flex flex-col gap-2">
-                  {[
-                    'O tráfego entrega o lead',
-                    'Por que o WhatsApp é crítico',
-                    'Os 3 gargalos da conversão',
-                    'Como estruturar o processo',
-                    'O papel da estratégia',
-                    'Pontos para fixar',
-                  ].map((item) => (
-                    <span key={item} className="text-xs text-zinc-500 border-l border-zinc-200 pl-3 py-1 hover:border-primary hover:text-zinc-900 transition-colors cursor-default">
-                      {item}
-                    </span>
-                  ))}
-                </nav>
-                <div className="mt-6 border border-zinc-200 p-5 flex flex-col gap-3">
-                  <span className="mono-tag text-zinc-400">Diagnóstico gratuito</span>
-                  <p className="text-xs text-zinc-500 leading-relaxed">Quer fechar o funil na sua operação?</p>
-                  <a
-                    href="/diagnostico"
-                    className="mono-tag text-primary/70 hover:text-primary transition-colors"
-                  >
-                    Falar com especialistas ↗
-                  </a>
-                </div>
-              </aside>
+              <ArticleSidebar
+                currentSlug="leads-do-trafego-pago-como-transformar-em-vendas"
+                toc={[
+                  { label: 'O tráfego entrega o lead' },
+                  { label: 'Por que o WhatsApp é crítico' },
+                  { label: 'Os 3 gargalos da conversão' },
+                  { label: 'Como estruturar o processo' },
+                  { label: 'O papel da estratégia' },
+                  { label: 'Pontos para fixar' },
+                ]}
+              />
 
               {/* Corpo do artigo */}
               <div className="flex flex-col gap-8 text-zinc-600 leading-relaxed">
