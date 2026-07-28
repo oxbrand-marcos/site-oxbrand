@@ -1,8 +1,6 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
