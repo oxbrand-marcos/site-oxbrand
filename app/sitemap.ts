@@ -32,6 +32,8 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/marketing-para-advogados`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/marketing-para-clinicas-e-medicos`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/marketing-imobiliario`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+  { url: `${BASE}/marketing-para-incorporadoras`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+  { url: `${BASE}/marketing-para-clinicas-de-estetica`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/trafego-pago-com-previsibilidade`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/blog/autor`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
   ...PROFILE_AUTHORS.map((a) => ({ url: `${BASE}/blog/autor/${a.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 })),
