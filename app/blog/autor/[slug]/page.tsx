@@ -48,6 +48,15 @@ const IconInstagram = () => (
 const IconMail = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 )
+const IconFacebook = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+)
+const IconThreads = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"/></svg>
+)
+const IconX = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+)
 
 export default async function AutorPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
@@ -62,13 +71,16 @@ export default async function AutorPage({ params }: { params: Promise<{ slug: st
   if (author.linkedin) socials.push({ label: 'LinkedIn', href: author.linkedin, icon: <IconLinkedIn /> })
   if (author.instagram) socials.push({ label: 'Instagram', href: author.instagram, icon: <IconInstagram /> })
   if (author.email) socials.push({ label: 'E-mail', href: `mailto:${author.email}`, icon: <IconMail /> })
+  if (author.facebook) socials.push({ label: 'Facebook', href: author.facebook, icon: <IconFacebook /> })
+  if (author.threads) socials.push({ label: 'Threads', href: author.threads, icon: <IconThreads /> })
+  if (author.twitter) socials.push({ label: 'X', href: author.twitter, icon: <IconX /> })
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(personSchema({
         name: author.name, slug: author.slug, jobTitle: author.role, description: author.headline,
         image: author.avatar, knowsAbout: author.especialidades,
-        sameAs: [author.linkedin, author.instagram].filter(Boolean) as string[],
+        sameAs: [author.linkedin, author.instagram, author.facebook, author.threads, author.twitter].filter(Boolean) as string[],
       })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([
         { name: 'OxBrand', url: '/' }, { name: 'Insights', url: '/blog' },
