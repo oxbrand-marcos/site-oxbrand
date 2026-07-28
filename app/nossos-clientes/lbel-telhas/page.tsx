@@ -131,6 +131,7 @@ export default function LbelTelhasCase() {
             <div className="w-full max-w-[340px] mx-auto lg:mx-0">
               <YouTubeFacade
                 videoId={VIDEO_ID}
+                poster="/images/depoimentos/lbel-telhas.webp"
                 title="Bruno Remonti, da LBEL Telhas, em depoimento sobre o case com a OxBrand"
                 aspect="portrait"
                 priority
