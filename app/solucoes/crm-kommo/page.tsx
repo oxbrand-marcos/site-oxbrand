@@ -122,7 +122,7 @@ export default function CrmKommoLP() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <p className="mono-tag text-muted-foreground/50 tracking-[0.2em]">Para quem usa WhatsApp como CRM</p>
+                  <p className="mono-tag text-muted-foreground/50 tracking-[0.2em]">CRM de vendas para quem usa o WhatsApp</p>
                   <h1 className="text-[clamp(2.6rem,5.5vw,5rem)] font-bold leading-[0.92] tracking-tight text-balance">
                     Pare de perder{' '}
                     <span className="text-glow">vendas</span>{' '}
