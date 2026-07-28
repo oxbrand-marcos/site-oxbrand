@@ -7,6 +7,7 @@ import DotsCanvas from '@/components/dots-canvas'
 import { ArticleAuthor, getAuthor } from '@/components/article-author'
 import { ArticleShare } from '@/components/article-share'
 import { ArticleRelated } from '@/components/article-related'
+import { ArticleSidebar } from '@/components/article-sidebar'
 import { blogPostingSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 import { readingTime } from '@/lib/utils'
 import { type Article, ARTICLES, articleText, coverFor } from '@/lib/blog-articles'
@@ -87,21 +88,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
             <div className="grid lg:grid-cols-[260px_1fr] gap-16 items-start">
 
               {/* Sumario lateral + CTA */}
-              <aside className="hidden lg:flex flex-col gap-4 sticky top-24 self-start">
-                <span className="mono-tag text-zinc-400">Neste artigo</span>
-                <nav className="flex flex-col gap-2">
-                  {headings.map((h, i) => (
-                    <a key={i} href={`#sec-${i}`} className="text-xs text-zinc-500 border-l border-zinc-200 pl-3 py-1 hover:border-primary hover:text-zinc-900 transition-colors">
-                      {h}
-                    </a>
-                  ))}
-                </nav>
-                <div className="mt-6 border border-zinc-200 p-5 flex flex-col gap-3">
-                  <span className="mono-tag text-zinc-400">Diagnóstico gratuito</span>
-                  <p className="text-xs text-zinc-500 leading-relaxed">Quer aplicar esses insights no seu negócio?</p>
-                  <a href="/diagnostico" className="mono-tag text-primary/70 hover:text-primary transition-colors">Falar com especialistas &#8599;</a>
-                </div>
-              </aside>
+              <ArticleSidebar toc={headings.map((h, i) => ({ label: h, href: `#sec-${i}` }))} currentSlug={article.slug} />
 
               {/* Corpo do artigo */}
               <div className="max-w-3xl flex flex-col gap-8">

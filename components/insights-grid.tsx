@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { BlogPost } from '@/lib/db/schema'
@@ -64,6 +64,12 @@ interface Props {
 
 export function InsightsGrid({ posts }: Props) {
   const [activeSlug, setActiveSlug] = useState('todos')
+
+  // Permite abrir o blog já filtrado via ?categoria=<slug> (usado na sidebar dos artigos).
+  useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get('categoria')
+    if (p && CATEGORY_DEFS.some((c) => c.slug === p)) setActiveSlug(p)
+  }, [])
 
   // Mescla posts do banco com estáticos, evitando duplicatas por slug.
   //
