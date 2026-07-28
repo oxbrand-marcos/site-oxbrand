@@ -8,6 +8,7 @@ import DotsCanvas from '@/components/dots-canvas'
 import { ArticleAuthor, AUTHORS } from '@/components/article-author'
 import { ArticleShare } from '@/components/article-share'
 import { ArticleRelated, type RelatedPost } from '@/components/article-related'
+import { ArticleSidebar } from '@/components/article-sidebar'
 import { blogPostingSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/jsonld'
 import { articleOg } from '@/lib/og'
 import { readingTime } from '@/lib/utils'
@@ -108,32 +109,16 @@ export default function MarketingConteudoPage() {
             <div className="grid lg:grid-cols-[260px_1fr] gap-16 items-start">
 
               {/* Sumário lateral */}
-              <aside className="hidden lg:flex flex-col gap-4 sticky top-20">
-                <span className="mono-tag text-zinc-400">Neste artigo</span>
-                <nav className="flex flex-col gap-2">
-                  {[
-                    'O que é o Conteúdo Pro',
-                    'Os 5 Q\'s',
-                    'Os 3 Pq\'s',
-                    'Implementando conteúdo estratégico',
-                    'E-book Comunicação Raiz',
-                  ].map((item) => (
-                    <span key={item} className="text-xs text-zinc-500 border-l border-zinc-200 pl-3 py-1 hover:border-primary hover:text-zinc-900 transition-colors cursor-default">
-                      {item}
-                    </span>
-                  ))}
-                </nav>
-                <div className="mt-6 border border-zinc-200 p-5 flex flex-col gap-3">
-                  <span className="mono-tag text-zinc-400">Diagnóstico gratuito</span>
-                  <p className="text-xs text-zinc-500 leading-relaxed">Quer aplicar esses insights no seu negócio?</p>
-                  <a
-                    href="/diagnostico"
-                    className="mono-tag text-primary/70 hover:text-primary transition-colors"
-                  >
-                    Falar com especialistas ↗
-                  </a>
-                </div>
-              </aside>
+              <ArticleSidebar
+                currentSlug="foco-em-marketing-de-conteudo-como-gerar-resultados-reais"
+                toc={[
+                  { label: 'O que é o Conteúdo Pro' },
+                  { label: "Os 5 Q's" },
+                  { label: "Os 3 Pq's" },
+                  { label: 'Implementando conteúdo estratégico' },
+                  { label: 'E-book Comunicação Raiz' },
+                ]}
+              />
 
               {/* Corpo do artigo */}
               <div className="flex flex-col gap-8 text-zinc-600 leading-relaxed">
