@@ -57,6 +57,7 @@ export default function Page() {
         ],
       }}
       relatedLinks={[
+        { label: 'Marketing para clínicas de estética', href: '/marketing-para-clinicas-de-estetica' },
         { label: 'Gestão de tráfego pago', href: '/solucoes/gestao-de-trafego-pago' },
         { label: 'CRM Kommo para a agenda', href: '/solucoes/crm-kommo' },
         { label: 'Desenvolvimento de sites', href: '/solucoes/desenvolvimento-de-sites' },
