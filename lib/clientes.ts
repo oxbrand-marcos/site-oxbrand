@@ -17,6 +17,7 @@ export interface CaseStudy {
   videoId?: string
   videoName?: string
   videoUploadDate?: string
+  videoAspect?: 'portrait' | 'landscape'
   videoDuration?: string
   services: string[]
   bodyHtml: string
@@ -80,6 +81,10 @@ export const CASES: CaseStudy[] = [
     ],
     services: [],
     bodyHtml: '',
+    depoimentoResumo: 'No vídeo, o case do Chris Tattoo: marketing estratégico que deu direção a uma marca pessoal, com tráfego qualificado e CRM que trouxeram previsibilidade e o cliente ideal chegando.',
+    videoId: 'EbfFj4KttlY',
+    videoName: 'Marketing para tatuador: o case do Chris Tattoo',
+    videoUploadDate: '2026-02-25T08:38:17-08:00',
     coverAlt: 'Case de sucesso Chris Tattoo com a OxBrand',
     dateISO: '2026-02-25',
     published: true,
@@ -143,6 +148,11 @@ export const CASES: CaseStudy[] = [
     ],
     services: [],
     bodyHtml: '',
+    depoimentoResumo: 'No vídeo, o case da RalTruck: marketing estruturado do zero à geração constante de leads e novos clientes em 1 ano, no setor de reforma de implementos rodoviários.',
+    videoId: 'sAnFkmpsakY',
+    videoName: 'Marketing para o setor de caminhões: case da Ral Truck',
+    videoUploadDate: '2026-02-25T07:32:05-08:00',
+    videoAspect: 'landscape',
     coverAlt: 'Case de sucesso RalTruck com a OxBrand',
     dateISO: '2026-02-25',
     published: true,
