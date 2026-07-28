@@ -95,7 +95,7 @@ export default async function InsightsPage() {
               Quer aplicar esses insights<br />no seu negócio?
             </h2>
             <p className="text-muted-foreground text-sm max-w-lg">
-              Nossa equipe analisa sua operação digital e retorna com um diagnóstico completo e gratuito.
+              Nosso time analisa sua operação digital e retorna com um diagnóstico completo e gratuito.
             </p>
             <a
               href="/diagnostico"
