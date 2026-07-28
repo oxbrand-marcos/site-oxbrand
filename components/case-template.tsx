@@ -12,6 +12,9 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
   const hasVideo = !!study.videoId
   const bullets = study.bullets ?? []
   const areas = study.areas ?? []
+  const vAspect = study.videoAspect ?? 'portrait'
+  const vCol = vAspect === 'landscape' ? 'lg:grid-cols-[minmax(0,520px)_1fr]' : 'lg:grid-cols-[minmax(0,340px)_1fr]'
+  const vMax = vAspect === 'landscape' ? 'max-w-[520px]' : 'max-w-[340px]'
 
   return (
     <main>
@@ -71,12 +74,12 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           </div>
 
           {hasVideo ? (
-            <div className="grid lg:grid-cols-[minmax(0,340px)_1fr] gap-8 items-start">
-              <div className="w-full max-w-[340px] mx-auto lg:mx-0">
+            <div className={`grid ${vCol} gap-8 items-start`}>
+              <div className={`w-full ${vMax} mx-auto lg:mx-0`}>
                 <YouTubeFacade
                   videoId={study.videoId as string}
                   title={study.videoName ?? study.headline}
-                  aspect="portrait"
+                  aspect={vAspect}
                   priority
                   className="rounded-xl border border-border"
                 />
