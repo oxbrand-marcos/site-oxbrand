@@ -277,7 +277,7 @@ export function SolutionPageTemplate({
             <div className="flex flex-col gap-6 items-center text-center lg:items-start lg:text-left">
               {introTitle && <span className="mono-tag text-primary/60">{introTitle}</span>}
               <h2 className="text-3xl sm:text-4xl font-bold text-zinc-900 leading-tight text-balance">
-                {ctaHeading ?? 'Transforme sua estratégia em resultados reais e escaláveis, com uma equipe de especialistas dedicada ao seu negócio.'}
+                {ctaHeading ?? 'Transforme sua estratégia em resultados reais e escaláveis, com um time de especialistas dedicado ao seu negócio.'}
               </h2>
               <p className="text-zinc-700 text-base leading-relaxed">{intro}</p>
               <Link

@@ -59,7 +59,7 @@ export function About() {
             <div className="relative w-full h-[220px] sm:h-[280px] overflow-hidden border border-border shadow-lg">
               <Image
                 src="/images/escritorio-oxbrand.jpg"
-                alt="Escritório OxBrand · equipe em operação"
+                alt="Escritório OxBrand · time em operação"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

@@ -201,7 +201,7 @@ export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {
                 </div>
                 <p className="text-white text-sm font-bold">WhatsApp aberto!</p>
                 <p className="text-white/50 text-xs leading-relaxed">
-                  Caso não tenha aberto, clique no botão abaixo para falar direto com nossa equipe.
+                  Caso não tenha aberto, clique no botão abaixo para falar direto com nosso time.
                 </p>
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}`}

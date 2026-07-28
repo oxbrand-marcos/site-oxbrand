@@ -157,7 +157,7 @@ export function PopupDiagnosticoBlog() {
               <div className="flex flex-col gap-2">
                 <h3 className="text-lg font-bold text-zinc-100">Recebemos o seu pedido!</h3>
                 <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
-                  Nossa equipe entrará em contato em até 1 hora útil para agendar o seu diagnóstico 360.
+                  Nosso time entrará em contato em até 1 hora útil para agendar o seu diagnóstico 360.
                 </p>
               </div>
               <button
