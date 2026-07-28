@@ -35,6 +35,8 @@ const colSolucoes = {
     { label: 'Marketing para Advogados', href: '/marketing-para-advogados' },
     { label: 'Marketing para Clínicas e Médicos', href: '/marketing-para-clinicas-e-medicos' },
     { label: 'Marketing Imobiliário', href: '/marketing-imobiliario' },
+    { label: 'Marketing para Incorporadoras', href: '/marketing-para-incorporadoras' },
+    { label: 'Marketing para Clínicas de Estética', href: '/marketing-para-clinicas-de-estetica' },
     { label: 'Tráfego Pago com Previsibilidade', href: '/trafego-pago-com-previsibilidade' },
     { label: 'Diagnóstico Gratuito', href: '/diagnostico' },
   ],
