@@ -118,6 +118,7 @@ export const CASES: CaseStudy[] = [
     ],
     depoimentoResumo: 'No vídeo, o case da Motobras Premium: uma operação sem direcionamento de marketing que, em 24 meses de parceria com a OxBrand, virou a maior boutique e o maior motocenter multimarcas do Rio de Janeiro, com branding, conteúdo e tráfego tratados como engenharia.',
     videoId: 'tODEyWH6HvM',
+    videoPoster: '/images/depoimentos/motobras.webp',
     videoName: 'Marketing para motocenter: o case da Motobras Premium',
     videoUploadDate: '2026-02-25T09:38:21-08:00',
     services: [],
