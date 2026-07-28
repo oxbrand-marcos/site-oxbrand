@@ -61,6 +61,10 @@ const nextConfig = {
   },
   // Compressão de assets
   compress: true,
+  // Tree-shaking agressivo de barrel imports (menos JS não usado)
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-phone-number-input'],
+  },
 }
 
 export default nextConfig
