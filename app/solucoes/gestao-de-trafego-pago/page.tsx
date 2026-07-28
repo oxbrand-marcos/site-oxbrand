@@ -3,8 +3,8 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Agência de Tráfego Pago: Google e Meta Ads | OxBrand',
-  description: 'Agência de tráfego pago com método: Google e Meta Ads geridos para ROI, não para curtida. +R$ 258 mi gerados para clientes. Diagnóstico gratuito.',
+  title: 'Gestão de Tráfego Pago: Google e Meta Ads | OxBrand',
+  description: 'Gestão de tráfego pago com método: Google e Meta Ads geridos para ROI, não para curtida. +R$ 258 mi gerados para clientes. Diagnóstico gratuito.',
   ...pageOg({
     title: 'Gestão de Tráfego Pago · OxBrand',
     description: 'Google Ads, Meta Ads, TikTok Ads e LinkedIn Ads. Da estratégia ao resultado: rastreio, mensuração e otimização contínua.',
@@ -20,7 +20,7 @@ export default function GestaoDeTrafegoPagoPage() {
       slug="gestao-de-trafego-pago"
       metaDescription="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final, com rastreio, mensuração e otimização contínua."
       tag="Aquisição com método"
-      headline="Agência de Tráfego Pago: campanhas geridas"
+      headline="Gestão de Tráfego Pago: campanhas geridas"
       headlineHighlight="para resultado, não para alcance."
       subheadline="Gestão de Performance e Tráfego Pago em Google ADS, Meta ADS, TikTok ADS e LinkedIn ADS. Da estratégia ao resultado final. Tráfego Pago é sobre pessoas."
       introTitle="Time dedicado ao seu resultado"
@@ -28,6 +28,14 @@ export default function GestaoDeTrafegoPagoPage() {
       stepsImage="/images/solucoes/trafego-processo.jpg"
       stepsAlt="Método de gestão de tráfego pago da OxBrand em 7 etapas"
       ctaHeading="Verba não é estratégia. Sem processo, tráfego pago é aposta."
+      extraSection={
+        <section className="py-16 bg-white border-b border-zinc-200">
+          <div className="max-w-3xl mx-auto px-6 flex flex-col gap-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900">O que é a gestão de tráfego pago da OxBrand</h2>
+            <p className="text-zinc-700 leading-relaxed">A gestão de tráfego pago é o trabalho contínuo de planejar, executar e otimizar campanhas de anúncios pagos em Google Ads, Meta Ads, TikTok e LinkedIn, com foco em custo por resultado. Na OxBrand, gestão de tráfego pago não é apenas subir anúncio: é estratégia, criativo por etapa do funil, rastreamento e otimização semanal, para a verba virar cliente e não só clique.</p>
+          </div>
+        </section>
+      }
       relatedLinks={[
         { label: 'Tráfego pago com previsibilidade', href: '/trafego-pago-com-previsibilidade' },
         { label: 'Guia de tráfego pago', href: '/blog/trafego-pago-guia-definitivo' },
