@@ -14,6 +14,8 @@ export interface AuthorData {
   bio: string[]
   /** Áreas de especialidade (tags), bom para SEO temático. */
   especialidades: string[]
+  /** Frase de destaque (aspas), exibida com realce no perfil. */
+  quote?: string
   linkedin?: string
   instagram?: string
   email?: string
@@ -49,39 +51,30 @@ export const AUTHORS: Record<string, AuthorData> = {
     hasProfile: true,
     headline: 'A equipe de marketing de performance da OxBrand: análises de tráfego pago, CRM, SEO e conversão direto de quem opera todos os dias.',
     bio: [
-      'A OxBrand é uma agência de marketing digital de performance em Mogi das Cruzes, com atuação nacional. Os artigos assinados pela equipe reúnem o que aprendemos operando tráfego pago, CRM, sites e SEO para mais de 450 marcas.',
-      'Nosso foco não é métrica de vaidade, e sim crescimento previsível: estratégia, dados e integração entre marketing e comercial. Cada conteúdo aqui nasce da prática, não da teoria.',
+      'Sócia-fundadora da OxBrand, lidera as áreas de conteúdo, comunicação e operações da agência, conectando estratégia, gestão e execução. Formada em Administração e Marketing, coordena um time multidisciplinar voltado à performance, ao fortalecimento de posicionamento e à consolidação de marcas.',
+      'Sua atuação une visão de negócio, branding empresarial e capacidade operacional para transformar estratégia em presença, percepção e crescimento. Acredita que marcas fortes não são construídas apenas pela comunicação, mas pela consistência entre posicionamento, experiência, identidade e entrega.',
+      'Como defende em seu e-book Comunicação Raiz: antes de comunicar para o mercado, uma marca precisa compreender com clareza quem é, o que defende e por que deseja ser lembrada.',
     ],
-    especialidades: ['Tráfego Pago', 'CRM e Automação', 'SEO e Conteúdo', 'Conversão'],
-    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
-  },
-  'marcos-blaustein': {
-    slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO e Estrategista',
-    avatar: '/images/authors/marcos-blaustein.jpg', hasProfile: true,
-    headline: 'Sócio-fundador da OxBrand. Lidera estratégia, tecnologia e crescimento previsível para mais de 450 marcas.',
-    bio: [
-      'Sócio-fundador da OxBrand, agência de marketing de performance em Mogi das Cruzes. Lidera a direção estratégica, a inteligência de dados e a inovação da operação, com foco em transformar marketing em estrutura de crescimento previsível.',
-      'À frente de um time multidisciplinar, une estratégia, tráfego pago e tecnologia para gerar resultado mensurável. Já esteve por trás de estratégias que ultrapassaram dezenas de milhões em vendas para clientes de diversos setores.',
-    ],
-    especialidades: ['Estratégia de Marketing', 'Tráfego Pago', 'CRM e Automação', 'Growth'],
-    linkedin: 'https://www.linkedin.com/in/marcos-blaustein-5302712a/',
-    instagram: 'https://www.instagram.com/marcosblaustein/',
-    email: OX_EMAIL, local: LOCAL,
-  },
-  'walquiria-blaustein': {
-    slug: 'walquiria-blaustein', name: 'Walquiria Blaustein', role: 'COO e Marketing',
-    avatar: '/images/authors/walquiria-blaustein.jpg', hasProfile: true,
-    headline: 'Sócia-fundadora da OxBrand. Lidera conteúdo, comunicação e operações, com forte atuação no mercado imobiliário.',
-    bio: [
-      'Sócia-fundadora da OxBrand, lidera as áreas de conteúdo, comunicação e operações da agência. Formada em Administração e Marketing, tem forte atuação no setor imobiliário e coordena um time multidisciplinar.',
-      'Une visão de negócio e comunicação para transformar estratégia em execução consistente. Acredita que marca forte se constrói com método, clareza de posicionamento e presença digital orientada a resultado.',
-    ],
+    quote: 'Quem constrói comunicação para caber na tendência será esquecido junto com ela. Legado exige raiz, posicionamento e coragem para não soar como todo mundo.',
     especialidades: ['Conteúdo e Branding', 'Marketing Imobiliário', 'Operações', 'Comunicação'],
     linkedin: 'https://www.linkedin.com/in/walquiria-costa-blaustein-a202091a5/',
     instagram: 'https://www.instagram.com/walquiriablaustein/',
     email: OX_EMAIL, local: LOCAL,
   },
-  'joane-guimaraes': redator('joane-guimaraes', 'Joane Guimarães'),
+  'joane-guimaraes': {
+    slug: 'joane-guimaraes', name: 'Joane Guimarães', role: 'Líder de Execução Visual',
+    avatar: '/images/authors/joane-guimaraes.jpg', hasProfile: true,
+    headline: 'Líder de Execução Visual da OxBrand. Traduz estratégia, conceito e posicionamento em identidade visual, com coerência e intenção.',
+    bio: [
+      'Líder de Execução Visual da OxBrand, conduz a tradução de estratégias, conceitos e posicionamentos em soluções visuais consistentes. Formada em Design Gráfico, atua na construção de identidades e peças que conectam intenção, estética e funcionalidade, garantindo coerência entre o que cada marca representa e a forma como ela se apresenta ao mercado.',
+      'À frente da execução criativa da agência, trabalha em conjunto com um time multidisciplinar para transformar direcionamentos estratégicos em experiências visuais capazes de gerar reconhecimento, percepção de valor e diferenciação. Sua atuação combina repertório técnico, atenção aos detalhes e sensibilidade para compreender a identidade própria de cada projeto.',
+      'Além do design, mantém uma relação constante com a expressão artística por meio da pintura e de outras práticas criativas, ampliando seu repertório e fortalecendo um olhar autoral sobre formas, cores, composições e narrativas.',
+      'Acredita que criatividade não é apenas ter boas ideias, mas saber dar forma, intenção e identidade a elas.',
+    ],
+    quote: 'Estética sem intenção é apenas decoração. Criação de verdade transforma estratégia em algo que o público reconhece, sente e não confunde.',
+    especialidades: ['Design Gráfico', 'Identidade Visual', 'Branding', 'Direção de Arte'],
+    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
+  },
   'murilo-novaes': redator('murilo-novaes', 'Murilo Novaes'),
   'breno-freire': redator('breno-freire', 'Breno Freire'),
   'julia-rodrigues': redator('julia-rodrigues', 'Julia Rodrigues'),
