@@ -457,7 +457,7 @@ export default function CrmKommoLP() {
                 <div className="relative w-full max-w-sm overflow-hidden">
                   <Image
                     src="/images/solucoes/oxbrand-kommo-partner.webp"
-                    alt="Equipe OxBrand recebendo a placa de parceiro certificado Kommo"
+                    alt="Time OxBrand recebendo a placa de parceiro certificado Kommo"
                     width={768}
                     height={960}
                     className="w-full h-auto object-cover"

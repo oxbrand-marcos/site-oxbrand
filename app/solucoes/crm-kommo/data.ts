@@ -36,10 +36,10 @@ export const faqItems = [
   },
   {
     q: 'A minha empresa já usa WhatsApp Business. Como migramos para o Kommo?',
-    a: 'A migração é simples e segura. O Kommo se integra diretamente com o seu número de WhatsApp Business, importando todas as conversas e contatos. Nossa equipe cuida de toda a configuração para garantir uma transição suave e sem perda de dados.',
+    a: 'A migração é simples e segura. O Kommo se integra diretamente com o seu número de WhatsApp Business, importando todas as conversas e contatos. Nosso time cuida de toda a configuração para garantir uma transição suave e sem perda de dados.',
   },
   {
     q: 'Qual é o próximo passo para implementar o Kommo?',
-    a: 'O próximo passo é solicitar um diagnóstico gratuito. Nossa equipe de especialistas irá analisar o seu processo de vendas e funil, para então criar um plano de implementação personalizado e mostrar como o Kommo pode transformar a sua gestão de clientes.',
+    a: 'O próximo passo é solicitar um diagnóstico gratuito. Nosso time de especialistas irá analisar o seu processo de vendas e funil, para então criar um plano de implementação personalizado e mostrar como o Kommo pode transformar a sua gestão de clientes.',
   },
 ]
