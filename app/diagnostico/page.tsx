@@ -139,7 +139,7 @@ export default function DiagnosticoPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl text-balance">
-              Inicie agora sua jornada de crescimento com os passos certos. Nossa equipe analisa sua operação digital e
+              Inicie agora sua jornada de crescimento com os passos certos. Nosso time analisa sua operação digital e
               te devolve um diagnóstico completo: sem custo, sem compromisso.
             </p>
 
@@ -172,7 +172,7 @@ export default function DiagnosticoPage() {
                   <span className="text-glow">Diagnóstico</span>
                 </h2>
                 <p className="text-zinc-600 leading-relaxed">
-                  Sabemos que o seu tempo é valioso. Preencha o formulário e nossa equipe de Marketing de Performance
+                  Sabemos que o seu tempo é valioso. Preencha o formulário e nosso time de Marketing de Performance
                   retornará o contato o mais rápido possível para iniciar o seu projeto com soluções que funcionam.
                 </p>
               </div>
@@ -211,7 +211,7 @@ export default function DiagnosticoPage() {
                   <div className="w-10 h-px bg-primary mx-auto" />
                   <h3 className="text-xl font-bold text-zinc-900">Recebemos seu diagnóstico!</h3>
                   <p className="text-sm text-zinc-500 leading-relaxed max-w-xs">
-                    Nossa equipe retornará em até 2 horas em dias úteis. Fique de olho no WhatsApp e e-mail.
+                    Nosso time retornará em até 2 horas em dias úteis. Fique de olho no WhatsApp e e-mail.
                   </p>
                   <button onClick={() => setSent(false)} className="text-xs text-zinc-400 hover:text-zinc-700 transition-colors font-mono">
                     Enviar outra solicitação →
@@ -277,7 +277,7 @@ export default function DiagnosticoPage() {
                 <label className="flex items-start gap-3 cursor-pointer">
                   <input type="checkbox" name="Aceite de contato" required className="mt-0.5 accent-primary shrink-0" />
                   <span className="text-xs text-zinc-500 leading-relaxed">
-                    Aceito receber o contato da equipe da Ox para realizar meu diagnóstico
+                    Aceito receber o contato do time da Ox para realizar meu diagnóstico
                   </span>
                 </label>
 
@@ -292,7 +292,7 @@ export default function DiagnosticoPage() {
                 </button>
 
                 <p className="text-xs text-center text-zinc-400 leading-relaxed">
-                  Ao clicar em enviar, você garante que nossa equipe de Marketing Digital em Mogi das Cruzes receberá
+                  Ao clicar em enviar, você garante que nosso time de Marketing Digital em Mogi das Cruzes receberá
                   sua solicitação.
                 </p>
                 <p className="text-[11px] text-center text-zinc-400 leading-relaxed">
