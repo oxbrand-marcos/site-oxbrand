@@ -279,6 +279,8 @@ export const ARTICLES: Article[] = [
 <li><strong>Produtividade do time:</strong> menos tempo procurando informação, mais tempo vendendo.</li>
 <li><strong>Decisão baseada em dado:</strong> você para de discutir com achismo e passa a olhar números reais de conversão.</li>
 </ul>
+<h2>CRM de vendas: o que é e para que serve</h2>
+<p>Quando o CRM é aplicado ao time comercial, ele vira um CRM de vendas: o sistema que organiza o funil, registra cada negociação, dispara follow-ups e mostra em que etapa está cada oportunidade. Um CRM de vendas serve para o vendedor parar de perder lead por esquecimento e para o gestor enxergar a previsão de fechamento em tempo real, decidindo com dado e não com achismo.</p>
 <h2>CRM e funil de vendas: a dupla que funciona</h2>
 <p>CRM e funil de vendas andam juntos. O funil é a lógica, as etapas que um lead percorre até virar cliente. O CRM é onde essa lógica vira operação do dia a dia. Um CRM sem um funil bem desenhado é uma agenda cara; um funil sem CRM é um desenho que ninguém segue. Se você ainda não tem o seu mapeado, comece por aqui: <a href="/blog/funil-de-vendas">o que é funil de vendas e como montar</a>.</p>
 <h2>Quando a sua empresa precisa de um CRM</h2>
@@ -299,14 +301,14 @@ export const ARTICLES: Article[] = [
     metaTitle: 'O que é funil de vendas e como montar | OxBrand',
     metaDescription: 'O que é funil de vendas, as etapas, como montar o seu e os erros mais comuns. Guia prático de quem estrutura processos comerciais que vendem.',
     title: 'Funil de vendas: o que é, etapas e como montar o seu',
-    subtitle: 'O que é, as etapas de topo, meio e fundo, o passo a passo para montar o seu e os erros mais comuns. O guia de quem estrutura processos comerciais que vendem.',
+    subtitle: 'O que é o funil de vendas digital, as etapas de topo, meio e fundo, o passo a passo para montar o seu e os erros mais comuns. O guia de quem estrutura processos comerciais que vendem.',
     tag: 'CRM & Vendas',
     breadcrumb: 'Vendas',
     dateISO: '2026-07-25',
     coverAlt: 'Diagrama de funil de vendas dividido em topo, meio e fundo',
     author: 'Marcos Blaustein',
     bodyHtml: `
-<p class="lead">Funil de vendas é a representação do caminho que uma pessoa percorre desde o primeiro contato com a sua empresa até virar cliente. Chama-se funil porque, como o objeto, ele é largo em cima e estreito embaixo: muita gente descobre a sua marca, uma parte demonstra interesse, e só uma fração fecha negócio.</p>
+<p class="lead">Funil de vendas é a representação do caminho que uma pessoa percorre desde o primeiro contato com a sua empresa até virar cliente. No ambiente online, ele vira o seu funil de vendas digital: o mesmo conceito aplicado a site, anúncios e CRM. Chama-se funil porque, como o objeto, ele é largo em cima e estreito embaixo: muita gente descobre a sua marca, uma parte demonstra interesse, e só uma fração fecha negócio.</p>
 <p>Mais do que um desenho bonito, o funil é a lógica que organiza todo o seu marketing e o seu comercial. Sem ele, você investe em anúncio, gera leads e não sabe por que a maioria não compra. Com ele, você enxerga exatamente onde as pessoas travam e conserta. Este guia mostra as etapas e como montar o seu na prática.</p>
 <h2>As etapas do funil de vendas</h2>
 <ul>
@@ -314,6 +316,8 @@ export const ARTICLES: Article[] = [
 <li><strong>Meio (consideração):</strong> a pessoa já entende o problema e avalia caminhos. Aqui você constrói confiança: comparativos, provas, materiais que aprofundam.</li>
 <li><strong>Fundo (decisão):</strong> a pessoa está pronta para comprar e compara fornecedores. Aqui entram oferta, diagnóstico e prova social, para conduzir à decisão com o mínimo de risco percebido.</li>
 </ul>
+<h2>Funil de vendas digital: o que muda no online</h2>
+<p>O funil de vendas digital é esse mesmo funil aplicado aos canais online: o topo é alimentado por tráfego e conteúdo, o meio por nutrição automatizada e o fundo por um CRM integrado ao WhatsApp e ao comercial. A grande vantagem do funil de vendas digital é a mensuração: você enxerga a taxa de conversão entre cada etapa e sabe exatamente onde o lead trava.</p>
 <h2>Funil de marketing x funil de vendas</h2>
 <p>Os dois termos se sobrepõem, mas há uma divisão prática: o funil de marketing cuida do topo e do meio (atrair e nutrir), e o funil de vendas cuida do fundo (converter a oportunidade em cliente). Na OxBrand tratamos os dois como um sistema único, porque separar marketing de vendas é justamente o que faz o lead esfriar no meio do caminho. O topo, aliás, é onde o inbound atua com força; se esse for o seu foco, vale entender <a href="/blog/o-que-e-inbound-marketing">o que é inbound marketing</a>.</p>
 <h2>Como montar o seu funil de vendas (passo a passo)</h2>
