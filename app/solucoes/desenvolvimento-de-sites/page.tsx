@@ -114,7 +114,7 @@ export default function DesenvolvimentoDeSitesPage() {
         },
         {
           title: 'Painel Administrativo Intuitivo',
-          description: 'WordPress com plugins e licenças originais. Você pode administrar o seu site ou contar com a nossa equipe para ajudá-lo sem complicação.',
+          description: 'WordPress com plugins e licenças originais. Você pode administrar o seu site ou contar com o nosso time para ajudá-lo sem complicação.',
         },
         {
           title: 'Código Limpo e Segurança',
