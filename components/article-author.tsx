@@ -63,16 +63,16 @@ export const AUTHORS: Record<string, AuthorData> = {
     linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, facebook: 'https://www.facebook.com/oxbrand.oficial', youtube: 'https://www.youtube.com/@oxbrand_br', whatsapp: 'https://wa.me/5511921425351', local: LOCAL,
   },
   'marcos-blaustein': {
-    slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO e Estrategista',
+    slug: 'marcos-blaustein', name: 'Marcos Blaustein', role: 'CEO / Diretor Estratégico',
     avatar: '/images/authors/marcos-blaustein.jpg', hasProfile: true,
-    headline: 'Sócio-fundador da OxBrand. Lidera estratégia, tecnologia e crescimento previsível para mais de 450 marcas.',
+    headline: 'Sócio-fundador da OxBrand, lidera a direção estratégica, a inteligência de dados e a inovação da agência, conectando visão de negócio, performance e tecnologia.',
     bio: [
       'Sócio-fundador da OxBrand, lidera a direção estratégica, a inteligência de dados e a inovação da agência, conectando visão de negócio, performance e tecnologia. À frente de um time multidisciplinar, atua na construção de operações de marketing mais estruturadas, mensuráveis e orientadas ao crescimento.',
       'Sua atuação une estratégia, tráfego pago, dados e capacidade de execução para transformar marketing em um sistema previsível de geração de resultado. Ao longo de sua trajetória, esteve por trás de estratégias que movimentaram dezenas de milhões de reais em vendas para empresas de diferentes segmentos.',
       'Acredita que crescimento não acontece por acaso, mas pela combinação entre leitura de cenário, tomada de decisão, acompanhamento de indicadores e disciplina para executar o que precisa ser feito.',
     ],
     quote: 'Resultado não respeita discurso, intenção ou vaidade. Ele responde a dado, decisão e à coragem de fazer o que precisa ser feito.',
-    especialidades: ['Estratégia de Marketing', 'Tráfego Pago', 'CRM e Automação', 'Growth'],
+    especialidades: ['Estratégia de Marketing', 'Branding', 'Design', 'Meta ADS', 'Google ADS', 'Desenvolvimento Web', 'SEO', 'CRM', 'Kommo', 'Automações', 'IA'],
     linkedin: 'https://www.linkedin.com/in/marcos-blaustein-5302712a/',
     instagram: 'https://www.instagram.com/marcosblaustein/',
     email: OX_EMAIL, local: LOCAL,
@@ -104,7 +104,7 @@ export const AUTHORS: Record<string, AuthorData> = {
     ],
     quote: 'Estética sem intenção é apenas decoração. Criação de verdade transforma estratégia em algo que o público reconhece, sente e não confunde.',
     especialidades: ['Coordenação visual', 'Design gráfico', 'Identidade de marca', 'Criação publicitária', 'Composição visual'],
-    linkedin: OX_LINKEDIN, instagram: OX_INSTAGRAM, email: OX_EMAIL, local: LOCAL,
+    email: undefined, linkedin: 'https://www.linkedin.com/in/joane-guimar%C3%A3es-762a092a0', instagram: 'https://www.instagram.com/joaneguimaraes_', local: LOCAL,
   },
   'murilo-novaes': {
     ...redator('murilo-novaes', 'Murilo Novaes'),
