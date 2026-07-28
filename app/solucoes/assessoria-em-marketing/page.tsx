@@ -102,7 +102,7 @@ export default function AssessoriaEmMarketingPage() {
           number: '3.',
           title: 'Execução e Otimização',
           description:
-            'É a hora de colocar a mão na massa. Nossa equipe de especialistas implementa o plano de ação, do zero ao resultado. Monitoramos cada campanha e cada métrica em tempo real, fazendo otimizações constantes para garantir a alta performance do seu investimento.',
+            'É a hora de colocar a mão na massa. Nosso time de especialistas implementa o plano de ação, do zero ao resultado. Monitoramos cada campanha e cada métrica em tempo real, fazendo otimizações constantes para garantir a alta performance do seu investimento.',
         },
         {
           number: '4.',
