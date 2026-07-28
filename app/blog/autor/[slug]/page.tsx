@@ -125,6 +125,11 @@ export default async function AutorPage({ params }: { params: Promise<{ slug: st
               {author.bio.map((p, i) => (
                 <p key={i} className="text-sm sm:text-base text-zinc-600 leading-relaxed">{p}</p>
               ))}
+              {author.quote && (
+                <blockquote className="mt-3 border-l-2 border-primary pl-5">
+                  <p className="text-lg sm:text-xl font-medium text-zinc-900 leading-relaxed italic">&ldquo;{author.quote}&rdquo;</p>
+                </blockquote>
+              )}
             </div>
             {author.especialidades.length > 0 && (
               <aside className="flex flex-col gap-4">
