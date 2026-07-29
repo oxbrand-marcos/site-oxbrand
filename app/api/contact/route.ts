@@ -4,9 +4,6 @@ import { createKommoLead } from '@/lib/kommo'
 
 // Mapeia a CHAVE enviada por cada formulário -> ID do campo no Kommo.
 const KOMMO_FIELD_MAP: Record<string, Record<string, number>> = {
-  contato: {
-    'Segmento': 1464494,
-  },
   diagnostico: {
     'O \"@\" do seu Instagram': 1468105,
     'Sua empresa possui um departamento ou alguém dedicado ao marketing atualmente?': 1476140,
@@ -15,6 +12,11 @@ const KOMMO_FIELD_MAP: Record<string, Record<string, number>> = {
     'Você já fez alguma ação de marketing digital antes?': 1476144,
     'Qual a sua média de faturamento mensal?': 1464508,
   },
+}
+
+// Campos que entram apenas como NOTA (não em campo exato do Kommo).
+const KOMMO_NOTE_MAP: Record<string, string[]> = {
+  contato: ['Segmento'],
 }
 
 const resend = new Resend(process.env.RESEND_API_KEY)
@@ -175,7 +177,12 @@ export async function POST(req: NextRequest) {
         if (v) extraFields.push({ id, value: v })
       }
 
-      const kommo = await createKommoLead({ title, nome, email, telefone, page: pageUrl, source, attr, extraFields })
+      const noteExtras: { label: string; value: string }[] = []
+      for (const key of KOMMO_NOTE_MAP[source] ?? []) {
+        if (fields[key]) noteExtras.push({ label: key, value: fields[key] })
+      }
+
+      const kommo = await createKommoLead({ title, nome, email, telefone, page: pageUrl, source, attr, extraFields, noteExtras })
       if (!kommo.ok && !kommo.skipped) console.error('[contact api] kommo error:', kommo.error)
     } catch (e) {
       console.error('[contact api] kommo unexpected:', e)
