@@ -6,7 +6,10 @@
 type Attr = Record<string, string>
 
 function baseUrl(): string | null {
-  const sub = process.env.KOMMO_SUBDOMAIN
+  let sub = (process.env.KOMMO_SUBDOMAIN || '').trim()
+  if (!sub) return null
+  sub = sub.replace(/^https?:\/\//i, '') // remove protocolo se colaram a URL
+  sub = sub.split('/')[0].split('?')[0].trim() // remove path/query
   if (!sub) return null
   const host = sub.includes('.') ? sub : `${sub}.kommo.com`
   return `https://${host}`
@@ -134,6 +137,8 @@ export async function createKommoLead(
 
     return { ok: true, id: leadId }
   } catch (e) {
-    return { ok: false, error: (e as Error).message }
+    const err = e as Error & { cause?: unknown }
+    const cause = err.cause ? ` | cause: ${String((err.cause as { code?: string })?.code ?? err.cause)}` : ''
+    return { ok: false, error: `${err.name}: ${err.message}${cause} @ base=${base}` }
   }
 }
