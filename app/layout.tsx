@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { DeferredGlobals } from '@/components/deferred-globals'
+import { WhatsAppSourceTagger } from '@/components/wa-source-tagger'
 import Script from 'next/script'
 
 const spaceGrotesk = Space_Grotesk({
@@ -100,6 +101,7 @@ export default function RootLayout({
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <WhatsAppSourceTagger />
         <DeferredGlobals />
       </body>
     </html>
