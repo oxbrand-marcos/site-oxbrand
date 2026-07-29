@@ -1,5 +1,6 @@
 import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
+import { createKommoLead } from '@/lib/kommo'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 const TO = 'contato@oxbrand.com.br'
@@ -134,6 +135,28 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error('[contact api] resend error:', error)
       return NextResponse.json({ ok: false, error: error.message }, { status: 500 })
+    }
+
+    // Cria o lead no Kommo (best-effort: nunca quebra a resposta do formulario).
+    try {
+      const email = fields['E-mail'] ?? fields['email'] ?? undefined
+      const telefone =
+        fields['Telefone'] ?? fields['WhatsApp'] ?? fields['whatsapp'] ?? fields['telefone'] ?? fields['Celular'] ?? undefined
+
+      let attr: Record<string, string> = {}
+      const rawAttr = req.cookies.get('oxb_attr')?.value
+      if (rawAttr) {
+        try {
+          attr = JSON.parse(decodeURIComponent(rawAttr)) as Record<string, string>
+        } catch {
+          try { attr = JSON.parse(rawAttr) as Record<string, string> } catch {}
+        }
+      }
+
+      const kommo = await createKommoLead({ title, nome, email, telefone, page: pageUrl, source, attr })
+      if (!kommo.ok && !kommo.skipped) console.error('[contact api] kommo error:', kommo.error)
+    } catch (e) {
+      console.error('[contact api] kommo unexpected:', e)
     }
 
     return NextResponse.json({ ok: true })
