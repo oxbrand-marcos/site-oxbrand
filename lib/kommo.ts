@@ -19,29 +19,59 @@ interface KommoField {
   id: number
   code?: string | null
   name?: string | null
+  type?: string | null
+  enums?: Array<{ id: number; value?: string | null }> | null
 }
 
-// Cache do mapa de campos (code em MAIÚSCULAS -> id) por 10 min entre invocações quentes.
-let fieldMapCache: { at: number; map: Record<string, number> } | null = null
+interface FieldDef {
+  entity: 'lead' | 'contact'
+  type: string
+  enums: Record<string, number> // value (minúsculo) -> enum_id
+}
 
-async function getLeadFieldMap(base: string, token: string): Promise<Record<string, number>> {
-  if (fieldMapCache && Date.now() - fieldMapCache.at < 10 * 60 * 1000) return fieldMapCache.map
-  const map: Record<string, number> = {}
-  for (let page = 1; page <= 5; page++) {
-    const r = await fetch(`${base}/api/v4/leads/custom_fields?page=${page}&limit=250`, {
+interface Defs {
+  defs: Record<number, FieldDef>
+  utm: Record<string, number> // CODE (maiúsculo) -> id (apenas lead)
+}
+
+// Cache das definições de campos por 10 min entre invocações quentes.
+let defsCache: { at: number; data: Defs } | null = null
+
+async function fetchFields(base: string, token: string, entity: 'lead' | 'contact'): Promise<KommoField[]> {
+  const path = entity === 'lead' ? 'leads' : 'contacts'
+  const all: KommoField[] = []
+  for (let page = 1; page <= 6; page++) {
+    const r = await fetch(`${base}/api/v4/${path}/custom_fields?page=${page}&limit=250`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     if (!r.ok) break
     const j = (await r.json()) as { _embedded?: { custom_fields?: KommoField[] }; _links?: { next?: unknown } }
-    const items = j?._embedded?.custom_fields ?? []
-    for (const f of items) {
-      if (f.code) map[String(f.code).toUpperCase()] = f.id
-      if (f.name) map[`NAME:${String(f.name).toUpperCase()}`] = f.id
-    }
+    all.push(...(j?._embedded?.custom_fields ?? []))
     if (!j?._links?.next) break
   }
-  fieldMapCache = { at: Date.now(), map }
-  return map
+  return all
+}
+
+async function getDefs(base: string, token: string): Promise<Defs> {
+  if (defsCache && Date.now() - defsCache.at < 10 * 60 * 1000) return defsCache.data
+  const defs: Record<number, FieldDef> = {}
+  const utm: Record<string, number> = {}
+  for (const entity of ['lead', 'contact'] as const) {
+    const fields = await fetchFields(base, token, entity)
+    for (const f of fields) {
+      const enums: Record<string, number> = {}
+      if (Array.isArray(f.enums)) {
+        for (const e of f.enums) {
+          if (e?.value != null && e?.id != null) enums[String(e.value).toLowerCase().trim()] = e.id
+        }
+      }
+      defs[f.id] = { entity, type: String(f.type || ''), enums }
+      if (entity === 'lead' && f.code) utm[String(f.code).toUpperCase()] = f.id
+    }
+  }
+  const data = { defs, utm }
+  defsCache = { at: Date.now(), data }
+  return data
 }
 
 export interface KommoLeadInput {
@@ -52,6 +82,7 @@ export interface KommoLeadInput {
   page?: string
   source?: string
   attr: Attr
+  extraFields?: Array<{ id: number; value: string }>
 }
 
 // Códigos padrão dos campos de rastreamento do Kommo -> chave no nosso cookie.
@@ -67,6 +98,18 @@ const TRACKING: [string, string][] = [
   ['GCLID', 'gclid'],
 ]
 
+type CFValue = { value: string } | { enum_id: number }
+type CF = { field_id: number; values: CFValue[] }
+
+// Monta o valor do custom field respeitando campos de seleção (enum).
+function buildCF(id: number, value: string, def: FieldDef | undefined): CF {
+  if (def && Object.keys(def.enums).length) {
+    const enumId = def.enums[value.toLowerCase().trim()]
+    if (enumId) return { field_id: id, values: [{ enum_id: enumId }] }
+  }
+  return { field_id: id, values: [{ value }] }
+}
+
 export async function createKommoLead(
   input: KommoLeadInput
 ): Promise<{ ok: boolean; skipped?: boolean; error?: string; id?: number }> {
@@ -75,17 +118,26 @@ export async function createKommoLead(
   if (!base || !token) return { ok: false, skipped: true }
 
   try {
-    const fieldMap = await getLeadFieldMap(base, token)
+    const { defs, utm } = await getDefs(base, token)
 
-    const leadCF: Array<{ field_id: number; values: Array<{ value: string }> }> = []
+    const leadCF: CF[] = []
     for (const [code, key] of TRACKING) {
       const val = input.attr[key]
-      if (val && fieldMap[code]) leadCF.push({ field_id: fieldMap[code], values: [{ value: String(val) }] })
+      if (val && utm[code]) leadCF.push({ field_id: utm[code], values: [{ value: String(val) }] })
     }
 
-    const contactCF: Array<{ field_code: string; values: Array<{ value: string; enum_code: string }> }> = []
+    const contactCF: Array<CF | { field_code: string; values: Array<{ value: string; enum_code: string }> }> = []
     if (input.telefone) contactCF.push({ field_code: 'PHONE', values: [{ value: input.telefone, enum_code: 'WORK' }] })
     if (input.email) contactCF.push({ field_code: 'EMAIL', values: [{ value: input.email, enum_code: 'WORK' }] })
+
+    // Campos extras dos formulários: roteia para lead ou contato conforme a definição.
+    for (const ef of input.extraFields ?? []) {
+      if (!ef.value) continue
+      const def = defs[ef.id]
+      const cf = buildCF(ef.id, String(ef.value), def)
+      if (def?.entity === 'contact') contactCF.push(cf)
+      else leadCF.push(cf) // default: lead (inclui ids não encontrados, que o Kommo ignora)
+    }
 
     const tags: Array<{ name: string }> = [{ name: 'Site' }]
     if (input.source) tags.push({ name: input.source })
@@ -110,7 +162,7 @@ export async function createKommoLead(
     })
     if (!res.ok) {
       const t = await res.text()
-      return { ok: false, error: `Kommo ${res.status}: ${t.slice(0, 300)}` }
+      return { ok: false, error: `Kommo ${res.status}: ${t.slice(0, 400)}` }
     }
 
     const created = (await res.json()) as Array<{ id?: number }>
