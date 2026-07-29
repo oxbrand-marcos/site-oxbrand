@@ -11,6 +11,8 @@ interface YouTubeFacadeProps {
   className?: string
   /** Passa priority=true apenas para vídeos acima da dobra */
   priority?: boolean
+  /** Preenche 100% do container pai (absolute inset-0), ignorando o aspect. Pai deve ser relative. */
+  fill?: boolean
   /** Poster customizado (ex.: capa vertical de Short). Substitui a thumbnail automática do YouTube. */
   poster?: string
 }
@@ -22,6 +24,7 @@ export function YouTubeFacade({
   className = '',
   priority = false,
   poster,
+  fill = false,
 }: YouTubeFacadeProps) {
   const [active, setActive] = useState(false)
   // Shorts não têm maxresdefault, usa hqdefault como fallback universal
@@ -31,11 +34,13 @@ export function YouTubeFacade({
       ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
       : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
   const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&autoplay=1`
-  const aspectClass = aspect === 'portrait' ? 'aspect-[9/16]' : 'aspect-video'
+  const sizeClass = fill
+    ? 'absolute inset-0 w-full h-full'
+    : `relative w-full ${aspect === 'portrait' ? 'aspect-[9/16]' : 'aspect-video'}`
 
   if (active) {
     return (
-      <div className={`relative w-full ${aspectClass} ${className}`}>
+      <div className={`${sizeClass} ${className}`}>
         <iframe
           src={embedUrl}
           title={title}
@@ -53,7 +58,7 @@ export function YouTubeFacade({
       type="button"
       onClick={() => setActive(true)}
       aria-label={`Reproduzir: ${title}`}
-      className={`relative w-full ${aspectClass} ${className} group overflow-hidden bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
+      className={`${sizeClass} ${className} group overflow-hidden bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary`}
     >
       {/* Thumbnail, lazy exceto quando explicitamente acima da dobra */}
       <Image

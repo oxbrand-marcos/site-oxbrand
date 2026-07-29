@@ -7,10 +7,10 @@ import DotsCanvas from '@/components/dots-canvas'
 import { STATS } from '@/src/config/stats'
 
 const metrics = [
-  { label: 'marcas atendidas', value: STATS.marcasAtendidas, suffix: '+', sub: 'Brasil e exterior' },
-  { label: 'anos de experiência', value: STATS.anosExperiencia, suffix: '+', sub: 'marketing e tecnologia' },
-  { label: 'em faturamento gerado', value: STATS.faturamentoGerado, suffix: 'M+', sub: 'para clientes', prefix: 'R$' },
-  { label: 'parceiros e certificações', value: STATS.parceiros, suffix: '+', sub: 'no ecossistema' },
+  { label: 'marcas atendidas', value: STATS.marcasAtendidas, from: 300, suffix: '+', sub: 'Brasil e exterior' },
+  { label: 'anos de experiência', value: STATS.anosExperiencia, from: 11, suffix: '+', sub: 'marketing e tecnologia' },
+  { label: 'em faturamento gerado', value: STATS.faturamentoGerado, from: 180, suffix: 'M+', sub: 'para clientes', prefix: 'R$' },
+  { label: 'parceiros e certificações', value: STATS.parceiros, from: 35, suffix: '+', sub: 'no ecossistema' },
 ]
 
 // Items duplicados uma única vez, a animação cobre exatamente 50% da largura total,
@@ -50,8 +50,8 @@ function TickerLine() {
   )
 }
 
-function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
-  const { count, ref } = useCountUp(target)
+function AnimatedCounter({ target, from = 0, suffix = '' }: { target: number; from?: number; suffix?: string }) {
+  const { count, ref } = useCountUp(target, from)
   return <span ref={ref as React.RefObject<HTMLSpanElement>}>{count}{suffix}</span>
 }
 
@@ -189,14 +189,14 @@ export function Hero() {
                 <div className="flex flex-col gap-1">
                   <span className="mono-tag text-muted-foreground/50">Retorno sobre investimento</span>
                   <span className="text-4xl font-bold text-foreground stat-number">
-                    <AnimatedCounter target={5} />.4<span className="text-primary text-2xl">x ROAS</span>
+                    <AnimatedCounter target={5} from={4} />.4<span className="text-primary text-2xl">x ROAS</span>
                   </span>
                   <span className="mono-tag" style={{ color: '#34d399' }}>&#9650; +27% de crescimento no trimestre</span>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <div className="flex justify-between">
                     <span className="mono-tag text-muted-foreground/50">Previsibilidade da meta</span>
-                    <span className="mono-tag text-primary"><AnimatedCounter target={92} />%</span>
+                    <span className="mono-tag text-primary"><AnimatedCounter target={92} from={70} />%</span>
                   </div>
                   <div className="h-1 bg-muted w-full">
                     <div className="h-full w-[92%] bg-primary" style={{ transition: 'width 1.5s ease' }} />
@@ -247,7 +247,7 @@ export function Hero() {
             }}
           >
             <span className="text-4xl sm:text-5xl font-bold text-primary stat-number leading-none">
-              {m.prefix ?? ''}<AnimatedCounter target={m.value} />{m.suffix}
+              {m.prefix ?? ''}<AnimatedCounter target={m.value} from={m.from} />{m.suffix}
             </span>
             <span className="text-sm font-semibold text-foreground leading-tight">{m.label}</span>
             <span className="mono-tag text-muted-foreground/50 mt-0.5">{m.sub}</span>

@@ -100,8 +100,7 @@ export function Differentials() {
             <YouTubeFacade
               videoId="mbITWskDplc"
               title="OxBrand: Processo Validado"
-              aspect="landscape"
-              className="absolute inset-0 !aspect-auto h-full"
+              fill
             />
           </div>
 
