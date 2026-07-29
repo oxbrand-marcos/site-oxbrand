@@ -62,6 +62,9 @@ export const CASES: CaseStudy[] = [
     customPage: true,
   },
   draft('Mara Rocha', 'mara-rocha', ''),
+  draft('BMR Advogados', 'bmr-advogados', 'Advocacia · Branding'),
+  draft('LM Assets', 'lm-assets', ''),
+  draft('Comissão de Direito Empresarial - OAB Mogi das Cruzes', 'comissao-direito-empresarial-oab-mogi', 'Direito empresarial · OAB'),
   {
     slug: 'chris-tattoo',
     client: 'Chris Tattoo',
