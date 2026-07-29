@@ -2,6 +2,21 @@ import { Resend } from 'resend'
 import { NextRequest, NextResponse } from 'next/server'
 import { createKommoLead } from '@/lib/kommo'
 
+// Mapeia a CHAVE enviada por cada formulário -> ID do campo no Kommo.
+const KOMMO_FIELD_MAP: Record<string, Record<string, number>> = {
+  contato: {
+    'Segmento': 1464494,
+  },
+  diagnostico: {
+    'O \"@\" do seu Instagram': 1468105,
+    'Sua empresa possui um departamento ou alguém dedicado ao marketing atualmente?': 1476140,
+    'A sua empresa já possui quantos anos de mercado?': 1464496,
+    'Hoje a sua empresa possui quantos funcionários?': 1476142,
+    'Você já fez alguma ação de marketing digital antes?': 1476144,
+    'Qual a sua média de faturamento mensal?': 1464508,
+  },
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 const TO = 'contato@oxbrand.com.br'
 const FROM = 'OxBrand Site <noreply@oxbrand.com.br>'
@@ -111,7 +126,7 @@ export async function POST(req: NextRequest) {
     }
 
     const title = titles[source] ?? 'Formulário do Site'
-    const nome = fields['Nome'] ?? fields['nome'] ?? 'Lead'
+    const nome = fields['Nome'] ?? fields['nome'] ?? fields['Seu nome'] ?? 'Lead'
     const pageUrl = _pageUrl || req.headers.get('referer') || ''
     const dataHora = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 
@@ -139,9 +154,9 @@ export async function POST(req: NextRequest) {
 
     // Cria o lead no Kommo (best-effort: nunca quebra a resposta do formulario).
     try {
-      const email = fields['E-mail'] ?? fields['email'] ?? undefined
+      const email = fields['E-mail'] ?? fields['email'] ?? fields['Seu melhor e-mail'] ?? undefined
       const telefone =
-        fields['Telefone'] ?? fields['WhatsApp'] ?? fields['whatsapp'] ?? fields['telefone'] ?? fields['Celular'] ?? undefined
+        fields['Telefone'] ?? fields['WhatsApp'] ?? fields['whatsapp'] ?? fields['telefone'] ?? fields['Celular'] ?? fields['Telefone com WhatsApp'] ?? undefined
 
       let attr: Record<string, string> = {}
       const rawAttr = req.cookies.get('oxb_attr')?.value
@@ -153,7 +168,14 @@ export async function POST(req: NextRequest) {
         }
       }
 
-      const kommo = await createKommoLead({ title, nome, email, telefone, page: pageUrl, source, attr })
+      const extraFields: { id: number; value: string }[] = []
+      const fieldMap = KOMMO_FIELD_MAP[source] ?? {}
+      for (const [key, id] of Object.entries(fieldMap)) {
+        const v = fields[key]
+        if (v) extraFields.push({ id, value: v })
+      }
+
+      const kommo = await createKommoLead({ title, nome, email, telefone, page: pageUrl, source, attr, extraFields })
       if (!kommo.ok && !kommo.skipped) console.error('[contact api] kommo error:', kommo.error)
     } catch (e) {
       console.error('[contact api] kommo unexpected:', e)
