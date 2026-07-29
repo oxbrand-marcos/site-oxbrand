@@ -6,6 +6,7 @@ import { Stats } from '@/components/stats'
 import { Team } from '@/components/team'
 import { Solutions } from '@/components/solutions'
 import { Differentials } from '@/components/differentials'
+import { FeaturedCase } from '@/components/featured-case'
 import { Clients } from '@/components/clients'
 import { FAQ } from '@/components/faq'
 import { Contact } from '@/components/contact'
@@ -43,6 +44,7 @@ export default function Home() {
       <Team />
       <Solutions />
       <Differentials />
+      <FeaturedCase />
       <Clients />
       <FAQ />
       <Contact />
