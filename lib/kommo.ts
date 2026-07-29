@@ -102,10 +102,13 @@ type CFValue = { value: string } | { enum_id: number }
 type CF = { field_id: number; values: CFValue[] }
 
 // Monta o valor do custom field respeitando campos de seleção (enum).
-function buildCF(id: number, value: string, def: FieldDef | undefined): CF {
-  if (def && Object.keys(def.enums).length) {
+// Retorna null quando não dá para enviar com segurança (seleção sem match),
+// para nunca invalidar a criação do lead inteiro por causa de um campo.
+function buildCF(id: number, value: string, def: FieldDef | undefined): CF | null {
+  if (!def) return null // id desconhecido: não arrisca
+  if (Object.keys(def.enums).length) {
     const enumId = def.enums[value.toLowerCase().trim()]
-    if (enumId) return { field_id: id, values: [{ enum_id: enumId }] }
+    return enumId ? { field_id: id, values: [{ enum_id: enumId }] } : null
   }
   return { field_id: id, values: [{ value }] }
 }
@@ -135,8 +138,9 @@ export async function createKommoLead(
       if (!ef.value) continue
       const def = defs[ef.id]
       const cf = buildCF(ef.id, String(ef.value), def)
+      if (!cf) continue // seleção sem match ou id inválido: pula (não derruba o lead)
       if (def?.entity === 'contact') contactCF.push(cf)
-      else leadCF.push(cf) // default: lead (inclui ids não encontrados, que o Kommo ignora)
+      else leadCF.push(cf)
     }
 
     const tags: Array<{ name: string }> = [{ name: 'Site' }]
