@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { X, MessageCircle, Send, ChevronDown } from 'lucide-react'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
+import { appendWaSource } from '@/lib/wa-source'
 
 const WHATSAPP_NUMBER = '+5511921425351'
 
@@ -80,7 +81,8 @@ export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
-      window.open(`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}?text=${message}`, '_blank')
+      const waUrl = appendWaSource(`https://wa.me/${WHATSAPP_NUMBER.replace(/\D/g, '')}?text=${message}`)
+      window.open(waUrl, '_blank')
     }, 600)
   }
 
