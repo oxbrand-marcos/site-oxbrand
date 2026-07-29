@@ -116,7 +116,7 @@ export function Hero() {
       {/* Conteúdo principal */}
       <div className="relative flex-1 flex items-center z-10 pb-0">
         <div className="max-w-7xl mx-auto px-6 w-full py-10 lg:py-14">
-          <div className="grid lg:grid-cols-[1fr_380px] gap-16 items-start">
+          <div className="grid lg:grid-cols-[1fr_380px] gap-16 items-start lg:items-stretch">
 
             {/* Coluna esquerda */}
             <div className="flex flex-col gap-8 items-center text-center lg:items-start lg:text-left">
@@ -205,14 +205,14 @@ export function Hero() {
               </div>
 
               {/* Mini cards de métricas */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-3 lg:flex-1 lg:auto-rows-fr">
                 {[
                   { label: 'Receita / mês', value: 'R$ 168k', sub: 'rastreada' },
                   { label: 'Custo por venda', value: '-22%', sub: 'vs. início' },
                   { label: 'Conversões', value: '1.960', sub: 'este mês' },
                   { label: 'Leads qualificados', value: '63%', sub: 'do total' },
                 ].map((item) => (
-                  <div key={item.label} className="border border-border bg-card p-4 flex flex-col gap-1 card-lift">
+                  <div key={item.label} className="border border-border bg-card p-4 flex flex-col justify-between gap-1 card-lift">
                     <span className="mono-tag text-muted-foreground/50">{item.label}</span>
                     <span className="text-xl font-bold text-foreground stat-number">{item.value}</span>
                     <span className="mono-tag text-muted-foreground/40">{item.sub}</span>
