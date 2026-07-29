@@ -83,6 +83,7 @@ export interface KommoLeadInput {
   source?: string
   attr: Attr
   extraFields?: Array<{ id: number; value: string }>
+  noteExtras?: Array<{ label: string; value: string }>
 }
 
 // Códigos padrão dos campos de rastreamento do Kommo -> chave no nosso cookie.
@@ -143,8 +144,8 @@ export async function createKommoLead(
       else leadCF.push(cf)
     }
 
-    const tags: Array<{ name: string }> = [{ name: 'Site' }]
-    if (input.source) tags.push({ name: input.source })
+    const tags: Array<{ name: string }> = [{ name: 'Site Ox' }]
+    if (input.source === 'diagnostico') tags.push({ name: 'Diagnóstico' })
 
     const contact: Record<string, unknown> = { name: input.nome || 'Lead' }
     if (contactCF.length) contact.custom_fields_values = contactCF
@@ -177,6 +178,9 @@ export async function createKommoLead(
       const originParts: string[] = []
       if (input.page) originParts.push(`página: ${input.page}`)
       if (input.source) originParts.push(`formulário: ${input.source}`)
+      for (const ne of input.noteExtras ?? []) {
+        if (ne.value) originParts.push(`${ne.label}: ${ne.value}`)
+      }
       for (const [, key] of TRACKING) {
         if (input.attr[key]) originParts.push(`${key}=${input.attr[key]}`)
       }
