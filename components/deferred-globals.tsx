@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic'
 const ConsentBanner = dynamic(() => import('./consent-banner').then((m) => m.ConsentBanner), { ssr: false })
 const PopupDiagnostico = dynamic(() => import('./popup-diagnostico').then((m) => m.PopupDiagnostico), { ssr: false })
 const FloatingActions = dynamic(() => import('./floating-actions').then((m) => m.FloatingActions), { ssr: false })
+const KommoButton = dynamic(() => import('./kommo-button').then((m) => m.KommoButton), { ssr: false })
 const Analytics = dynamic(() => import('@vercel/analytics/next').then((m) => m.Analytics), { ssr: false })
 const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then((m) => m.SpeedInsights), { ssr: false })
 
@@ -41,6 +42,7 @@ export function DeferredGlobals() {
       <ConsentBanner />
       <PopupDiagnostico />
       <FloatingActions />
+      <KommoButton />
       <Analytics />
       <SpeedInsights />
     </>

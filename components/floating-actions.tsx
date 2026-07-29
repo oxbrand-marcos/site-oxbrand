@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { WhatsAppWidget } from '@/components/whatsapp-widget'
 
 /**
  * FloatingActions, agrupa o widget de acessibilidade e o botão do WhatsApp
@@ -49,7 +48,7 @@ export function FloatingActions() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-3">
       {/* Painel de acessibilidade */}
       {a11yOpen && (
         <div
@@ -116,8 +115,6 @@ export function FloatingActions() {
         <AccessibilityIcon />
       </button>
 
-      {/* WhatsApp widget embutido, posicionamento gerenciado por FloatingActions */}
-      <WhatsAppWidget embedded />
     </div>
   )
 }
