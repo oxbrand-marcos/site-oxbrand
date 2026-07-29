@@ -35,6 +35,7 @@ const clientLogos = [
 ]
 
 const clientVideos = [
+  { id: 'h-xsI7o5ELY', title: 'Depoimento Sabrina Blaustein, BMR Advogados', short: true, poster: '/images/depoimentos/bmr-advogados.webp' },
   { id: 'oFTOtx3dzig', title: 'Depoimento cliente OxBrand 1', short: true, poster: '/images/depoimentos/lbel-telhas.webp' },
   { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true, poster: '/images/depoimentos/truck-center-express.webp' },
   { id: 'tODEyWH6HvM', title: 'Depoimento cliente OxBrand 3', short: true, poster: '/images/depoimentos/motobras.webp' },
