@@ -3,54 +3,69 @@
 import { useEffect, useRef, useState } from 'react'
 
 /**
- * Anima um número de 0 até `target` em `duration` ms com easing ease-out.
- * - Dispara via IntersectionObserver quando entra no viewport (uma vez só)
- * - Respeita prefers-reduced-motion: exibe o valor final direto
- * - SSR: retorna `target` para crawlers e leitores de tela
+ * Anima um número de `from` até `target` em `duration` ms (ease-out).
+ * - Começa forte: `from` evita mostrar valores fracos na primeira impressão.
+ * - Disparo confiável: se já visível no load, dispara na hora; senão IO; com fallback.
+ * - Respeita prefers-reduced-motion e é seguro para SSR (retorna o valor final).
  */
-export function useCountUp(target: number, duration = 1500) {
-  // Inicia com o valor final para SSR (crawlers leem o número real)
-  const [count, setCount] = useState(target)
+export function useCountUp(target: number, from = 0, duration = 900) {
+  const [count, setCount] = useState(target) // SSR/no-JS: valor final
   const ref = useRef<HTMLElement | null>(null)
   const started = useRef(false)
 
   useEffect(() => {
-    // Respeitar prefers-reduced-motion
     const prefersReduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
-
     if (prefersReduced) {
       setCount(target)
       return
     }
 
+    function run() {
+      if (started.current) return
+      started.current = true
+      const startTime = performance.now()
+      setCount(from)
+      function tick(now: number) {
+        const progress = Math.min((now - startTime) / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3) // ease-out cubic
+        setCount(Math.round(from + eased * (target - from)))
+        if (progress < 1) requestAnimationFrame(tick)
+      }
+      requestAnimationFrame(tick)
+    }
+
+    const el = ref.current
+    if (!el) {
+      run()
+      return
+    }
+
+    // Já visível no carregamento? dispara imediatamente (confiável, sem esperar callback)
+    const rect = el.getBoundingClientRect()
+    const vh = window.innerHeight || document.documentElement.clientHeight
+    if (rect.top < vh && rect.bottom > 0) {
+      run()
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting || started.current) return
-        started.current = true
-
-        const startTime = performance.now()
-
-        function tick(now: number) {
-          const elapsed = now - startTime
-          const progress = Math.min(elapsed / duration, 1)
-          // ease-out cubic: rápido no início, desacelera no fim
-          const eased = 1 - Math.pow(1 - progress, 3)
-          setCount(Math.round(eased * target))
-          if (progress < 1) requestAnimationFrame(tick)
+        if (entry.isIntersecting) {
+          run()
+          observer.disconnect()
         }
-
-        // Começa em 0 antes do primeiro frame
-        setCount(0)
-        requestAnimationFrame(tick)
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     )
-
-    if (ref.current) observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [target, duration])
+    observer.observe(el)
+    const fallback = window.setTimeout(run, 1200) // garante disparo
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
+  }, [target, from, duration])
 
   return { count, ref }
 }
