@@ -115,12 +115,12 @@ export function Clients() {
           <div className="flex flex-col gap-4 w-full">
             <div
               ref={scrollRef}
-              className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 snap-x snap-mandatory scrollbar-hide lg:grid lg:grid-cols-5 lg:overflow-visible lg:mx-0 lg:px-0"
+              className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 lg:mx-0 lg:px-0 snap-x snap-mandatory scrollbar-hide"
             >
               {clientVideos.map((v) => (
                 <div
                   key={v.id}
-                  className="flex-none w-[220px] lg:w-auto snap-start rounded-sm border border-border overflow-hidden"
+                  className="flex-none w-[220px] lg:w-[calc(20%_-_0.8rem)] snap-start rounded-sm border border-border overflow-hidden"
                 >
                   <YouTubeFacade
                     videoId={v.id}
@@ -134,7 +134,7 @@ export function Clients() {
             </div>
 
             {/* Controles de navegação */}
-            <div className="flex items-center justify-center gap-4 sm:hidden">
+            <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => scrollTo(activeIdx - 1)}
                 disabled={activeIdx === 0}
