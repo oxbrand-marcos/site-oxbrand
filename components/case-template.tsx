@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { YouTubeFacade } from '@/components/youtube-facade'
 import { ClientMarquee } from '@/components/client-marquee'
-import { jsonLd, breadcrumbSchema } from '@/lib/jsonld'
+import { jsonLd, breadcrumbSchema, caseReviewSchema } from '@/lib/jsonld'
 import type { CaseStudy } from '@/lib/clientes'
 import { CASES } from '@/lib/clientes'
 
@@ -50,6 +50,21 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           ),
         }}
       />
+      {study.depoimentoResumo ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(
+              caseReviewSchema({
+                client: study.client,
+                reviewBody: study.depoimentoResumo,
+                slug: study.slug,
+                datePublished: study.dateISO,
+              })
+            ),
+          }}
+        />
+      ) : null}
       <Header />
 
       {/* Hero */}
