@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Marketing jurídico para advogados e escritórios, dentro do Provimento 205/2021 da OAB: autoridade, conteúdo e captação ética de clientes. Diagnóstico gratuito.'
+const DESC = 'Marketing jurídico dentro do Provimento 205/2021 da OAB: autoridade, conteúdo e captação ética de clientes. Diagnóstico gratuito.'
 
 export const metadata: Metadata = {
   title: 'Marketing para Advogados: ético e eficaz | OxBrand',
