@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Marketing para incorporadoras com método: geração de demanda para lançamentos, leads qualificados e CRM integrado ao comercial. Previsibilidade de VGV, não só leads.'
+const DESC = 'Marketing para incorporadoras: demanda para lançamentos, leads qualificados e CRM integrado ao comercial. Previsibilidade de VGV.'
 
 export const metadata: Metadata = {
   title: 'Marketing para incorporadoras: venda mais VGV | OxBrand',
