@@ -14,7 +14,7 @@ const VIDEO_ID = 'oFTOtx3dzig'
 export const metadata: Metadata = {
   title: 'Case LBEL Telhas: de R$ 0 a R$ 23 mi em 48 meses | OxBrand',
   description:
-    'Como a OxBrand levou a LBEL Telhas de R$ 0 a R$ 23 milhões em 48 meses: site, CRM, social e tráfego para WhatsApp (ROAS 54,12). Case real de marketing de performance.',
+    'Como a OxBrand levou a LBEL Telhas de R$ 0 a R$ 23 milhões em 48 meses com site, CRM, social e tráfego para WhatsApp. ROAS 54,12.',
   ...pageOg({
     title: 'Case LBEL Telhas: de R$ 0 a R$ 23 milhões em 48 meses',
     description:
