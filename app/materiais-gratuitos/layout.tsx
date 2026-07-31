@@ -4,7 +4,7 @@ import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Materiais Gratuitos de Marketing Digital | OxBrand',
-  description: 'Acesse gratuitamente e-books e guias práticos criados pela OxBrand. Conteúdo estratégico para empreendedores que querem crescer com método, dados e responsabilidade.',
+  description: 'E-books e guias práticos gratuitos da OxBrand. Conteúdo estratégico para empreendedores que querem crescer com método e dados.',
   ...pageOg({
     title: 'Materiais Gratuitos de Marketing Digital',
     description: 'Guias, checklists e templates que usamos na nossa própria operação. Sem cadastro longo, sem enrolação.',
