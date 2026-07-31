@@ -13,8 +13,12 @@ const BASE = '/images/wp/portfolio/'
 const categoriesData = [
   {
     id: 'logotipos',
-    label: 'Logotipos',
+    label: 'Identidade Visual',
     items: [
+      { slug: 'idv-anna-neg', alt: 'Anna Neg' },
+      { slug: 'idv-lm-assets', alt: 'LM Assets' },
+      { slug: 'idv-rovinglass', alt: 'RovinGlass' },
+      { slug: 'idv-talent', alt: 'Talent' },
       { slug: 'oxbrand-portfolio-lgotipo-cia-do-caminhao', alt: 'Cia do Caminhão' },
       { slug: 'oxbrand-portfolio-logotipo-aerobrasil', alt: 'AeroBrasil' },
       { slug: 'oxbrand-portfolio-logotipo-aguarasa', alt: 'Água Rasa' },
@@ -75,8 +79,14 @@ const categoriesData = [
   },
   {
     id: 'redes-sociais',
-    label: 'Redes Sociais',
+    label: 'Social Media',
     items: [
+      { slug: 'social-anna-neg', alt: 'Anna Neg' },
+      { slug: 'social-comissao', alt: 'Comissão OAB Mogi' },
+      { slug: 'social-consulting', alt: 'Consulting' },
+      { slug: 'social-lm-assets', alt: 'LM Assets' },
+      { slug: 'social-rovinglass', alt: 'RovinGlass' },
+      { slug: 'social-talent', alt: 'Talent' },
       { slug: 'oxbrand-portfolio-redes-sociais-agua-rasa', alt: 'Água Rasa' },
       { slug: 'oxbrand-portfolio-redes-sociais-arrumma', alt: 'Arrumma' },
       { slug: 'oxbrand-portfolio-redes-sociais-auto-escola-fm', alt: 'Auto Escola FM' },
@@ -117,8 +127,14 @@ const categoriesData = [
   },
   {
     id: 'sites',
-    label: 'Sites',
+    label: 'Site / LP',
     items: [
+      { slug: 'site-comissao', alt: 'Comissão OAB Mogi', videoId: null },
+      { slug: 'site-consulting', alt: 'Consulting', videoId: null },
+      { slug: 'site-lm-assets', alt: 'LM Assets', videoId: null },
+      { slug: 'site-madu', alt: 'Madu', videoId: null },
+      { slug: 'site-rovinglass', alt: 'RovinGlass', videoId: null },
+      { slug: 'site-talent', alt: 'Talent', videoId: null },
       { slug: 'oxbrand-desenvolvimento-oxbrand-portfolio-desenvol-brasil-fibras', alt: 'Brasil Fibras', videoId: null },
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-eco-maquinas', alt: 'Eco Máquinas', videoId: 'SYhM_vcI0nw' },
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-almeida-', alt: 'Almeida', videoId: 'jfGr9YY2uL8' },
@@ -145,6 +161,30 @@ const categoriesData = [
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-motobras', alt: 'Motobras', videoId: 'QOGSguD8MAw' },
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-lbel', alt: 'LBel', videoId: 'GcLl1xBFDMY' },
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-ncfseguros', alt: 'NCF Seguros', videoId: 'Y0uskM3yklQ' },
+    ],
+  },
+  {
+    id: 'crm',
+    label: 'CRM',
+    items: [
+      { slug: 'crm-consulting', alt: 'Consulting' },
+      { slug: 'crm-mara-rocha', alt: 'Mara Rocha' },
+    ],
+  },
+  {
+    id: 'trafego',
+    label: 'Tráfego Pago',
+    items: [
+      { slug: 'trafego-anna-neg', alt: 'Anna Neg' },
+      { slug: 'trafego-arrumma', alt: 'Arrumma' },
+      { slug: 'trafego-bauforte', alt: 'Bauforte' },
+      { slug: 'trafego-brasil-fibras', alt: 'Brasil Fibras' },
+      { slug: 'trafego-consulting', alt: 'Consulting' },
+      { slug: 'trafego-madu', alt: 'Madu' },
+      { slug: 'trafego-mara-rocha', alt: 'Mara Rocha' },
+      { slug: 'trafego-r2m', alt: 'R2M' },
+      { slug: 'trafego-rovinglass', alt: 'RovinGlass' },
+      { slug: 'trafego-talent', alt: 'Talent' },
     ],
   },
 ]
