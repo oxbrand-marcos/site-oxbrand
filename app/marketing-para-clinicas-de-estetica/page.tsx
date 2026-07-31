@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Marketing para clínicas de estética com método: atrair o paciente certo, encher a agenda e reduzir no-show com tráfego, landing page e CRM. Previsibilidade, não sazonalidade.'
+const DESC = 'Marketing para clínicas de estética: atrair o paciente certo, encher a agenda e reduzir no-show com tráfego, landing page e CRM.'
 
 export const metadata: Metadata = {
   title: 'Marketing para clínicas de estética | OxBrand',
