@@ -22,7 +22,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'automacao-de-marketing',
     metaTitle: 'Automação de marketing: o que é e como aplicar bem | OxBrand',
-    metaDescription: 'Automação de marketing não é robotizar o contato. Veja o que é, onde ela funciona de verdade (nutrição, CRM, follow-up) e como aplicar sem perder a relação. Guia OxBrand.',
+    metaDescription: 'Automação de marketing não é robotizar o contato. Veja o que é, onde funciona de verdade (nutrição, CRM, follow-up) e como aplicar.',
     title: 'Automação de marketing: o que é e como aplicar sem robotizar a relação',
     subtitle: 'O que é, onde a automação funciona de verdade (nutrição, CRM e follow-up) e como aplicar sem robotizar a relação. O guia de quem estrutura automação sobre um CRM organizado.',
     tag: 'CRM & Vendas',
@@ -68,7 +68,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'inbound-marketing-b2b',
     metaTitle: 'Inbound marketing B2B: como gerar demanda com método | OxBrand',
-    metaDescription: 'Inbound marketing B2B: como atrair e nutrir empresas com ciclo de compra longo e múltiplos decisores. O que muda em relação ao B2C e como aplicar. Guia OxBrand.',
+    metaDescription: 'Inbound marketing B2B: como atrair e nutrir empresas com ciclo de compra longo e múltiplos decisores. O que muda e como aplicar.',
     title: 'Inbound marketing B2B: como gerar demanda em vendas de ciclo longo',
     subtitle: 'Como atrair e nutrir empresas com ciclo de compra longo e múltiplos decisores, o que muda em relação ao B2C e como estruturar na prática. O guia de quem faz geração de demanda B2B.',
     tag: 'Estratégia & Gestão',
@@ -166,7 +166,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'geracao-de-leads-qualificados',
     metaTitle: 'Geração de leads qualificados: o guia para vender mais | OxBrand',
-    metaDescription: 'Geração de leads qualificados não é volume, é qualidade. O que é um lead qualificado, como gerar e como qualificar para o comercial vender mais. Guia da OxBrand.',
+    metaDescription: 'Geração de leads qualificados é qualidade, não volume. O que é um lead qualificado, como gerar e qualificar para o comercial vender.',
     title: 'Geração de leads qualificados: como parar de gerar contato e começar a gerar venda',
     subtitle: 'O que é um lead qualificado, como gerá-lo e como qualificá-lo para o comercial, MQL e SQL, os 4 pilares e a conta que importa. O guia de aquisição de quem entrega oportunidade, não volume.',
     tag: 'Tráfego & Aquisição',
@@ -1005,7 +1005,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'como-zerar-o-kommo-crm',
     metaTitle: 'Como zerar o Kommo CRM (e recomeçar certo) | OxBrand',
-    metaDescription: 'Como zerar o Kommo CRM sem perder o que importa: limpar leads, funis e automações e recomeçar com um funil que vende. Passo a passo de quem é Top 5% parceiro Kommo.',
+    metaDescription: 'Como zerar o Kommo CRM sem perder o que importa: limpar leads, funis e automações e recomeçar com um funil que vende. Passo a passo.',
     title: 'Como zerar o Kommo CRM (e recomeçar do jeito certo)',
     subtitle: 'O que apagar, o que preservar e como recomeçar com um funil que realmente vende. O passo a passo de quem reconstrói operações de CRM toda semana.',
     tag: 'CRM & Vendas',
@@ -1146,7 +1146,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'crm-integrado-ao-whatsapp',
     metaTitle: 'CRM integrado ao WhatsApp: pare de perder leads | OxBrand',
-    metaDescription: 'Como um CRM integrado ao WhatsApp (Kommo) organiza o atendimento, automatiza respostas e para de perder lead no meio da conversa. Guia da OxBrand, Top 5% Kommo no Brasil.',
+    metaDescription: 'Como um CRM integrado ao WhatsApp (Kommo) organiza o atendimento, automatiza respostas e para de perder lead no meio da conversa.',
     title: 'CRM integrado ao WhatsApp: como parar de perder leads no meio da conversa',
     subtitle: 'O WhatsApp virou o principal canal de vendas do Brasil e segue tratado como app de recado. Veja como um CRM integrado organiza o funil, automatiza a espera e para de perder lead.',
     tag: 'CRM & Vendas',
@@ -1270,7 +1270,7 @@ export const ARTICLES: Article[] = [
   {
     slug: 'o-que-e-inbound-marketing',
     metaTitle: 'O Que é Inbound Marketing? Guia Completo 2026 | OxBrand',
-    metaDescription: 'Entenda o que é inbound marketing, como funciona na prática, etapas, ferramentas, custos e prazos. Guia completo com exemplos reais para aplicar na sua empresa.',
+    metaDescription: 'Entenda o que é inbound marketing, como funciona na prática, etapas, ferramentas, custos e prazos. Guia completo com exemplos reais.',
     title: 'O Que é Inbound Marketing? Guia Completo 2026',
     subtitle: 'Atrair clientes por relevância, não por interrupção. Entenda as cinco etapas, a jornada de compra, ferramentas, custos e prazos do inbound, com exemplos reais para aplicar.',
     tag: 'Estratégia & Gestão',
