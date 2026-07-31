@@ -284,6 +284,33 @@ export function personSchema(opts: {
   }
 }
 
+export function caseReviewSchema(opts: {
+  client: string
+  reviewBody: string
+  slug: string
+  datePublished?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'Organization',
+      '@id': ORG_ID,
+      name: 'OxBrand',
+    },
+    author: { '@type': 'Organization', name: opts.client },
+    reviewBody: opts.reviewBody,
+    ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    url: `${BASE_URL}/nossos-clientes/${opts.slug}`,
+  }
+}
+
 export function jsonLd(schema: object) {
   return JSON.stringify(schema)
 }
