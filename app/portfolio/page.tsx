@@ -10,7 +10,7 @@ import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Portfólio OxBrand | Logotipos, Redes Sociais e Sites',
-  description: 'Uma seleção de 118 projetos de branding e presença digital entregues pela OxBrand. Logotipos, identidade visual, redes sociais e sites para mais de 450 marcas.',
+  description: 'Seleção de 118 projetos de branding e presença digital da OxBrand: logotipos, identidade visual, redes sociais e sites para +450 marcas.',
   ...pageOg({
     title: 'Portfólio OxBrand | Logotipos, Redes Sociais e Sites',
     description: 'Uma seleção de 118 projetos de branding e presença digital entregues pela OxBrand. Logotipos, identidade visual, redes sociais e sites para mais de 450 marcas.',
