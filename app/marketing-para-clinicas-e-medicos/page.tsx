@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Agência de marketing digital para clínicas e médicos: atrair pacientes com previsibilidade, dentro das regras do CFM. Método validado em +450 marcas. Diagnóstico gratuito.'
+const DESC = 'Marketing digital para clínicas e médicos: atrair pacientes com previsibilidade, dentro das regras do CFM. Validado em +450 marcas.'
 
 export const metadata: Metadata = {
   title: 'Marketing Digital para Clínicas e Médicos | OxBrand',
