@@ -7,8 +7,10 @@ import { YouTubeFacade } from '@/components/youtube-facade'
 import { ClientMarquee } from '@/components/client-marquee'
 import { jsonLd, breadcrumbSchema } from '@/lib/jsonld'
 import type { CaseStudy } from '@/lib/clientes'
+import { CASES } from '@/lib/clientes'
 
 export function CaseTemplate({ study }: { study: CaseStudy }) {
+  const outrosCases = CASES.filter((c) => c.published && c.slug !== study.slug).slice(0, 3)
   const hasVideo = !!study.videoId
   const bullets = study.bullets ?? []
   const areas = study.areas ?? []
@@ -166,6 +168,28 @@ export function CaseTemplate({ study }: { study: CaseStudy }) {
           <div className="max-w-3xl mx-auto px-6 flex flex-col gap-4">
             <span className="mono-tag text-black/40">Resumo do vídeo</span>
             <p className="text-black/70 leading-relaxed">{study.depoimentoResumo}</p>
+          </div>
+        </section>
+      ) : null}
+
+      {/* Outros cases */}
+      {outrosCases.length > 0 ? (
+        <section className="py-16 border-b border-border section-light">
+          <div className="max-w-6xl mx-auto px-6 flex flex-col gap-6">
+            <span className="mono-tag text-black/40">Outros cases</span>
+            <div className="grid sm:grid-cols-3 gap-4">
+              {outrosCases.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/nossos-clientes/${c.slug}`}
+                  className="group border border-black/10 bg-white p-6 flex flex-col gap-2 hover:border-primary transition-colors"
+                >
+                  <span className="mono-tag text-black/40">{c.segment}</span>
+                  <span className="text-lg font-bold text-black group-hover:text-primary transition-colors">{c.client}</span>
+                  <span className="mono-tag text-primary mt-2">Ver case &rarr;</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       ) : null}

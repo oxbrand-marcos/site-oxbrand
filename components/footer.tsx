@@ -125,6 +125,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
                   className="w-8 h-8 flex items-center justify-center rounded-sm border border-primary/20 bg-primary/10 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors"
                 >
                   {svg}
+                  <span className="sr-only">{label}</span>
                 </Link>
               ))}
             </div>

@@ -204,7 +204,7 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
               const isKommo = p.alt === 'Kommo Partner'
               const Wrapper = isKommo ? 'a' : 'div'
               const wrapperProps = isKommo
-                ? { href: 'https://www.kommo.com.br', target: '_blank', rel: 'noopener noreferrer' }
+                ? { href: 'https://www.kommo.com/br/', target: '_blank', rel: 'noopener noreferrer' }
                 : {}
               return (
                 <Wrapper

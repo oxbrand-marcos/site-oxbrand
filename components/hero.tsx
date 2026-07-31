@@ -74,7 +74,7 @@ export function Hero() {
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
         <Image
           src="/images/hero-clouds.png"
-          alt=""
+          alt="Céu com nuvens sobre o topo da página da OxBrand"
           fill
           className="object-cover opacity-20"
           priority
