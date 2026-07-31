@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Agência de marketing imobiliário: gere leads qualificados para lançamentos, imóveis e construtoras com método e CRM. Experiência real no setor. Diagnóstico gratuito.'
+const DESC = 'Marketing imobiliário: leads qualificados para lançamentos, imóveis e construtoras com método e CRM. Experiência real no setor.'
 
 export const metadata: Metadata = {
   title: 'Agência de Marketing Imobiliário e Construtoras | OxBrand',
