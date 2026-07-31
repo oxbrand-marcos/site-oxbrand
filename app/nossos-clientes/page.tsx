@@ -12,7 +12,7 @@ import { breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 
 export const metadata: Metadata = {
   title: 'Nossos Clientes | Cases de Sucesso, OxBrand',
-  description: 'Conheça as marcas que cresceram com a OxBrand. Mais de 450 marcas de todo o Brasil que confiam na nossa agência de marketing de performance em Mogi das Cruzes.',
+  description: 'Conheça marcas que cresceram com a OxBrand: +450 clientes de todo o Brasil que confiam na nossa agência de marketing de performance.',
   ...pageOg({
     title: 'Nossos Clientes · 450+ marcas que cresceram com a OxBrand',
     description: 'De construção civil a e-commerce, de clínicas a indústria. Empresas reais que estruturaram aquisição e passaram a crescer com previsibilidade.',
@@ -49,7 +49,7 @@ export default function ClientesPage() {
         />
 
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
-          <Image src="/images/hero-clouds.png" alt="" fill sizes="100vw" className="object-cover opacity-20" priority />
+          <Image src="/images/hero-clouds.png" alt="Céu com nuvens sobre o topo da página da OxBrand" fill sizes="100vw" className="object-cover opacity-20" priority />
 
           <div className="absolute -left-32 -top-10 w-[450px] h-[400px] rounded-full blur-3xl"
             style={{ background: 'radial-gradient(ellipse, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.05) 50%, transparent 75%)' }} />
