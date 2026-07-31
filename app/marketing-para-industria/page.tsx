@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { pageOg } from '@/lib/og'
 import { SolutionPageTemplate } from '@/components/solution-page-template'
 
-const DESC = 'Agência de marketing para indústria e empresas B2B: geração de demanda qualificada, ciclo de venda longo e ROI. Método validado em +450 marcas. Diagnóstico gratuito.'
+const DESC = 'Marketing para indústria e B2B: geração de demanda qualificada, ciclo de venda longo e ROI. Método validado em +450 marcas.'
 
 export const metadata: Metadata = {
   title: 'Marketing para Indústria e B2B com Método | OxBrand',
