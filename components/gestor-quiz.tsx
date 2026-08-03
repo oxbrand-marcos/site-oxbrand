@@ -134,6 +134,16 @@ export function GestorQuiz() {
     </h1>
   )
 
+  const pct = score / TOTAL
+  const verdict =
+    score >= 8
+      ? 'Excelente domínio técnico. Forte candidato para seguir na etapa presencial.'
+      : score >= 6
+      ? 'Bom conhecimento, com alguns pontos a reforçar. Vale aprofundar na conversa.'
+      : score >= 4
+      ? 'Conhecimento mediano. Avalie os erros com atenção antes de avançar.'
+      : 'Abaixo do esperado para o nível da vaga.'
+
   if (isResult) {
     return (
       <div className="w-full max-w-2xl mx-auto px-6 py-16 flex flex-col gap-10">
@@ -142,10 +152,11 @@ export function GestorQuiz() {
           <Title />
         </div>
 
-        <div className={`border px-6 py-6 flex flex-col items-center gap-1 text-center ${score >= 7 ? 'border-primary bg-primary/10' : 'border-border bg-card/30'}`}>
+        <div className={`border px-6 py-7 flex flex-col items-center gap-2 text-center ${score >= 7 ? 'border-primary bg-primary/10' : 'border-border bg-card/30'}`}>
           <span className="mono-tag text-muted-foreground/60">Resultado</span>
-          <span className="text-4xl font-bold text-foreground">{score} <span className="text-muted-foreground/60 text-2xl">/ {TOTAL}</span></span>
-          <span className="text-sm text-muted-foreground">corretas</span>
+          <span className="text-5xl font-bold text-foreground">{score} <span className="text-muted-foreground/60 text-2xl">/ {TOTAL}</span></span>
+          <p className="text-base font-medium text-foreground mt-1">Você acertou {score} de {TOTAL} questões ({Math.round((score / TOTAL) * 100)}%).</p>
+          <p className="text-sm text-muted-foreground max-w-md leading-relaxed">{verdict}</p>
         </div>
 
         <ol className="flex flex-col gap-5">
