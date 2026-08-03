@@ -16,7 +16,6 @@ const categoriesData = [
     label: 'Identidade Visual',
     items: [
       { slug: 'idv-anna-neg', alt: 'Anna Neg' },
-      { slug: 'idv-lm-assets', alt: 'LM Assets' },
       { slug: 'idv-rovinglass', alt: 'RovinGlass' },
       { slug: 'idv-talent', alt: 'Talent' },
       { slug: 'oxbrand-portfolio-lgotipo-cia-do-caminhao', alt: 'Cia do Caminhão' },
@@ -84,7 +83,6 @@ const categoriesData = [
       { slug: 'social-anna-neg', alt: 'Anna Neg' },
       { slug: 'social-comissao', alt: 'Comissão OAB Mogi' },
       { slug: 'social-consulting', alt: 'Consulting' },
-      { slug: 'social-lm-assets', alt: 'LM Assets' },
       { slug: 'social-rovinglass', alt: 'RovinGlass' },
       { slug: 'social-talent', alt: 'Talent' },
       { slug: 'oxbrand-portfolio-redes-sociais-agua-rasa', alt: 'Água Rasa' },
@@ -134,7 +132,6 @@ const categoriesData = [
       { slug: 'site-ncf-seguros', alt: 'NCF Seguros', videoId: null },
       { slug: 'site-comissao', alt: 'Comissão OAB Mogi', videoId: null },
       { slug: 'site-consulting', alt: 'Consulting', videoId: null },
-      { slug: 'site-lm-assets', alt: 'LM Assets', videoId: null },
       { slug: 'site-madu', alt: 'Madu', videoId: null },
       { slug: 'site-rovinglass', alt: 'RovinGlass', videoId: null },
       { slug: 'site-talent', alt: 'Talent', videoId: null },
