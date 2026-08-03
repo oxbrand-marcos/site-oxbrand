@@ -107,120 +107,145 @@ const QUESTIONS: Q[] = [
   },
 ]
 
-export function GestorQuiz() {
-  const [answers, setAnswers] = useState<Record<number, 'a' | 'b' | 'c'>>({})
-  const [submitted, setSubmitted] = useState(false)
+const TOTAL = QUESTIONS.length
 
-  const answeredCount = Object.keys(answers).length
-  const allAnswered = answeredCount === QUESTIONS.length
+export function GestorQuiz() {
+  const [step, setStep] = useState(0) // 0..TOTAL-1 = questões; TOTAL = resultado
+  const [answers, setAnswers] = useState<Record<number, 'a' | 'b' | 'c'>>({})
+
+  const isResult = step >= TOTAL
   const score = QUESTIONS.reduce((acc, q) => acc + (answers[q.n] === q.correct ? 1 : 0), 0)
 
   function pick(n: number, key: 'a' | 'b' | 'c') {
-    if (submitted) return
     setAnswers((prev) => ({ ...prev, [n]: key }))
   }
+  function goTop() { if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' }) }
+  function next() { setStep((s) => s + 1); goTop() }
+  function back() { setStep((s) => Math.max(s - 1, 0)); goTop() }
+  function reset() { setAnswers({}); setStep(0); goTop() }
 
-  function reset() {
-    setAnswers({})
-    setSubmitted(false)
-    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const Logo = () => (
+    <img src="/images/oxbrand-logo.webp" alt="OxBrand" className="h-8 w-auto mx-auto" />
+  )
+  const Title = () => (
+    <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight text-center">
+      Teste Técnico ·<br />
+      Gestor de Tráfego <span className="text-glow">(Google Ads)</span>
+    </h1>
+  )
 
-  return (
-    <div className="w-full max-w-3xl mx-auto px-6 py-16 flex flex-col gap-10">
-      {/* Cabeçalho */}
-      <header className="flex flex-col gap-4">
-        <div className="flex items-center justify-between">
-          <span className="font-bold text-lg tracking-tight text-foreground">Ox<span className="text-primary">Brand</span></span>
-          <span className="mono-tag text-primary/70">Teste técnico</span>
+  if (isResult) {
+    return (
+      <div className="w-full max-w-2xl mx-auto px-6 py-16 flex flex-col gap-10">
+        <div className="flex flex-col items-center gap-6">
+          <Logo />
+          <Title />
         </div>
-        <h1 className="text-3xl sm:text-4xl font-bold text-foreground leading-tight">
-          Teste Técnico · Gestor de Tráfego <span className="text-glow">(Google Ads)</span>
-        </h1>
-        <div className="border border-border bg-card/30 px-5 py-4">
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            <span className="text-foreground font-medium">Instruções:</span> você tem 15 minutos para responder. Seja direto. Marque uma alternativa por questão.
-          </p>
-        </div>
-      </header>
 
-      {/* Resultado */}
-      {submitted && (
-        <div className={`border px-6 py-5 flex items-center justify-between ${score >= 7 ? 'border-primary bg-primary/10' : 'border-border bg-card/30'}`}>
-          <div className="flex flex-col">
-            <span className="mono-tag text-muted-foreground/60">Resultado</span>
-            <span className="text-2xl font-bold text-foreground">{score} de {QUESTIONS.length} corretas</span>
-          </div>
-          <button onClick={reset} className="px-5 py-3 border border-border text-foreground text-xs font-bold tracking-widest uppercase hover:border-primary/60 transition-colors">
-            Refazer
-          </button>
+        <div className={`border px-6 py-6 flex flex-col items-center gap-1 text-center ${score >= 7 ? 'border-primary bg-primary/10' : 'border-border bg-card/30'}`}>
+          <span className="mono-tag text-muted-foreground/60">Resultado</span>
+          <span className="text-4xl font-bold text-foreground">{score} <span className="text-muted-foreground/60 text-2xl">/ {TOTAL}</span></span>
+          <span className="text-sm text-muted-foreground">corretas</span>
         </div>
-      )}
 
-      {/* Questões */}
-      <ol className="flex flex-col gap-8">
-        {QUESTIONS.map((q) => {
-          const chosen = answers[q.n]
-          return (
-            <li key={q.n} className="flex flex-col gap-4">
-              <div className="flex items-start gap-3">
-                <span className="mono-tag text-primary shrink-0 mt-1">{String(q.n).padStart(2, '0')}</span>
-                <p className="text-base font-medium text-foreground leading-relaxed">{q.q}</p>
-              </div>
-              <div className="flex flex-col gap-2 pl-1">
-                {q.options.map((o) => {
-                  const isChosen = chosen === o.key
-                  const isCorrect = o.key === q.correct
-                  let cls = 'border-border text-foreground/80 hover:border-primary/50 hover:text-foreground'
-                  if (submitted) {
-                    if (isCorrect) cls = 'border-green-600 bg-green-600/10 text-foreground'
-                    else if (isChosen) cls = 'border-red-600 bg-red-600/10 text-foreground'
-                    else cls = 'border-border text-muted-foreground/60'
-                  } else if (isChosen) {
-                    cls = 'border-primary bg-primary/15 text-foreground'
-                  }
-                  return (
-                    <button
-                      key={o.key}
-                      type="button"
-                      onClick={() => pick(q.n, o.key)}
-                      disabled={submitted}
-                      className={`text-left px-4 py-3 border text-sm leading-relaxed transition-colors flex gap-3 ${cls} ${submitted ? 'cursor-default' : 'cursor-pointer'}`}
-                    >
-                      <span className="font-mono font-bold uppercase shrink-0">{o.key})</span>
-                      <span>{o.text}</span>
-                      {submitted && isCorrect && <span className="ml-auto text-green-500 font-bold shrink-0">✓</span>}
-                    </button>
-                  )
-                })}
-              </div>
-            </li>
-          )
-        })}
-      </ol>
+        <ol className="flex flex-col gap-5">
+          {QUESTIONS.map((q) => {
+            const chosen = answers[q.n]
+            const ok = chosen === q.correct
+            const correctText = q.options.find((o) => o.key === q.correct)?.text
+            const chosenText = q.options.find((o) => o.key === chosen)?.text
+            return (
+              <li key={q.n} className={`border px-5 py-4 flex flex-col gap-2 ${ok ? 'border-green-700/50 bg-green-600/5' : 'border-red-700/50 bg-red-600/5'}`}>
+                <div className="flex items-start gap-2">
+                  <span className={`mono-tag shrink-0 mt-0.5 ${ok ? 'text-green-500' : 'text-red-500'}`}>{String(q.n).padStart(2, '0')} {ok ? '✓' : '✕'}</span>
+                  <p className="text-sm font-medium text-foreground leading-relaxed">{q.q}</p>
+                </div>
+                {!ok && <p className="text-xs text-red-400/90 pl-1"><span className="uppercase font-mono">Resposta: </span>{chosen ? `${chosen}) ${chosenText}` : 'em branco'}</p>}
+                <p className="text-xs text-green-400/90 pl-1"><span className="uppercase font-mono">Correta: </span>{q.correct}) {correctText}</p>
+              </li>
+            )
+          })}
+        </ol>
 
-      {/* Rodapé de ação */}
-      {!submitted ? (
-        <div className="flex flex-col gap-3 sticky bottom-0 bg-background/95 backdrop-blur py-4 border-t border-border">
-          <div className="flex items-center justify-between gap-4">
-            <span className="mono-tag text-muted-foreground/60">{answeredCount} de {QUESTIONS.length} respondidas</span>
-            <button
-              onClick={() => { setSubmitted(true); if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' }) }}
-              disabled={!allAnswered}
-              className="px-7 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              Ver resultado
-            </button>
-          </div>
-          {!allAnswered && <span className="text-[11px] text-muted-foreground/50 text-right">Responda todas as questões para ver o resultado.</span>}
-        </div>
-      ) : (
         <div className="flex justify-center">
           <button onClick={reset} className="px-7 py-3 border border-border text-foreground text-xs font-bold tracking-widest uppercase hover:border-primary/60 transition-colors">
             Refazer teste
           </button>
         </div>
-      )}
+      </div>
+    )
+  }
+
+  const q = QUESTIONS[step]
+  const chosen = answers[q.n]
+  const answered = !!chosen
+  const isLastQuestion = step === TOTAL - 1
+
+  return (
+    <div className="w-full max-w-2xl mx-auto px-6 py-16 flex flex-col gap-10 min-h-screen">
+      <header className="flex flex-col items-center gap-6">
+        <Logo />
+        <Title />
+        <div className="border border-border bg-card/30 px-5 py-3 w-full">
+          <p className="text-sm text-muted-foreground leading-relaxed text-center">
+            <span className="text-foreground font-medium">Instruções:</span> você tem 15 minutos. Seja direto. Uma alternativa por questão.
+          </p>
+        </div>
+      </header>
+
+      {/* Progresso */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <span className="mono-tag text-primary/70">Questão {step + 1} de {TOTAL}</span>
+          <span className="mono-tag text-muted-foreground/50">{Object.keys(answers).length} respondidas</span>
+        </div>
+        <div className="flex items-center gap-1">
+          {QUESTIONS.map((_, i) => (
+            <span key={i} className={`h-1 flex-1 rounded-full transition-colors ${i <= step ? 'bg-primary' : 'bg-border'}`} />
+          ))}
+        </div>
+      </div>
+
+      {/* Seção da questão */}
+      <div className="flex flex-col gap-5">
+        <div className="flex items-start gap-3">
+          <span className="mono-tag text-primary shrink-0 mt-1">{String(q.n).padStart(2, '0')}</span>
+          <p className="text-lg font-medium text-foreground leading-relaxed">{q.q}</p>
+        </div>
+        <div className="flex flex-col gap-2.5">
+          {q.options.map((o) => {
+            const isChosen = chosen === o.key
+            const cls = isChosen ? 'border-primary bg-primary/15 text-foreground' : 'border-border text-foreground/80 hover:border-primary/50 hover:text-foreground'
+            return (
+              <button
+                key={o.key}
+                type="button"
+                onClick={() => pick(q.n, o.key)}
+                className={`text-left px-4 py-3.5 border text-sm leading-relaxed transition-colors flex gap-3 cursor-pointer ${cls}`}
+              >
+                <span className="font-mono font-bold uppercase shrink-0">{o.key})</span>
+                <span>{o.text}</span>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* Navegação */}
+      <div className="flex items-center gap-3 mt-2">
+        {step > 0 && (
+          <button onClick={back} className="px-5 py-3 border border-border text-muted-foreground text-xs font-bold tracking-widest uppercase hover:border-primary/50 hover:text-foreground transition-colors">
+            Voltar
+          </button>
+        )}
+        <button
+          onClick={next}
+          disabled={!answered}
+          className="flex-1 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+        >
+          {isLastQuestion ? 'Ver resultado' : 'Continuar'}
+        </button>
+      </div>
     </div>
   )
 }
