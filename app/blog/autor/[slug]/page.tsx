@@ -131,6 +131,7 @@ export default async function AutorPage({ params }: { params: Promise<{ slug: st
                   <a key={s.label} href={s.href} target={s.href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener noreferrer" aria-label={s.label}
                     className="w-9 h-9 flex items-center justify-center rounded-sm border border-primary/25 bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
                     {s.icon}
+                    <span className="sr-only">{s.label}</span>
                   </a>
                 ))}
               </div>
