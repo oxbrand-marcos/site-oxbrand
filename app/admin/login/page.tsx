@@ -35,14 +35,9 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-sm flex flex-col gap-8">
 
         {/* Logo */}
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center">
-            <span className="text-white font-black text-lg">Ox</span>
-          </div>
-          <div className="text-center">
-            <p className="text-xs tracking-[0.2em] uppercase text-zinc-500 font-mono">OxBrand</p>
-            <h1 className="text-white font-bold text-xl mt-1">Área dos Redatores</h1>
-          </div>
+        <div className="flex flex-col items-center gap-4">
+          <Image src="/images/oxbrand-logo.webp" alt="OxBrand" width={150} height={35} className="h-9 w-auto" priority />
+          <h1 className="text-white font-bold text-xl text-center">Área dos redatores do blog</h1>
         </div>
 
         {/* Form */}
