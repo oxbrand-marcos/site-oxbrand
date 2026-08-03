@@ -1509,7 +1509,7 @@ export const ARTICLES: Article[] = [
 <p class="lead">Tráfego pago para advogados é o canal mais rápido para um escritório sair da dependência de indicação, e também o mais delicado de operar, porque a publicidade na advocacia tem regras que nenhum outro segmento tem.</p>
 <p>A advocacia vive um paradoxo: nunca houve tanta demanda jurídica pesquisada no Google, e a maioria dos escritórios ainda depende exclusivamente de indicação. O resultado é receita instável e crescimento fora de controle. O tráfego pago resolve o lado da previsibilidade, desde que respeite o Código de Ética da OAB e o Provimento 205/2021, que regulam o marketing jurídico. Anunciar sem dominar essa camada é arriscar o registro profissional para gerar leads.</p>
 <h2>O que a OAB permite no tráfego pago (e o que não permite)</h2>
-<p>Em linhas gerais, o <a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" target="_blank" rel="noopener">Provimento 205/2021</a> autoriza a publicidade na advocacia com caráter informativo e educativo, e veda a mercantilização. Na prática, para campanhas:</p>
+<p>Em linhas gerais, o <strong>Provimento 205/2021</strong> autoriza a publicidade na advocacia com caráter informativo e educativo, e veda a mercantilização. Na prática, para campanhas:</p>
 <p><strong>Permitido:</strong></p>
 <ul>
 <li>Anúncios com conteúdo informativo sobre áreas de atuação;</li>
