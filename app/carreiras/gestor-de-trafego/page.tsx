@@ -3,26 +3,21 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
-import { CareerForm } from '@/components/career-form'
+import { CareerFormGestor } from '@/components/career-form-gestor'
 
 export const metadata: Metadata = {
-  title: 'Vaga Gestor de Tráfego | Trabalhe na OxBrand, Mogi das Cruzes',
-  description: 'Vaga aberta para Gestor de Tráfego Pago na OxBrand. Meta, Google, performance orientada por dados em Mogi das Cruzes.',
+  title: 'Vaga Analista de Performance Jr. (Google Ads) | OxBrand Mogi',
+  description: 'Vaga de Analista de Performance Júnior (Google Ads) na OxBrand, Mogi das Cruzes. CLT híbrido, R$ 2.000 + benefícios. Experiência comprovada em Meta e Google Ads.',
 }
 
 const benefits = [
-  { title: 'Evolução', desc: 'Investimos em treinamentos e em sua evolução como profissional.' },
-  { title: 'Flexibilidade', desc: 'Horários e modelo de contratação flexíveis.' },
-  { title: 'Híbrido', desc: 'Modelo normalmente híbrido, respeitando o home office.' },
-  { title: 'Saudável', desc: 'Ambiente livre de pressões e toxicidade.' },
-  { title: 'Feedbacks', desc: 'Cultura do feedback praticada no dia a dia.' },
-  { title: 'Reuniões', desc: 'Ambiente colaborativo com membros home no Discord.' },
-  { title: 'Organização', desc: 'Softwares modernos para gestão de tarefas e demandas.' },
-  { title: 'Hierarquia', desc: 'Hierarquia bem definida, sem report excessivo.' },
-  { title: 'Recompensas', desc: 'Premiações por desempenho e evolução.' },
-  { title: 'Benefícios', desc: 'Plano odontológico, plano médico e Wellhub (Gympass).' },
-  { title: 'PDI', desc: 'Plano de desenvolvimento individual para sua carreira.' },
-  { title: 'Segurança', desc: 'Ambiente seguro em condomínio protegido.' },
+  { title: 'Remuneração', desc: 'R$ 2.000,00 mensais em regime CLT exclusivo. Valor de entrada da vaga.' },
+  { title: 'Ajuda de custo', desc: 'R$ 200,00 de ajuda de custo.' },
+  { title: 'Wellhub', desc: 'Acesso ao Wellhub (Gympass) para cuidar do corpo e da mente.' },
+  { title: 'Vale-transporte', desc: 'Vale-transporte para os dias presenciais.' },
+  { title: 'Plano Odontológico', desc: 'Plano odontológico incluso.' },
+  { title: 'Estrutura', desc: 'Espaço próprio para refeições (copa) no escritório.' },
+  { title: 'Crescimento', desc: 'Ambiente de aprendizado contínuo, com autonomia e crescimento acelerado.' },
 ]
 
 export default function VagaGestorTrafego() {
@@ -49,12 +44,12 @@ export default function VagaGestorTrafego() {
             <p className="mono-tag text-primary/60 tracking-[0.2em]">be a oxmaker</p>
 
             <h1 className="text-[clamp(2.4rem,6vw,5rem)] font-bold leading-[0.92] tracking-tight text-foreground text-balance">
-              Vagas para<br />
-              <span className="text-glow">Gestor de Tráfego</span>
+              Analista de Performance<br />
+              <span className="text-glow">Júnior · Google Ads</span>
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl text-balance">
-              Buscamos um Gestor de Tráfego Pago para trabalhar com campanhas de alta performance em Meta Ads e Google Ads. Alguém que vive de dados, otimiza sem parar e sabe que cada real investido precisa gerar retorno.
+              Vaga para nível Júnior COM experiência comprovada em tráfego pago (Meta e Google Ads). Não é para iniciantes. Você vai executar com excelência: gerir até 20 contas e um orçamento de R$ 40 mil/mês com meta de ROAS 3x. A estratégia é do nosso time Sênior; o domínio pleno da ferramenta e a execução são seus.
             </p>
 
             <Link
@@ -80,12 +75,12 @@ export default function VagaGestorTrafego() {
                   <span className="mono-tag text-muted-foreground/60">O que buscamos</span>
                   <h2 className="text-2xl font-bold text-foreground">Perfil do candidato</h2>
                   {[
-                    'Experiência comprovada em gestão de campanhas Meta Ads e Google Ads',
-                    'Domínio em leitura e interpretação de métricas de performance',
-                    'Capacidade de estruturar funis de conversão e otimizar CPA',
-                    'Conhecimento em pixels, rastreamento e análise de dados (GA4, GTM)',
-                    'Habilidade em testes A/B de criativos, segmentações e ofertas',
-                    'Proatividade, autonomia e compromisso com resultados reais',
+                    'Experiência comprovada em Meta Ads (Facebook/Instagram) e Google Ads. Não é vaga para iniciantes.',
+                    'Morar em Mogi das Cruzes ou região próxima (regime híbrido, com dias presenciais).',
+                    'Notebook próprio de alto desempenho para o modelo híbrido.',
+                    'Domínio pleno de ferramenta de gestão de projetos. A nossa é o ClickUp.',
+                    'Leitura afiada de métricas de aquisição, CPA, ROAS e conversão.',
+                    'Excelente comunicação e postura proativa.',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 border-b border-border/50 pb-3">
                       <span className="text-primary mt-0.5 shrink-0">→</span>
@@ -97,11 +92,11 @@ export default function VagaGestorTrafego() {
                 <div className="flex flex-col gap-4">
                   <span className="mono-tag text-muted-foreground/60">Responsabilidades</span>
                   {[
-                    'Planejamento e execução de campanhas pagas em Meta e Google',
-                    'Otimização contínua de campanhas com foco em ROAS e CPA',
-                    'Elaboração de relatórios semanais e mensais com insights acionáveis',
-                    'Alinhamento com o time de conteúdo para criativos de alta performance',
-                    'Acompanhamento de novidades e atualizações das plataformas de mídia',
+                    'Execução operacional hands-on das campanhas, do início ao resultado.',
+                    'Atuação simultânea em um portfólio de até 20 contas de clientes.',
+                    'Gestão de um orçamento mensal de R$ 40 mil, com meta de ROAS 3x para clientes B2B e e-commerce.',
+                    'Segmentação e otimização contínua das contas.',
+                    'Comunicação precisa e atualização constante do ClickUp. A estratégia principal é do time Sênior; a excelência na execução é sua.',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 border-b border-border/50 pb-3">
                       <span className="text-primary mt-0.5 shrink-0">✔</span>
@@ -113,11 +108,11 @@ export default function VagaGestorTrafego() {
 
               {/* Formulário candidatura */}
               <div className="flex flex-col gap-6 h-fit">
-                <CareerForm vaga="Gestor de Tráfego Pago" />
+                <CareerFormGestor vaga="Analista de Performance Júnior (Google Ads)" />
                 <div className="flex flex-col gap-3 border border-border p-6 bg-card/30">
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Modelo</span>
-                    <span className="text-foreground font-medium">Híbrido</span>
+                    <span className="text-foreground font-medium">Híbrido · CLT</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Local</span>
@@ -125,7 +120,7 @@ export default function VagaGestorTrafego() {
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Área</span>
-                    <span className="text-foreground font-medium">Performance & Tráfego</span>
+                    <span className="text-foreground font-medium text-right">Performance<br /><span className="text-xs text-muted-foreground font-normal">R$ 2.000 + benefícios</span></span>
                   </div>
                 </div>
               </div>
@@ -161,7 +156,7 @@ export default function VagaGestorTrafego() {
             <div className="grid sm:grid-cols-2 gap-px bg-black/10 border border-black/10">
               <Link href="/carreiras/social-media" className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
                 <span className="mono-tag text-black/40 group-hover:text-primary/60 transition-colors">Vaga</span>
-                <span className="text-xl font-bold text-black">Social Media Estratégico</span>
+                <span className="text-xl font-bold text-black">Arquiteto(a) de Conteúdo (Social Media Jr.)</span>
                 <span className="mono-tag text-muted-foreground/50 mt-2 group-hover:text-primary/60 transition-colors">Ver vaga ↗</span>
               </Link>
               <Link href="/carreiras-em-marketing-digital" className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
