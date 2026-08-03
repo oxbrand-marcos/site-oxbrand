@@ -3,26 +3,21 @@ import Link from 'next/link'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
-import { CareerForm } from '@/components/career-form'
+import { CareerFormSocial } from '@/components/career-form-social'
 
 export const metadata: Metadata = {
-  title: 'Vaga Social Media Estratégico | Time OxBrand, Mogi das Cruzes',
-  description: 'Vaga aberta para Social Media Estratégico na OxBrand. Faça parte de um time de performance orientado por dados em Mogi das Cruzes.',
+  title: 'Vaga Arquiteto de Conteúdo (Social Media Jr.) | OxBrand Mogi',
+  description: 'Vaga de Arquiteto(a) de Conteúdo (Social Media Júnior) na OxBrand, em Mogi das Cruzes. Time de performance, mentoria real e trilha para Coordenação.',
 }
 
 const benefits = [
-  { title: 'Evolução', desc: 'Investimos em treinamentos e em sua evolução como profissional.' },
-  { title: 'Flexibilidade', desc: 'Horários e modelo de contratação flexíveis.' },
-  { title: 'Híbrido', desc: 'Modelo normalmente híbrido, respeitando o home office.' },
-  { title: 'Saudável', desc: 'Ambiente livre de pressões e toxicidade.' },
-  { title: 'Feedbacks', desc: 'Cultura do feedback praticada no dia a dia.' },
-  { title: 'Reuniões', desc: 'Ambiente colaborativo com membros home no Discord.' },
-  { title: 'Organização', desc: 'Softwares modernos para gestão de tarefas e demandas.' },
-  { title: 'Hierarquia', desc: 'Hierarquia bem definida, sem report excessivo.' },
-  { title: 'Recompensas', desc: 'Premiações por desempenho e evolução.' },
-  { title: 'Benefícios', desc: 'Plano odontológico, plano médico e Wellhub (Gympass).' },
-  { title: 'PDI', desc: 'Plano de desenvolvimento individual para sua carreira.' },
-  { title: 'Segurança', desc: 'Ambiente seguro em condomínio protegido.' },
+  { title: 'Remuneração inicial', desc: 'R$ 2.000,00 (CLT). Valor de entrada para o período de aculturação e treinamento.' },
+  { title: 'Aposta de carreira', desc: 'O objetivo real é te levar à Coordenação da área, com revisão salarial proporcional à responsabilidade assumida.' },
+  { title: 'Cursos e mentoria', desc: 'Mentoria direta em Performance e cursos à disposição de quem toma a frente do próprio crescimento.' },
+  { title: 'Ajuda de custo', desc: 'R$ 200,00 de ajuda de custo.' },
+  { title: 'Wellhub', desc: 'Acesso ao Wellhub (Gympass) para cuidar do corpo e da mente.' },
+  { title: 'Plano Odontológico', desc: 'Plano odontológico incluso.' },
+  { title: 'Vale-transporte', desc: 'VT sem desconto em folha.' },
 ]
 
 export default function VagaSocialMediaPage() {
@@ -49,12 +44,12 @@ export default function VagaSocialMediaPage() {
             <p className="mono-tag text-primary/60 tracking-[0.2em]">be a oxmaker</p>
 
             <h1 className="text-[clamp(2.4rem,6vw,5rem)] font-bold leading-[0.92] tracking-tight text-foreground text-balance">
-              Vagas para<br />
-              <span className="text-glow">Social Media</span>
+              Arquiteto(a) de Conteúdo<br />
+              <span className="text-glow">Social Media Júnior</span>
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl text-balance">
-              Buscamos um profissional estratégico de Social Media para integrar o time OxBrand em Mogi das Cruzes. Alguém que une criatividade com análise de dados e entende que conteúdo existe para gerar resultado.
+              A OxBrand não está procurando alguém para \"subir posts\". Buscamos alguém comprometido, que corre atrás em vez de esperar mandarem. No início você passa por treinamento e aculturação; depois, curso, especialista e mentoria em Performance ficam à disposição, e quem evolui é quem toma a frente e usa por conta própria.
             </p>
 
             <Link
@@ -79,13 +74,13 @@ export default function VagaSocialMediaPage() {
                 <div className="flex flex-col gap-4">
                   <span className="mono-tag text-muted-foreground/60">O que buscamos</span>
                   <h2 className="text-2xl font-bold text-foreground">Perfil do candidato</h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed">Se você precisa de alguém puxando a sua orelha no dia a dia, essa vaga não é pra você. Você é a pessoa certa se:</p>
                   {[
-                    'Experiência comprovada com gestão de redes sociais para marcas',
-                    'Domínio em criação de conteúdo estratégico e posicionamento de marca',
-                    'Capacidade analítica para interpretar métricas e ajustar estratégias',
-                    'Conhecimento em ferramentas de agendamento e monitoramento',
-                    'Habilidade em copywriting e storytelling para diferentes formatos',
-                    'Proatividade, autonomia e senso de dono sobre os resultados',
+                    'Já tem experiência prática com conteúdo e redes sociais. Não estamos buscando quem está começando agora.',
+                    'Tem senso de urgência de verdade: antecipa o problema, não espera o briefing cair no colo.',
+                    'Depois do onboarding, usa os recursos da empresa (cursos, especialistas, mentoria) por iniciativa própria.',
+                    'Se comunica bem com o time e também puxando conversa de vendas e de negócio.',
+                    'Quer sair do operacional e aprender a olhar métrica de negócio, não métrica de vaidade.',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 border-b border-border/50 pb-3">
                       <span className="text-primary mt-0.5 shrink-0">→</span>
@@ -95,13 +90,11 @@ export default function VagaSocialMediaPage() {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                  <span className="mono-tag text-muted-foreground/60">Responsabilidades</span>
+                  <span className="mono-tag text-muted-foreground/60">Pré-requisitos</span>
                   {[
-                    'Planejamento e execução do calendário editorial de clientes',
-                    'Produção de conteúdo alinhado ao posicionamento de cada marca',
-                    'Monitoramento de métricas e elaboração de relatórios de desempenho',
-                    'Alinhamento com o time de tráfego para campanhas integradas',
-                    'Gestão de relacionamento e engajamento nas redes sociais',
+                    'Experiência prévia com conteúdo e redes sociais.',
+                    'Residir em Mogi das Cruzes.',
+                    'Notebook próprio para os dias de home office.',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-3 border-b border-border/50 pb-3">
                       <span className="text-primary mt-0.5 shrink-0">✔</span>
@@ -113,7 +106,7 @@ export default function VagaSocialMediaPage() {
 
               {/* Formulário candidatura */}
               <div className="flex flex-col gap-6 h-fit">
-                <CareerForm vaga="Social Media Estratégico" />
+                <CareerFormSocial vaga="Arquiteto(a) de Conteúdo (Social Media Jr.)" />
                 <div className="flex flex-col gap-3 border border-border p-6 bg-card/30">
                   <div className="flex items-center justify-between text-sm">
                     <span className="mono-tag text-muted-foreground/50">Modelo</span>
