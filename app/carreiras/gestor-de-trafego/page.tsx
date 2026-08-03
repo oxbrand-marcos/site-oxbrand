@@ -7,7 +7,7 @@ import { CareerFormGestor } from '@/components/career-form-gestor'
 
 export const metadata: Metadata = {
   title: 'Vaga Analista de Performance Jr. (Google Ads) | OxBrand Mogi',
-  description: 'Vaga de Analista de Performance Júnior (Google Ads) na OxBrand, Mogi das Cruzes. CLT híbrido, R$ 2.000 + benefícios. Experiência comprovada em Meta e Google Ads.',
+  description: 'Vaga de Analista de Performance Júnior (Google Ads) na OxBrand, Mogi das Cruzes. CLT híbrido, R$ 2.000 + benefícios. Experiência em Meta e Google Ads.',
 }
 
 const benefits = [
