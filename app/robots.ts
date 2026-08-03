@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin/', '/api/', '/obrigado'],
+        disallow: ['/admin/', '/api/', '/obrigado', '/teste-gestor'],
       },
     ],
     sitemap: 'https://www.oxbrand.com.br/sitemap.xml',
