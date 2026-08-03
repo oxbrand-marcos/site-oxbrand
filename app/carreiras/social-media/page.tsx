@@ -49,7 +49,7 @@ export default function VagaSocialMediaPage() {
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl text-balance">
-              A OxBrand não está procurando alguém para \"subir posts\". Buscamos alguém comprometido, que corre atrás em vez de esperar mandarem. No início você passa por treinamento e aculturação; depois, curso, especialista e mentoria em Performance ficam à disposição, e quem evolui é quem toma a frente e usa por conta própria.
+              A OxBrand não está procurando alguém para “subir posts”. Buscamos alguém comprometido, que corre atrás em vez de esperar mandarem. No início você passa por treinamento e aculturação; depois, curso, especialista e mentoria em Performance ficam à disposição, e quem evolui é quem toma a frente e usa por conta própria.
             </p>
 
             <Link
