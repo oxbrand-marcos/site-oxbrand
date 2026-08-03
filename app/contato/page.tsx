@@ -181,6 +181,7 @@ export default function ContatoPage() {
                       className="w-9 h-9 flex items-center justify-center rounded-sm border border-primary/20 bg-primary/10 text-primary hover:bg-primary hover:text-white hover:border-primary transition-colors"
                     >
                       {svg}
+                      <span className="sr-only">{label}</span>
                     </a>
                   ))}
                 </div>
