@@ -36,7 +36,8 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/marketing-para-clinicas-de-estetica`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/trafego-pago-com-previsibilidade`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/blog/autor`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-  ...PROFILE_AUTHORS.map((a) => ({ url: `${BASE}/blog/autor/${a.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 })),
+  // Autores 'finos' recebem noindex (ver pagina de autor) -> ficam fora do sitemap
+  ...PROFILE_AUTHORS.filter((a) => !['joane-guimaraes', 'maria-clara', 'beatriz-soares', 'gabriel-figueiredo'].includes(a.slug)).map((a) => ({ url: `${BASE}/blog/autor/${a.slug}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.5 })),
   { url: `${BASE}/politica-de-privacidade`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   { url: `${BASE}/termos-e-condicoes`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
 ]
