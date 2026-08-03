@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { getRecaptchaToken } from '@/lib/recaptcha-client'
 
 type Q = { n: number; q: string; options: { key: 'a' | 'b' | 'c'; text: string }[]; correct: 'a' | 'b' | 'c' }
 
@@ -112,17 +113,66 @@ const TOTAL = QUESTIONS.length
 export function GestorQuiz() {
   const [step, setStep] = useState(0) // 0..TOTAL-1 = questões; TOTAL = resultado
   const [answers, setAnswers] = useState<Record<number, 'a' | 'b' | 'c'>>({})
+  const [emailStatus, setEmailStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
 
   const isResult = step >= TOTAL
   const score = QUESTIONS.reduce((acc, q) => acc + (answers[q.n] === q.correct ? 1 : 0), 0)
+  const percent = Math.round((score / TOTAL) * 100)
+  const verdict =
+    score >= 8
+      ? 'Excelente domínio técnico. Forte candidato para seguir na etapa presencial.'
+      : score >= 6
+      ? 'Bom conhecimento, com alguns pontos a reforçar. Vale aprofundar na conversa.'
+      : score >= 4
+      ? 'Conhecimento mediano. Avalie os erros com atenção antes de avançar.'
+      : 'Abaixo do esperado para o nível da vaga.'
 
   function pick(n: number, key: 'a' | 'b' | 'c') {
+    if (isResult) return
     setAnswers((prev) => ({ ...prev, [n]: key }))
   }
   function goTop() { if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' }) }
   function next() { setStep((s) => s + 1); goTop() }
   function back() { setStep((s) => Math.max(s - 1, 0)); goTop() }
-  function reset() { setAnswers({}); setStep(0); goTop() }
+
+  async function submitResult() {
+    if (emailStatus !== 'idle') return
+    setEmailStatus('sending')
+    setStep(TOTAL)
+    goTop()
+    try {
+      let token = ''
+      try { token = await getRecaptchaToken('teste_gestor') } catch { /* segue sem token */ }
+      const payload = {
+        score,
+        total: TOTAL,
+        percent,
+        verdict,
+        answers: QUESTIONS.map((q) => {
+          const chosen = answers[q.n]
+          return {
+            n: q.n,
+            q: q.q,
+            chosen: chosen ?? '',
+            chosenText: q.options.find((o) => o.key === chosen)?.text ?? '',
+            correct: q.correct,
+            correctText: q.options.find((o) => o.key === q.correct)?.text ?? '',
+            ok: chosen === q.correct,
+          }
+        }),
+        _recaptcha: token,
+      }
+      const res = await fetch('/api/teste-gestor', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const data = await res.json().catch(() => ({ ok: false }))
+      setEmailStatus(data.ok ? 'sent' : 'error')
+    } catch {
+      setEmailStatus('error')
+    }
+  }
 
   const Logo = () => (
     <img src="/images/oxbrand-logo.webp" alt="OxBrand" className="h-8 w-auto mx-auto" />
@@ -133,16 +183,6 @@ export function GestorQuiz() {
       Gestor de Tráfego <span className="text-glow">(Google Ads)</span>
     </h1>
   )
-
-  const pct = score / TOTAL
-  const verdict =
-    score >= 8
-      ? 'Excelente domínio técnico. Forte candidato para seguir na etapa presencial.'
-      : score >= 6
-      ? 'Bom conhecimento, com alguns pontos a reforçar. Vale aprofundar na conversa.'
-      : score >= 4
-      ? 'Conhecimento mediano. Avalie os erros com atenção antes de avançar.'
-      : 'Abaixo do esperado para o nível da vaga.'
 
   if (isResult) {
     return (
@@ -155,7 +195,7 @@ export function GestorQuiz() {
         <div className={`border px-6 py-7 flex flex-col items-center gap-2 text-center ${score >= 7 ? 'border-primary bg-primary/10' : 'border-border bg-card/30'}`}>
           <span className="mono-tag text-muted-foreground/60">Resultado</span>
           <span className="text-5xl font-bold text-foreground">{score} <span className="text-muted-foreground/60 text-2xl">/ {TOTAL}</span></span>
-          <p className="text-base font-medium text-foreground mt-1">Você acertou {score} de {TOTAL} questões ({Math.round((score / TOTAL) * 100)}%).</p>
+          <p className="text-base font-medium text-foreground mt-1">Você acertou {score} de {TOTAL} questões ({percent}%).</p>
           <p className="text-sm text-muted-foreground max-w-md leading-relaxed">{verdict}</p>
         </div>
 
@@ -179,9 +219,15 @@ export function GestorQuiz() {
         </ol>
 
         <div className="flex justify-center">
-          <button onClick={reset} className="px-7 py-3 border border-border text-foreground text-xs font-bold tracking-widest uppercase hover:border-primary/60 transition-colors">
-            Refazer teste
-          </button>
+          <span className="mono-tag text-center text-muted-foreground/70">
+            {emailStatus === 'sending'
+              ? 'Enviando resultado à OxBrand...'
+              : emailStatus === 'sent'
+              ? 'Resultado registrado e enviado à OxBrand.'
+              : emailStatus === 'error'
+              ? 'Resultado registrado. (O envio automático por e-mail falhou.)'
+              : 'Resultado registrado.'}
+          </span>
         </div>
       </div>
     )
@@ -250,7 +296,7 @@ export function GestorQuiz() {
           </button>
         )}
         <button
-          onClick={next}
+          onClick={isLastQuestion ? submitResult : next}
           disabled={!answered}
           className="flex-1 px-6 py-3 bg-primary text-primary-foreground text-xs font-bold tracking-widest uppercase hover:bg-primary/85 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
