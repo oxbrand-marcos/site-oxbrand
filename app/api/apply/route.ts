@@ -42,7 +42,7 @@ async function verifyRecaptcha(secret: string, token: string | undefined, req: N
   }
 }
 
-function buildHtml(vaga: string, fields: Record<string, string>, curriculo: string, pageUrl: string, dataHora: string): string {
+function buildHtml(vaga: string, fields: Record<string, string>, curriculo: string | null, pageUrl: string, dataHora: string): string {
   const rows = Object.entries(fields)
     .filter(([, v]) => v)
     .map(([k, v]) => {
@@ -74,10 +74,10 @@ function buildHtml(vaga: string, fields: Record<string, string>, curriculo: stri
     </div>
     <div style="padding:28px 32px">
       <table style="width:100%;border-collapse:collapse">${rows}</table>
-      <div style="margin-top:20px;padding:14px 16px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:6px">
+      ${curriculo ? `<div style="margin-top:20px;padding:14px 16px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:6px">
         <span style="font-family:monospace;font-size:12px;font-weight:600;color:#6b21a8;text-transform:uppercase;letter-spacing:1px">Curriculo</span>
         <span style="font-size:14px;color:#111827;margin-left:10px">${esc(curriculo)} (anexo neste e-mail)</span>
-      </div>
+      </div>` : ''}
     </div>
     <div style="padding:16px 32px;background:#f9fafb;border-top:1px solid #e5e7eb">
       <p style="margin:0;font-size:12px;color:#6b7280;line-height:1.6">Candidatura enviada pelo Site da OxBrand no link ${linkHtml} em ${esc(dataHora)}</p>
@@ -95,25 +95,23 @@ export async function POST(req: NextRequest) {
     const nome = String(formData.get('nome') || '').trim()
     const email = String(formData.get('email') || '').trim()
     const telefone = String(formData.get('telefone') || '').trim()
-    const nascimento = String(formData.get('nascimento') || '').trim()
-    const descricao = String(formData.get('descricao') || '').trim()
-    const linkedin = String(formData.get('linkedin') || '').trim()
-    const instagram = String(formData.get('instagram') || '').trim()
     const pageUrl = String(formData.get('_pageUrl') || '') || req.headers.get('referer') || ''
     const recaptcha = String(formData.get('_recaptcha') || '')
     const file = formData.get('curriculo') as File | null
 
-    if (!nome || !email || !telefone || !nascimento || !descricao || !linkedin || !instagram) {
-      return NextResponse.json({ ok: false, error: 'Preencha todos os campos obrigatorios.' }, { status: 400 })
+    if (!nome || !email || !telefone) {
+      return NextResponse.json({ ok: false, error: 'Preencha ao menos nome, e-mail e WhatsApp.' }, { status: 400 })
     }
-    if (!file || typeof file === 'string' || file.size === 0) {
-      return NextResponse.json({ ok: false, error: 'Anexe o seu curriculo (PDF, DOC ou DOCX).' }, { status: 400 })
-    }
-    if (!ALLOWED_EXT.test(file.name)) {
-      return NextResponse.json({ ok: false, error: 'Formato invalido. Envie PDF, DOC ou DOCX.' }, { status: 400 })
-    }
-    if (file.size > MAX_FILE_BYTES) {
-      return NextResponse.json({ ok: false, error: 'Arquivo muito grande. O limite e 4MB.' }, { status: 400 })
+
+    // Curriculo e opcional; valida apenas se enviado.
+    const hasFile = !!file && typeof file !== 'string' && file.size > 0
+    if (hasFile) {
+      if (!ALLOWED_EXT.test((file as File).name)) {
+        return NextResponse.json({ ok: false, error: 'Formato invalido. Envie PDF, DOC ou DOCX.' }, { status: 400 })
+      }
+      if ((file as File).size > MAX_FILE_BYTES) {
+        return NextResponse.json({ ok: false, error: 'Arquivo muito grande. O limite e 4MB.' }, { status: 400 })
+      }
     }
 
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
@@ -124,26 +122,38 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer())
     const dataHora = new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
 
-    const fields: Record<string, string> = {
-      Nome: nome,
-      Telefone: telefone,
-      'E-mail': email,
-      'Data de nascimento': nascimento,
-      'Descricao da candidatura': descricao,
-      LinkedIn: linkedin,
-      Instagram: instagram,
+    // Rotulos amigaveis para chaves conhecidas; demais chaves entram como vieram (na ordem do formulario).
+    const KNOWN: Record<string, string> = {
+      nome: 'Nome',
+      telefone: 'WhatsApp',
+      email: 'E-mail',
+      nascimento: 'Data de nascimento',
+      descricao: 'Descricao da candidatura',
+      linkedin: 'LinkedIn',
+      instagram: 'Instagram',
     }
+    const fields: Record<string, string> = {}
+    for (const [k, v] of formData.entries()) {
+      if (k.startsWith('_') || k === 'vaga' || k === 'curriculo') continue
+      if (typeof v !== 'string') continue
+      const val = v.trim()
+      if (!val) continue
+      fields[KNOWN[k] ?? k] = val
+    }
+
+    const attachments = hasFile
+      ? [{ filename: (file as File).name, content: Buffer.from(await (file as File).arrayBuffer()) }]
+      : undefined
 
     const { error } = await resend.emails.send({
       from: FROM,
       to: TO,
       replyTo: email,
       subject: `Candidatura para ${vaga}`,
-      html: buildHtml(vaga, fields, file.name, pageUrl, dataHora),
-      attachments: [{ filename: file.name, content: buffer }],
+      html: buildHtml(vaga, fields, hasFile ? (file as File).name : null, pageUrl, dataHora),
+      ...(attachments ? { attachments } : {}),
     })
 
     if (error) {
