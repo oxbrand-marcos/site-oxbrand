@@ -28,50 +28,63 @@ const STEPS: Step[] = [
   {
     tag: 'Bloco 1',
     title: 'Basico',
-    intro:
-      'Antes de comecar: aqui na OxBrand gostamos de organizacao e, para isso, usamos o ClickUp como nosso sistema de gestao operacional. E nele que organizamos tarefas, prazos e entregas do dia a dia. Nada de tarefas perdidas no WhatsApp.',
     fields: [
       { key: 'nome', label: 'Nome completo', type: 'text', placeholder: 'Nome e sobrenome' },
       { key: 'telefone', label: 'WhatsApp com DDD', type: 'tel' },
       { key: 'email', label: 'E-mail', type: 'email', placeholder: 'seu@email.com' },
       { key: 'nascimento', label: 'Data de nascimento', type: 'date' },
-      { key: 'Reside em Mogi das Cruzes', label: 'Reside em Mogi das Cruzes?', type: 'radio', options: ['Sim', 'Nao'] },
-      { key: 'Notebook proprio para home office', label: 'Possui notebook proprio disponivel para os dias de home office?', type: 'radio', options: ['Sim', 'Nao'] },
+      { key: 'Cidade e bairro', label: 'Qual a sua cidade e bairro?', type: 'text', placeholder: 'Cidade e bairro' },
       { key: 'LinkedIn', label: 'Perfil no LinkedIn', type: 'text', placeholder: 'Link ou @ do seu LinkedIn' },
       { key: 'Instagram', label: 'Perfil no Instagram', type: 'text', placeholder: '@ do seu Instagram' },
     ],
   },
   {
     tag: 'Bloco 2',
-    title: 'Experiencia',
+    title: 'Fit e compromisso',
+    intro:
+      'Antes de comecar: aqui na OxBrand gostamos de organizacao e usamos o ClickUp como nosso sistema de gestao operacional (tarefas, prazos e entregas do dia a dia). Esta vaga e para nivel Junior COM experiencia comprovada em trafego pago. Nao e para iniciantes. Esta etapa leva de 5 a 10 minutos e pede empenho: respostas genericas ou vagas sao desclassificadas.',
     fields: [
-      { key: 'Portfolio ou melhores trabalhos', label: 'Link do seu portfolio ou de 2-3 trabalhos que voce considera seus melhores (Instagram, Behance, Drive, o que for)', type: 'text', placeholder: 'Cole o link aqui' },
-      { key: 'Tempo com conteudo/redes sociais', label: 'Ha quanto tempo trabalha com conteudo/redes sociais?', type: 'text', placeholder: 'Ex.: 2 anos' },
-      { key: 'Resultado gerado com conteudo', label: 'Conte um resultado (nao likes/seguidores) que voce ja gerou com conteudo: qual era o problema e o que voce fez', type: 'textarea' },
+      { key: 'Tem experiencia e se compromete com a atencao necessaria', label: 'Voce tem experiencia comprovada em trafego pago e se compromete a dedicar a atencao necessaria as proximas etapas?', type: 'radio', options: ['Sim', 'Nao'] },
+      { key: 'Regime CLT/hibrido e faixa salarial alinhados', label: 'O regime CLT, hibrido e a faixa de R$ 2.000 + beneficios estao alinhados com suas expectativas?', type: 'radio', options: ['Sim', 'Nao'] },
+      { key: 'Confortavel com alto volume e orcamento (ROAS 3x)', label: 'Voce se sente confortavel e motivado por gerir ate 20 contas e um orcamento de R$ 40 mil/mes com meta de ROAS 3x?', type: 'radio', options: ['Sim', 'Nao'] },
+      { key: 'Atende a todos os requisitos obrigatorios', label: 'Voce atende OBRIGATORIAMENTE a todos os requisitos (morar em Mogi das Cruzes ou regiao, dominio de Meta e Google Ads, notebook proprio)?', type: 'radio', options: ['Sim', 'Nao'] },
     ],
   },
   {
     tag: 'Bloco 3',
-    title: 'Senso de urgencia e proatividade',
+    title: 'Motivacao',
     fields: [
-      { key: 'Percebeu um problema antes de avisarem', label: 'Descreva uma situacao em que voce percebeu um problema antes de alguem te avisar, e o que voce fez', type: 'textarea' },
-      { key: 'Aprendeu algo sozinho', label: 'Conte sobre uma vez em que voce precisou aprender algo sozinho (sem ninguem te ensinando) para resolver um problema no trabalho', type: 'textarea' },
-      { key: 'O que mais te atrai na vaga', label: 'O que mais te atrai nessa vaga?', type: 'radio', options: ['Aprender estrategia', 'Estabilidade CLT', 'Crescer para Coordenacao', 'Mentoria em Performance'] },
+      { key: 'Por que quer ser um OxMaker', label: 'Por que voce quer ser um OxMaker na OxBrand? Nao economize palavras: a sua comunicacao esta sendo avaliada aqui.', type: 'textarea' },
     ],
   },
   {
     tag: 'Bloco 4',
-    title: 'Logistica',
+    title: 'Situacoes',
+    intro: 'Respostas objetivas e especificas. Genericas serao desclassificadas.',
     fields: [
-      { key: 'Remuneracao de entrada esta de acordo', label: 'A remuneracao de entrada (R$ 2.000,00 + beneficios) esta de acordo com sua expectativa?', type: 'radio', options: ['Sim', 'Nao'] },
-      { key: 'Disponibilidade para inicio', label: 'Disponibilidade para inicio', type: 'radio', options: ['Imediato', 'Aviso previo', 'Outro'] },
+      { key: 'Situacao 01 - R$5k vs R$50k', label: 'Situacao 01: em no maximo 3 frases, a diferenca estrategica que voce faria ao gerir uma campanha de R$ 5k e uma de R$ 50k.', type: 'textarea' },
+      { key: 'Situacao 02 - metrica de aquisicao', label: 'Situacao 02: qual metrica de aquisicao voce considera a mais importante e por que?', type: 'textarea' },
+      { key: 'Situacao 03 - CPC baixo x conversao 0,5%', label: 'Situacao 03: CPC baixo e muitos cliques, mas conversao na LP em 0,5%. O que voce analisa primeiro: a campanha de Google Ads ou a estrutura da pagina? Justifique.', type: 'textarea' },
+      { key: 'Situacao 04 - ROAS 2 x margem 10%', label: 'Situacao 04: cliente investe R$ 2.500, ROAS 2 e margem do produto de 10%. Esta ganhando ou perdendo dinheiro? O que voce sugere?', type: 'textarea' },
     ],
   },
   {
     tag: 'Bloco 5',
-    title: 'Verificacao final',
+    title: 'Autoavaliacao (0 a 10)',
+    intro: 'Seja sincero: isso sera testado depois. Precisamos de experiencia, nao de um expert.',
     fields: [
-      { key: 'Sistema de gestao operacional', label: 'Qual sistema a OxBrand usa para gestao operacional?', type: 'text', placeholder: 'Sua resposta' },
+      { key: 'Habilidade Meta Ads (0-10)', label: 'Sua habilidade na ferramenta Meta Ads', type: 'scale' },
+      { key: 'Habilidade Google Ads (0-10)', label: 'Sua habilidade na ferramenta Google Ads', type: 'scale' },
+      { key: 'Comunicacao escrita (0-10)', label: 'Sua habilidade na comunicacao escrita', type: 'scale' },
+      { key: 'Comunicacao falada (0-10)', label: 'Sua habilidade na comunicacao falada', type: 'scale' },
+    ],
+  },
+  {
+    tag: 'Bloco 6',
+    title: 'Final',
+    fields: [
+      { key: 'Por que voce deve ser a escolha', label: 'Pense que voce responde ao seu avaliador final: por que voce deveria ser a nossa escolha? Nao economize palavras.', type: 'textarea' },
+      { key: 'Ferramenta de gestao de projetos (atencao)', label: 'Ultima questao: qual e a nossa principal ferramenta de gestao de projetos, mencionada no comeco deste formulario?', type: 'text', placeholder: 'Sua resposta' },
       { key: 'curriculo', label: 'Anexe o seu curriculo (PDF, DOC ou DOCX)', type: 'file' },
     ],
   },
@@ -79,7 +92,7 @@ const STEPS: Step[] = [
 
 type Props = { vaga: string }
 
-export function CareerFormSocial({ vaga }: Props) {
+export function CareerFormGestor({ vaga }: Props) {
   const [step, setStep] = useState(0)
   const [values, setValues] = useState<Record<string, string>>({})
   const [file, setFile] = useState<File | null>(null)
