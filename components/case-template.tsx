@@ -10,7 +10,10 @@ import type { CaseStudy } from '@/lib/clientes'
 import { CASES } from '@/lib/clientes'
 
 export function CaseTemplate({ study }: { study: CaseStudy }) {
-  const outrosCases = CASES.filter((c) => c.published && c.slug !== study.slug).slice(0, 3)
+  const publicados = CASES.filter((c) => c.published)
+  const startIdx = publicados.findIndex((c) => c.slug === study.slug)
+  const qtd = Math.min(3, Math.max(0, publicados.length - 1))
+  const outrosCases = Array.from({ length: qtd }, (_, i) => publicados[(startIdx + i + 1) % publicados.length]).filter((c) => c && c.slug !== study.slug)
   const hasVideo = !!study.videoId
   const bullets = study.bullets ?? []
   const areas = study.areas ?? []
