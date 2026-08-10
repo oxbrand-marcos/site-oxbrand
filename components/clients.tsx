@@ -3,36 +3,9 @@
 import { useRef, useState } from 'react'
 import Image from 'next/image'
 import { testimonials } from '@/src/config/testimonials'
+import { CLIENT_LOGOS } from '@/src/config/clients'
 import { YouTubeFacade } from '@/components/youtube-facade'
 
-// 24 logos únicos, duplicados no marquee = 48 nós no DOM (antes: 106)
-// Seleção baseada em reconhecimento de marca e diversidade de segmentos
-const clientLogos = [
-  { src: '/images/clients/bravo.webp',        alt: 'Bravo' },
-  { src: '/images/clients/cia-trucks.webp',   alt: 'CIA Trucks' },
-  { src: '/images/clients/brasil-fibras.webp',alt: 'Brasil Fibras' },
-  { src: '/images/clients/aquarium.webp',     alt: 'Aquarium' },
-  { src: '/images/clients/grupo-supply.webp', alt: 'Grupo Supply' },
-  { src: '/images/clients/bauforte.webp',     alt: 'Bauforte' },
-  { src: '/images/clients/oab.webp',          alt: 'OAB' },
-  { src: '/images/clients/le-petrin.webp',    alt: 'Le Petrin Menswear' },
-  { src: '/images/clients/injecar.webp',      alt: 'Injecar' },
-  { src: '/images/clients/corum.webp',        alt: 'Corum' },
-  { src: '/images/clients/decorplane.webp',   alt: 'Decorplane' },
-  { src: '/images/clients/miliveste.webp',    alt: 'Miliveste' },
-  { src: '/images/clients/lbel.webp',         alt: "L'Bel" },
-  { src: '/images/clients/fratelli.webp',     alt: 'Fratelli' },
-  { src: '/images/clients/movfrete.webp',     alt: 'Movfrete' },
-  { src: '/images/clients/thermoprint.webp',  alt: 'Grupo Thermoprint' },
-  { src: '/images/clients/motel-athos.webp',  alt: 'Motel Athos' },
-  { src: '/images/clients/envolt.webp',       alt: 'Envolt' },
-  { src: '/images/clients/pet-company.webp',  alt: 'Pet Company' },
-  { src: '/images/clients/truckcenter.webp',  alt: 'Truck Center' },
-  { src: '/images/clients/ncf-seguros.webp',  alt: 'NCF Seguros' },
-  { src: '/images/clients/sartori.webp',      alt: 'Sartori' },
-  { src: '/images/clients/power-bikes.webp',  alt: 'Power Bikes' },
-  { src: '/images/clients/vanguard.webp',     alt: 'Vanguard' },
-]
 
 const clientVideos = [
   { id: 'h-xsI7o5ELY', title: 'Depoimento Sabrina Blaustein, BMR Advogados', short: true, poster: '/images/depoimentos/bmr-advogados.webp' },
@@ -76,10 +49,10 @@ export function Clients() {
           {/* Marquee, logos brancos sobre fundo preto */}
           <div className="overflow-hidden" aria-label="Clientes OxBrand">
             <div className="marquee-track flex items-center gap-24 w-max">
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
+              {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-center w-52 sm:w-64 h-28 shrink-0 opacity-80 hover:opacity-100 transition-opacity duration-300"
+                  className="flex items-center justify-center w-56 sm:w-72 h-32 shrink-0 opacity-80 hover:opacity-100 transition-opacity duration-300"
                 >
                   <Image
                     src={logo.src}
@@ -88,7 +61,7 @@ export function Clients() {
                     height={120}
                     loading="lazy"
                     unoptimized
-                    className="h-20 sm:h-24 w-auto max-w-full object-contain brightness-0 invert"
+                    className="h-24 sm:h-28 w-auto max-w-full object-contain"
                   />
                 </div>
               ))}

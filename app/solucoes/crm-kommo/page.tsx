@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useCountUp } from '@/hooks/use-count-up'
 import { testimonials } from '@/src/config/testimonials'
+import { CLIENT_LOGOS } from '@/src/config/clients'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Header } from '@/components/header'
@@ -45,20 +46,6 @@ function CrossIcon() {
 }
 
 /* ─── Logos de clientes ──────────────────────────────────────── */
-const clientLogos = [
-  { src: '/images/clients/truckcenter.webp', alt: 'Truck Center' },
-  { src: '/images/clients/eco-maquinas.webp', alt: 'Eco Máquinas' },
-  { src: '/images/clients/bravo.webp', alt: 'Bravo' },
-  { src: '/images/clients/r2m.webp', alt: 'R2M' },
-  { src: '/images/clients/nanotech.webp', alt: 'Nanotech' },
-  { src: '/images/clients/grupo-supply.webp', alt: 'Grupo Supply' },
-  { src: '/images/clients/movfrete.webp', alt: 'Movfrete' },
-  { src: '/images/clients/power-bikes.webp', alt: 'Power Bikes' },
-  { src: '/images/clients/smart-sense.webp', alt: 'Smart Sense' },
-  { src: '/images/clients/vanguard.webp', alt: 'Vanguard' },
-  { src: '/images/clients/injecar.webp', alt: 'Injecar' },
-  { src: '/images/clients/ncf-seguros.webp', alt: 'NCF Seguros' },
-]
 
 /* ─── CTA flutuante ─────────────────────────────────────────── */
 function CTAButton({ children, className = '' }: { children: React.ReactNode; className?: string }) {
@@ -193,7 +180,7 @@ export default function CrmKommoLP() {
             <div className="absolute inset-y-0 right-0 w-24 z-10 pointer-events-none"
               style={{ background: 'linear-gradient(to left, #1d1d1d, transparent)' }} />
             <div className="marquee-track flex gap-10 items-center">
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
+              {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((logo, i) => (
                 <div key={i} className="relative h-8 w-24 shrink-0 opacity-50 hover:opacity-100 transition-opacity">
                   <Image src={logo.src} alt={logo.alt} fill className="object-contain" unoptimized />
                 </div>

@@ -25,10 +25,13 @@ Guia rápido para qualquer sessão do Claude que for mexer neste repositório. L
 
 ## Logos de clientes — FONTE ÚNICA `src/config/clients.ts`
 - **Para atualizar logos de clientes no site inteiro, editar APENAS `src/config/clients.ts`** (lista `CLIENT_LOGOS`, em ordem alfabética por `alt`).
-- Três consumidores importam dessa lista:
+- Consumidores que importam dessa lista (TODOS precisam continuar usando `CLIENT_LOGOS`; se criar uma faixa nova, importe daqui, não faça lista inline):
   - `components/client-grid.tsx` → grade em **/nossos-clientes**, aplica **máscara preta** (`brightness-0`).
-  - `components/client-marquee.tsx` → carrossel que passa (home, páginas de case, lbel-telhas), **cor original** (sem filtro).
-  - `components/solution-page-template.tsx` → carrossel das páginas de solução, também **cor original**.
+  - `components/clients.tsx` → faixa da **Home** e da /nossos-clientes (acima dos depoimentos), **cor original**.
+  - `components/client-marquee.tsx` → carrossel das páginas de case e lbel-telhas, **cor original**.
+  - `components/solution-page-template.tsx` → carrossel das páginas de solução, **cor original**.
+  - `app/solucoes/crm-kommo/page.tsx` → faixa do CRM Kommo, **cor original** (versão menor/sutil).
+  - Obs.: `components/featured-case.tsx` usa um logo ÚNICO da L'Bel (de `/images/clients/`) num case em destaque; não faz parte da fonte única.
 - Imagens: `public/images/wp/clients/<slug>.webp`. Os logos da pasta são **brancos monocromáticos com transparência** (por isso `brightness-0` vira preto na grade, e no carrossel de fundo preto a cor original branca aparece bem).
 - Ordem alfabética por `alt` na lista. Ao trocar o conjunto, apagar os `.webp` que ficarem órfãos.
 
