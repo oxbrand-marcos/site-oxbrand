@@ -1,35 +1,71 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { testimonials } from '@/src/config/testimonials'
 import { CLIENT_LOGOS } from '@/src/config/clients'
 import { YouTubeFacade } from '@/components/youtube-facade'
 
 
+// Ordem alfabética por marca
 const clientVideos = [
-  { id: 'h0Ul21kjbt4', title: 'Depoimento Comissão de Direito Empresarial, OAB Mogi das Cruzes', short: true, poster: '/images/depoimentos/comissao-oab.webp' },
   { id: 'h-xsI7o5ELY', title: 'Depoimento Sabrina Blaustein, BMR Advogados', short: true, poster: '/images/depoimentos/bmr-advogados.webp' },
-  { id: 'oFTOtx3dzig', title: 'Depoimento cliente OxBrand 1', short: true, poster: '/images/depoimentos/lbel-telhas.webp' },
-  { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true, poster: '/images/depoimentos/truck-center-express.webp' },
-  { id: 'tODEyWH6HvM', title: 'Depoimento cliente OxBrand 3', short: true, poster: '/images/depoimentos/motobras.webp' },
-  { id: 'EbfFj4KttlY', title: 'Depoimento cliente OxBrand 4', short: true, poster: '/images/depoimentos/chris-tattoo.webp' },
-  { id: 'sAnFkmpsakY', title: 'Depoimento cliente OxBrand 5', short: false, poster: '/images/depoimentos/ral-truck.webp' },
+  { id: 'EbfFj4KttlY', title: 'Depoimento Chris Tattoo', short: true, poster: '/images/depoimentos/chris-tattoo.webp' },
+  { id: 'h0Ul21kjbt4', title: 'Depoimento Comissão de Direito Empresarial, OAB Mogi das Cruzes', short: true, poster: '/images/depoimentos/comissao-oab.webp' },
+  { id: 'oFTOtx3dzig', title: 'Depoimento Bruno Remonti, LBEL Telhas', short: true, poster: '/images/depoimentos/lbel-telhas.webp' },
+  { id: 'tODEyWH6HvM', title: 'Depoimento Motobras Premium', short: true, poster: '/images/depoimentos/motobras.webp' },
+  { id: 'sAnFkmpsakY', title: 'Depoimento RalTruck', short: false, poster: '/images/depoimentos/ral-truck.webp' },
+  { id: 'gNHf86huuYs', title: 'Depoimento Truck Center Express', short: true, poster: '/images/depoimentos/truck-center-express.webp' },
 ]
 
 
 export function Clients() {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [activeIdx, setActiveIdx] = useState(0)
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(false)
 
-  function scrollTo(idx: number) {
+  // Sincroniza os controles com o scroll real (arrastar, swipe ou clique)
+  function updateState() {
+    const c = scrollRef.current
+    const first = c?.firstElementChild as HTMLElement | null
+    if (!c || !first) return
+    const cards = Array.from(c.children) as HTMLElement[]
+    let idx = 0
+    let best = Infinity
+    cards.forEach((card, i) => {
+      const dist = Math.abs((card.offsetLeft - first.offsetLeft) - c.scrollLeft)
+      if (dist < best) {
+        best = dist
+        idx = i
+      }
+    })
+    setActiveIdx(idx)
+    setAtStart(c.scrollLeft <= 2)
+    setAtEnd(c.scrollLeft + c.clientWidth >= c.scrollWidth - 2)
+  }
+
+  useEffect(() => {
+    const c = scrollRef.current
+    if (!c) return
+    updateState()
+    c.addEventListener('scroll', updateState, { passive: true })
+    window.addEventListener('resize', updateState)
+    return () => {
+      c.removeEventListener('scroll', updateState)
+      window.removeEventListener('resize', updateState)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  function scrollToIdx(idx: number) {
+    const c = scrollRef.current
+    const first = c?.firstElementChild as HTMLElement | null
+    if (!c || !first) return
     const clamped = Math.max(0, Math.min(idx, clientVideos.length - 1))
-    setActiveIdx(clamped)
-    const container = scrollRef.current
-    if (!container) return
-    const card = container.children[clamped] as HTMLElement
+    const card = c.children[clamped] as HTMLElement
     if (card) {
-      container.scrollTo({ left: card.offsetLeft - container.offsetLeft, behavior: 'smooth' })
+      c.scrollTo({ left: card.offsetLeft - first.offsetLeft, behavior: 'smooth' })
     }
   }
 
@@ -110,8 +146,8 @@ export function Clients() {
             {/* Controles de navegação */}
             <div className="flex items-center justify-center gap-4">
               <button
-                onClick={() => scrollTo(activeIdx - 1)}
-                disabled={activeIdx === 0}
+                onClick={() => scrollToIdx(activeIdx - 1)}
+                disabled={atStart}
                 aria-label="Vídeo anterior"
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               >
@@ -121,7 +157,7 @@ export function Clients() {
                 {clientVideos.map((_, i) => (
                   <button
                     key={i}
-                    onClick={() => scrollTo(i)}
+                    onClick={() => scrollToIdx(i)}
                     aria-label={`Ir para vídeo ${i + 1}`}
                     aria-current={i === activeIdx ? 'true' : undefined}
                     className="group/dot grid place-items-center w-6 h-6 rounded-full transition-all"
@@ -137,8 +173,8 @@ export function Clients() {
                 ))}
               </div>
               <button
-                onClick={() => scrollTo(activeIdx + 1)}
-                disabled={activeIdx === clientVideos.length - 1}
+                onClick={() => scrollToIdx(activeIdx + 1)}
+                disabled={atEnd}
                 aria-label="Próximo vídeo"
                 className="w-9 h-9 flex items-center justify-center border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
               >
