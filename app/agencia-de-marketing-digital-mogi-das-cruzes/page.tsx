@@ -280,6 +280,7 @@ export default function LpMogiPage() {
                   { label: 'Google Partner', src: '/images/partners/google.webp' },
                   { label: 'Meta Business Partner', src: '/images/partners/meta.webp' },
                   { label: 'Kommo Top 5% Brasil', src: '/images/partners/kommo.webp' },
+                  { label: 'Onvox', src: '/images/partners/onvox.webp' },
                   { label: 'ActiveCampaign Platinum', src: '/images/partners/activecampaign.webp' },
                 ].map((p) => (
                   <div key={p.label} className="bg-card border border-border p-5 flex flex-col gap-3">

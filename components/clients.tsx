@@ -8,6 +8,7 @@ import { YouTubeFacade } from '@/components/youtube-facade'
 
 
 const clientVideos = [
+  { id: 'h0Ul21kjbt4', title: 'Depoimento Comissão de Direito Empresarial, OAB Mogi das Cruzes', short: true, poster: '/images/depoimentos/comissao-oab.webp' },
   { id: 'h-xsI7o5ELY', title: 'Depoimento Sabrina Blaustein, BMR Advogados', short: true, poster: '/images/depoimentos/bmr-advogados.webp' },
   { id: 'oFTOtx3dzig', title: 'Depoimento cliente OxBrand 1', short: true, poster: '/images/depoimentos/lbel-telhas.webp' },
   { id: 'gNHf86huuYs', title: 'Depoimento cliente OxBrand 2', short: true, poster: '/images/depoimentos/truck-center-express.webp' },

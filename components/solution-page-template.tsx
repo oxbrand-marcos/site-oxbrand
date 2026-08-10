@@ -29,6 +29,7 @@ const partnerLogos = [
   { src: '/images/partners/tiktok.webp',          alt: 'TikTok Marketing Partners' },
   { src: '/images/partners/rd.webp',              alt: 'RD Station' },
   { src: '/images/partners/kommo.webp',           alt: 'Kommo Partner Top 5%' },
+  { src: '/images/partners/onvox.webp',           alt: 'Onvox' },
   { src: '/images/partners/semrush.webp',         alt: 'SEMrush Certified Agency' },
   { src: '/images/partners/activecampaign.webp',  alt: 'ActiveCampaign Platinum Agency' },
   { src: '/images/partners/adobe.webp',           alt: 'Adobe Solution Partner' },

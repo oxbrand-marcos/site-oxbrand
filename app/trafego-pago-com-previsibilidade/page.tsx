@@ -38,6 +38,7 @@ const parceiros = [
   { nome: 'TikTok Marketing Partner', logo: '/images/partners/tiktok.webp' },
   { nome: 'RD Station Partner', logo: '/images/partners/rd.webp' },
   { nome: 'Kommo Partner', logo: '/images/partners/kommo.webp' },
+  { nome: 'Onvox', logo: '/images/partners/onvox.webp' },
   { nome: 'SEMrush Certified', logo: '/images/partners/semrush.webp' },
   { nome: 'ActiveCampaign Platinum', logo: '/images/partners/activecampaign.webp' },
   { nome: 'Adobe Solution Partner', logo: '/images/partners/adobe.webp' },

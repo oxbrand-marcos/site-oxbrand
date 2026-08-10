@@ -2,20 +2,22 @@ import { Target, Palette, FileText, BarChart2, Globe, Cpu, CheckCircle2 } from '
 import Image from 'next/image'
 import Link from 'next/link'
 
+// Grade de 10 colunas (desktop): logo normal ocupa 2, destaques (Kommo/Onvox) ocupam 3 = "1,5" cada.
 const partners = [
-  { src: '/images/partners/google.webp',         alt: 'Google Partner',                          span: 1 },
-  { src: '/images/partners/meta.webp',            alt: 'Meta Business Partner',                   span: 1 },
-  { src: '/images/partners/linkedin.webp',        alt: 'LinkedIn Marketing Partner',              span: 1 },
-  { src: '/images/partners/tiktok.webp',          alt: 'TikTok Marketing Partners',               span: 1 },
-  { src: '/images/partners/pinterest.webp',       alt: 'Pinterest Marketing Partners',            span: 1 },
-  { src: '/images/partners/rd.webp',              alt: 'RD Station',                              span: 1 },
+  { src: '/images/partners/google.webp',         alt: 'Google Partner',                          span: 2 },
+  { src: '/images/partners/meta.webp',            alt: 'Meta Business Partner',                   span: 2 },
+  { src: '/images/partners/linkedin.webp',        alt: 'LinkedIn Marketing Partner',              span: 2 },
+  { src: '/images/partners/tiktok.webp',          alt: 'TikTok Marketing Partners',               span: 2 },
+  { src: '/images/partners/pinterest.webp',       alt: 'Pinterest Marketing Partners',            span: 2 },
+  { src: '/images/partners/rd.webp',              alt: 'RD Station',                              span: 2 },
   { src: '/images/partners/kommo.webp',           alt: 'Kommo Partner',                           span: 3 },
-  { src: '/images/partners/semrush.webp',         alt: 'SEMrush Certified Agency Partner',        span: 1 },
-  { src: '/images/partners/activecampaign.webp',  alt: 'ActiveCampaign Platinum Agency Partner',  span: 1 },
-  { src: '/images/partners/nuvemshop.webp',       alt: 'Nuvemshop Partners',                      span: 1 },
-  { src: '/images/partners/clickup.webp',         alt: 'ClickUp Partner',                         span: 1 },
-  { src: '/images/partners/adobe.webp',           alt: 'Adobe Solution Partner',                  span: 1 },
-  { src: '/images/partners/umbler.webp',          alt: 'Umbler Prime Agência Parceira',           span: 1 },
+  { src: '/images/partners/onvox.webp',           alt: 'Onvox',                                   span: 3 },
+  { src: '/images/partners/semrush.webp',         alt: 'SEMrush Certified Agency Partner',        span: 2 },
+  { src: '/images/partners/activecampaign.webp',  alt: 'ActiveCampaign Platinum Agency Partner',  span: 2 },
+  { src: '/images/partners/nuvemshop.webp',       alt: 'Nuvemshop Partners',                      span: 2 },
+  { src: '/images/partners/clickup.webp',         alt: 'ClickUp Partner',                         span: 2 },
+  { src: '/images/partners/adobe.webp',           alt: 'Adobe Solution Partner',                  span: 2 },
+  { src: '/images/partners/umbler.webp',          alt: 'Umbler Prime Agência Parceira',           span: 2 },
 ]
 
 const solutions = [
@@ -197,11 +199,12 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
           </p>
 
           <div
-            className="grid grid-cols-3 lg:grid-cols-5 border-t border-l border-border"
+            className="grid grid-cols-6 lg:grid-cols-10 border-t border-l border-border"
             aria-label="Lista de parceiros certificados"
           >
             {partners.map((p) => {
               const isKommo = p.alt === 'Kommo Partner'
+              const big = p.span >= 3
               const Wrapper = isKommo ? 'a' : 'div'
               const wrapperProps = isKommo
                 ? { href: 'https://www.kommo.com/br/', target: '_blank', rel: 'noopener noreferrer' }
@@ -210,16 +213,16 @@ export function Solutions({ hideViewAll = false }: { hideViewAll?: boolean }) {
                 <Wrapper
                   key={p.alt}
                   {...wrapperProps}
-                  style={{ gridColumn: p.span > 1 ? `span ${p.span}` : undefined }}
+                  style={{ gridColumn: `span ${p.span}` }}
                   className="group relative border-b border-r border-border flex flex-col items-center justify-center gap-2 px-8 py-8 bg-card/30 hover:bg-card transition-colors duration-200 overflow-hidden"
                 >
                   <Image
                     src={p.src}
                     alt={p.alt}
-                    width={p.span > 1 ? 320 : 180}
-                    height={p.span > 1 ? 96 : 64}
+                    width={big ? 320 : 180}
+                    height={big ? 96 : 64}
                     unoptimized
-                    className={`w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 ${p.span > 1 ? 'h-20' : 'h-16'}`}
+                    className={`w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 ${big ? 'h-20' : 'h-16'}`}
                   />
                   {isKommo && (
                     <span className="absolute bottom-3 left-0 right-0 text-center text-[11px] font-mono tracking-widest uppercase text-primary/70 group-hover:text-primary transition-colors duration-300">
