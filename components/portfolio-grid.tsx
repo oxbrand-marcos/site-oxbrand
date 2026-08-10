@@ -76,6 +76,7 @@ const categoriesData = [
       { slug: 'idv-rm3', alt: 'RM3' },
       { slug: 'idv-satorigo', alt: 'Sartori Go' },
       { slug: 'idv-pousada-athos', alt: 'Pousada Athos' },
+      { slug: 'oxbrand-portfolio-logotipo-fm-autoescola', alt: 'FM Autoescola' },
     ],
   },
   {
@@ -124,6 +125,7 @@ const categoriesData = [
       { slug: 'oxbrand-portfolio-redes-sociais-up-eyes', alt: 'Up Eyes' },
       { slug: 'oxbrand-portfolio-redes-sociais-via-calce', alt: 'Via Calce' },
       { slug: 'social-eco-maquinas', alt: 'Eco Máquinas' },
+      { slug: 'oxbrand-portfolio-redes-sociais-corum', alt: 'Corum' },
     ],
   },
   {
@@ -163,6 +165,7 @@ const categoriesData = [
       { slug: 'oxbrand-portfolio-desenvolvimento-de-sites-thumbnail-lbel', alt: 'LBel', videoId: 'GcLl1xBFDMY' },
       { slug: 'site-miliveste', alt: 'Miliveste', videoId: null },
       { slug: 'site-cia-truck', alt: 'Cia Truck', videoId: null },
+      { slug: 'site-fm-autoescola', alt: 'FM Autoescola', videoId: null },
     ],
   },
   {
