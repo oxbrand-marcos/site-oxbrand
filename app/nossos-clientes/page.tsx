@@ -112,25 +112,22 @@ export default function ClientesPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-black">Cases de sucesso</h2>
             <p className="text-black/60 leading-relaxed max-w-2xl">Marcas reais que estruturaram aquisicao e passaram a crescer com previsibilidade ao lado da OxBrand.</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-black/10 border border-black/10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-black/10">
             {CASES.map((c) =>
               c.published ? (
-                <Link key={c.slug} href={`/nossos-clientes/${c.slug}`} className="group bg-white p-8 flex flex-col gap-3 hover:bg-black/[0.02] transition-colors">
+                <Link key={c.slug} href={`/nossos-clientes/${c.slug}`} className="group bg-white p-8 flex flex-col gap-3 border-b border-r border-black/10 hover:bg-black/[0.02] transition-colors">
                   <span className="mono-tag text-black/40">{c.segment || 'Case'}</span>
                   <span className="text-xl font-bold text-black group-hover:text-primary transition-colors">{c.client}</span>
                   <span className="mono-tag text-primary/70 mt-auto">Ver case →</span>
                 </Link>
               ) : (
-                <div key={c.slug} className="bg-white p-8 flex flex-col gap-3 cursor-default select-none opacity-70">
+                <div key={c.slug} className="bg-white p-8 flex flex-col gap-3 border-b border-r border-black/10 cursor-default select-none opacity-70">
                   <span className="mono-tag text-black/40">{c.segment || 'Case'}</span>
                   <span className="text-xl font-bold text-black">{c.client}</span>
                   <span className="mono-tag text-black/30 mt-auto">Em breve</span>
                 </div>
               )
             )}
-            {Array.from({ length: (6 - (CASES.length % 6)) % 6 }).map((_, i) => (
-              <div key={`case-filler-${i}`} aria-hidden="true" className="bg-white" />
-            ))}
           </div>
         </div>
       </section>
