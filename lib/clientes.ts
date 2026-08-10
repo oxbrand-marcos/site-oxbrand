@@ -28,22 +28,6 @@ export interface CaseStudy {
   customPage?: boolean
 }
 
-const draft = (client: string, slug: string, segment: string): CaseStudy => ({
-  slug,
-  client,
-  metaTitle: `Case ${client} | Marketing de Performance | OxBrand`,
-  metaDescription: `Case de ${client} com a OxBrand: estrategia, execucao e resultados em marketing de performance. Agencia em Mogi das Cruzes e Sao Paulo.`,
-  segment,
-  headline: client,
-  summary: '',
-  metrics: [],
-  services: [],
-  bodyHtml: '',
-  coverAlt: `Case de sucesso ${client} com a OxBrand`,
-  dateISO: '2026-07-27',
-  published: false,
-})
-
 export const CASES: CaseStudy[] = [
   {
     slug: 'lbel-telhas',
@@ -61,7 +45,6 @@ export const CASES: CaseStudy[] = [
     published: true,
     customPage: true,
   },
-  draft('Mara Rocha', 'mara-rocha', ''),
   {
     slug: 'bmr-advogados',
     client: 'BMR Advogados',
@@ -100,7 +83,44 @@ export const CASES: CaseStudy[] = [
     dateISO: '2026-07-29',
     published: true,
   },
-  draft('Comissão de Direito Empresarial - OAB Mogi das Cruzes', 'comissao-direito-empresarial-oab-mogi', 'Direito empresarial · OAB'),
+  {
+    slug: 'comissao-direito-empresarial-oab-mogi',
+    client: 'Comissão de Direito Empresarial da OAB Mogi das Cruzes',
+    metaTitle: 'Case Comissão de Direito Empresarial OAB Mogi | OxBrand',
+    metaDescription: 'Case da Comissão de Direito Empresarial da OAB Mogi das Cruzes: branding, social media, boletim informativo e site em conformidade com a OAB, à altura de mais de 3 anos de atuação. Agência OxBrand.',
+    segment: 'Direito empresarial · OAB',
+    headline: 'Comissão de Direito Empresarial da OAB Mogi das Cruzes: identidade e autoridade à altura de mais de 3 anos de atuação',
+    summary: 'Da Comissão de Direito Empresarial sem identidade própria a uma referência de profissionalismo, com branding e conteúdo à altura de sua atuação consolidada há mais de 3 anos.',
+    bullets: [
+      'Identidade visual construída e aplicada em todos os pontos de contato digitais, redes sociais e materiais de divulgação, com o profissionalismo condizente com mais de 3 anos de atuação consolidada.',
+      'Gestão completa das redes sociais, da criação das postagens à organização dos vídeos, elevando a percepção profissional da comissão para quem acompanha o Instagram.',
+      'Boletim informativo produzido de forma recorrente, garantindo comunicação consistente com membros e público, sem sobrecarregar o time interno.',
+      'Posicionamento de marca que trouxe uma nova mensagem, muito mais profissional, mudando como a comissão é vista internamente e pelo mercado.',
+    ],
+    metrics: [
+      { value: '+3 anos', label: 'de atuação consolidada traduzidos na marca' },
+      { value: '100%', label: 'dos pontos de contato com identidade própria' },
+      { value: 'OAB', label: 'comunicação em conformidade, autoridade sem apelo comercial' },
+      { value: 'Boletim', label: 'comunicação recorrente com membros e público' },
+    ],
+    areas: [
+      { tag: 'Branding / Identidade Visual', href: '/marketing-para-advogados', text: 'Construção da identidade visual da comissão em todos os pontos de contato: digital, redes sociais, páginas e materiais de divulgação. Um visual estratégico que traduz o profissionalismo e o posicionamento condizentes com mais de 3 anos de atuação consolidada.' },
+      { tag: 'Social Media', href: '/solucoes', text: 'Gestão completa das redes sociais, da criação das postagens à organização dos vídeos, elevando a percepção profissional da comissão para quem acompanha o Instagram.' },
+      { tag: 'Conteúdo / Boletim Informativo', href: '/solucoes/copywriting-e-redacao', text: 'Produção recorrente do boletim informativo, garantindo comunicação consistente e profissional com os membros e o público, reforçando a autoridade da comissão no meio jurídico empresarial, sem sobrecarregar o time interno.' },
+      { tag: 'Posicionamento de Marca', href: '/solucoes/assessoria-em-marketing', text: 'Estratégia de comunicação que trouxe uma nova mensagem, muito mais profissional, mudando a forma como a comissão é vista tanto internamente quanto pelo mercado.' },
+      { tag: 'Site', href: '/solucoes/desenvolvimento-de-sites', text: 'Presença digital condizente com a relevância da comissão, reforçando o posicionamento construído nas redes sociais e no boletim. Respeitando as diretrizes da OAB, que exigem caráter consultivo e informativo na comunicação do advogado, o site consolida a autoridade ao educar e informar o visitante, sem apelo comercial, à altura de mais de 3 anos como referência no meio jurídico empresarial.' },
+    ],
+    depoimentoResumo: 'No vídeo, o case da Comissão de Direito Empresarial da OAB Mogi das Cruzes: de uma comissão sem identidade própria a uma referência de profissionalismo, com branding, social media, boletim informativo e um site em conformidade com a OAB, à altura de mais de 3 anos de atuação consolidada.',
+    videoId: 'h0Ul21kjbt4',
+    videoName: 'Marketing para OAB: o case da Comissão de Direito Empresarial de Mogi das Cruzes',
+    videoUploadDate: '2026-08-10T08:00:00-03:00',
+    videoAspect: 'portrait',
+    services: [],
+    bodyHtml: '',
+    coverAlt: 'Case de sucesso da Comissão de Direito Empresarial da OAB Mogi das Cruzes com a OxBrand',
+    dateISO: '2026-08-10',
+    published: true,
+  },
   {
     slug: 'chris-tattoo',
     client: 'Chris Tattoo',

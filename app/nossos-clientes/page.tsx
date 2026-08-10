@@ -128,6 +128,9 @@ export default function ClientesPage() {
                 </div>
               )
             )}
+            {Array.from({ length: (6 - (CASES.length % 6)) % 6 }).map((_, i) => (
+              <div key={`case-filler-${i}`} aria-hidden="true" className="bg-background" />
+            ))}
           </div>
         </div>
       </section>
