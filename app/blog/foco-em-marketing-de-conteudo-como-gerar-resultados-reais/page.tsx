@@ -47,7 +47,7 @@ export default function MarketingConteudoPage() {
         coverUrl: '/blog/marketing-conteudo-cover.png',
         datePublished: '2026-01-15',
         dateModified: '2026-01-15',
-        authorName: 'OxBrand',
+        authorName: 'Marcos Blaustein',
         tags: ['Marketing de Conteúdo', 'Conversão', 'Estratégia Digital'],
       })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([
@@ -123,7 +123,7 @@ export default function MarketingConteudoPage() {
               {/* Corpo do artigo */}
               <div className="flex flex-col gap-8 text-zinc-600 leading-relaxed">
 
-                <ArticleAuthor author={AUTHORS.oxbrand} />
+                <ArticleAuthor author={AUTHORS['marcos-blaustein']} />
 
                 <p className="text-zinc-900 text-lg leading-relaxed">
                   No competitivo ambiente digital, ter foco em marketing de conteúdo deixou de ser uma opção e passou a ser um pilar estratégico para empresas que buscam crescimento sustentável, autoridade e conversão.
