@@ -29,7 +29,7 @@ export const ARTICLES: Article[] = [
     breadcrumb: 'CRM',
     dateISO: '2026-07-28',
     coverAlt: 'Automação de marketing: fluxos que nutrem leads e organizam o follow-up',
-    author: 'OxBrand',
+    author: 'Marcos Blaustein',
     bodyHtml: `
 <p class="lead">Automação de marketing tem fama dividida. Para uns, é a solução mágica que faz vendas sozinha; para outros, é aquele robô que dispara mensagem genérica e afasta o cliente. As duas visões erram. Automação bem feita não substitui a relação, ela libera tempo para que a relação aconteça na hora certa, com a pessoa certa.</p>
 <p>Automação de marketing é usar tecnologia para executar tarefas repetitivas de comunicação e relacionamento de forma automática e personalizada: nutrir leads, organizar follow-up, responder rápido e mover o contato pelo funil sem depender de lembrar de tudo manualmente. Este guia mostra onde ela funciona de verdade e onde vira ruído.</p>
@@ -75,7 +75,7 @@ export const ARTICLES: Article[] = [
     breadcrumb: 'Inbound',
     dateISO: '2026-07-28',
     coverAlt: 'Inbound marketing B2B: atrair, nutrir e converter empresas em ciclo de compra longo',
-    author: 'OxBrand',
+    author: 'Marcos Blaustein',
     bodyHtml: `
 <p class="lead">No B2B, ninguém compra por impulso. A decisão passa por mais de uma pessoa, envolve orçamento, comparação e tempo, às vezes meses. Por isso o inbound marketing, que atrai e educa em vez de interromper, encaixa tão bem em vendas complexas: ele constrói confiança ao longo do caminho, no ritmo em que a empresa decide.</p>
 <p>Inbound marketing B2B é atrair empresas certas com conteúdo relevante, nutrir esse interesse ao longo do ciclo de compra e entregar ao comercial um lead que já entende o problema e a solução. Este guia mostra o que muda em relação ao B2C e como estruturar na prática.</p>
@@ -121,7 +121,7 @@ export const ARTICLES: Article[] = [
     breadcrumb: 'Estratégia',
     dateISO: '2026-07-28',
     coverAlt: 'Consultoria de marketing digital: direção estratégica antes da execução',
-    author: 'OxBrand',
+    author: 'Marcos Blaustein',
     bodyHtml: `
 <p class="lead">Muita empresa investe em marketing e mesmo assim não cresce. Faz tráfego, posta, tem site, mas os esforços não conversam e o faturamento não acompanha. Nesse ponto, o que falta quase nunca é mais execução. É direção. E é aí que entra a consultoria de marketing digital.</p>
 <p>Consultoria de marketing digital é o trabalho de diagnosticar, direcionar e estruturar a estratégia de marketing de uma empresa, para que cada ação tenha lógica e conexão com o resultado de negócio. Este guia explica o que ela é, quando faz sentido contratar e como escolher sem cair em promessa vazia.</p>
@@ -173,7 +173,7 @@ export const ARTICLES: Article[] = [
     breadcrumb: 'Aquisição',
     dateISO: '2026-07-28',
     coverAlt: 'Geração de leads qualificados: do contato ao lead pronto para o comercial',
-    author: 'OxBrand',
+    author: 'Marcos Blaustein',
     bodyHtml: `
 <p class="lead">Gerar lead é fácil. Difícil é gerar lead que compra. A maioria das empresas mede o marketing pela quantidade de contatos e comemora um número que o comercial, na prática, não consegue transformar em venda. O problema quase nunca é falta de lead. É excesso de lead errado.</p>
 <p>Geração de leads qualificados é o oposto de encher o funil. É atrair a pessoa certa, no momento certo, com informação suficiente para o comercial agir com foco. Este guia mostra o que é um lead qualificado, como gerá-lo e como qualificá-lo, para o marketing parar de entregar volume e passar a entregar oportunidade.</p>
@@ -1197,6 +1197,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'quanto-custa-gestao-de-trafego-pago',
+    author: 'Marcos Blaustein',
     metaTitle: 'Quanto Custa Tráfego Pago? Valores Reais 2026 | OxBrand',
     metaDescription: 'Quanto custa tráfego pago em 2026? Veja valores reais de gestão, verba de mídia, modelos de cobrança e o que muda o preço. Guia direto, sem enrolação.',
     title: 'Quanto Custa Tráfego Pago? Valores Reais em 2026',
@@ -1269,6 +1270,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'o-que-e-inbound-marketing',
+    author: 'Marcos Blaustein',
     metaTitle: 'O Que é Inbound Marketing? Guia Completo 2026 | OxBrand',
     metaDescription: 'Entenda o que é inbound marketing, como funciona na prática, etapas, ferramentas, custos e prazos. Guia completo com exemplos reais.',
     title: 'O Que é Inbound Marketing? Guia Completo 2026',
@@ -1423,6 +1425,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'como-funciona-o-crm-kommo',
+    author: 'Marcos Blaustein',
     metaTitle: 'Como Funciona o CRM Kommo na Prática? Guia 2026 | OxBrand',
     metaDescription: 'Veja como funciona o CRM Kommo na prática: WhatsApp integrado, funil de vendas, Salesbot, planos e preços 2026. Guia da OxBrand, Top 5% parceiros Kommo.',
     title: 'Como Funciona o CRM Kommo na Prática: Guia 2026',
@@ -1490,6 +1493,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'trafego-pago-para-advogados',
+    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Advogados: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para advogados: o que a OAB permite, quais canais funcionam e como gerar casos qualificados com previsibilidade. Guia completo da OxBrand.',
     title: 'Tráfego Pago para Advogados: da OAB ao Caso Fechado',
@@ -1556,6 +1560,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'trafego-pago-para-ecommerce',
+    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para E-commerce: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para e-commerce: como estruturar Google Shopping, Meta Ads e remarketing para escalar vendas com ROAS saudável. Guia completo da OxBrand.',
     title: 'Tráfego Pago para E-commerce: Como Escalar Vendas',
@@ -1621,6 +1626,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'trafego-pago-para-imobiliarias',
+    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Imobiliárias: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para imobiliárias: como gerar leads qualificados para lançamentos, prontos e locação, com CRM, qualificação e custo por visita medido.',
     title: 'Tráfego Pago para Imobiliárias: do Lead à Visita',
@@ -1679,6 +1685,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'trafego-pago-para-construcao-civil',
+    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Construção Civil 2026 | OxBrand',
     metaDescription: 'Tráfego pago para construção civil: como construtoras, incorporadoras e engenharia geram demanda previsível, de lançamentos a contratos B2B. Guia OxBrand.',
     title: 'Tráfego Pago para Construção Civil: Guia Completo',
@@ -1741,6 +1748,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-vs-rd-station',
+    author: 'Marcos Blaustein',
     metaTitle: 'Kommo vs RD Station: Qual CRM Escolher em 2026? | OxBrand',
     metaDescription: 'Kommo vs RD Station: comparamos preços, WhatsApp, automações e para qual operação cada CRM funciona melhor, com a visão de quem implanta os dois.',
     title: 'Kommo vs RD Station: Qual CRM Escolher em 2026?',
@@ -1803,6 +1811,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'lgpd-no-marketing',
+    author: 'Marcos Blaustein',
     metaTitle: 'LGPD no Marketing: Campanhas e CRM em Conformidade | OxBrand',
     metaDescription: 'LGPD não é freio de crescimento. Veja como estruturar campanhas, CRM e automações em conformidade: rastreamento, consentimento, opt-out e contratos.',
     title: 'LGPD no Marketing: Campanhas, CRM e Automações Sem Travar a Operação',
