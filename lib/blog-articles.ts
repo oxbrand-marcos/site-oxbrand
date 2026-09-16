@@ -1198,7 +1198,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'quanto-custa-gestao-de-trafego-pago',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Quanto Custa Tráfego Pago? Valores Reais 2026 | OxBrand',
     metaDescription: 'Quanto custa tráfego pago em 2026? Veja valores reais de gestão, verba de mídia, modelos de cobrança e o que muda o preço. Guia direto, sem enrolação.',
     title: 'Quanto Custa Tráfego Pago? Valores Reais em 2026',
@@ -1271,7 +1270,6 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'o-que-e-inbound-marketing',
-    author: 'Marcos Blaustein',
     author: 'Marcos Blaustein',
     metaTitle: 'O Que é Inbound Marketing? Guia Completo 2026 | OxBrand',
     metaDescription: 'Entenda o que é inbound marketing, como funciona na prática, etapas, ferramentas, custos e prazos. Guia completo com exemplos reais.',
@@ -1428,7 +1426,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'como-funciona-o-crm-kommo',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Como Funciona o CRM Kommo na Prática? Guia 2026 | OxBrand',
     metaDescription: 'Veja como funciona o CRM Kommo na prática: WhatsApp integrado, funil de vendas, Salesbot, planos e preços 2026. Guia da OxBrand, Top 5% parceiros Kommo.',
     title: 'Como Funciona o CRM Kommo na Prática: Guia 2026',
@@ -1497,7 +1494,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'trafego-pago-para-advogados',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Advogados: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para advogados: o que a OAB permite, quais canais funcionam e como gerar casos qualificados com previsibilidade. Guia completo da OxBrand.',
     title: 'Tráfego Pago para Advogados: da OAB ao Caso Fechado',
@@ -1565,7 +1561,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'trafego-pago-para-ecommerce',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para E-commerce: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para e-commerce: como estruturar Google Shopping, Meta Ads e remarketing para escalar vendas com ROAS saudável. Guia completo da OxBrand.',
     title: 'Tráfego Pago para E-commerce: Como Escalar Vendas',
@@ -1632,7 +1627,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'trafego-pago-para-imobiliarias',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Imobiliárias: Guia 2026 | OxBrand',
     metaDescription: 'Tráfego pago para imobiliárias: como gerar leads qualificados para lançamentos, prontos e locação, com CRM, qualificação e custo por visita medido.',
     title: 'Tráfego Pago para Imobiliárias: do Lead à Visita',
@@ -1691,7 +1685,6 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'trafego-pago-para-construcao-civil',
-    author: 'Marcos Blaustein',
     author: 'Marcos Blaustein',
     metaTitle: 'Tráfego Pago para Construção Civil 2026 | OxBrand',
     metaDescription: 'Tráfego pago para construção civil: como construtoras, incorporadoras e engenharia geram demanda previsível, de lançamentos a contratos B2B. Guia OxBrand.',
@@ -1756,7 +1749,6 @@ export const ARTICLES: Article[] = [
   {
     slug: 'kommo-vs-rd-station',
     author: 'Marcos Blaustein',
-    author: 'Marcos Blaustein',
     metaTitle: 'Kommo vs RD Station: Qual CRM Escolher em 2026? | OxBrand',
     metaDescription: 'Kommo vs RD Station: comparamos preços, WhatsApp, automações e para qual operação cada CRM funciona melhor, com a visão de quem implanta os dois.',
     title: 'Kommo vs RD Station: Qual CRM Escolher em 2026?',
@@ -1819,7 +1811,6 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'lgpd-no-marketing',
-    author: 'Marcos Blaustein',
     author: 'Marcos Blaustein',
     metaTitle: 'LGPD no Marketing: Campanhas e CRM em Conformidade | OxBrand',
     metaDescription: 'LGPD não é freio de crescimento. Veja como estruturar campanhas, CRM e automações em conformidade: rastreamento, consentimento, opt-out e contratos.',
