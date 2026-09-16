@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const author = getAuthorBySlug(slug)
   if (!author || !author.hasProfile) return {}
-  const NOINDEX_AUTHORS = new Set(['joane-guimaraes', 'maria-clara', 'beatriz-soares', 'gabriel-figueiredo'])
+  const NOINDEX_AUTHORS = new Set(['joane-guimaraes', 'maria-clara', 'beatriz-soares', 'gabriel-figueiredo', 'oxbrand'])
   const title = `${author.name}, ${author.role} na OxBrand`
   // Meta description unica por autor (evita duplicidade): nome + cargo + temas.
   const temas = author.especialidades && author.especialidades.length
