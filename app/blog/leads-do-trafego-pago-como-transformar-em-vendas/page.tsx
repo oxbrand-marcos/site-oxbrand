@@ -70,7 +70,7 @@ export default function LeadsTrafegoPage() {
         coverUrl: '/blog/leads-trafego-pago-cover.png',
         datePublished: '2026-06-03',
         dateModified: '2026-06-03',
-        authorName: 'OxBrand',
+        authorName: 'Marcos Blaustein',
         tags: ['Tráfego Pago', 'WhatsApp', 'Conversão', 'CRM'],
       })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(breadcrumbSchema([
@@ -148,7 +148,7 @@ export default function LeadsTrafegoPage() {
               {/* Corpo do artigo */}
               <div className="flex flex-col gap-8 text-zinc-600 leading-relaxed">
 
-                <ArticleAuthor author={AUTHORS.oxbrand} />
+                <ArticleAuthor author={AUTHORS['marcos-blaustein']} />
 
                 <p className="text-zinc-900 text-lg leading-relaxed">
                   Você investe em tráfego pago, o anúncio performa, os leads chegam. As vendas não acontecem. Esse é um dos problemas mais comuns e mais caros do marketing digital brasileiro.
