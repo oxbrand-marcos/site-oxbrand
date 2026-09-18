@@ -9,14 +9,14 @@ import { LpMogiForm } from './lp-mogi-form'
 export const metadata: Metadata = {
   title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
   description:
-    'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas. Diagnóstico gratuito.',
+    'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique. Diagnóstico gratuito.',
   alternates: {
     canonical: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
   },
   openGraph: {
     title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
     description:
-      'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas. Diagnóstico gratuito.',
+      'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique. Diagnóstico gratuito.',
     url: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
     siteName: 'OxBrand',
     locale: 'pt_BR',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
     description:
-      'Agência de marketing digital em Mogi das Cruzes com método próprio: tráfego pago, CRM e sites que convertem. +450 marcas atendidas.',
+      'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique.',
     images: ['https://www.oxbrand.com.br/og-home.jpg'],
     site: '@oxbrand_br',
   },
@@ -38,9 +38,9 @@ const WA_LINK =
 
 const servicos = [
   {
-    titulo: 'Gestão de Tráfego Pago',
-    desc: 'Campanhas no Google Ads e Meta Ads por intenção, para sua empresa aparecer para quem já está procurando em Mogi e região.',
-    href: '/solucoes/gestao-de-trafego-pago',
+    titulo: 'Tráfego Pago em Mogi das Cruzes',
+    desc: 'Campanhas no Google Ads e Meta Ads por intenção, ligadas ao CRM, para sua empresa aparecer para quem já está procurando na região.',
+    href: '/trafego-pago-mogi-das-cruzes',
   },
   {
     titulo: 'CRM de Vendas (Kommo)',
