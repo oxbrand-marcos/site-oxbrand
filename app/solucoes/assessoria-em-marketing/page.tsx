@@ -3,28 +3,28 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Assessoria de Marketing Digital com Método | OxBrand',
-  description: 'Assessoria de marketing digital: estratégia, execução e integração com o comercial. Clareza e direção, não só mais tarefas. Diagnóstico gratuito na OxBrand.',
+  title: 'Consultoria e Assessoria de Marketing Digital | OxBrand',
+  description: 'Consultoria de marketing digital com execução junto: diagnóstico, estratégia e integração com o comercial. Direção, não só mais tarefas. Diagnóstico gratuito.',
   ...pageOg({
-    title: 'Assessoria em Marketing · OxBrand',
-    description: 'Planejamento, execução e otimização de campanhas com performance digital, inteligência de dados e criatividade. Com responsabilidade sobre o resultado.',
+    title: 'Consultoria e Assessoria de Marketing · OxBrand',
+    description: 'Consultoria de marketing digital que não para no diagnóstico: planejamento, execução e otimização com responsabilidade sobre o resultado.',
     path: '/solucoes/assessoria-em-marketing',
-    subtitle: 'Assessoria de Marketing',
+    subtitle: 'Consultoria de Marketing',
   }),
 }
 
 export default function AssessoriaEmMarketingPage() {
   return (
     <SolutionPageTemplate
-      breadcrumb="Assessoria em Marketing"
+      breadcrumb="Consultoria e Assessoria em Marketing"
       slug="assessoria-em-marketing"
-      metaDescription="Planejamos, executamos e otimizamos campanhas que geram resultado de verdade, com performance digital, inteligência de dados e criatividade."
+      metaDescription="Consultoria de marketing digital com execução junto: diagnóstico, plano, execução e otimização, com responsabilidade sobre o resultado."
       tag="Direção, não mais tarefas"
-      headline="Assessoria de Marketing: direção estratégica"
-      headlineHighlight="e execução integrada."
-      subheadline="Com a nossa Assessoria de Marketing, planejamos, executamos e otimizamos campanhas de marketing que geram resultados de verdade, com performance digital, inteligência de dados e criatividade, fortalecendo o branding da sua marca."
-      introTitle="Assessoria completa"
-      intro="Você já investiu em marketing, mas não vê o retorno? Tentou estruturar um time interno ou contratou agências que não entregavam o que prometiam? Você não precisa mais tentar sozinho. A OxBrand é a solução definitiva. Nossa assessoria vai além do plano de ação: o time executa, otimiza e gerencia todas as frentes, com metas claras e responsabilidade sobre o resultado."
+      headline="Consultoria de marketing que não para"
+      headlineHighlight="no diagnóstico."
+      subheadline="Consultoria de marketing digital costuma terminar onde o trabalho começa: um diagnóstico, um plano em slides, e a sua equipe olhando para tudo aquilo sem saber por onde começar. Aqui o diagnóstico é o início. A gente fica para executar junto, com o time comercial dentro da conversa."
+      introTitle="Consultoria com execução junto"
+      intro="Você já investiu em marketing, mas não vê o retorno? Tentou estruturar um time interno ou contratou agências que não entregavam o que prometiam? Você não precisa mais tentar sozinho. A nossa consultoria vai além do plano de ação: o time executa, otimiza e gerencia todas as frentes, com metas claras e responsabilidade sobre o resultado. É consultoria com mão na massa, e é por isso que a gente chama de assessoria."
       stepsImage="/images/solucoes/assessoria-processo.jpg"
       stepsAlt="Metodologia OxBrand: como trabalhamos em 4 etapas, Análise e Diagnóstico, Estratégia e Plano de Ação, Execução e Otimização, Relatórios e Alinhamento"
       ctaHeading="Você não precisa de mais tarefas. Precisa de direção."
@@ -34,6 +34,22 @@ export default function AssessoriaEmMarketingPage() {
         { label: 'Inbound marketing', href: '/solucoes/inbound-marketing' },
       ]}
       faqItems={[
+        {
+          q: 'Quanto custa uma consultoria de marketing digital?',
+          a: 'Depende de escopo e de tempo de contrato, e quem responde com um número fixo sem te ouvir está chutando. O que dá para dizer com honestidade: consultoria pura, só diagnóstico e plano, costuma ser um projeto fechado de algumas semanas. Consultoria com execução é mensal e o valor acompanha o tamanho da operação. No diagnóstico gratuito a gente chega no número da sua realidade antes de qualquer proposta.',
+        },
+        {
+          q: 'Qual a diferença entre consultoria de marketing e assessoria?',
+          a: 'Consultoria entrega direção e termina no plano. Assessoria continua junto na execução e responde pelo resultado. A OxBrand trabalha no segundo formato, porque plano sem execução vira slide guardado e execução sem direção vira tarefa sem destino.',
+        },
+        {
+          q: 'Vale a pena contratar consultoria de marketing digital para empresa pequena?',
+          a: 'Vale quando o problema é de direção, não de volume. Se a empresa já investe em marketing e não sabe dizer o que funciona, a consultoria paga sozinha em poucos meses. Se ainda não existe nenhuma operação rodando, é melhor começar com uma estrutura mínima e trazer a consultoria quando houver dado para analisar.',
+        },
+        {
+          q: 'Em quanto tempo uma consultoria de marketing mostra resultado?',
+          a: 'Diagnóstico e plano em duas a três semanas. Os primeiros sinais de operação, como custo por lead e taxa de resposta do comercial, aparecem no primeiro mês. Resultado de receita atribuída depende do ciclo de venda do seu negócio, e é a primeira coisa que a gente mapeia justamente para não prometer prazo que não existe.',
+        },
         {
           q: 'O que é uma assessoria de marketing?',
           a: 'É um serviço contínuo de estratégia e acompanhamento: planejamento, rotina de execução e alinhamento entre marketing e comercial. Para quem quer clareza e direção, não apenas mais uma lista de tarefas.',
