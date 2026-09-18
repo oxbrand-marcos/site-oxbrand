@@ -28,6 +28,7 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/diagnostico`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.5 },
   { url: `${BASE}/agencia-de-marketing-digital-mogi-das-cruzes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE}/agencia-de-marketing-digital-sao-paulo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+  { url: `${BASE}/trafego-pago-mogi-das-cruzes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
   { url: `${BASE}/marketing-para-industria`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/marketing-para-advogados`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/marketing-para-clinicas-e-medicos`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
