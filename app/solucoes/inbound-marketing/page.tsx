@@ -3,7 +3,7 @@ import { SolutionPageTemplate } from '@/components/solution-page-template'
 import { pageOg } from '@/lib/og'
 
 export const metadata: Metadata = {
-  title: 'Agência de Inbound Marketing e Conteúdo | OxBrand',
+  title: 'Agência de Inbound Marketing B2B | OxBrand',
   description: 'Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até a venda. Inbound Marketing com resultados reais e previsíveis.',
   ...pageOg({
     title: 'Inbound Marketing · OxBrand',
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 export default function InboundMarketingPage() {
   return (
     <SolutionPageTemplate
-      breadcrumb="Inbound Marketing"
+      breadcrumb="Agência de Inbound Marketing B2B"
       slug="inbound-marketing"
       metaDescription="Estratégia de inbound marketing que atrai o público certo, converte visitantes em leads qualificados e nutre até a venda, reduzindo dependência de mídia paga ao longo do tempo."
       tag="Tráfego que não depende de verba"
-      headline="Inbound Marketing que"
+      headline="Agência de Inbound Marketing B2B que"
       headlineHighlight="atrai, converte e vende."
       subheadline="Uma estratégia complexa e poderosa que exige a inteligência de profissionais especializados. Atraímos o público certo, convertemos visitantes em leads qualificados e nutrimos até que estejam prontos para comprar."
       introTitle="O poder da atração"
