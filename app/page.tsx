@@ -27,8 +27,31 @@ const homeFaq = [
   { q: 'O que diferencia a OxBrand de outras agências?', a: 'Enquanto vendem execução, nós entregamos direção. Operamos com método próprio (OX Growth Engineering), time com especialista por frente, rotina de otimização semanal e integração real entre marketing e comercial. Não é presença. É engenharia de resultado.' },
 ]
 
+// Titulo e descricao proprios da home (o layout guarda so o padrao de fallback)
+const HOME_TITLE = 'OxBrand | Agência de Marketing Digital e Performance'
+const HOME_DESCRIPTION = 'Tráfego pago, SEO, sites e CRM para empresas que medem marketing em vendas. Atendimento em Mogi das Cruzes, São Paulo e todo o Brasil.'
+const HOME_OG_IMAGE = 'https://www.oxbrand.com.br/og-home.jpg'
+
 export const metadata: Metadata = {
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
   alternates: { canonical: '/' },
+  openGraph: {
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    url: 'https://www.oxbrand.com.br',
+    siteName: 'OxBrand',
+    locale: 'pt_BR',
+    type: 'website',
+    images: [{ url: HOME_OG_IMAGE, width: 1200, height: 630, alt: HOME_TITLE }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [HOME_OG_IMAGE],
+    site: '@oxbrand_br',
+  },
 }
 
 export default function Home() {
