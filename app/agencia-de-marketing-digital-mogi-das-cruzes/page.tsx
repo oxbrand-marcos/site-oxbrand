@@ -9,14 +9,14 @@ import { LpMogiForm } from './lp-mogi-form'
 export const metadata: Metadata = {
   title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
   description:
-    'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique. Diagnóstico gratuito.',
+    'Agência de marketing digital em Mogi das Cruzes com foco em venda: tráfego pago, SEO, sites e CRM medidos em resultado. Peça seu diagnóstico gratuito.',
   alternates: {
     canonical: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
   },
   openGraph: {
     title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
     description:
-      'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique. Diagnóstico gratuito.',
+      'Agência de marketing digital em Mogi das Cruzes com foco em venda: tráfego pago, SEO, sites e CRM medidos em resultado. Peça seu diagnóstico gratuito.',
     url: 'https://www.oxbrand.com.br/agencia-de-marketing-digital-mogi-das-cruzes',
     siteName: 'OxBrand',
     locale: 'pt_BR',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Agência de Marketing Digital em Mogi das Cruzes | OxBrand',
     description:
-      'Nota 5,0 no Google e 16 anos de sede em Mogi das Cruzes. Tráfego pago, CRM e sites com receita atribuída, não relatório de clique.',
+      'Agência de marketing digital em Mogi das Cruzes com foco em venda: tráfego pago, SEO, sites e CRM medidos em resultado. Peça seu diagnóstico gratuito.',
     images: ['https://www.oxbrand.com.br/og-home.jpg'],
     site: '@oxbrand_br',
   },
