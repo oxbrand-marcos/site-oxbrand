@@ -1049,8 +1049,8 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-planos-e-precos',
-    metaTitle: 'Kommo: planos e preços, qual escolher | OxBrand',
-    metaDescription: 'Kommo: planos, preços e qual escolher para a sua empresa. Comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem enrolação. Guia da OxBrand.',
+    metaTitle: 'Kommo: Planos e Preços Atualizados e Qual Escolher',
+    metaDescription: 'Compare os planos do Kommo, o que cada um inclui e qual faz sentido para o tamanho da sua equipe de vendas antes de contratar.',
     title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
     subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
     tag: 'CRM & Vendas',
@@ -1426,8 +1426,8 @@ export const ARTICLES: Article[] = [
   {
     slug: 'como-funciona-o-crm-kommo',
     author: 'Marcos Blaustein',
-    metaTitle: 'Como Funciona o CRM Kommo na Prática? Guia 2026 | OxBrand',
-    metaDescription: 'Veja como funciona o CRM Kommo na prática: WhatsApp integrado, funil de vendas, Salesbot, planos e preços 2026. Guia da OxBrand, Top 5% parceiros Kommo.',
+    metaTitle: 'Kommo CRM: O Que É, Como Funciona e Para Quem Serve',
+    metaDescription: 'Entenda o Kommo (antigo amoCRM): funil de vendas, WhatsApp integrado, bots e automações. Guia prático de quem implanta o Kommo para empresas.',
     title: 'Como Funciona o CRM Kommo na Prática: Guia 2026',
     subtitle: 'WhatsApp no centro, funil visual, Salesbot e integração com anúncios. Veja como o CRM conversacional funciona na prática, os planos e para quem ele realmente entrega.',
     tag: 'CRM & Vendas',
@@ -1686,8 +1686,8 @@ export const ARTICLES: Article[] = [
   {
     slug: 'trafego-pago-para-construcao-civil',
     author: 'Marcos Blaustein',
-    metaTitle: 'Tráfego Pago para Construção Civil 2026 | OxBrand',
-    metaDescription: 'Tráfego pago para construção civil: como construtoras, incorporadoras e engenharia geram demanda previsível, de lançamentos a contratos B2B. Guia OxBrand.',
+    metaTitle: 'Tráfego Pago para Construção Civil: Leads com Previsibilidade',
+    metaDescription: 'Como construtoras e incorporadoras usam Google e Meta Ads para gerar leads qualificados todo mês, com orçamento, metas e medição de venda.',
     title: 'Tráfego Pago para Construção Civil: Guia Completo',
     subtitle: 'Não é um mercado, são três: incorporação, alto padrão B2C e engenharia B2B. Como cada operação gera demanda previsível com tráfego pago e o método por trás.',
     tag: 'Tráfego & Aquisição',
