@@ -1859,6 +1859,156 @@ export const ARTICLES: Article[] = [
 <div class="callout"><p>Crescimento não é tentativa. É sistema. E sistema que ignora o requisito legal não é sistema: é aposta. Se a sua operação roda hoje sem registro de consentimento, sem opt-out testado e sem contrato que defina responsabilidades, o próximo passo não é mais uma campanha. É estruturar a casa.</p></div>
 `,
   },
+  {
+    slug: 'como-escolher-agencia-de-inbound-marketing',
+    metaTitle: 'Como escolher uma agência de inbound marketing | OxBrand',
+    metaDescription: 'Sete critérios para escolher uma agência de inbound marketing sem cair em entrega de post e relatório de vaidade. O que perguntar antes de contratar.',
+    title: 'Como escolher uma agência de inbound marketing: 7 critérios antes de contratar',
+    subtitle: 'O que separa uma agência que gera demanda de uma que produz conteúdo e relatório. Sete critérios práticos e as perguntas que você deve fazer na primeira reunião.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Inbound',
+    dateISO: '2026-09-21',
+    coverAlt: 'Como escolher uma agência de inbound marketing: critérios de avaliação lado a lado',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Quase toda agência diz que faz inbound marketing. Na prática, muitas entregam um calendário de posts, alguns artigos por mês e um relatório de alcance. Isso é produção de conteúdo, não inbound. A diferença aparece seis meses depois, quando o blog está cheio e o comercial continua sem oportunidade.</p>
+<p>Inbound marketing é um sistema: atrair a empresa certa, converter o interesse em contato, nutrir até a decisão e entregar ao comercial alguém pronto para conversar. Escolher a agência certa é escolher quem sabe operar esse sistema inteiro. Estes são os critérios que separam uma da outra.</p>
+<h2>1. Ela começa pelo diagnóstico, não pelo pacote</h2>
+<p>Agência que chega com proposta pronta, "4 artigos e 12 posts por mês", decidiu o remédio antes de examinar o paciente. O primeiro trabalho de um bom parceiro é entender o seu ciclo de venda, o seu cliente ideal, o que o comercial já faz e onde a demanda está vazando. Só depois disso faz sentido falar em volume de conteúdo.</p>
+<p><strong>Pergunte:</strong> o que vocês precisam saber do meu negócio antes de montar a proposta?</p>
+<h2>2. Ela mede oportunidade, não curtida</h2>
+<p>Relatório de impressão, alcance e seguidor é fácil de produzir e quase nunca muda uma decisão. O indicador que importa é o que chega ao comercial: leads qualificados, oportunidades abertas, taxa de conversão por etapa e, quando o ciclo permite, receita atribuída.</p>
+<p><strong>Pergunte:</strong> qual é o número que vocês vão me mostrar todo mês, e como ele se liga à venda?</p>
+<h2>3. Ela entende CRM de verdade</h2>
+<p>Inbound sem <a href="/blog/o-que-e-crm">CRM</a> é conteúdo sem memória. O lead converte, recebe um email e some. É o CRM que registra de onde a pessoa veio, o que ela já consumiu e em que momento o comercial deve agir. Agência que trata o CRM como assunto "do cliente" vai entregar lead e não vai saber o que aconteceu com ele.</p>
+<p><strong>Pergunte:</strong> como o lead que vocês geram entra no meu CRM, e quem acompanha o que acontece depois?</p>
+<h2>4. Ela fala com o seu comercial</h2>
+<p>O ponto de ruptura mais comum do inbound é a passagem de bastão. Marketing entrega um contato que o comercial considera frio, o comercial não aborda, e cada lado culpa o outro. Uma boa agência propõe um acordo claro: o que é um lead pronto para vendas, em quanto tempo ele é abordado e o que volta para nutrição.</p>
+<p><strong>Pergunte:</strong> vocês participam de reunião com o meu time comercial?</p>
+<h2>5. Ela tem método de conteúdo por etapa do funil</h2>
+<p>Falar de produto para quem ainda nem entendeu o problema afasta. Falar do problema para quem já está comparando fornecedores desperdiça a chance. O conteúdo precisa cobrir as três etapas do <a href="/blog/funil-de-vendas">funil</a>: descoberta, consideração e decisão, cada uma com o formato certo.</p>
+<p><strong>Pergunte:</strong> como vocês decidem sobre o que escrever, e para quem é cada peça?</p>
+<h2>6. Ela sabe combinar inbound com mídia paga</h2>
+<p>Inbound puro é lento. Leva meses para o conteúdo ganhar tração orgânica. A agência que resolve isso usa <a href="/blog/trafego-pago-guia-definitivo">tráfego pago</a> para acelerar a distribuição do que já funciona e para capturar a demanda que existe hoje, enquanto o orgânico amadurece. Quem vende inbound como alternativa à mídia, e não como complemento, está vendendo paciência.</p>
+<p><strong>Pergunte:</strong> como vocês aceleram os primeiros meses, enquanto o orgânico não responde?</p>
+<h2>7. Ela mostra caso, não promessa</h2>
+<p>Qualquer agência consegue descrever o processo ideal. Poucas conseguem mostrar uma operação real funcionando, com números e com um cliente que atende o telefone. Peça casos do seu segmento ou de um ciclo de venda parecido com o seu.</p>
+<p><strong>Pergunte:</strong> posso falar com um cliente de vocês que tenha um ciclo de venda parecido com o meu?</p>
+<h2>Os sinais de alerta</h2>
+<ul>
+<li><strong>Contrato preso a volume de peças</strong> em vez de objetivo de negócio.</li>
+<li><strong>Promessa de resultado em 30 dias</strong> para uma estratégia que, por natureza, leva meses.</li>
+<li><strong>Nenhuma pergunta sobre o seu comercial</strong> na primeira conversa.</li>
+<li><strong>Relatório sem uma linha sequer sobre venda.</strong></li>
+</ul>
+<p>Se a conversa com a agência não passa pelo seu comercial, pelo seu CRM e pela sua meta de receita, ela está vendendo conteúdo. É um serviço legítimo, mas não é inbound.</p>
+<div class="callout"><p>O serviço de <a href="/solucoes/inbound-marketing">inbound marketing B2B da OxBrand</a> começa pelo diagnóstico e responde pelos sete pontos acima: conteúdo por etapa, nutrição, CRM integrado e alinhamento com o comercial. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional. Conteúdo atualizado em setembro de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que uma agência de inbound marketing faz?', a: 'Estrutura o sistema que atrai empresas certas com conteúdo, converte o interesse em contato, nutre esse contato até a decisão e entrega ao comercial um lead pronto para conversar. Inclui estratégia de conteúdo, páginas de conversão, automação, CRM e alinhamento com vendas.' },
+      { q: 'Como saber se uma agência de inbound é boa?', a: 'Observe se ela começa pelo diagnóstico, se mede oportunidades e não curtidas, se entende CRM, se envolve o seu comercial e se mostra casos reais com números. Proposta pronta antes de conhecer o seu negócio é sinal de alerta.' },
+      { q: 'Quanto tempo o inbound marketing leva para dar resultado?', a: 'O orgânico costuma levar de três a seis meses para ganhar tração. Por isso a combinação com mídia paga é comum nos primeiros meses: ela acelera a distribuição e captura a demanda que já existe enquanto o conteúdo amadurece.' },
+      { q: 'Vale mais contratar agência ou montar time interno de inbound?', a: 'Depende do volume e da maturidade. Um time interno completo exige estrategista, redator, designer, especialista em automação e alguém de dados. Para a maioria das empresas médias, a agência entrega essa estrutura com custo menor e curva de aprendizado já paga.' },
+    ],
+  },
+  {
+    slug: 'consultoria-de-inbound-marketing',
+    metaTitle: 'Consultoria de inbound marketing: quando vale a pena | OxBrand',
+    metaDescription: 'O que uma consultoria de inbound marketing entrega, quando ela resolve e quando você precisa de execução junto. Guia para empresas B2B.',
+    title: 'Consultoria de inbound marketing: o que entrega e quando vale a pena',
+    subtitle: 'A diferença entre consultoria e execução, os sinais de que a sua operação precisa de uma, e o que esperar do trabalho. Guia para empresas que já produzem conteúdo e não veem resultado.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Inbound',
+    dateISO: '2026-09-21',
+    coverAlt: 'Consultoria de inbound marketing: diagnóstico da operação de conteúdo, nutrição e CRM',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Existe um estágio muito comum nas empresas B2B: o blog já existe, o time já publica, a ferramenta de automação já foi contratada, e mesmo assim as oportunidades não aparecem. Nesse ponto, produzir mais conteúdo raramente é a resposta. O que falta é direção. É para isso que serve uma consultoria de inbound marketing.</p>
+<p>Consultoria de inbound é um trabalho de diagnóstico e desenho: olhar a operação inteira, encontrar onde a demanda está vazando e montar o plano para corrigir. Ela não substitui a execução. Ela diz o que executar, em que ordem e com que critério de sucesso.</p>
+<h2>Consultoria, execução ou os dois?</h2>
+<p>A confusão entre os termos custa caro, então vale separar:</p>
+<ul>
+<li><strong>Consultoria</strong> entrega diagnóstico, estratégia e plano. Termina quando o plano está pronto e o time interno sabe o que fazer.</li>
+<li><strong>Execução</strong> entrega as peças: artigos, páginas, emails, fluxos, campanhas. Não questiona a direção, apenas produz.</li>
+<li><strong>Assessoria</strong> junta as duas coisas: diagnostica, desenha e fica para executar junto, respondendo pelo resultado.</li>
+</ul>
+<p>Se a sua empresa tem time interno capaz e só precisa de direção, consultoria resolve. Se não tem quem execute, uma consultoria pura entrega um plano que vai ficar na gaveta. Nesse caso, o formato certo é o de <a href="/solucoes/assessoria-em-marketing">consultoria com execução junto</a>.</p>
+<h2>Sinais de que a sua operação precisa de consultoria</h2>
+<ul>
+<li><strong>Muito conteúdo, pouca conversão.</strong> O tráfego do blog cresce e o número de contatos não acompanha.</li>
+<li><strong>Leads que o comercial rejeita.</strong> Marketing comemora o volume e vendas reclama da qualidade.</li>
+<li><strong>Automação ligada e ninguém sabe o que ela faz.</strong> Fluxos antigos disparando para bases que ninguém revisa há meses.</li>
+<li><strong>Nenhum número liga o conteúdo à venda.</strong> O relatório mostra visitas e aberturas, nunca oportunidade ou receita.</li>
+</ul>
+<p>Qualquer um desses sinais indica problema de sistema, não de volume. Produzir mais só amplifica o que já não funciona.</p>
+<h2>O que uma boa consultoria de inbound analisa</h2>
+<p><strong>1. Posicionamento e cliente ideal.</strong> Para quem a empresa escreve, e se essa pessoa é quem de fato decide a compra. No <a href="/blog/inbound-marketing-b2b">inbound B2B</a> quem pesquisa nem sempre é quem assina.</p>
+<p><strong>2. Conteúdo por etapa.</strong> Se existe material para descoberta, consideração e decisão, ou se tudo está concentrado no topo, atraindo curioso e ignorando quem está comparando fornecedores.</p>
+<p><strong>3. Pontos de conversão.</strong> Páginas, ofertas e formulários. Onde o visitante vira contato, e quantos visitantes se perdem antes disso.</p>
+<p><strong>4. Nutrição e automação.</strong> O que acontece com o lead depois que ele converte. Quanto tempo ele espera, que conteúdo recebe e quando é passado ao comercial.</p>
+<p><strong>5. CRM e passagem para vendas.</strong> Se existe definição clara de lead pronto para vendas, se o <a href="/blog/o-que-e-crm">CRM</a> registra a origem e se o comercial aborda no tempo combinado.</p>
+<p><strong>6. Mensuração.</strong> Se a empresa consegue dizer quais conteúdos e canais geram oportunidade de verdade.</p>
+<h2>O que esperar como entrega</h2>
+<p>Ao fim de uma consultoria bem feita, a empresa deve ter três coisas nas mãos: um diagnóstico com os gargalos priorizados, um plano de ação com ordem de execução e responsáveis, e um conjunto de indicadores que permita saber, em poucas semanas, se o plano está funcionando.</p>
+<p>Consultoria que entrega apenas uma apresentação bonita, sem ordem de prioridade e sem indicador, deixou o trabalho difícil para depois.</p>
+<div class="callout"><p>A OxBrand faz consultoria de inbound marketing com execução junto: diagnóstico, plano, conteúdo por etapa, nutrição e CRM integrado ao comercial. Conheça o serviço de <a href="/solucoes/inbound-marketing">inbound marketing B2B</a> ou comece pelo <a href="/diagnostico">diagnóstico gratuito</a>. Conteúdo atualizado em setembro de 2026.</p></div>
+`,
+    faq: [
+      { q: 'O que é consultoria de inbound marketing?', a: 'É um trabalho de diagnóstico e desenho da operação de inbound: analisar posicionamento, conteúdo por etapa do funil, pontos de conversão, nutrição, CRM e mensuração, e entregar um plano priorizado para corrigir os gargalos.' },
+      { q: 'Qual a diferença entre consultoria e agência de inbound?', a: 'A consultoria entrega direção e plano, e termina quando o time interno sabe o que fazer. A agência executa as peças. A assessoria junta as duas coisas: diagnostica, desenha e fica para executar junto, respondendo pelo resultado.' },
+      { q: 'Quando vale contratar uma consultoria de inbound?', a: 'Quando a empresa já produz conteúdo e não vê oportunidade, quando o comercial rejeita os leads, quando a automação roda sem revisão ou quando nenhum indicador liga o conteúdo à venda. São sinais de problema de sistema, não de volume.' },
+      { q: 'Consultoria de inbound serve para empresa B2B?', a: 'É justamente onde ela mais rende. No B2B o ciclo de compra é longo e envolve vários decisores, então erros de nutrição e de passagem para vendas custam caro e ficam escondidos por meses.' },
+    ],
+  },
+  {
+    slug: 'inbound-marketing-para-industria',
+    metaTitle: 'Inbound marketing para indústria: como gerar demanda B2B | OxBrand',
+    metaDescription: 'Como aplicar inbound marketing em indústria: conteúdo técnico, ciclo de venda longo, engenharia e compras na mesma decisão. Guia prático.',
+    title: 'Inbound marketing para indústria: como gerar demanda em vendas técnicas',
+    subtitle: 'Como aplicar inbound em empresas industriais, onde o comprador é técnico, a decisão passa por engenharia e compras, e o ciclo pode levar meses. O que funciona e o que não funciona.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Inbound',
+    dateISO: '2026-09-21',
+    coverAlt: 'Inbound marketing para indústria: conteúdo técnico alimentando o funil de vendas B2B',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">A indústria sempre vendeu por relacionamento, feira e representante. Esse modelo não morreu, mas mudou de lugar. Hoje o engenheiro pesquisa especificação no Google antes de ligar para qualquer fornecedor, e o comprador compara três orçamentos antes da primeira reunião. Quem não aparece nessa pesquisa não entra na lista.</p>
+<p>Inbound marketing para indústria é ocupar esse espaço: estar presente, com conteúdo técnico útil, no momento em que a empresa começa a procurar solução. Não substitui o comercial técnico. Faz com que ele chegue à reunião com um cliente que já confia na empresa.</p>
+<h2>Por que a venda industrial é diferente</h2>
+<ul>
+<li><strong>Comprador técnico.</strong> Quem pesquisa entende do assunto e rejeita conteúdo genérico em segundos. Superficialidade é descartada.</li>
+<li><strong>Decisão em comitê.</strong> Engenharia valida a especificação, compras negocia preço e prazo, a diretoria aprova o investimento. Cada um tem uma objeção diferente.</li>
+<li><strong>Ciclo longo.</strong> Entre a primeira pesquisa e o pedido podem passar meses, às vezes um orçamento anual inteiro.</li>
+<li><strong>Risco alto.</strong> Fornecedor errado para a linha. A prova técnica pesa mais que qualquer argumento comercial.</li>
+</ul>
+<p>Isso muda a execução do inbound em quase tudo. O princípio é o mesmo do <a href="/blog/inbound-marketing-b2b">inbound B2B</a>, mas o nível de profundidade é outro.</p>
+<h2>O conteúdo que funciona na indústria</h2>
+<p><strong>Conteúdo de especificação.</strong> Tabelas técnicas, comparativos de material, normas aplicáveis, tolerâncias. É o que o engenheiro procura e o que pouca concorrência publica com clareza.</p>
+<p><strong>Conteúdo de aplicação.</strong> Em que situação o produto resolve, em que situação não resolve. Honestidade técnica gera mais confiança que catálogo.</p>
+<p><strong>Conteúdo para compras.</strong> Custo total de propriedade, prazo, manutenção, garantia. O comprador precisa de argumento para defender a escolha internamente.</p>
+<p><strong>Prova.</strong> Casos de aplicação com dado real, fotos de instalação, certificações. Na indústria, prova fecha mais venda que promessa.</p>
+<h2>Onde o inbound industrial costuma falhar</h2>
+<ul>
+<li><strong>Blog escrito por quem não conhece o produto.</strong> O engenheiro percebe na primeira frase e não volta.</li>
+<li><strong>Formulário que pede demais cedo demais.</strong> Quem está só especificando não quer falar com vendedor ainda. Ofereça a ficha técnica, não a reunião.</li>
+<li><strong>Lead que não chega ao representante.</strong> A indústria costuma ter comercial distribuído. Sem <a href="/blog/o-que-e-crm">CRM</a> e regra de distribuição, o contato morre no email de alguém.</li>
+<li><strong>Expectativa de retorno em semanas.</strong> Em ciclo industrial, o primeiro pedido vindo do inbound pode levar meses. Quem mede no primeiro trimestre desiste antes da colheita.</li>
+</ul>
+<h2>Como estruturar na prática</h2>
+<p><strong>1. Mapear as dúvidas reais.</strong> O melhor briefing de conteúdo está nas perguntas que engenharia e comercial ouvem toda semana. Comece por elas.</p>
+<p><strong>2. Construir páginas por aplicação,</strong> não só por produto. O cliente busca a solução para o problema dele, não o nome do seu item de catálogo.</p>
+<p><strong>3. Oferecer material técnico como conversão.</strong> Ficha técnica, guia de especificação, calculadora. É o que o comprador industrial aceita trocar pelo contato.</p>
+<p><strong>4. Distribuir o lead com regra clara</strong> por região, linha de produto ou porte, e acompanhar no CRM até o pedido.</p>
+<p><strong>5. Acelerar com mídia.</strong> Enquanto o orgânico amadurece, <a href="/blog/trafego-pago-guia-definitivo">tráfego pago</a> bem segmentado leva o conteúdo técnico a quem está especificando agora.</p>
+<div class="callout"><p>A OxBrand estrutura <a href="/solucoes/inbound-marketing">inbound marketing B2B</a> para indústria, com conteúdo técnico, CRM e distribuição de leads para o comercial. Veja também como trabalhamos o <a href="/marketing-para-industria">marketing para indústria</a>. Conteúdo atualizado em setembro de 2026.</p></div>
+`,
+    faq: [
+      { q: 'Inbound marketing funciona para indústria?', a: 'Funciona, desde que o conteúdo tenha profundidade técnica. O comprador industrial pesquisa especificação, aplicação e norma antes de falar com fornecedor. Quem publica esse conteúdo com clareza entra na lista de avaliação antes da concorrência.' },
+      { q: 'Que tipo de conteúdo gerar para indústria?', a: 'Conteúdo de especificação (tabelas, normas, tolerâncias), de aplicação (quando o produto resolve e quando não), conteúdo para compras (custo total, prazo, manutenção) e prova (casos com dados, certificações).' },
+      { q: 'Quanto tempo o inbound leva para gerar pedido na indústria?', a: 'Em ciclo industrial, o primeiro pedido originado do inbound pode levar vários meses. Os primeiros sinais aparecem antes, em contatos qualificados e pedidos de orçamento, mas a receita acompanha o ciclo de venda da empresa.' },
+      { q: 'Como conciliar inbound com representantes comerciais?', a: 'Com CRM e regra de distribuição clara por região, linha ou porte. O inbound gera o contato, o CRM direciona para o representante certo e registra o andamento até o pedido, para que nenhum lead se perca.' },
+    ],
+  },
 ]
 
 /** Texto puro (sem HTML) para calculo de tempo de leitura. */
