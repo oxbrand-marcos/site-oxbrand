@@ -11,6 +11,9 @@ export function generateStaticParams() {
   return ARTICLES.filter((a) => !STATIC_SLUGS.has(a.slug)).map((a) => ({ slug: a.slug }))
 }
 
+// Artigos cujo og:title e twitter:title seguem o title da busca, nao o H1
+const OG_USA_META_TITLE = new Set(['como-funciona-o-crm-kommo', 'trafego-pago-para-construcao-civil', 'kommo-planos-e-precos'])
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
   const article = getArticle(slug)
@@ -18,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.metaTitle,
     description: article.metaDescription,
-    ...articleOg({ title: article.title, description: article.metaDescription, slug, coverUrl: coverFor(slug), datePublished: article.dateISO }),
+    ...articleOg({ title: OG_USA_META_TITLE.has(slug) ? article.metaTitle : article.title, description: article.metaDescription, slug, coverUrl: coverFor(slug), datePublished: article.dateISO }),
   }
 }
 
