@@ -180,7 +180,7 @@ export default function EbookComunicacaoRaizPage() {
                     <Link href="/materiais-gratuitos" className="mono-tag text-primary/60 hover:text-primary transition-colors">← Ver mais materiais</Link>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                  <form id="form-ebook-comunicacao-raiz" onSubmit={handleSubmit} className="flex flex-col gap-5">
                     <div className="flex flex-col gap-1.5">
                       <label className="mono-tag text-zinc-500 text-center md:text-left" htmlFor="nome">Seu nome</label>
                       <input
