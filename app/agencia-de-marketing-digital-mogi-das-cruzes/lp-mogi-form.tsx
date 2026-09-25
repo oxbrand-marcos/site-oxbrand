@@ -77,7 +77,7 @@ export function LpMogiForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form id="form-agencia-mogi" onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
         type="text"
         required
