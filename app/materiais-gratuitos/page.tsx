@@ -120,7 +120,7 @@ function LeadModal({ onClose }: { onClose: () => void }) {
               <p className="mt-1 text-xs text-zinc-400">Preencha para liberar o download imediato.</p>
             </div>
 
-            <form onSubmit={handleSubmit} noValidate className="px-8 py-6 flex flex-col gap-4">
+            <form id="form-materiais-gratuitos" onSubmit={handleSubmit} noValidate className="px-8 py-6 flex flex-col gap-4">
 
               {/* Nome */}
               <div className="flex flex-col gap-1">
