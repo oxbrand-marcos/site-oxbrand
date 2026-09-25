@@ -105,7 +105,7 @@ export function CareerForm({ vaga }: Props) {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form id="form-carreira" onSubmit={handleSubmit} className="flex flex-col gap-4">
         {/* 1. Nome */}
         <div className="flex flex-col gap-1.5">
           <label htmlFor="cf-nome" className="mono-tag text-muted-foreground/50">Nome completo<Req /></label>
