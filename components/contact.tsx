@@ -87,7 +87,7 @@ export function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form id="form-contato" onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor="name" className="mono-tag text-muted-foreground/50 text-center sm:text-left">Nome<Req /></label>
