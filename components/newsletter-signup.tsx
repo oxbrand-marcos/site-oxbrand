@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { pushFormSuccess } from '@/lib/tracking'
 
 type Variant = 'inline' | 'article' | 'footer'
 
@@ -26,9 +27,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
       })
       if (!res.ok) throw new Error()
       // GTM: evento de conversão de formulário
-      const w = window as any
-      w.dataLayer = w.dataLayer || []
-      w.dataLayer.push({ event: 'form_success', lead_email: email.trim(), lead_name: name.trim() })
+      pushFormSuccess(`form-newsletter${variant === 'footer' ? '-rodape' : variant === 'article' ? '-artigo' : ''}`, { name, email })
       setStatus('success')
     } catch {
       setStatus('error')
