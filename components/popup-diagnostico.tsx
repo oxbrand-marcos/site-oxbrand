@@ -179,7 +179,7 @@ export function PopupDiagnostico() {
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <form id="form-popup-diagnostico" onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <input
                   type="text"
                   required
