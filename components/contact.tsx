@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const inputCls =
   'border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:border-primary transition-colors w-full font-mono'
@@ -43,9 +44,7 @@ export function Contact() {
       const data = await res.json()
       if (!data.ok) throw new Error(data.error ?? 'Erro ao enviar')
       // GTM: evento de conversão de formulário
-      const w = window as any
-      w.dataLayer = w.dataLayer || []
-      w.dataLayer.push({ event: 'form_success', lead_email: form.email, lead_phone: form.phone, lead_name: form.name })
+      pushFormSuccess('form-contato', { name: form.name, email: form.email, phone: form.phone })
       setSent(true)
     } catch {
       setError('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
