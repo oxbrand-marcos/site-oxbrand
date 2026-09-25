@@ -218,7 +218,7 @@ export default function DiagnosticoPage() {
                   </button>
                 </div>
               ) : (
-              <form ref={formRef} className="flex flex-col gap-5" onSubmit={handleSubmit}>
+              <form id="form-diagnostico" ref={formRef} className="flex flex-col gap-5" onSubmit={handleSubmit}>
 
                 {campos.map((campo) => (
                   <Fragment key={campo.id}>
