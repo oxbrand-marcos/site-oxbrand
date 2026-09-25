@@ -47,7 +47,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
         {status === 'success' ? (
           <p className="text-xs text-primary font-semibold">Cadastrado. Fique de olho na caixa de entrada.</p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full" noValidate>
+          <form id="form-newsletter-rodape" onSubmit={handleSubmit} className="flex flex-col gap-2 w-full" noValidate>
             <input
               type="text"
               placeholder="Seu nome"
@@ -96,7 +96,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
         {status === 'success' ? (
           <p className="text-sm font-semibold text-primary">Cadastrado. Fique de olho na caixa de entrada.</p>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3" noValidate>
+          <form id="form-newsletter-artigo" onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3" noValidate>
             <input
               type="text"
               placeholder="Seu nome"
@@ -144,7 +144,7 @@ export function NewsletterSignup({ variant = 'inline' }: { variant?: Variant }) 
       {status === 'success' ? (
         <p className="text-sm font-semibold text-white">Cadastrado. Fique de olho na caixa de entrada.</p>
       ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-xl" noValidate>
+        <form id="form-newsletter" onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-xl" noValidate>
           <input
             type="text"
             placeholder="Seu nome"
