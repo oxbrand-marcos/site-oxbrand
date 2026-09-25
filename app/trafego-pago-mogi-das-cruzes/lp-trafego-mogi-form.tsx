@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const inputCls =
   'bg-[#181818] border border-zinc-700 text-zinc-100 placeholder:text-zinc-500 text-sm px-4 py-3 outline-none focus:border-[#5c36eb] transition-colors w-full'
@@ -44,14 +45,7 @@ export function LpTrafegoMogiForm() {
       })
       const data = await res.json()
       if (!data.ok) throw new Error(data.error ?? 'Erro ao enviar')
-      const w = window as any
-      w.dataLayer = w.dataLayer || []
-      w.dataLayer.push({
-        event: 'form_success',
-        lead_name: form.nome,
-        lead_email: form.email,
-        lead_phone: form.whatsapp,
-      })
+      pushFormSuccess('form-trafego-mogi', { name: form.nome, email: form.email, phone: form.whatsapp })
       setSent(true)
     } catch {
       setErro('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
