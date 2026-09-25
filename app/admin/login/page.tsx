@@ -41,7 +41,7 @@ export default function AdminLoginPage() {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form id="form-admin-login" onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div className="flex flex-col gap-1.5">
             <label htmlFor="email" className="text-xs font-mono tracking-widest uppercase text-zinc-400">
               E-mail
