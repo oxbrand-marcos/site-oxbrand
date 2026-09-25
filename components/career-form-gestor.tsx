@@ -197,7 +197,7 @@ export function CareerFormGestor({ vaga }: Props) {
         {current.intro && <p className="text-sm text-muted-foreground leading-relaxed mt-1">{current.intro}</p>}
       </div>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <form id="form-carreira-gestor" onSubmit={handleSubmit} className="flex flex-col gap-5">
         {current.fields.map((f) => {
           const id = `cfg-${f.key.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`
           return (
