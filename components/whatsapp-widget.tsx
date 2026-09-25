@@ -127,7 +127,7 @@ export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {
                   Preencha seus dados e vamos te chamar no WhatsApp agora mesmo.
                 </p>
 
-                <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                <form id="form-whatsapp-widget" onSubmit={handleSubmit} className="flex flex-col gap-3">
                   <div className="flex flex-col gap-1">
                     <label className="text-[10px] font-bold text-white/40 uppercase tracking-widest">
                       Nome completo <span className="text-primary">*</span>
