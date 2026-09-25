@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const STORAGE_KEY = 'oxb_popup_blog'
 const COOLDOWN_DAYS = 14
@@ -95,6 +96,7 @@ export function PopupDiagnosticoBlog() {
       const w = window as any
       w.dataLayer = w.dataLayer || []
       w.dataLayer.push({ event: 'popup_blog_diagnostico_submit', lead_email: form.email, lead_phone: form.whatsapp })
+      pushFormSuccess('form-popup-diagnostico-blog', { name: form.nome, email: form.email, phone: form.whatsapp })
       setSent(true)
     } catch {
       setErro('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
