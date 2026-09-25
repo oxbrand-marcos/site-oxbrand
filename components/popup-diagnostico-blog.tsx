@@ -182,7 +182,7 @@ export function PopupDiagnosticoBlog() {
               {/* Divisor */}
               <div className="h-px bg-zinc-800 mb-5" />
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <form id="form-popup-diagnostico-blog" onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <input
                   type="text"
                   required
