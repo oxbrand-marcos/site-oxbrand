@@ -7,6 +7,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { X, Loader2, CheckCircle2 } from 'lucide-react'
+import { pushFormSuccess } from '@/lib/tracking'
 
 /* ─── tipos ────────────────────────────────────────────────── */
 type ModalState = 'idle' | 'submitting' | 'success'
@@ -46,7 +47,7 @@ function LeadModal({ onClose }: { onClose: () => void }) {
     setState('submitting')
 
     try {
-      await fetch('/api/leads/materiais', {
+      const res = await fetch('/api/leads/materiais', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -56,6 +57,7 @@ function LeadModal({ onClose }: { onClose: () => void }) {
           material: 'comunicacao-raiz',
         }),
       })
+      if (res.ok) pushFormSuccess('form-materiais-gratuitos', { name: form.nome, email: form.email, phone: form.whatsapp })
     } catch {
       // falha silenciosa — não bloqueia o download
     }
