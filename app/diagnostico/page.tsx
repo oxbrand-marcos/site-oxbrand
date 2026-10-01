@@ -9,6 +9,7 @@ import DotsCanvas from '@/components/dots-canvas'
 import { CheckCircle2 } from 'lucide-react'
 import { PhoneField, isValidPhoneNumber } from '@/components/phone-field'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0" aria-hidden="true">
@@ -89,9 +90,7 @@ export default function DiagnosticoPage() {
       const data = await res.json()
       if (!data.ok) throw new Error(data.error ?? 'Erro ao enviar')
       // GTM: evento de conversão de formulário
-      const w = window as any
-      w.dataLayer = w.dataLayer || []
-      w.dataLayer.push({ event: 'form_success', lead_email: body['Seu melhor e-mail'], lead_phone: phone, lead_name: body['Seu nome'] })
+      pushFormSuccess('form-diagnostico', { name: body['Seu nome'], email: body['Seu melhor e-mail'], phone })
       setSent(true)
     } catch {
       setErro('Não foi possível enviar. Tente novamente ou fale pelo WhatsApp.')
