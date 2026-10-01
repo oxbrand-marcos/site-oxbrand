@@ -7,6 +7,7 @@ import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { Check } from 'lucide-react'
 import Image from 'next/image'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const challenges = [
   'Atrair Clientes',
@@ -39,7 +40,7 @@ export default function EbookComunicacaoRaizPage() {
     if (!form.aceito) return
 
     try {
-      await fetch('/api/leads/materiais', {
+      const res = await fetch('/api/leads/materiais', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -49,6 +50,7 @@ export default function EbookComunicacaoRaizPage() {
           material: 'comunicacao-raiz',
         }),
       })
+      if (res.ok) pushFormSuccess('form-ebook-comunicacao-raiz', { name: form.nome, email: form.email, phone: form.telefone })
     } catch {
       // falha silenciosa — não bloqueia o download
     }
