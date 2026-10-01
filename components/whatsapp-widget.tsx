@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { X, MessageCircle, Send, ChevronDown } from 'lucide-react'
 import { getRecaptchaToken } from '@/lib/recaptcha-client'
 import { appendWaSource } from '@/lib/wa-source'
+import { pushFormSuccess } from '@/lib/tracking'
 
 const WHATSAPP_NUMBER = '+5511921425351'
 
@@ -75,6 +76,10 @@ export function WhatsAppWidget({ embedded = false }: { embedded?: boolean }) {
             Telefone: form.telefone,
           }),
         })
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.ok) pushFormSuccess('form-whatsapp-widget', { name: form.nome, email: form.email, phone: form.telefone })
       })
       .catch(() => {})
 
