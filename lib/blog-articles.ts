@@ -1049,7 +1049,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-planos-e-precos',
-    metaTitle: 'Kommo: Planos e Preços Atualizados e Qual Escolher',
+    metaTitle: 'Planos do Kommo e preços: qual escolher para sua equipe',
     metaDescription: 'Compare os planos do Kommo, o que cada um inclui e qual faz sentido para o tamanho da sua equipe de vendas antes de contratar.',
     title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
     subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
