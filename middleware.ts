@@ -1,17 +1,5 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { buildRedirects } from './lib/redirects.mjs'
-
-/**
- * Mapa origem (sem barra final) -> destino, montado a partir das mesmas regras
- * do next.config. Serve para resolver a URL legada COM barra final em um salto
- * so: o Next normaliza a barra antes de aplicar os redirects, entao sem isto
- * /rota-legada/ gastaria dois saltos (normalizacao + redirect), o que o Google
- * conta como cadeia.
- */
-const MAPA_REDIRECTS = new Map(
-  buildRedirects().map((r) => [r.source.replace(/\/$/, ''), r.destination] as const),
-)
 
 const PRODUCTION_HOSTS = ['oxbrand.com.br', 'www.oxbrand.com.br']
 
@@ -37,16 +25,6 @@ export function middleware(request: NextRequest) {
   // 410 Gone — URLs descontinuadas do WordPress
   if (GONE_PATTERNS.some(re => re.test(pathname))) {
     return new NextResponse(null, { status: 410 })
-  }
-
-  // Rota legada com barra final: vai direto ao destino, sem o salto de normalizacao
-  if (pathname.length > 1 && pathname.endsWith('/')) {
-    const destino = MAPA_REDIRECTS.get(pathname.slice(0, -1))
-    if (destino) {
-      const url = request.nextUrl.clone()
-      url.pathname = destino
-      return NextResponse.redirect(url, 308)
-    }
   }
 
   const response = NextResponse.next()
