@@ -6,7 +6,8 @@ import { buildRedirects } from './lib/redirects.mjs'
  * Mapa origem (sem barra final) -> destino, montado a partir das mesmas regras
  * do next.config. Serve para resolver a URL legada COM barra final em um salto
  * so: o Next normaliza a barra antes de aplicar os redirects, entao sem isto
- * /rota-legada/ gastaria dois saltos (normalizacao + redirect).
+ * /rota-legada/ gastaria dois saltos (normalizacao + redirect), o que o Google
+ * conta como cadeia.
  */
 const MAPA_REDIRECTS = new Map(
   buildRedirects().map((r) => [r.source.replace(/\/$/, ''), r.destination] as const),
