@@ -9,7 +9,7 @@ import { LpTrafegoMogiForm } from './lp-trafego-mogi-form'
 const URL = 'https://www.oxbrand.com.br/trafego-pago-mogi-das-cruzes'
 const TITLE = 'Agência de Tráfego Pago em Mogi das Cruzes | OxBrand'
 const DESC =
-  'Agência de tráfego pago em Mogi das Cruzes: Google Ads e Meta Ads ligados ao CRM, com custo por lead e receita na mesma tela. +R$ 258M gerados. Análise gratuita.'
+  'Agência de tráfego pago em Mogi das Cruzes: Google e Meta Ads ligados ao CRM, com custo por lead e receita na mesma tela. +R$ 258M gerados. Análise grátis.'
 
 export const metadata: Metadata = {
   title: TITLE,
