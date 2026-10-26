@@ -6,7 +6,6 @@ import Image from 'next/image'
 import type { BlogPost } from '@/lib/db/schema'
 import { NewsletterSignup } from '@/components/newsletter-signup'
 import { readingTime } from '@/lib/utils'
-import { STATIC_POSTS } from '@/lib/blog-static'
 
 // Categorias canônicas, a fonte da verdade para labels e slugs
 const CATEGORY_DEFS = [
@@ -59,7 +58,8 @@ function formatDate(date: Date | string) {
 
 
 interface Props {
-  posts: BlogPost[]
+  // readMinutes vem calculado do servidor (app/blog/page.tsx), que também já mescla os posts.
+  posts: (BlogPost & { readMinutes?: number })[]
 }
 
 export function InsightsGrid({ posts }: Props) {
@@ -79,9 +79,7 @@ export function InsightsGrid({ posts }: Props) {
   // lesse a versão do banco, os dois divergiriam, era o que fazia o card exibir
   // "1 min de leitura" enquanto o artigo exibia "6 min". Uma fonte de verdade só.
   const allPosts = useMemo(() => {
-    const staticSlugs = new Set(STATIC_POSTS.map((p) => p.slug))
-    const dbOnly = posts.filter((p) => !staticSlugs.has(p.slug))
-    return [...STATIC_POSTS, ...dbOnly].sort(
+    return [...posts].sort(
       (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     )
   }, [posts])
@@ -150,7 +148,7 @@ export function InsightsGrid({ posts }: Props) {
         ) : (
           <div className="flex flex-col md:grid md:grid-cols-2 gap-px bg-zinc-200 border border-zinc-200">
             {filtered.flatMap((post, i) => {
-              const mins = readingTime(post.content)
+              const mins = post.readMinutes ?? readingTime(post.content)
               const card = (
                 <Link
                   key={post.slug}
