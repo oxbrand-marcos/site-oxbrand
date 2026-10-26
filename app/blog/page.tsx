@@ -6,6 +6,7 @@ import { Footer } from '@/components/footer'
 import DotsCanvas from '@/components/dots-canvas'
 import { getAllPublishedPosts } from '@/app/actions/blog'
 import { InsightsGrid } from '@/components/insights-grid'
+import { readingTime } from '@/lib/utils'
 import { blogListingSchema, breadcrumbSchema, jsonLd } from '@/lib/jsonld'
 import { STATIC_POSTS } from '@/lib/blog-static'
 
@@ -23,6 +24,11 @@ export const metadata: Metadata = {
 
 export default async function InsightsPage() {
   const posts = await getAllPublishedPosts()
+  // Lista leve para o grid (roda no navegador): sem o texto dos artigos, só o tempo de leitura.
+  // Antes o grid importava os artigos inteiros e mandava ~280 KB de texto no JavaScript.
+  const gridPosts = [...STATIC_POSTS, ...posts.filter((p) => !STATIC_POSTS.some((s) => s.slug === p.slug))]
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+    .map((p) => ({ ...p, content: '', readMinutes: readingTime(p.content) }))
 
   return (
     <>
@@ -85,7 +91,7 @@ export default async function InsightsPage() {
         </section>
 
         {/* Grid de posts com filtros */}
-        <InsightsGrid posts={posts} />
+        <InsightsGrid posts={gridPosts} />
 
         {/* CTA */}
         <section className="py-20 bg-background">
