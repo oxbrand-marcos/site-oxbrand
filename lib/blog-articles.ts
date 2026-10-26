@@ -1962,7 +1962,7 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'inbound-marketing-para-industria',
-    metaTitle: 'Inbound marketing para indústria: como gerar demanda B2B | OxBrand',
+    metaTitle: 'Inbound marketing para indústria: demanda B2B | OxBrand',
     metaDescription: 'Como aplicar inbound marketing em indústria: conteúdo técnico, ciclo de venda longo, engenharia e compras na mesma decisão. Guia prático.',
     title: 'Inbound marketing para indústria: como gerar demanda em vendas técnicas',
     subtitle: 'Como aplicar inbound em empresas industriais, onde o comprador é técnico, a decisão passa por engenharia e compras, e o ciclo pode levar meses. O que funciona e o que não funciona.',
