@@ -87,9 +87,9 @@ export const CASES: CaseStudy[] = [
     slug: 'comissao-direito-empresarial-oab-mogi',
     client: 'Comissão de Direito Empresarial da OAB Mogi das Cruzes',
     metaTitle: 'Case Comissão de Direito Empresarial OAB Mogi | OxBrand',
-    metaDescription: 'Case da Comissão de Direito Empresarial da OAB Mogi das Cruzes: branding, social media, boletim informativo e site em conformidade com a OAB, à altura de mais de 3 anos de atuação. Agência OxBrand.',
+    metaDescription: 'Case da Comissão de Direito Empresarial da OAB Mogi das Cruzes: branding, social media, boletim e site em conformidade com a OAB. Agência OxBrand.',
     segment: 'Direito empresarial · OAB',
-    headline: 'Comissão de Direito Empresarial da OAB Mogi das Cruzes: identidade e autoridade à altura de mais de 3 anos de atuação',
+    headline: 'Comissão de Direito Empresarial da OAB Mogi: identidade e autoridade à altura da sua atuação',
     summary: 'Da Comissão de Direito Empresarial sem identidade própria a uma referência de profissionalismo, com branding e conteúdo à altura de sua atuação consolidada há mais de 3 anos.',
     bullets: [
       'Identidade visual construída e aplicada em todos os pontos de contato digitais, redes sociais e materiais de divulgação, com o profissionalismo condizente com mais de 3 anos de atuação consolidada.',
