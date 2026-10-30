@@ -1049,8 +1049,8 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-planos-e-precos',
-    metaTitle: 'Planos do Kommo e preços: qual escolher para sua equipe',
-    metaDescription: 'Compare os planos do Kommo, o que cada um inclui e qual faz sentido para o tamanho da sua equipe de vendas antes de contratar.',
+    metaTitle: 'Kommo: planos e preços 2026 (Base, Avançado, Empresarial)',
+    metaDescription: 'Quanto custa o Kommo em 2026: Base US$ 15, Avançado US$ 25 e Empresarial US$ 45 por usuário/mês. Tabela, exemplo de conta e qual plano escolher.',
     title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
     subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
     tag: 'CRM & Vendas',
@@ -1059,7 +1059,7 @@ export const ARTICLES: Article[] = [
     coverAlt: 'Comparativo de planos e preços do Kommo CRM',
     author: 'Marcos Blaustein',
     faq: [
-      { q: 'Quanto custa o Kommo?', a: 'O Kommo cobra por usuário/mês, em dólar, com desconto no plano anual. Como o câmbio e a política de preços variam, confirme o valor vigente no site oficial. Mais importante que o preço de tabela é qual plano serve para o seu tamanho de operação.' },
+      { q: 'Quanto custa o Kommo?', a: 'No plano anual, o Kommo custa US$ 15 por usuário/mês no Base, US$ 25 no Avançado e US$ 45 no Empresarial (valores de tabela conferidos em outubro de 2026). O mensal sai mais caro. Em real, depende da cotação do dólar.' },
       { q: 'Qual o melhor plano do Kommo?', a: 'Para a maioria das empresas que já vendem por WhatsApp, o plano Avançado é o ponto de equilíbrio entre automação e custo. Times pequenos começam bem no Base; operações grandes vão para o Empresarial.' },
       { q: 'O Kommo tem plano gratuito?', a: 'O Kommo trabalha com teste gratuito por tempo limitado, não com um plano gratuito permanente. Dá para testar antes de decidir, e é o que recomendamos, para o time sentir a ferramenta antes de contratar.' },
       { q: 'Vale a pena contratar com uma agência parceira?', a: 'Se você quer a configuração certa desde o início (funil, automações e integrações), sim. Uma implementação parceira poupa meses de tentativa e erro. Somos Top 5% dos parceiros Kommo no Brasil.' },
@@ -1067,7 +1067,17 @@ export const ARTICLES: Article[] = [
     bodyHtml: `
 <p class="lead">Se você chegou aqui, provavelmente já entendeu que precisa de um CRM integrado ao WhatsApp e o Kommo apareceu como opção. A dúvida agora é prática: quanto custa, quais são os planos e qual deles faz sentido para o seu tamanho de operação. Como somos Top 5% dos parceiros Kommo no Brasil, este é o comparativo que fazemos numa reunião, direto, sem empurrar o plano mais caro.</p>
 <p>Se você ainda está mapeando a ferramenta como um todo, o nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> reúne o que é, como funciona e como implementar num lugar só.</p>
-<p>Um aviso de transparência: o Kommo reajusta preços periodicamente e cobra em dólar, por usuário e por mês (no plano anual). Então trate os valores abaixo como faixa de referência e confirme o preço vigente no site oficial antes de decidir. O que não muda é a lógica de qual plano serve para quem, e é nisso que este guia foca.</p>
+<p><strong>Resposta direta:</strong> o Kommo tem três planos pagos, cobrados em dólar por usuário/mês no plano anual: <strong>Base a US$ 15</strong>, <strong>Avançado a US$ 25</strong> e <strong>Empresarial a US$ 45</strong>. Há teste gratuito de 14 dias e não existe plano grátis permanente.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Plano</th><th>Preço por usuário/mês (anual)</th><th>Para quem serve</th></tr></thead>
+<tbody>
+<tr><td>Base</td><td>US$ 15</td><td>Time pequeno organizando o atendimento no WhatsApp e no Instagram</td></tr>
+<tr><td>Avançado</td><td>US$ 25</td><td>Quem já vende por WhatsApp e quer automação, Salesbot e disparos</td></tr>
+<tr><td>Empresarial</td><td>US$ 45</td><td>Operação com base grande de contatos e vários vendedores</td></tr>
+</tbody>
+</table></div>
+<p><strong>Exemplo de conta:</strong> um time de 3 vendedores no Avançado paga 3 × US$ 25 = US$ 75 por mês, ou US$ 900 no ano. Em real, multiplique pela cotação do dólar no dia da contratação.</p>
+<p>Valores de tabela conferidos em outubro de 2026. O Kommo reajusta preços periodicamente e o mensal custa mais que o anual, então confirme o valor vigente no site oficial antes de fechar. Abaixo, a lógica de qual plano serve para quem, que é o que mais pesa no resultado.</p>
 <h2>Como o Kommo cobra (o modelo, antes do preço)</h2>
 <ul>
 <li><strong>Por usuário, por mês:</strong> o valor é multiplicado pelo número de pessoas do time que vão usar o sistema.</li>
@@ -1093,7 +1103,7 @@ export const ARTICLES: Article[] = [
 <h2>Preço não é o que decide o resultado</h2>
 <p>Depois de implementar Kommo em dezenas de operações, a conclusão é sempre a mesma: o que separa quem cresce de quem desiste não é o plano contratado, é a configuração. Funil desenhado para o seu processo, automações que fazem sentido e um time treinado valem mais que qualquer recurso extra do plano premium.</p>
 <p>É por isso que, mais do que contratar o Kommo, o que muda o jogo é implementá-lo bem. Se você quer entender qual plano e qual configuração servem para a sua operação, essa é a conversa do nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>. E se ainda está entendendo como o CRM se conecta ao WhatsApp, comece por <a href="/blog/crm-integrado-ao-whatsapp">este guia</a>.</p>
-<div class="callout"><p>Conteúdo atualizado em julho de 2026. Os planos e preços do Kommo mudam periodicamente; confira sempre os valores vigentes no site oficial do Kommo antes de decidir.</p></div>
+<div class="callout"><p>Conteúdo atualizado em outubro de 2026. Os planos e preços do Kommo mudam periodicamente; confira sempre os valores vigentes no site oficial do Kommo antes de decidir.</p></div>
 <p>A OxBrand implementa o Kommo com método: o plano certo para o seu tamanho e a configuração que faz o time realmente usar. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Agende um <a href="/diagnostico">diagnóstico gratuito</a>.</p>
 `,
   },
