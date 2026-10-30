@@ -162,7 +162,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
             <p className="text-sm font-bold text-foreground tracking-wide">Contato</p>
             <p className="text-sm text-foreground/70 leading-relaxed">
               Sede: Mogi das Cruzes - SP<br />
-              Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1303<br />
+              Av. Ver. Narciso Yague Guimarães, 1145 - Sala 1002<br />
               Torre Office (Helbor Concept) - Socorro<br />
               CEP 08780-500
             </p>
