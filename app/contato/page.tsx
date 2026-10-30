@@ -11,7 +11,7 @@ import DotsCanvas from '@/components/dots-canvas'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Contato | OxBrand, Agência de Marketing em Mogi das Cruzes',
+  title: 'Contato | OxBrand: diagnóstico gratuito de marketing',
   description: 'Entre em contato com a OxBrand. Agende um diagnóstico gratuito e descubra como escalar seus resultados com marketing de performance.',
   ...pageOg({
     title: 'Fale com a OxBrand · Diagnóstico gratuito',
@@ -116,6 +116,13 @@ export default function ContatoPage() {
                 </h2>
                 <p className="text-base text-gray-600 leading-relaxed max-w-md">
                   Prefere conversar pessoalmente? Venha tomar um café e entender quais soluções fazem mais sentido para o seu momento.
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed max-w-md">
+                  Conheça a nossa{' '}
+                  <Link href="/agencia-de-marketing-digital-mogi-das-cruzes" className="underline underline-offset-2 hover:text-gray-900">
+                    agência de marketing digital em Mogi das Cruzes
+                  </Link>
+                  : cases da região, bairros atendidos e como trabalhamos.
                 </p>
 
                 {/* Endereço */}
