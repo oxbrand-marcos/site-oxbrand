@@ -136,7 +136,7 @@ const servicoSchema = {
     email: 'contato@oxbrand.com.br',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Av. Ver. Narciso Yague Guimarães, 1145, Sala 1303',
+      streetAddress: 'Av. Ver. Narciso Yague Guimarães, 1145, Sala 1002',
       addressLocality: 'Mogi das Cruzes',
       addressRegion: 'SP',
       postalCode: '08780-500',
@@ -543,7 +543,7 @@ export default function TrafegoPagoMogiPage() {
                 </h2>
                 <address className="not-italic flex flex-col gap-2 text-sm text-muted-foreground">
                   <p className="font-semibold text-foreground">OxBrand, Tecnologia e Marketing</p>
-                  <p>Av. Ver. Narciso Yague Guimarães, 1.145, Sala 1303</p>
+                  <p>Av. Ver. Narciso Yague Guimarães, 1.145, Sala 1002</p>
                   <p>Edifício Helbor Concept (Torre Office)</p>
                   <p>Mogi das Cruzes/SP · CEP 08780-500</p>
                 </address>
