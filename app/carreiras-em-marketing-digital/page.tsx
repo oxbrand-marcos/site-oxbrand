@@ -35,7 +35,7 @@ const candidateFAQ = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Carreiras em Marketing Digital | OxBrand, Mogi das Cruzes',
+  title: 'Carreiras em Marketing Digital | OxBrand',
   description: 'Faça parte do time OxBrand. Vagas para profissionais de marketing digital que querem crescer numa agência de performance orientada por dados.',
   ...pageOg({
     title: 'Carreiras na OxBrand · Seja um OxMaker',
