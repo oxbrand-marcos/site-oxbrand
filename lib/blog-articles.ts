@@ -2,6 +2,10 @@
  * Artigos do blog renderizados pela rota dinamica /blog/[slug].
  * bodyHtml e conteudo estatico, autoral, sem entrada de usuario, seguro para render direto.
  * Regra de estilo: nunca usar travessao no texto.
+ *
+ * Precos de terceiros citados aqui tem data no proprio texto do post.
+ * Kommo: tabela em portugues conferida em 12/11/2026 (Basico 20, Avancado 30,
+ * Pro 45 e Empresarial sob medida; assinatura minima de 6 meses).
  */
 export interface Article {
   slug: string
