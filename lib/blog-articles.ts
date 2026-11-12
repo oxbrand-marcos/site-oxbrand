@@ -1049,8 +1049,8 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-planos-e-precos',
-    metaTitle: 'Kommo: planos e preços 2026 (Base, Avançado, Empresarial)',
-    metaDescription: 'Quanto custa o Kommo em 2026: Base US$ 15, Avançado US$ 25 e Empresarial US$ 45 por usuário/mês. Tabela, exemplo de conta e qual plano escolher.',
+    metaTitle: 'Kommo: planos e preços 2026 (Básico, Avançado, Pro)',
+    metaDescription: 'Quanto custa o Kommo em 2026: Básico US$ 20, Avançado US$ 30 e Pro US$ 45 por usuário/mês na tabela Brasil. Exemplo de conta e qual plano escolher.',
     title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
     subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
     tag: 'CRM & Vendas',
@@ -1059,44 +1059,46 @@ export const ARTICLES: Article[] = [
     coverAlt: 'Comparativo de planos e preços do Kommo CRM',
     author: 'Marcos Blaustein',
     faq: [
-      { q: 'Quanto custa o Kommo?', a: 'No plano anual, o Kommo custa US$ 15 por usuário/mês no Base, US$ 25 no Avançado e US$ 45 no Empresarial (valores de tabela conferidos em outubro de 2026). O mensal sai mais caro. Em real, depende da cotação do dólar.' },
-      { q: 'Qual o melhor plano do Kommo?', a: 'Para a maioria das empresas que já vendem por WhatsApp, o plano Avançado é o ponto de equilíbrio entre automação e custo. Times pequenos começam bem no Base; operações grandes vão para o Empresarial.' },
+      { q: 'Quanto custa o Kommo?', a: 'Na tabela em português de novembro de 2026, o Kommo custa US$ 20 por usuário/mês no Básico, US$ 30 no Avançado e US$ 45 no Pro. O Empresarial é sob medida. Não existe pagamento mensal: a assinatura mínima é de 6 meses. Em real, depende da cotação do dólar.' },
+      { q: 'Qual o melhor plano do Kommo?', a: 'Para a maioria das empresas que já vendem por WhatsApp, o plano Avançado é o ponto de equilíbrio entre automação e custo. Times pequenos começam bem no Básico; operações maduras vão para o Pro, e o Empresarial é sob medida.' },
       { q: 'O Kommo tem plano gratuito?', a: 'O Kommo trabalha com teste gratuito por tempo limitado, não com um plano gratuito permanente. Dá para testar antes de decidir, e é o que recomendamos, para o time sentir a ferramenta antes de contratar.' },
       { q: 'Vale a pena contratar com uma agência parceira?', a: 'Se você quer a configuração certa desde o início (funil, automações e integrações), sim. Uma implementação parceira poupa meses de tentativa e erro. Somos Top 5% dos parceiros Kommo no Brasil.' },
     ],
     bodyHtml: `
 <p class="lead">Se você chegou aqui, provavelmente já entendeu que precisa de um CRM integrado ao WhatsApp e o Kommo apareceu como opção. A dúvida agora é prática: quanto custa, quais são os planos e qual deles faz sentido para o seu tamanho de operação. Como somos Top 5% dos parceiros Kommo no Brasil, este é o comparativo que fazemos numa reunião, direto, sem empurrar o plano mais caro.</p>
 <p>Se você ainda está mapeando a ferramenta como um todo, o nosso <a href="/blog/kommo-crm-guia-completo">guia completo do Kommo</a> reúne o que é, como funciona e como implementar num lugar só.</p>
-<p><strong>Resposta direta:</strong> o Kommo tem três planos pagos, cobrados em dólar por usuário/mês no plano anual: <strong>Base a US$ 15</strong>, <strong>Avançado a US$ 25</strong> e <strong>Empresarial a US$ 45</strong>. Há teste gratuito de 14 dias e não existe plano grátis permanente.</p>
+<p><strong>Resposta direta:</strong> o Kommo tem quatro planos pagos, cobrados em dólar por usuário/mês: <strong>Básico a US$ 20</strong>, <strong>Avançado a US$ 30</strong>, <strong>Pro a US$ 45</strong> e <strong>Empresarial sob medida</strong> (tabela em português, novembro de 2026). Há teste gratuito de 14 dias e não existe plano grátis permanente.</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Plano</th><th>Preço por usuário/mês (anual)</th><th>Para quem serve</th></tr></thead>
+<thead><tr><th>Plano</th><th>Preço por usuário/mês (tabela Brasil)</th><th>Para quem serve</th></tr></thead>
 <tbody>
-<tr><td>Base</td><td>US$ 15</td><td>Time pequeno organizando o atendimento no WhatsApp e no Instagram</td></tr>
-<tr><td>Avançado</td><td>US$ 25</td><td>Quem já vende por WhatsApp e quer automação, Salesbot e disparos</td></tr>
-<tr><td>Empresarial</td><td>US$ 45</td><td>Operação com base grande de contatos e vários vendedores</td></tr>
+<tr><td>Básico</td><td>US$ 20</td><td>Time pequeno organizando o atendimento no WhatsApp e no Instagram</td></tr>
+<tr><td>Avançado</td><td>US$ 30</td><td>Quem já vende por WhatsApp e quer automação, Salesbot e disparos</td></tr>
+<tr><td>Pro</td><td>US$ 45</td><td>Operação com base grande de contatos, vários vendedores e análise avançada</td></tr>
+<tr><td>Empresarial</td><td>Sob medida</td><td>Grandes operações, com necessidade de segurança e suporte dedicado</td></tr>
 </tbody>
 </table></div>
-<p><strong>Exemplo de conta:</strong> um time de 3 vendedores no Avançado paga 3 × US$ 25 = US$ 75 por mês, ou US$ 900 no ano. Em real, multiplique pela cotação do dólar no dia da contratação.</p>
-<p>Valores de tabela conferidos em outubro de 2026. O Kommo reajusta preços periodicamente e o mensal custa mais que o anual, então confirme o valor vigente no site oficial antes de fechar. Abaixo, a lógica de qual plano serve para quem, que é o que mais pesa no resultado.</p>
+<p><strong>Exemplo de conta:</strong> um time de 3 vendedores no Avançado paga 3 × US$ 30 = US$ 90 por mês, o que dá US$ 540 no ciclo mínimo de 6 meses e US$ 1.080 em 12 meses. Em real, multiplique pela cotação do dólar no dia da contratação.</p>
+<p>Valores conferidos em novembro de 2026 na tabela em português do site oficial do Kommo. Atenção a uma diferença que confunde: a tabela internacional, em inglês, cobra mais (US$ 25 no Básico e US$ 35 no Avançado). O Kommo reajusta preços periodicamente, então confirme o valor vigente antes de fechar. Abaixo, a lógica de qual plano serve para quem, que é o que mais pesa no resultado.</p>
 <h2>Como o Kommo cobra (o modelo, antes do preço)</h2>
 <ul>
 <li><strong>Por usuário, por mês:</strong> o valor é multiplicado pelo número de pessoas do time que vão usar o sistema.</li>
 <li><strong>Em dólar:</strong> o preço final em real varia com o câmbio.</li>
-<li><strong>Mais barato no anual:</strong> o plano mensal custa bem mais caro por usuário que o anual. Para quem vai usar de verdade, o anual compensa.</li>
+<li><strong>Por período, nunca mensal:</strong> não existe pagamento mensal. A assinatura mínima é de 6 meses, e os ciclos mais longos (9, 12 e 24 meses) derrubam o valor por usuário.</li>
 </ul>
 <h2>Os planos do Kommo, na prática</h2>
 <ul>
-<li><strong>Base:</strong> o plano de entrada. Funil, integração com WhatsApp e canais, gestão de leads. Serve para times pequenos que querem organizar o atendimento e parar de perder lead. Para muita empresa iniciando no CRM, já resolve.</li>
+<li><strong>Básico:</strong> o plano de entrada. Funil, integração com WhatsApp e canais, gestão de leads. Serve para times pequenos que querem organizar o atendimento e parar de perder lead. Para muita empresa iniciando no CRM, já resolve.</li>
 <li><strong>Avançado:</strong> adiciona automações mais robustas, funil de tarefas e recursos de produtividade para o time comercial. É o ponto ideal para a maioria das operações que já vendem por WhatsApp e querem escalar com processo.</li>
-<li><strong>Empresarial:</strong> foco em bases grandes de contatos, perfilamento e necessidades de operações maiores. Faz sentido para quem tem volume alto de leads e um time comercial estruturado.</li>
+<li><strong>Pro:</strong> foco em bases grandes de contatos, perfilamento, análise avançada e necessidades de operações maiores. Faz sentido para quem tem volume alto de leads e um time comercial estruturado.</li>
+<li><strong>Empresarial:</strong> preço sob medida, definido conforme a configuração. É a faixa de grandes operações, com exigência de segurança e suporte dedicado.</li>
 </ul>
 <h2>Qual plano escolher? A regra simples</h2>
 <ul>
-<li><strong>Time pequeno, começando a organizar o WhatsApp:</strong> comece no Base. Ele já entrega o essencial: nenhum lead perdido e histórico registrado.</li>
+<li><strong>Time pequeno, começando a organizar o WhatsApp:</strong> comece no Básico. Ele já entrega o essencial: nenhum lead perdido e histórico registrado.</li>
 <li><strong>Já vende por WhatsApp e quer automatizar e escalar:</strong> o Avançado é o ponto certo. É onde a automação começa a devolver tempo para o time vender.</li>
-<li><strong>Operação grande, base extensa, vários vendedores:</strong> Empresarial.</li>
+<li><strong>Operação grande, base extensa, vários vendedores:</strong> Pro, e Empresarial só quando a configuração exigir.</li>
 </ul>
-<p>O erro mais comum não é escolher o plano errado, é escolher o plano certo e configurar mal. Um Kommo Avançado sem funil bem desenhado rende menos que um Base bem implementado. Preço é o menor dos fatores; implementação é o que define o resultado.</p>
+<p>O erro mais comum não é escolher o plano errado, é escolher o plano certo e configurar mal. Um Kommo Avançado sem funil bem desenhado rende menos que um Básico bem implementado. Preço é o menor dos fatores; implementação é o que define o resultado.</p>
 <h2>Kommo vale a pena?</h2>
 <p>Vale, para um perfil claro: empresas que recebem leads pelo WhatsApp, têm mais de um vendedor e hoje não conseguem dizer quantos contatos entraram e converteram no mês. Para esse perfil, o custo do Kommo é uma fração do que se perde em lead mal atendido.</p>
 <p>Não vale (ainda) se você recebe pouquíssimos contatos e uma pessoa dá conta com folga. Nesse caso, o problema não é CRM, é gerar demanda primeiro. A gente diz isso antes de vender, porque ferramenta parada é custo, não solução.</p>
@@ -1447,7 +1449,7 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'O Kommo funciona com WhatsApp normal ou só API?', a: 'Funciona com os dois: WhatsApp Lite (via QR code) para operações menores e WhatsApp Cloud API (oficial) para escala, automações avançadas e múltiplos atendentes.' },
       { q: 'O Kommo tem plano gratuito?', a: 'Não. Há teste gratuito de 14 dias com acesso completo aos recursos.' },
-      { q: 'Quanto custa o Kommo por mês?', a: 'A partir de US$ 15 por usuário ao mês no plano Base, com contratos mínimos de período no Brasil. Via parceiro oficial, há condições e bônus de tempo de contrato.' },
+      { q: 'Quanto custa o Kommo por mês?', a: 'A partir de US$ 20 por usuário ao mês no plano Básico, na tabela em português de novembro de 2026. Não há pagamento mensal: a assinatura mínima é de 6 meses. Via parceiro oficial, há condições e bônus de tempo de contrato.' },
       { q: 'O Kommo serve para equipes pequenas?', a: 'Sim. Operações com 2 ou 3 atendentes já sentem o efeito da caixa unificada e da resposta automática. O plano Base cobre o essencial para começar.' },
       { q: 'Kommo ou RD Station CRM: qual escolher?', a: 'Depende da operação. Se a venda acontece no WhatsApp e no Instagram, o Kommo tende a levar vantagem. Se a prioridade é o ecossistema de automação de marketing em português, o RD entra forte. Leia o comparativo completo.' },
     ],
@@ -1476,10 +1478,10 @@ export const ARTICLES: Article[] = [
 <div class="table-wrap"><table>
 <thead><tr><th>Plano</th><th>Preço (por usuário/mês)</th><th>Para quem</th></tr></thead>
 <tbody>
-<tr><td>Base</td><td>US$ 15</td><td>Times pequenos: funil, caixa unificada, automação básica</td></tr>
-<tr><td>Advanced</td><td>US$ 25</td><td>Times em crescimento: automação de pipeline, Salesbot, broadcasting</td></tr>
+<tr><td>Básico</td><td>US$ 20</td><td>Times pequenos: funil, caixa unificada, automação básica</td></tr>
+<tr><td>Avançado</td><td>US$ 30</td><td>Times em crescimento: automação de pipeline, Salesbot, broadcasting</td></tr>
 <tr><td>Pro</td><td>US$ 45</td><td>Times maduros: analytics avançado, canais ilimitados, IA em escala</td></tr>
-<tr><td>Enterprise</td><td>Sob consulta</td><td>Grandes operações: segurança e suporte dedicado</td></tr>
+<tr><td>Empresarial</td><td>Sob medida</td><td>Grandes operações: segurança e suporte dedicado</td></tr>
 </tbody></table></div>
 <p>No Brasil, a contratação via parceiro oficial costuma incluir condições e bônus de período (por exemplo, meses adicionais em contratos anuais), além de implantação assistida. Os valores em reais variam com o câmbio e as condições vigentes, consulte antes de fechar. Todos os planos têm teste gratuito de 14 dias, direto no <a href="https://www.kommo.com/br/" target="_blank" rel="noopener">site oficial do Kommo</a>.</p>
 <h2>Para que tipo de empresa o Kommo funciona melhor</h2>
@@ -1768,7 +1770,7 @@ export const ARTICLES: Article[] = [
     dateISO: '2026-07-07',
     coverAlt: 'Kommo vs RD Station: comparativo de recursos e preços',
     faq: [
-      { q: 'Kommo ou RD Station: qual é mais barato?', a: 'Para 1 a 3 usuários, o RD Free é imbatível (gratuito). A partir daí, o Kommo Base (US$ 15) e o RD Basic (R$ 65,70) ficam próximos: a conta muda com câmbio, período de contrato e recursos necessários.' },
+      { q: 'Kommo ou RD Station: qual é mais barato?', a: 'Para 1 a 3 usuários, o RD Free é imbatível (gratuito). A partir daí, o Kommo Básico (US$ 20) e o RD Basic (R$ 65,70) ficam próximos: a conta muda com câmbio, período de contrato e recursos necessários.' },
       { q: 'Posso usar Kommo e RD Station juntos?', a: 'Sim, é uma arquitetura que implantamos: RD Station Marketing para nutrição e automação de e-mail, Kommo como CRM conversacional do comercial, integrados.' },
       { q: 'Qual tem melhor integração com WhatsApp?', a: 'Kommo, com folga. WhatsApp é o núcleo da ferramenta, com API oficial e automações de conversa nativas.' },
       { q: 'Qual é melhor para inbound marketing?', a: 'RD Station, pela integração nativa entre marketing e vendas. Se sua máquina é de conteúdo e nutrição, o ecossistema RD foi feito para isso.' },
@@ -1788,10 +1790,10 @@ export const ARTICLES: Article[] = [
 <thead><tr><th>Item</th><th>Kommo</th><th>RD Station CRM</th></tr></thead>
 <tbody>
 <tr><td>Plano gratuito</td><td>Não (teste de 14 dias)</td><td>Sim, até 4 usuários</td></tr>
-<tr><td>Entrada</td><td>Base: US$ 15/usuário/mês</td><td>Basic: R$ 65,70/usuário/mês</td></tr>
-<tr><td>Intermediário</td><td>Advanced: US$ 25/usuário/mês</td><td>Pro: R$ 117,90/usuário/mês (mín. 4)</td></tr>
+<tr><td>Entrada</td><td>Básico: US$ 20/usuário/mês</td><td>Basic: R$ 65,70/usuário/mês</td></tr>
+<tr><td>Intermediário</td><td>Avançado: US$ 30/usuário/mês</td><td>Pro: R$ 117,90/usuário/mês (mín. 4)</td></tr>
 <tr><td>Avançado</td><td>Pro: US$ 45/usuário/mês</td><td>Advanced: sob consulta (mín. 4)</td></tr>
-<tr><td>Contrato</td><td>Períodos mínimos no Brasil</td><td>Mensal ou anual com desconto</td></tr>
+<tr><td>Contrato</td><td>Mínimo de 6 meses, sem opção mensal</td><td>Mensal ou anual com desconto</td></tr>
 <tr><td>Moeda</td><td>Dólar (via parceiro, em reais)</td><td>Real</td></tr>
 </tbody></table></div>
 <p>Dois pontos de atenção: o plano Free do RD é uma porta de entrada real para times pequenos, e o Kommo não tem equivalente. Por outro lado, o preço do Kommo em dólar via parceiro oficial costuma vir com bônus de período e implantação assistida que mudam a conta final.</p>
