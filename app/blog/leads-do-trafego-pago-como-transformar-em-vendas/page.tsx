@@ -170,7 +170,7 @@ export default function LeadsTrafegoPage() {
                 <div className="bg-zinc-50 border border-zinc-200 p-6 flex flex-col gap-2">
                   <span className="mono-tag text-primary/60">Dado relevante</span>
                   <p className="text-sm text-zinc-900">Segundo{' '}
-                    <a href="https://insidesales.com/blog/lead-response/lead-response-management-study/" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">estudo da InsideSales</a>
+                    <a href="https://www.mortech.com/hs-fs/hub/25649/file-13535879-pdf/docs/mit_study.pdf" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">estudo da InsideSales com o MIT</a>
                     , a taxa de conversão é <strong>21 vezes maior</strong> quando o lead é contactado em até 5 minutos após a demonstração de interesse. Passando de 1 hora, a probabilidade de conversão cai até 10 vezes.</p>
                 </div>
 
