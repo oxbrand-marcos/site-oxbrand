@@ -24,6 +24,215 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'crm-para-advogados',
+    metaTitle: 'CRM para advogados: como organizar a captação do escritório',
+    metaDescription: 'CRM para escritório de advocacia: funil por área, triagem no WhatsApp, origem do contato e regras da OAB. Diferença entre CRM e software jurídico.',
+    title: 'CRM para advogados: como organizar a entrada de clientes no escritório',
+    subtitle: 'O escritório investe em conteúdo e anúncio, o contato chega pelo WhatsApp e se perde entre um prazo e outro. Um CRM comercial resolve isso, desde que seja montado dentro das regras da OAB.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-11-16',
+    coverAlt: 'CRM para advogados: funil de atendimento do escritório de advocacia organizado por área do direito',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Quase todo escritório que chega até nós tem o mesmo desenho: o marketing traz contatos, o WhatsApp do escritório recebe tudo, e a resposta depende de quem está livre naquele momento. Ninguém sabe dizer quantas consultas chegaram no mês, de onde vieram e quantas viraram contrato. O problema não é falta de demanda. É falta de registro.</p>
+<p>CRM para advogados é o sistema que organiza essa entrada: cada pessoa que procura o escritório vira um registro, com origem, área do direito, etapa do atendimento e próximo passo. Não substitui o software jurídico que controla processos e prazos. Cuida do que acontece antes da procuração.</p>
+<h2>CRM comercial não é software jurídico</h2>
+<p>É a confusão mais comum. Sistemas como Astrea, ADVBOX ou Projuris gerenciam processos, prazos, publicações e documentos de quem já é cliente. Um CRM comercial, como o Kommo, gerencia quem ainda não é cliente: o primeiro contato, a triagem, a consulta, a proposta de honorários e a decisão.</p>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>CRM comercial</th><th>Software jurídico</th></tr></thead>
+<tbody>
+<tr><td>Quem está dentro</td><td>Pessoas que procuraram o escritório</td><td>Clientes com caso em andamento</td></tr>
+<tr><td>O que controla</td><td>Origem, triagem, consulta, proposta, fechamento</td><td>Processos, prazos, publicações, documentos</td></tr>
+<tr><td>Pergunta que responde</td><td>Quantos contatos viraram contrato, e por quê?</td><td>O que precisa ser feito em cada processo?</td></tr>
+</tbody>
+</table></div>
+<p>Os dois se complementam. O erro é tentar fazer o software jurídico cumprir o papel do comercial, ou deixar o comercial sem sistema nenhum.</p>
+<h2>O que um CRM resolve no escritório</h2>
+<ul>
+<li><strong>Contato que esfria.</strong> Quem procura um advogado costuma estar com urgência e falando com mais de um escritório. Sem registro, a resposta atrasa e a pessoa contrata quem respondeu primeiro.</li>
+<li><strong>Consulta que não volta.</strong> A pessoa faz a consulta, diz que vai pensar e some. Sem uma tarefa de retorno com data, ninguém lembra de ligar.</li>
+<li><strong>Origem desconhecida.</strong> O escritório paga anúncio, publica conteúdo, recebe indicação, e não sabe qual canal gera contrato. Decide o investimento no escuro.</li>
+<li><strong>Atendimento dependente de uma pessoa.</strong> Quando a secretária sai de férias, o histórico vai junto com ela.</li>
+</ul>
+<h2>Como montar o funil do escritório</h2>
+<p>O funil precisa refletir como o escritório realmente atende. Um desenho que funciona na maioria dos casos:</p>
+<p><strong>1. Novo contato.</strong> Toda mensagem do WhatsApp, Instagram ou formulário do site entra aqui automaticamente, com a origem registrada.</p>
+<p><strong>2. Triagem.</strong> Qual é a área (trabalhista, família, previdenciário, empresarial), qual é a urgência e se o caso está dentro do que o escritório atende. Casos fora do escopo são encaminhados com cordialidade e encerrados, sem ocupar o funil.</p>
+<p><strong>3. Consulta agendada.</strong> Data, formato (presencial ou online) e documentos que a pessoa precisa trazer.</p>
+<p><strong>4. Proposta de honorários enviada.</strong> O valor fica registrado no negócio, e o sistema cria a tarefa de retorno.</p>
+<p><strong>5. Contrato fechado ou perdido.</strong> Quando perde, o motivo é registrado (preço, escolheu outro escritório, desistiu da ação). Em alguns meses, esses motivos mostram onde o atendimento precisa melhorar.</p>
+<p>Escritórios com áreas muito diferentes costumam funcionar melhor com um funil por área, porque a triagem e o tempo de decisão mudam muito entre um caso trabalhista e uma reestruturação societária.</p>
+<h2>O que a OAB permite (e o que muda no CRM)</h2>
+<p>O <a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" target="_blank" rel="noopener noreferrer">Provimento 205/2021</a> organiza a publicidade na advocacia, e três pontos dele afetam diretamente o atendimento:</p>
+<ul>
+<li><strong>Chatbot é permitido,</strong> para facilitar a comunicação e coletar dados ou documentos, mas não pode afastar a pessoalidade do serviço jurídico. Na prática: o bot recebe, organiza e encaminha. Quem orienta é o advogado.</li>
+<li><strong>Nada de promessa de resultado</strong> nem de referência a honorários, descontos ou gratuidade para atrair clientes. Isso vale também para as mensagens automáticas do CRM.</li>
+<li><strong>Grupos de WhatsApp</strong> só com pessoas determinadas, ligadas às relações do escritório. Disparo em massa para listas compradas está fora.</li>
+</ul>
+<p>Um CRM bem configurado ajuda a cumprir essas regras, porque as mensagens automáticas passam a ser revisadas uma vez e usadas sempre do mesmo jeito, em vez de cada pessoa escrever o que quiser no WhatsApp.</p>
+<h2>Triagem no WhatsApp sem perder a pessoalidade</h2>
+<p>A automação certa no escritório é discreta. Um exemplo do que costumamos configurar no <a href="/solucoes/crm-kommo">Kommo</a>:</p>
+<ul>
+<li>A mensagem chega e o sistema responde em segundos, se apresentando e avisando que um advogado vai dar continuidade.</li>
+<li>Duas ou três perguntas objetivas identificam a área e a urgência.</li>
+<li>O contato é distribuído para o advogado responsável pela área, com o histórico completo.</li>
+<li>Se ninguém responder em um tempo definido, o coordenador é avisado.</li>
+</ul>
+<p>O bot não dá parecer, não estima chance de êxito e não fala de valores. Ele tira o atraso da entrada. O resto é atendimento humano, como deve ser. Para entender como a integração funciona por dentro, vale ler o guia de <a href="/blog/crm-integrado-ao-whatsapp">CRM integrado ao WhatsApp</a>.</p>
+<h2>Dados de clientes e LGPD</h2>
+<p>O escritório recebe informação sensível desde a primeira mensagem: saúde, família, situação financeira. O CRM precisa de controle de acesso por usuário, para que cada advogado veja apenas os contatos da sua área quando for o caso, e de uma política clara de quanto tempo os dados de quem não virou cliente ficam guardados. Os cuidados gerais estão no nosso texto sobre <a href="/blog/lgpd-no-marketing">LGPD no marketing</a>.</p>
+<h2>Os números que o escritório passa a enxergar</h2>
+<ul>
+<li>Contatos por mês e por origem (anúncio, conteúdo, indicação, Google).</li>
+<li>Tempo médio até a primeira resposta.</li>
+<li>Taxa de contatos que viram consulta, e de consultas que viram contrato.</li>
+<li>Motivos de perda mais frequentes.</li>
+</ul>
+<p>Com isso, a conversa sobre marketing muda de nível. Em vez de discutir se o anúncio está bom, o escritório discute quanto custa cada contrato fechado por canal, e investe onde o retorno é maior. É a base para qualquer estratégia de <a href="/blog/trafego-pago-para-advogados">tráfego pago para advogados</a> que se pague.</p>
+<div class="callout"><p>A OxBrand é parceira Kommo Top 5% do Brasil e estrutura CRM para escritórios de advocacia: funil por área, triagem no WhatsApp dentro das regras da OAB e relatórios por origem. Veja como trabalhamos o <a href="/marketing-para-advogados">marketing para advogados</a> e solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'Qual o melhor CRM para escritório de advocacia?', a: 'Depende do que o escritório quer controlar. Para a captação (primeiro contato, triagem, consulta e proposta), um CRM comercial com integração ao WhatsApp, como o Kommo, costuma funcionar melhor. Para processos e prazos de quem já é cliente, o certo é um software jurídico. Os dois se complementam.' },
+      { q: 'Advogado pode usar chatbot no WhatsApp?', a: 'Pode. O Provimento 205/2021 da OAB permite chatbot para facilitar a comunicação e coletar dados ou documentos, desde que ele não afaste a pessoalidade do serviço jurídico. O bot organiza a entrada; a orientação jurídica é sempre do advogado.' },
+      { q: 'CRM substitui o software jurídico?', a: 'Não. O software jurídico gerencia processos, prazos e publicações de clientes. O CRM comercial gerencia quem ainda não é cliente, da primeira mensagem até o contrato assinado.' },
+      { q: 'Quanto custa um CRM para advogados?', a: 'No Kommo, a cobrança é por usuário por mês, conforme o plano. O detalhamento atualizado está no nosso guia de planos e preços do Kommo. Mais importante que a mensalidade é a configuração: funil, triagem e relatórios montados para a realidade do escritório.' },
+    ],
+  },
+  {
+    slug: 'como-calcular-roas',
+    metaTitle: 'Como calcular ROAS (com ROI e ROAS de equilíbrio) | OxBrand',
+    metaDescription: 'Fórmula do ROAS, diferença entre ROAS e ROI, como achar o ROAS mínimo pela margem e por que o ROAS da plataforma engana. Exemplos com números.',
+    title: 'Como calcular ROAS: a conta que mostra se o anúncio dá lucro',
+    subtitle: 'ROAS é a métrica mais citada em tráfego pago e uma das mais mal interpretadas. A fórmula é simples. O que define se o número é bom ou ruim é a sua margem.',
+    tag: 'Tráfego & Aquisição',
+    breadcrumb: 'Tráfego Pago',
+    dateISO: '2026-11-16',
+    coverAlt: 'Como calcular ROAS: retorno sobre investimento em anúncios em um painel de métricas',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">"O ROAS está em 4." A frase aparece em quase toda reunião de tráfego pago, e quase nunca vem acompanhada da pergunta que importa: com a nossa margem, 4 dá lucro? Um ROAS 4 pode ser excelente para uma empresa e prejuízo para outra. Este guia mostra a conta completa.</p>
+<h2>O que é ROAS</h2>
+<p>ROAS (Return on Ad Spend) é o retorno sobre o investimento em anúncios. Mostra quanto de receita cada real investido em mídia trouxe de volta.</p>
+<div class="callout"><p><strong>ROAS = receita gerada pelos anúncios ÷ investimento em anúncios</strong></p></div>
+<p><strong>Exemplo:</strong> a empresa investiu R$ 10.000 em Meta Ads e Google Ads no mês, e as vendas atribuídas a essas campanhas somaram R$ 40.000. O ROAS é 40.000 ÷ 10.000 = 4. Também se escreve 4x ou 400%.</p>
+<h2>ROAS não é ROI</h2>
+<p>O ROAS olha receita. O ROI olha lucro. A diferença parece detalhe e é onde muita empresa se engana.</p>
+<div class="callout"><p><strong>ROI = (lucro obtido − investimento) ÷ investimento</strong></p></div>
+<p>No mesmo exemplo, imagine que a margem de contribuição do produto seja de 30% (o que sobra da venda depois de custo do produto, impostos, frete e comissão). Os R$ 40.000 de receita deixam R$ 12.000 de margem. Descontando os R$ 10.000 de mídia, sobram R$ 2.000. O ROI é 2.000 ÷ 10.000 = 0,2, ou 20%.</p>
+<p>ROAS 4 com ROI de 20%. A campanha dá lucro, mas bem menos do que o número da plataforma sugere.</p>
+<h2>O ROAS de equilíbrio: o número que você precisa saber de cor</h2>
+<p>ROAS de equilíbrio é o ponto em que a campanha empata: não dá lucro nem prejuízo. Abaixo dele, cada venda feita pelo anúncio custa dinheiro.</p>
+<div class="callout"><p><strong>ROAS de equilíbrio = 1 ÷ margem de contribuição</strong></p></div>
+<div class="table-wrap"><table>
+<thead><tr><th>Margem de contribuição</th><th>ROAS de equilíbrio</th></tr></thead>
+<tbody>
+<tr><td>50%</td><td>2,0</td></tr>
+<tr><td>40%</td><td>2,5</td></tr>
+<tr><td>30%</td><td>3,3</td></tr>
+<tr><td>25%</td><td>4,0</td></tr>
+<tr><td>20%</td><td>5,0</td></tr>
+</tbody>
+</table></div>
+<p>Com margem de 25%, ROAS 4 é empate. Com margem de 50%, ROAS 4 é o dobro do necessário. Por isso não existe "ROAS bom" universal: existe o ROAS que a sua margem exige.</p>
+<h2>Por que o ROAS da plataforma engana</h2>
+<p>O Meta Ads e o Google Ads mostram um ROAS no painel. Ele é útil para comparar campanhas entre si, mas não é a receita real da empresa, por três motivos:</p>
+<ul>
+<li><strong>Janela de atribuição.</strong> Cada plataforma conta a venda do seu jeito. Uma pessoa que clicou no anúncio do Meta e depois buscou a marca no Google pode ser contada pelas duas.</li>
+<li><strong>Venda que acontece fora do site.</strong> Em negócios que vendem pelo WhatsApp ou pelo comercial, a plataforma não vê a venda. Ela vê o lead.</li>
+<li><strong>Cancelamento e devolução.</strong> A plataforma registra a compra. Não registra o estorno de uma semana depois.</li>
+</ul>
+<p>A correção é simples de explicar e trabalhosa de fazer: cruzar o investimento com a receita registrada no CRM ou no sistema de vendas, por origem. É o que separa o ROAS de painel do ROAS de caixa.</p>
+<h2>E quando a empresa vende por lead?</h2>
+<p>Em serviços, imóveis, educação e B2B, o anúncio gera um contato, e a venda acontece dias ou meses depois. Nesse caso o ROAS só existe se o CRM ligar cada contrato à origem do lead. Enquanto isso não existe, a métrica de controle passa a ser o custo por venda:</p>
+<div class="callout"><p><strong>CAC = investimento total em aquisição ÷ número de novos clientes</strong></p></div>
+<p>Se o CAC fica abaixo da margem que um cliente deixa (e, melhor ainda, do valor que ele gera ao longo do tempo), a conta fecha. A estrutura para medir isso está no nosso texto sobre <a href="/blog/leads-do-trafego-pago-como-transformar-em-vendas">como transformar leads do tráfego pago em vendas</a>.</p>
+<h2>Como melhorar o ROAS sem cortar o que funciona</h2>
+<ul>
+<li><strong>Melhorar a conversão antes de aumentar a verba.</strong> Uma <a href="/blog/landing-page">landing page</a> que converte 3% em vez de 1,5% dobra o ROAS sem um real a mais de mídia.</li>
+<li><strong>Separar campanhas por intenção.</strong> Quem busca o produto no Google e quem vê o anúncio no feed estão em momentos diferentes e não podem ser medidos pela mesma régua.</li>
+<li><strong>Olhar ticket e margem por produto.</strong> Às vezes o ROAS geral é baixo porque a verba está concentrada no item de menor margem.</li>
+<li><strong>Responder rápido.</strong> Em venda por WhatsApp, o tempo de resposta derruba ou sustenta a conversão. Anúncio bom com atendimento lento vira ROAS ruim.</li>
+</ul>
+<div class="callout"><p>A OxBrand faz <a href="/solucoes/gestao-de-trafego-pago">gestão de tráfego pago</a> medida pelo que entra no caixa, não pelo painel: ROAS de equilíbrio definido pela margem do cliente, CRM ligado à origem de cada venda e otimização semanal. Solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'Qual a fórmula do ROAS?', a: 'ROAS = receita gerada pelos anúncios dividida pelo investimento em anúncios. Exemplo: R$ 40.000 de vendas com R$ 10.000 de investimento dá ROAS 4 (ou 400%).' },
+      { q: 'Qual é um ROAS bom?', a: 'Depende da margem. O ROAS mínimo para não ter prejuízo é 1 dividido pela margem de contribuição. Com margem de 25%, o equilíbrio é ROAS 4; com 50%, é ROAS 2. Bom é o ROAS que fica com folga acima do seu equilíbrio.' },
+      { q: 'Qual a diferença entre ROAS e ROI?', a: 'O ROAS compara receita com investimento em mídia. O ROI compara lucro com investimento. Uma campanha pode ter ROAS 4 e ROI de apenas 20%, quando a margem do produto é baixa.' },
+      { q: 'Como calcular ROAS quando a venda acontece no WhatsApp?', a: 'É preciso registrar a origem de cada lead no CRM e ligar o contrato fechado a essa origem. Sem isso, a plataforma só enxerga o lead, e o controle mais confiável passa a ser o custo por cliente (CAC).' },
+    ],
+  },
+  {
+    slug: 'quanto-custa-criar-um-site',
+    metaTitle: 'Quanto custa criar um site em 2026: o que entra no preço',
+    metaDescription: 'Quanto custa criar um site em 2026: criador de sites, freelancer ou agência, custos fixos (domínio, hospedagem) e o que define o preço. Guia sem enrolação.',
+    title: 'Quanto custa criar um site em 2026 (e o que faz o preço mudar)',
+    subtitle: 'Orçamentos de site variam de algumas dezenas de reais por mês a dezenas de milhares por projeto. A diferença não é só o desenho: é o que o site precisa fazer pelo negócio.',
+    tag: 'Sites & Conversão',
+    breadcrumb: 'Sites',
+    dateISO: '2026-11-16',
+    coverAlt: 'Quanto custa criar um site: estrutura de um site empresarial com páginas, formulários e métricas',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">"Quanto custa um site?" é uma pergunta parecida com "quanto custa uma casa?". A resposta honesta é: depende do que ela precisa ter. Este guia organiza os caminhos possíveis, os custos que aparecem depois da entrega e as perguntas que separam um orçamento barato de um site que traz cliente.</p>
+<h2>Os três caminhos para ter um site</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Caminho</th><th>Como funciona</th><th>Faz sentido quando</th></tr></thead>
+<tbody>
+<tr><td>Criador de sites (Wix, Hostinger e similares)</td><td>Você monta o site sozinho a partir de modelos, pagando uma mensalidade</td><td>O negócio está começando e precisa de presença básica rápido</td></tr>
+<tr><td>Profissional autônomo</td><td>Um desenvolvedor ou designer faz o projeto por um valor fechado</td><td>O escopo é simples e bem definido, e você vai cuidar do conteúdo e da divulgação</td></tr>
+<tr><td>Agência</td><td>Equipe com estratégia, texto, design, desenvolvimento e mensuração</td><td>O site precisa gerar contatos e vendas, integrado a anúncios e ao comercial</td></tr>
+</tbody>
+</table></div>
+<p>Como referência de mercado, um levantamento da <a href="https://www.hostinger.com/br/tutoriais/quanto-custa-fazer-um-site/" target="_blank" rel="noopener noreferrer">Hostinger para 2026</a> aponta planos de criadores de sites entre R$ 10 e R$ 250 por mês, sites simples com design profissional entre R$ 1.000 e R$ 10.000, e projetos completos de agência a partir de R$ 25.000. As faixas são largas porque o escopo muda tudo.</p>
+<h2>O que faz o preço subir ou descer</h2>
+<ul>
+<li><strong>Número de páginas e de modelos.</strong> Cinco páginas institucionais são um projeto. Cinquenta páginas de serviço por cidade são outro.</li>
+<li><strong>Texto.</strong> Site com texto pronto do cliente custa menos. Site com redação estratégica, pensada para busca e conversão, custa mais e costuma vender mais.</li>
+<li><strong>Design próprio ou modelo.</strong> Modelo adaptado é mais barato. Identidade própria exige mais horas.</li>
+<li><strong>Integrações.</strong> Formulário que cai no CRM, WhatsApp com origem rastreada, agenda online, área do cliente. Cada uma é trabalho de desenvolvimento.</li>
+<li><strong>Loja virtual.</strong> Catálogo, pagamento, frete e estoque colocam o projeto em outra categoria.</li>
+<li><strong>Velocidade e SEO técnico.</strong> Site leve, bem estruturado para o Google, com dados estruturados e boas notas no PageSpeed, exige cuidado que o modelo pronto raramente tem.</li>
+</ul>
+<h2>Os custos que continuam depois da entrega</h2>
+<ul>
+<li><strong>Domínio.</strong> O endereço .com.br é renovado todo ano. É um custo pequeno, mas que não pode vencer.</li>
+<li><strong>Hospedagem.</strong> Varia de planos compartilhados baratos a estruturas em nuvem que aguentam picos de acesso. Site lento perde visitante e posição no Google.</li>
+<li><strong>Manutenção.</strong> Atualizações de segurança, ajustes de texto, páginas novas. Site parado envelhece rápido.</li>
+<li><strong>Ferramentas.</strong> Email profissional, CRM, ferramenta de agendamento, plugins pagos.</li>
+</ul>
+<p>Na hora de comparar orçamentos, peça o custo total do primeiro ano, não só o valor do projeto.</p>
+<h2>O site mais caro é o que não traz cliente</h2>
+<p>Um site de R$ 2.000 que não gera nenhum contato custa R$ 2.000 por nada. Um site de R$ 20.000 que gera dez clientes por mês se paga rápido. O preço só faz sentido ao lado do que o site precisa entregar. Antes de pedir orçamento, vale responder:</p>
+<ul>
+<li>O site é cartão de visita ou canal de venda?</li>
+<li>Vou investir em anúncios apontando para ele? (Se sim, a conversão de cada página vale dinheiro.)</li>
+<li>Quero aparecer no Google para quais buscas?</li>
+<li>Para onde vai o contato que chega pelo site, e quem responde?</li>
+</ul>
+<h2>Site institucional ou landing page?</h2>
+<p>Nem sempre o primeiro passo é o site completo. Para validar uma oferta com tráfego pago, uma landing page bem construída costuma ser mais rápida e mais barata, e converte melhor porque tem um único objetivo. Os detalhes estão no nosso guia de <a href="/blog/quanto-custa-uma-landing-page">quanto custa uma landing page</a>. O site institucional entra quando a empresa precisa de várias páginas de serviço, conteúdo e presença orgânica.</p>
+<h2>O que pedir no orçamento</h2>
+<ul>
+<li>Lista de páginas e o que cada uma precisa fazer.</li>
+<li>Quem escreve o texto.</li>
+<li>Prazo de entrega e quantas rodadas de ajuste estão incluídas.</li>
+<li>Se o código e o domínio ficam no nome da sua empresa.</li>
+<li>Como os contatos serão medidos (Google Analytics, Tag Manager, origem no CRM).</li>
+<li>Meta de velocidade (nota no PageSpeed) e o que acontece se ela não for atingida.</li>
+<li>Custo de manutenção depois da entrega.</li>
+</ul>
+<div class="callout"><p>A OxBrand faz <a href="/solucoes/desenvolvimento-de-sites">desenvolvimento de sites e landing pages</a> pensados para conversão: texto estratégico, notas altas no PageSpeed, rastreamento completo e integração com o CRM desde o primeiro acesso. Veja exemplos no <a href="/portfolio">portfólio</a> e solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'Quanto custa criar um site simples?', a: 'Em criadores de sites, a partir de algumas dezenas de reais por mês, fazendo você mesmo. Com um profissional, sites simples com design profissional costumam ficar entre R$ 1.000 e R$ 10.000, segundo levantamento da Hostinger para 2026. O valor final depende de páginas, texto, design e integrações.' },
+      { q: 'Quanto custa manter um site por ano?', a: 'Os custos fixos são domínio (renovação anual), hospedagem e manutenção. Somam pouco em sites simples e crescem com o tráfego, as integrações e a frequência de atualização. Peça sempre o custo total do primeiro ano.' },
+      { q: 'Vale mais a pena contratar agência ou freelancer?', a: 'Freelancer atende bem escopos simples, quando a empresa cuida do texto e da divulgação. Agência faz sentido quando o site precisa gerar contatos e vendas, com estratégia, texto, mensuração e integração com anúncios e comercial.' },
+      { q: 'Quanto tempo leva para criar um site?', a: 'Uma landing page pode ficar pronta em poucos dias. Um site institucional com várias páginas e texto estratégico costuma levar algumas semanas, dependendo das rodadas de aprovação e da entrega de materiais pelo cliente.' },
+    ],
+  },
+  {
     slug: 'automacao-de-marketing',
     metaTitle: 'Automação de marketing: o que é e como aplicar bem | OxBrand',
     metaDescription: 'Automação de marketing não é robotizar o contato. Veja o que é, onde funciona de verdade (nutrição, CRM, follow-up) e como aplicar.',
