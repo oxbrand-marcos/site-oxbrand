@@ -120,7 +120,7 @@ export default function LbelTelhasCase() {
             </p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-1">
               <span className="mono-tag text-muted-foreground/50">O cliente:</span>
-              <a href="https://lbeltelhas.com.br/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Site &#8599;</a>
+              <a href="https://www.lbeltelhas.com.br/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Site &#8599;</a>
               <a href="https://www.instagram.com/lbeltelhas/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Instagram &#8599;</a>
               <a href="https://www.facebook.com/LBELTELHAS" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">Facebook &#8599;</a>
               <a href="https://www.linkedin.com/company/lbeltelhas/" target="_blank" rel="noopener noreferrer" className="mono-tag text-muted-foreground/70 hover:text-primary transition-colors">LinkedIn &#8599;</a>
