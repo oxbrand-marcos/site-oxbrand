@@ -194,7 +194,7 @@ export default function MarketingConteudoPage() {
                 <div className="bg-zinc-50 border border-zinc-200 p-6 flex flex-col gap-2">
                   <span className="mono-tag text-primary/60">Dado relevante</span>
                   <p className="text-sm text-zinc-900">Um estudo da{' '}
-                    <a href="https://www.demandmetric.com/content/content-marketing-infographic" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Demand Metric</a>
+                    <a href="https://www.demandmetric.com/content/infographic-content-marketing" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">Demand Metric</a>
                     {' '}mostra que <strong>70% das pessoas preferem aprender sobre empresas por meio de conteúdo</strong>, não anúncios.</p>
                 </div>
 
