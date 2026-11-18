@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kommo 3.0 · Daniela Rocha · OxBrand</title>
+<link rel="icon" href="/icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#1d1d1d;--card:#262626;--card2:#2e2e2e;--line:#3a3a3a;--ink:#eae6e6;--mut:#a39f9f;--vi:#8f74ff;--vid:#5c36eb;--az:#29a8e0;--cl:#19c3a3;--rc:#8d8d8d;--tr:#eae6e6;--ok:#19c3a3;--adj:#f2a65a}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Space Grotesk",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+h1{font-size:clamp(40px,6vw,76px)}
+h2{font-size:clamp(28px,3.6vw,44px)}
+h3{font-size:22px}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid var(--az);outline-offset:2px}
+.w{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+.sec{padding:clamp(56px,8vw,110px) 0}
+.eb{color:var(--vi);font-weight:600;font-size:15px;margin-bottom:14px}
+.sub{color:var(--mut);font-size:18px;max-width:56ch;margin-top:14px}
+/* topo */
+.bar{position:sticky;top:0;z-index:20;background:rgba(29,29,29,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .w{display:flex;align-items:center;gap:18px;height:60px}
+.logo{font-weight:700;font-size:20px;letter-spacing:-.02em;flex:none}
+.logo b{color:var(--vi)}
+.nav{display:flex;gap:4px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
+.nav a{flex:none;color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:14px}
+.nav a:hover{color:var(--ink);background:var(--card)}
+.nav a.go{background:var(--vid);color:#fff}
+/* hero */
+.hero{padding-top:clamp(40px,6vw,80px)}
+.hero h1 span{color:var(--vi)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:30px 0 14px}
+.lg{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mut);background:none;border:0;padding:6px 0}
+.lg i{width:28px;height:8px;border-radius:4px}
+.lg:hover{color:var(--ink)}
+.mapw{overflow-x:auto;border:1px solid var(--line);border-radius:22px;background:radial-gradient(120% 90% at 20% 0%,#24203a 0%,#1d1d1d 60%)}
+.map{position:relative;min-width:980px;height:520px}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map text{font-family:"Space Grotesk",sans-serif;font-size:14px;fill:var(--ink)}
+.map .st{cursor:pointer}
+.map .st:hover circle{stroke-width:7}
+.map .ln{font-weight:700;font-size:17px}
+.map .mt{fill:var(--mut);font-size:13px}
+.hint{color:var(--mut);font-size:14px;margin-top:12px}
+/* antes e depois */
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:40px}
+.pan{background:var(--card);border-radius:22px;padding:28px}
+.pan h3{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.pan h3 em{font-style:normal;font-size:56px;line-height:1}
+.pan .lbl{color:var(--mut);font-size:14px;margin:4px 0 20px}
+.cells{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));gap:6px}
+.cell{aspect-ratio:1;border-radius:6px;position:relative}
+.cell.hot{outline:2px solid #ff6b5a;outline-offset:1px}
+.ck{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:16px;font-size:13px;color:var(--mut)}
+.ck span{display:flex;align-items:center;gap:6px}
+.ck i{width:10px;height:10px;border-radius:3px}
+.big{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:20px}
+.bn{border-top:2px solid var(--line);padding-top:16px}
+.bn b{display:block;font-size:clamp(34px,4vw,52px);line-height:1;font-weight:700}
+.bn span{display:block;color:var(--mut);font-size:15px;margin-top:8px}
+/* funis */
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 0}
+.tab{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:10px 18px;min-height:46px;font-weight:600}
+.tab i{width:14px;height:14px;border-radius:50%}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.fun{margin-top:26px;background:var(--card);border-radius:24px;padding:clamp(20px,3vw,36px);border-top:6px solid var(--c)}
+.fh{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start}
+.fh h3{font-size:clamp(28px,3.4vw,40px);color:var(--c)}
+.why{color:var(--mut);font-size:17px;max-width:62ch;margin-top:10px}
+.pill{font-size:13px;font-weight:700;border-radius:999px;padding:5px 12px;background:var(--card2);white-space:nowrap}
+.track{overflow-x:auto;margin:28px -8px 0;padding:8px}
+.rail{display:flex;position:relative;width:100%;min-width:max-content;padding:14px 0 6px}
+.rail:before{content:"";position:absolute;left:calc(50% / var(--n));right:calc(50% / var(--n));top:44px;height:10px;border-radius:5px;background:var(--c)}
+.sn{position:relative;flex:1 0 120px;display:flex;flex-direction:column;align-items:center;gap:10px;background:none;border:0;padding:0 4px;text-align:center}
+.sn .o{width:40px;height:40px;border-radius:50%;background:var(--bg);border:7px solid var(--c);display:grid;place-items:center;font-size:13px;font-weight:700;transition:transform .15s}
+.sn:hover .o{transform:scale(1.12)}
+.sn[aria-pressed=true] .o{background:var(--c);color:var(--bg);transform:scale(1.18)}
+.sn .t{font-size:15px;font-weight:600;line-height:1.2}
+.sn .tg{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--card2);color:var(--mut)}
+.sn .tg.n{background:rgba(143,116,255,.18);color:var(--vi)}
+.sn .tg.j{background:rgba(41,168,224,.18);color:var(--az)}
+.det{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.dc{background:var(--bg);border-radius:16px;padding:18px;display:grid;gap:10px;align-content:start}
+.dc svg{width:28px;height:28px;stroke:var(--c);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dc b{font-size:13px;color:var(--mut);font-weight:600}
+.dc p{font-size:17px;line-height:1.35}
+.was{margin-top:12px;display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:14px;padding:14px 18px;color:var(--mut);font-size:15px}
+.was strong{color:#ff8b7d;font-weight:600;flex:none}
+/* aprovação */
+.ap{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-top:1px solid var(--line);padding-top:20px}
+.ap .q{font-weight:600;margin-right:6px}
+.ab{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:var(--bg);font-weight:600}
+.ab:hover{border-color:var(--ink)}
+.ab.on[data-v=ok]{background:var(--ok);border-color:var(--ok);color:#10201c}
+.ab.on[data-v=adj]{background:var(--adj);border-color:var(--adj);color:#2a1a08}
+.ap textarea{flex-basis:100%}
+textarea,input[type=text]{width:100%;font:16px/1.45 "Space Grotesk",sans-serif;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+textarea{min-height:84px;resize:vertical}
+/* regras */
+.rules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:40px}
+.rl{background:var(--card);border-radius:20px;padding:22px 20px;display:grid;gap:12px;align-content:start}
+.rl .ic{width:52px;height:52px;border-radius:14px;background:rgba(143,116,255,.14);display:grid;place-items:center}
+.rl .ic svg{width:28px;height:28px;stroke:var(--vi);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rl b{font-size:18px;line-height:1.2}
+.rl span{color:var(--mut);font-size:14px;line-height:1.4}
+.boxap{background:var(--card);border-radius:20px;padding:6px 24px 20px;margin-top:14px}
+/* biblioteca */
+.lib{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;margin-top:40px}
+.cloud{display:flex;flex-wrap:wrap;gap:5px;margin:16px 0}
+.cloud span{width:14px;height:14px;border-radius:4px;background:#4a4a4a}
+.cloud span.k{background:var(--vi)}
+.fam{display:grid;grid-template-columns:7.5em minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid var(--line)}
+.fam b{font-size:14px;color:var(--mut);padding-top:5px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:14px;padding:5px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:16px}
+.col{background:var(--bg);border-radius:16px;padding:16px}
+.col h4{margin:0 0 10px;font-size:15px;display:flex;align-items:center;gap:8px}
+.col h4 i{width:12px;height:12px;border-radius:50%}
+.col li{font-size:15px;margin:6px 0;color:var(--ink)}
+.col ul{margin:0;padding-left:18px}
+.fl{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);gap:8px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.fl .a{color:var(--mut)}
+.fl svg{width:20px;height:20px;stroke:var(--vi);fill:none;stroke-width:2}
+/* decisões */
+.dq{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
+.dk{background:var(--card);border-radius:20px;padding:22px;display:grid;gap:10px;align-content:start}
+.dk .n{width:36px;height:36px;border-radius:50%;background:var(--vid);display:grid;place-items:center;font-weight:700}
+.dk label{font-size:19px;font-weight:700;line-height:1.2}
+.dk span{color:var(--mut);font-size:14px}
+/* implantação */
+.road{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:44px;position:relative}
+.road:before{content:"";position:absolute;left:0;right:0;top:21px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--vid),var(--az))}
+.rs{position:relative;padding-right:16px}
+.rs .o{width:48px;height:48px;border-radius:50%;background:var(--bg);border:6px solid var(--vi);display:grid;place-items:center;font-weight:700;margin-bottom:16px}
+.rs b{display:block;font-size:19px;margin-bottom:6px}
+.rs span{color:var(--mut);font-size:15px}
+/* enviar */
+.send{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;margin-top:40px;align-items:start}
+.tally{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:18px}
+.tl{background:var(--card);border-radius:16px;padding:16px}
+.tl b{display:block;font-size:40px;line-height:1}
+.tl span{color:var(--mut);font-size:14px}
+.sbtn{min-height:52px;padding:12px 22px;border-radius:14px;border:0;background:var(--vid);color:#fff;font-weight:700;font-size:16px}
+.sbtn.sec2{background:var(--card2);color:var(--ink)}
+.sbtn:disabled{opacity:.5;cursor:default}
+.msg{font-size:15px;margin-top:12px;min-height:22px}
+.out{background:var(--card);border-radius:18px;padding:18px;white-space:pre-wrap;font-size:14px;line-height:1.5;color:var(--mut);max-height:440px;overflow:auto}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:14px}
+@media(max-width:1000px){.rules{grid-template-columns:repeat(2,minmax(0,1fr))}.det{grid-template-columns:repeat(2,minmax(0,1fr))}.dq{grid-template-columns:repeat(2,minmax(0,1fr))}.lib,.send,.vs{grid-template-columns:minmax(0,1fr)}.big{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.road{grid-template-columns:minmax(0,1fr);gap:22px}.road:before{left:21px;right:auto;width:6px;top:0;bottom:0;height:auto;background:linear-gradient(180deg,var(--vid),var(--az))}.rs{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 16px;padding:0}.rs .o{grid-row:span 2;margin:0}.nav{display:none}}
+@media(max-width:600px){.det,.dq,.rules,.cols{grid-template-columns:minmax(0,1fr)}.fh{grid-template-columns:minmax(0,1fr)}.cells{gap:4px}.tally{grid-template-columns:repeat(3,minmax(0,1fr))}.tl b{font-size:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sn .o{transition:none}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="w">
+ <div class="logo">Ox<b>Brand</b></div>
+ <nav class="nav" aria-label="Seções"><a href="#mapa">Mapa</a><a href="#hoje">Antes e depois</a><a href="#funis">Funis</a><a href="#regras">Regras</a><a href="#tags">Tags e campos</a><a href="#decisoes">Decisões</a><a href="#implantacao">Implantação</a><a href="#enviar" class="go" id="navgo">Enviar respostas</a></nav>
+</div></header>
+
+<main>
+<section class="sec hero" id="mapa"><div class="w">
+ <div class="eb">Kommo 3.0 · Daniela Rocha Advocacia</div>
+ <h1>Cada lead em uma <span>linha clara</span>,<br>do primeiro oi ao contrato.</h1>
+ <p class="sub">Toque em qualquer estação para ver como ela funciona. Nada muda na sua Kommo antes da sua aprovação.</p>
+ <div class="legend" id="legend"></div>
+ <div class="mapw"><div class="map" id="map"><svg role="img" aria-label="Mapa das linhas da Kommo 3.0"></svg></div></div>
+ <p class="hint">No celular, arraste o mapa para os lados.</p>
+</div></section>
+
+<section class="sec" id="hoje" style="background:#191919"><div class="w">
+ <div class="eb">Antes e depois</div>
+ <h2>Metade das etapas, nenhuma parada à toa.</h2>
+ <div class="vs">
+  <div class="pan"><h3>Hoje <em>44</em></h3><div class="lbl">etapas em 5 funis · contorno vermelho: onde os leads estão parados</div><div class="cells" id="cellsA"></div><div class="ck" id="ckA"></div></div>
+  <div class="pan"><h3>Proposta <em style="color:var(--vi)">22</em></h3><div class="lbl">etapas em 5 linhas, cada uma com um trabalho só</div><div class="cells" id="cellsB"></div><div class="ck" id="ckB"></div></div>
+ </div>
+ <div class="big" id="big"></div>
+</div></section>
+
+<section class="sec" id="funis"><div class="w">
+ <div class="eb">Funis</div>
+ <h2>Linha por linha.</h2>
+ <div class="tabs" role="tablist" id="tabs"></div>
+ <div id="fun"></div>
+</div></section>
+
+<section class="sec" id="regras" style="background:#191919"><div class="w">
+ <div class="eb">Regras da casa</div>
+ <h2>Dez regras que valem para todos os robôs.</h2>
+ <div class="rules" id="rules"></div>
+ <div class="boxap" id="ap-regras"></div>
+</div></section>
+
+<section class="sec" id="tags"><div class="w">
+ <div class="eb">Tags, motivos de perda e campos</div>
+ <h2>Um nome para cada coisa.</h2>
+ <div class="lib">
+  <div class="pan">
+   <h3>Tags <em style="font-size:40px;font-style:normal">120 <span style="color:var(--mut)">→</span> <span style="color:var(--vi)">22</span></em></h3>
+   <div class="cloud" id="cloud" aria-hidden="true"></div>
+   <div id="fams"></div>
+  </div>
+  <div class="pan">
+   <h3>Motivos de perda</h3>
+   <div class="cols">
+    <div class="col"><h4><i style="background:var(--ok)"></i>Voltam na recuperação</h4><ul id="lossY"></ul></div>
+    <div class="col"><h4><i style="background:#ff8b7d"></i>Encerram de vez</h4><ul id="lossN"></ul></div>
+   </div>
+   <h3 style="margin-top:28px">Campos</h3>
+   <div id="fields" style="margin-top:10px"></div>
+  </div>
+ </div>
+ <div class="boxap" id="ap-lib"></div>
+</div></section>
+
+<section class="sec" id="decisoes" style="background:#191919"><div class="w">
+ <div class="eb">Decisões suas</div>
+ <h2>Seis respostas que só você pode dar.</h2>
+ <div class="dq" id="dq"></div>
+</div></section>
+
+<section class="sec" id="implantacao"><div class="w">
+ <div class="eb">Implantação</div>
+ <h2>Construído ao lado, virado com segurança.</h2>
+ <div class="road" id="road"></div>
+</div></section>
+
+<section class="sec" id="enviar" style="background:#191919"><div class="w">
+ <div class="eb">Enviar</div>
+ <h2>Pronto? Manda para a gente.</h2>
+ <div class="send">
+  <div>
+   <div class="tally" id="tally"></div>
+   <label for="nome" style="font-weight:600;display:block;margin-bottom:8px">Seu nome</label>
+   <input type="text" id="nome" autocomplete="name" placeholder="Como você quer aparecer no envio">
+   <input type="text" id="site" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+   <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+    <button class="sbtn" id="sendBtn" type="button">Enviar para a OxBrand</button>
+    <button class="sbtn sec2" id="copyBtn" type="button">Copiar para o WhatsApp</button>
+   </div>
+   <div class="msg" id="msg" aria-live="polite"></div>
+   <p style="color:var(--mut);font-size:14px;margin-top:8px">Pode enviar parcial. Suas marcações ficam salvas neste aparelho até você enviar.</p>
+  </div>
+  <div class="out" id="out"></div>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="w">Proposta da OxBrand · Engenharia de Performance para Daniela Rocha Advocacia · números levantados na Kommo em 18/11/2026.</div></footer>
+
+<script>
+{
+const COL={TR:'#eae6e6',RV:'#8f74ff',OA:'#29a8e0',CL:'#19c3a3',RC:'#8d8d8d'};
+const ICON={
+ in:'<svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>',
+ bot:'<svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><circle cx="12" cy="3" r="1"/><path d="M9 14h.01M15 14h.01"/></svg>',
+ eq:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
+ out:'<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>'
+};
+const RI={
+ one:'<svg viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4"/><path d="M9 14h6"/></svg>',
+ no:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m6 6 12 12"/></svg>',
+ task:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12 3 3 5-6"/></svg>',
+ move:'<svg viewBox="0 0 24 24"><path d="M4 12h12"/><path d="m12 6 6 6-6 6"/><path d="M20 4v16"/></svg>',
+ list:'<svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg>',
+ msg:'<svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M9 12h6"/></svg>',
+ tag:'<svg viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9Z"/><circle cx="8" cy="8" r="1.5"/></svg>',
+ cash:'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>',
+ pin:'<svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+ name:'<svg viewBox="0 0 24 24"><path d="M4 7V5h16v2"/><path d="M12 5v14"/><path d="M9 19h6"/></svg>'
+};
+
+/* [nome, tag, entra, robô, equipe, sai, hoje] */
+const F=[
+{id:'TR',nome:'Triagem',pill:'Linha nova',why:'Hoje toda conversa cai no funil de vendas. Com a triagem, cada lead só entra numa linha depois de dizer o que precisa.',st:[
+ ['Novo contato','n','Toda conversa nova','Marca a origem e dá boas vindas','Nada','Triagem, em 1 minuto','Novo lead, no meio do funil de vendas'],
+ ['Triagem','n','Vindo do novo contato','Lista com 3 opções e a pergunta: você é do RS?','Só entra se o lead travar','Revisional, Outros assuntos, Clientes ou Fora da área','Menu numerado: 6.578 respostas inválidas']
+]},
+{id:'RV',nome:'Revisional de veículo',pill:'Muda',why:'Hoje 303 dos 480 leads abertos estão parados no Follow Up 03, e Negociação e Assinatura estão vazias. A linha nova junta os follow ups e traz o fechamento para dentro.',st:[
+ ['Qualificação','','Escolheu veículo na triagem','Botões e lista: banco, parcelas, valor, atraso, veículo','Nada','Em atendimento','Timer de 1 hora corta o questionário no meio'],
+ ['Em atendimento','','Qualificação concluída','Roleta e uma tarefa só: ligar hoje','Ligar e montar a proposta','Proposta enviada','2 a 4 tarefas criadas de uma vez'],
+ ['Proposta enviada','n','Campo Proposta preenchido','Respondeu: tarefa. 24h quieto: Sem retorno','Negociar','Negociação','Não existe: a proposta se perde'],
+ ['Sem retorno','j','24h sem resposta','3 mensagens em 7 dias','Nada até o lead responder','Volta de onde veio, ou Perdido','Follow Up 01 a 04: 387 leads'],
+ ['Negociação','','A atendente move','Lembrete se ficar 48h parado','Fechar as condições','Contrato enviado','Negociação: 0 leads'],
+ ['Contrato enviado','j','Contrato mandado para assinar','Lembretes nos dias 1, 3 e 5','Acompanhar a assinatura','Assinado','Funil 02 de Fechamento separado: 3 leads'],
+ ['Assinado','','Assinatura finalizada','Exige o valor e abre o cliente em Clientes','Nada','Clientes','Ganhos com valor zerado']
+]},
+{id:'OA',nome:'Outros assuntos',pill:'Muda',why:'Hoje são 15 etapas, 4 temporárias, e 425 dos 493 leads estão parados no Follow Up 02. O assunto vira um campo e a IA da 7Club faz a qualificação.',st:[
+ ['Assunto','','Escolheu empréstimo ou cartão','Lista: consignado, cartão, pessoal, juros abusivos, outro','Nada','Qualificação IA','Menu por número que confunde valores com opções'],
+ ['Qualificação IA','n','Assunto escolhido','Agente 7Club conversa, resume o caso e qualifica','Ler o resumo','Em atendimento ou Desqualificado','Robôs 1.0, um por assunto'],
+ ['Em atendimento','','Qualificado pela IA','Distribui e cria uma tarefa: responder hoje','Explicar e pedir documentos','Documentos','Sem qualificação e Aguardando atendimento'],
+ ['Sem retorno','j','24h sem resposta','3 mensagens em 7 dias','Nada até o lead responder','Volta, ou Perdido','Follow Up 01 e 02: 444 leads'],
+ ['Documentos','','Documentos pedidos','3 lembretes em 7 dias','Conferir','Análise jurídica','Aguardando doc e Follow Up Documento'],
+ ['Análise jurídica','','Documentos completos','Tarefa com prazo para a advogada','Analisar o caso','Contrato, ou Sem viabilidade','Análise jurídica: 4 leads'],
+ ['Contrato','','Caso aprovado','Lembretes nos dias 1, 3 e 5','Acompanhar a assinatura','Clientes','Procuração e contrato: 0 leads']
+]},
+{id:'CL',nome:'Clientes',pill:'Linha nova',why:'Hoje quem diz "já sou cliente" cai na roleta de vendas e gera tarefa de venda. Cliente ganha linha própria, com quem cuida do caso.',st:[
+ ['Nova solicitação','n','Disse "já sou cliente", ou assinou','Vai para a responsável do caso, com tarefa','Responder hoje','Em andamento','Caía na roleta de vendas (383 vezes)'],
+ ['Em andamento','n','A equipe respondeu','Lembrete se ficar 3 dias parado','Atualizar o cliente','Resolvido','Não existe'],
+ ['Resolvido','n','A equipe resolveu','Fecha a conversa. Depois: avaliação e indicação','Nada','Encerra','Não existe']
+]},
+{id:'RC',nome:'Recuperação',pill:'Muda',why:'Hoje são 10 etapas, 11.549 leads e uma mensagem a cada 30 dias por quase um ano. Depois do banimento de outubro, é o maior risco da conta. Vira 4 toques, só para quem pode voltar.',st:[
+ ['Toque 1','','15 dias após a perda, motivo recuperável, sem "Não contatar"','Um caso real ou depoimento','Nada','Respondeu: Em atendimento','Abre com 2 mensagens seguidas'],
+ ['Toque 2','','30 dias depois','O que a revisão verifica, sem promessa','Nada','Toque 3','Mensagens quase iguais por meses'],
+ ['Toque 3','','30 dias depois','Uma novidade ou condição','Nada','Toque 4','Etapas 06 a 08'],
+ ['Toque 4','','30 dias depois','Última mensagem, com saída clara','Nada','Encerra sem novos envios','Etapas 09 e 10, sem trava para quem disse não']
+]}
+];
+
+const MAP=[
+ {id:'TR',y:.5,x0:.04,x1:.17,names:['Novo contato','Triagem'],lab:1},
+ {id:'RV',y:.18,x0:.25,x1:.965,names:F[1].st.map(s=>s[0]),lab:-1},
+ {id:'OA',y:.5,x0:.25,x1:.965,names:F[2].st.map(s=>s[0]),lab:1},
+ {id:'CL',y:.74,x0:.25,x1:.58,names:F[3].st.map(s=>s[0]),lab:1},
+ {id:'RC',y:.92,x0:.965,x1:.62,names:F[4].st.map(s=>s[0]),lab:-1}
+];
+
+const RULES=[['one','Um robô por etapa','Acaba a mensagem duplicada.'],['no','Não é não','Quem pede para parar nunca mais recebe nada.'],['task','Tarefa só quando o lead responde','No máximo uma aberta por lead.'],['move','Robô ou regra, nunca os dois','Cada etapa tem um dono do movimento.'],['list','Lista e botão, nada de digitar 1, 2, 3','Uma segunda chance, depois humano.'],['msg','Mensagem sem promessa','Sem percentual, sem escassez, revisada antes da Meta.'],['tag','Origem sempre marcada','Para saber qual anúncio traz contrato.'],['cash','Ganho com valor, perda com motivo','Sem isso não dá para medir.'],['pin','Só RS','Fora da área recebe uma resposta educada e encerra.'],['name','Nome padrão em tudo','Ox 3.0, funil, etapa, função.']];
+
+const FAMS=[['Origem',['LP','Site','Meta Ads','Google','Indicação']],['Assunto',['Revisional veículo','Consignado','Cartão','Empréstimo pessoal','Juros abusivos','Outro']],['Situação',['Parcela em atraso','Urgente','Não contatar','Fora do RS','Já é cliente']],['Recuperação',['Recuperado','Não recuperado']],['Atendimento',['Tratado pela IA','Passou para humano','Qualificado','Não qualificou']]];
+const LOSSY=['Sem orçamento','Medo da busca e apreensão','Vai deixar para depois','Parou de responder','Esposa ou marido não aprovou'];
+const LOSSN=['Fechou com outra empresa','Desqualificado','Não quer contato (novo)','Fora da área (novo)','Sem viabilidade jurídica (novo)'];
+const FIELDS=[['40 tags de banco','Campo Banco com todas as opções'],['Parcelas em texto','Parcelas em número'],['Valores em texto','Valores em reais'],['Economia digitada à mão','Economia calculada sozinha'],['Assunto na etapa','Campo Assunto'],['Sem estado','Campo Estado, da triagem']];
+
+const DQ=[['Outros assuntos é produto ou ruído?','Produto ganha equipe e meta. Ruído a gente reduz no anúncio.'],['Quem atende cada linha?','Revisional, Outros assuntos, Clientes e análise jurídica.'],['O que fazemos com os 11.549 da recuperação?','Sugestão: últimos 6 meses entram no Toque 1, o resto fica arquivado.'],['Qual o horário da equipe?','Define o prazo das tarefas e o aviso da IA.'],['A análise paga continua?','Se continua, ganha etapa própria no Outros assuntos.'],['Falta alguma coisa?','Etapa, mensagem ou regra que faz falta no dia a dia.']];
+
+const ROAD=[['Aprovação','Você aprova esta página.'],['Construção','Tudo montado ao lado, com os robôs desligados.'],['Mensagens','Revisão anti spam e jurídica, depois aprovação da Meta.'],['Virada','Linha por linha, com lead de teste. Robôs antigos pausados, não apagados.'],['Ajuste fino','Duas semanas medindo antes de remover o que saiu.']];
+
+/* ---------- estado ---------- */
+const KEY='ox-kommo-dani-3';
+let A={};try{A=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(A))}catch(e){};sum()};
+const LBL={};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function apHTML(id,label,q){LBL[id]=label;const a=A[id]||{};const b=(v,t)=>`<button class="ab${a.v===v?' on':''}" type="button" data-id="${id}" data-v="${v}" aria-pressed="${a.v===v}">${t}</button>`;return `<div class="ap"><span class="q">${q}</span>${b('ok','Aprovo')}${b('adj','Quero ajustar')}<textarea data-n="${id}" aria-label="Comentário sobre ${esc(label)}" placeholder="O que você mudaria?" ${a.v==='adj'||a.n?'':'hidden'}>${esc(a.n||'')}</textarea></div>`}
+
+/* ---------- mapa ---------- */
+const svg=document.querySelector('#map svg');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function drawMap(){
+ const W=svg.clientWidth,H=svg.clientHeight,X=f=>f*W,Y=f=>f*H;let s='';
+ const bx=X(.17),by=Y(.5),kx=X(.21);
+ s+=`<path d="M${bx} ${by}H${kx}L${X(.25)} ${Y(.18)}" fill="none" stroke="${COL.RV}" stroke-width="10" stroke-linejoin="round"/>`;
+ s+=`<path d="M${bx} ${by}H${kx}L${X(.25)} ${Y(.74)}" fill="none" stroke="${COL.CL}" stroke-width="10" stroke-linejoin="round"/>`;
+ s+=`<path d="M${bx} ${by}H${X(.25)}" fill="none" stroke="${COL.OA}" stroke-width="10"/>`;
+ s+=`<path d="M${X(.985)} ${Y(.18)}V${Y(.92)}H${X(.965)}" fill="none" stroke="${COL.RC}" stroke-width="4" stroke-dasharray="9 8"/>`;
+ s+=`<text class="mt" x="${X(.975)}" y="${Y(.34)}" text-anchor="end">perdidos que podem voltar</text>`;
+ s+=`<path d="M${X(.62)} ${Y(.92)}H${X(.5)}" fill="none" stroke="${COL.RC}" stroke-width="4" stroke-dasharray="9 8"/>`;
+ s+=`<text class="mt" x="${X(.495)}" y="${Y(.92)+5}" text-anchor="end">respondeu: volta para Em atendimento</text>`;
+ MAP.forEach((l,li)=>{
+  const y=Y(l.y),x0=X(l.x0),x1=X(l.x1),c=COL[l.id],n=l.names.length;
+  s+=`<line x1="${x0}" y1="${y}" x2="${x1}" y2="${y}" stroke="${c}" stroke-width="10" stroke-linecap="round" ${l.id==='RC'?'stroke-dasharray="1 0"':''}/>`;
+  l.names.forEach((t,i)=>{
+   const x=n===1?x0:x0+(x1-x0)*i/(n-1);const fi=F.findIndex(f=>f.id===l.id);
+   const end=(l.id==='RV'||l.id==='OA'||l.id==='CL')&&i===n-1;
+   let anc='middle',tx=x;if(l.id==='TR'&&i===0){anc='start';tx=x-12}else if(x>X(.94)){anc='end';tx=x+10}
+   s+=`<g class="st" tabindex="0" role="button" aria-label="${esc(t)}" data-f="${fi}" data-s="${i}"><circle cx="${x}" cy="${y}" r="${end?13:10}" fill="#1d1d1d" stroke="${c}" stroke-width="${end?6:5}"/><text x="${tx}" y="${l.lab<0?y-24:y+34}" text-anchor="${anc}">${esc(t)}</text></g>`;
+  });
+ });
+ s+=`<text class="ln" x="${X(.25)}" y="${Y(.18)-52}" fill="${COL.RV}">Revisional de veículo</text>`;
+ s+=`<text class="ln" x="${X(.25)}" y="${Y(.5)+66}" fill="${COL.OA}">Outros assuntos</text>`;
+ s+=`<text class="ln" x="${X(.04)}" y="${Y(.5)-28}" fill="${COL.TR}">Triagem</text>`;
+ s+=`<text class="ln" x="${X(.25)}" y="${Y(.74)+66}" fill="${COL.CL}">Clientes</text>`;
+ s+=`<text class="ln" x="${X(.965)}" y="${Y(.92)-52}" text-anchor="end" fill="${COL.RC}">Recuperação · 4 toques</text>`;
+ if(!reduce){
+  const p=`M${X(.04)} ${by}H${kx}L${X(.25)} ${Y(.18)}H${X(.965)}`;
+  s+=`<circle r="7" fill="#fff"><animateMotion dur="9s" repeatCount="indefinite" path="${p}"/></circle>`;
+  const p2=`M${X(.04)} ${by}H${X(.965)}`;
+  s+=`<circle r="7" fill="#fff" opacity=".8"><animateMotion dur="11s" begin="2s" repeatCount="indefinite" path="${p2}"/></circle>`;
+ }
+ svg.innerHTML=s;
+}
+new ResizeObserver(drawMap).observe(svg);
+const goStation=(fi,si)=>{showF(fi,si);document.getElementById('funis').scrollIntoView()};
+svg.addEventListener('click',e=>{const g=e.target.closest('.st');if(g)goStation(+g.dataset.f,+g.dataset.s)});
+svg.addEventListener('keydown',e=>{if(e.key!=='Enter'&&e.key!==' ')return;const g=e.target.closest('.st');if(g){e.preventDefault();goStation(+g.dataset.f,+g.dataset.s)}});
+document.getElementById('legend').innerHTML=F.map((f,i)=>`<button class="lg" type="button" data-f="${i}"><i style="background:${COL[f.id]}"></i>${f.nome}</button>`).join('');
+document.getElementById('legend').addEventListener('click',e=>{const b=e.target.closest('.lg');if(b)goStation(+b.dataset.f,0)});
+
+/* ---------- antes e depois ---------- */
+const HOJE=[['F01 Vendas',10,'#8f74ff',[6]],['F02 Fechamento',5,'#5c36eb',[]],['F03 Recuperação',11,'#8d8d8d',[0,1,2,3,4,5,6,7,8,9]],['F04 Outros assuntos',15,'#29a8e0',[10]],['Disparos',3,'#555',[]]];
+let ca='';HOJE.forEach(h=>{for(let i=0;i<h[1];i++)ca+=`<div class="cell${h[3].includes(i)?' hot':''}" style="background:${h[2]}"></div>`});
+document.getElementById('cellsA').innerHTML=ca;
+document.getElementById('ckA').innerHTML=HOJE.map(h=>`<span><i style="background:${h[2]}"></i>${h[0]} · ${h[1]}</span>`).join('');
+let cb='';F.forEach(f=>{f.st.forEach(()=>{cb+=`<div class="cell" style="background:${COL[f.id]}"></div>`})});
+document.getElementById('cellsB').innerHTML=cb;
+document.getElementById('ckB').innerHTML=F.map(f=>`<span><i style="background:${COL[f.id]}"></i>${f.nome} · ${f.st.length}</span>`).join('');
+document.getElementById('big').innerHTML=[['303','leads parados no Follow Up 03 do funil de vendas'],['0','leads em Negociação e em Aguardando assinatura'],['11.549','leads recebendo recuperação por até 10 meses'],['31','robôs em 6 versões diferentes rodando juntos']].map(b=>`<div class="bn"><b>${b[0]}</b><span>${b[1]}</span></div>`).join('');
+
+/* ---------- funis ---------- */
+const tabs=document.getElementById('tabs');
+tabs.innerHTML=F.map((f,i)=>`<button class="tab" role="tab" type="button" aria-selected="false" data-f="${i}"><i style="background:${COL[f.id]}"></i>${f.nome}</button>`).join('');
+let cur=0,curS=0;
+function det(f,s){const st=f.st[s];return `<div class="det"><div class="dc">${ICON.in}<b>Entra quando</b><p>${esc(st[2])}</p></div><div class="dc">${ICON.bot}<b>O robô faz</b><p>${esc(st[3])}</p></div><div class="dc">${ICON.eq}<b>A equipe faz</b><p>${esc(st[4])}</p></div><div class="dc">${ICON.out}<b>Sai para</b><p>${esc(st[5])}</p></div></div><div class="was"><strong>Hoje</strong><span>${esc(st[6])}</span></div>`}
+function showF(fi,si=0){
+ cur=fi;curS=si;const f=F[fi];
+ [...tabs.children].forEach((t,i)=>t.setAttribute('aria-selected',i===fi));
+ const tg={n:['n','Nova'],j:['j','Junta etapas']};
+ document.getElementById('fun').innerHTML=`<div class="fun" style="--c:${COL[f.id]}"><div class="fh"><div><h3>${f.nome}</h3><p class="why">${esc(f.why)}</p></div><span class="pill">${f.pill} · ${f.st.length} estações</span></div><div class="track"><div class="rail" style="--n:${f.st.length}">${f.st.map((s,i)=>`<button class="sn" type="button" data-s="${i}" aria-pressed="${i===si}"><span class="o">${i+1}</span><span class="t">${esc(s[0])}</span>${s[1]?`<span class="tg ${tg[s[1]][0]}">${tg[s[1]][1]}</span>`:''}</button>`).join('')}</div></div><div id="det">${det(f,si)}</div>${apHTML('F-'+f.id,'Linha '+f.nome,'Esta linha está boa?')}</div>`;
+}
+tabs.addEventListener('click',e=>{const t=e.target.closest('.tab');if(t)showF(+t.dataset.f)});
+document.getElementById('fun').addEventListener('click',e=>{const b=e.target.closest('.sn');if(!b)return;curS=+b.dataset.s;document.querySelectorAll('.sn').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('det').innerHTML=det(F[cur],curS)});
+F.forEach(f=>LBL['F-'+f.id]='Linha '+f.nome);
+showF(0);
+
+/* ---------- regras, tags, decisões, implantação ---------- */
+document.getElementById('rules').innerHTML=RULES.map(r=>`<div class="rl"><div class="ic">${RI[r[0]]}</div><b>${r[1]}</b><span>${r[2]}</span></div>`).join('');
+document.getElementById('ap-regras').innerHTML=apHTML('REGRAS','Regras da casa','As dez regras estão boas?');
+let cl='';for(let i=0;i<120;i++)cl+=`<span class="${i<22?'k':''}"></span>`;document.getElementById('cloud').innerHTML=cl;
+document.getElementById('fams').innerHTML=FAMS.map(f=>`<div class="fam"><b>${f[0]}</b><div class="chips">${f[1].map(c=>`<span class="chip">${c}</span>`).join('')}</div></div>`).join('');
+document.getElementById('lossY').innerHTML=LOSSY.map(x=>`<li>${x}</li>`).join('');
+document.getElementById('lossN').innerHTML=LOSSN.map(x=>`<li>${x}</li>`).join('');
+document.getElementById('fields').innerHTML=FIELDS.map(x=>`<div class="fl"><span class="a">${x[0]}</span>${ICON.out}<span>${x[1]}</span></div>`).join('');
+document.getElementById('ap-lib').innerHTML=apHTML('LIB','Tags, motivos e campos','Tags, motivos e campos estão bons?');
+document.getElementById('dq').innerHTML=DQ.map((d,i)=>{const id='D'+(i+1);LBL[id]=d[0];return `<div class="dk"><div class="n">${i+1}</div><label for="t-${id}">${d[0]}</label><span>${d[1]}</span><textarea id="t-${id}" data-n="${id}" data-ans="1" placeholder="Sua resposta">${esc((A[id]||{}).n||'')}</textarea></div>`}).join('');
+document.getElementById('road').innerHTML=ROAD.map((r,i)=>`<div class="rs"><div class="o">${i+1}</div><b>${r[0]}</b><span>${r[1]}</span></div>`).join('');
+
+/* ---------- interação ---------- */
+document.addEventListener('click',e=>{const b=e.target.closest('.ab');if(!b)return;const id=b.dataset.id,v=b.dataset.v;A[id]=A[id]||{};A[id].v=A[id].v===v?'':v;const box=b.parentElement;box.querySelectorAll('.ab').forEach(x=>{const on=x.dataset.v===A[id].v;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});const t=box.querySelector('textarea');if(A[id].v==='adj'){t.hidden=false;t.focus()}else if(!t.value)t.hidden=true;save()});
+document.addEventListener('input',e=>{const t=e.target.closest('textarea[data-n]');if(!t)return;const id=t.dataset.n;A[id]=A[id]||{};A[id].n=t.value;if(t.dataset.ans)A[id].v=t.value.trim()?'ans':'';save()});
+const nome=document.getElementById('nome');nome.value=A._nome||'';nome.addEventListener('input',()=>{A._nome=nome.value;save()});
+
+function items(){return Object.keys(A).filter(k=>k[0]!=='_'&&A[k]&&(A[k].v||(A[k].n||'').trim())).map(k=>({id:k,bloco:LBL[k]||k,status:A[k].v||'',nota:(A[k].n||'').trim()}))}
+function text(){const it=items();const g=(v,t)=>{const l=it.filter(x=>x.status===v);return l.length?`*${t}*\n`+l.map(x=>`• ${x.bloco}${x.nota?': '+x.nota:''}`).join('\n')+'\n\n':''};return (`💜 *Kommo 3.0 · respostas${A._nome?' de '+A._nome:''}*\n\n`+g('adj','Quero ajustar')+g('ans','Decisões')+g('ok','Aprovado')).trim()}
+function sum(){const it=items();const c={ok:0,adj:0,ans:0};it.forEach(x=>{if(c[x.status]!==undefined)c[x.status]++});document.getElementById('tally').innerHTML=[['Aprovados',c.ok,'var(--ok)'],['Ajustes',c.adj,'var(--adj)'],['Decisões',c.ans,'var(--vi)']].map(t=>`<div class="tl"><b style="color:${t[2]}">${t[1]}</b><span>${t[0]}</span></div>`).join('');document.getElementById('out').textContent=it.length?text():'Suas respostas aparecem aqui conforme você marca Aprovo ou Quero ajustar ao longo da página.';document.getElementById('navgo').textContent=it.length?`Enviar respostas (${it.length})`:'Enviar respostas'}
+sum();
+
+const msg=document.getElementById('msg');
+document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(text());msg.textContent='Copiado. É só colar no WhatsApp.'}catch(e){msg.textContent='Não deu para copiar automaticamente. Selecione o texto ao lado e copie.'}});
+document.getElementById('sendBtn').addEventListener('click',async()=>{
+ const it=items();if(!it.length){msg.textContent='Marque pelo menos um bloco antes de enviar.';return}
+ if(!nome.value.trim()){msg.textContent='Escreva seu nome para a gente saber quem respondeu.';nome.focus();return}
+ const btn=document.getElementById('sendBtn');btn.disabled=true;msg.textContent='Enviando...';
+ try{const r=await fetch('/api/blueprint',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({projeto:'kommo-daniela-rocha',nome:nome.value.trim(),site:document.getElementById('site').value,respostas:it})});const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){msg.textContent='Recebido. A OxBrand já tem suas respostas.'}else{msg.textContent=(j.error||'Não foi possível enviar agora.')+' Use o botão Copiar para o WhatsApp.'}}catch(e){msg.textContent='Sem conexão agora. Use o botão Copiar para o WhatsApp.'}
+ btn.disabled=false});
+}
+</script>
+</body>
+</html>
