@@ -9,9 +9,19 @@ const nextConfig = {
     return buildRedirects()
   },
 
+  // Páginas de projeto escondidas para clientes (HTML estático em public/projetos):
+  // URL limpa sem /index.html. Fora do sitemap e com noindex no header abaixo.
+  async rewrites() {
+    return [{ source: '/projetos/:slug', destination: '/projetos/:slug/index.html' }]
+  },
+
   // Headers de segurança (PageSpeed / Práticas recomendadas)
   async headers() {
     return [
+      {
+        source: '/projetos/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
       {
         source: '/:path*',
         headers: [
