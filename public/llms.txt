@@ -20,6 +20,7 @@
 ## Conteúdo
 - [Blog / Insights](https://www.oxbrand.com.br/blog): Artigos sobre marketing de performance, tráfego pago e conteúdo.
 - [Materiais Gratuitos](https://www.oxbrand.com.br/materiais-gratuitos): E-books e materiais ricos.
+- [Contexto detalhado para modelos de linguagem](https://www.oxbrand.com.br/llms-full.txt): todas as paginas do site descritas para assistentes de IA.
 
 ## Contato
 - [Contato](https://www.oxbrand.com.br/contato): Fale com o time da OxBrand.
