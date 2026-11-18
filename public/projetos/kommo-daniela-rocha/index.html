@@ -29,7 +29,7 @@ button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px soli
 .bar{position:sticky;top:0;z-index:20;background:rgba(29,29,29,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .bar .w{display:flex;align-items:center;gap:18px;height:60px}
 .logo{font-weight:700;font-size:20px;letter-spacing:-.02em;flex:none}
-.logo b{color:var(--vi)}
+.logo img{display:block;height:28px;width:auto}
 .nav{display:flex;gap:4px;overflow-x:auto;margin-left:auto;scrollbar-width:none}
 .nav a{flex:none;color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:999px;font-size:14px}
 .nav a:hover{color:var(--ink);background:var(--card)}
@@ -104,6 +104,28 @@ button:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px soli
 .ap textarea{flex-basis:100%}
 textarea,input[type=text]{width:100%;font:16px/1.45 "Space Grotesk",sans-serif;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 textarea{min-height:84px;resize:vertical}
+/* automações */
+.au{margin-top:26px;background:var(--card);border-radius:24px;padding:clamp(20px,3vw,36px);border-top:6px solid var(--c)}
+.auh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px}
+.auh h3{font-size:clamp(26px,3vw,36px);color:var(--c)}
+.colh{display:grid;grid-template-columns:150px minmax(0,1fr) 34px minmax(0,1.3fr) minmax(0,1fr);gap:14px;padding:14px 0 8px;color:var(--mut);font-size:13px;font-weight:600;border-bottom:1px solid var(--line)}
+.ar{display:grid;grid-template-columns:150px minmax(0,1fr) 34px minmax(0,1.3fr) minmax(0,1fr);gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.ar .et{font-size:13px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);border-radius:999px;padding:5px 12px;justify-self:start}
+.wh{display:flex;gap:10px;align-items:center;font-size:16px;font-weight:600}
+.wh svg,.arr svg,.ac svg{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wh svg{width:26px;height:26px;flex:none;stroke:#ffd166}
+.arr svg{width:28px;height:28px;stroke:var(--c)}
+.acs{display:flex;flex-wrap:wrap;gap:6px}
+.ac{display:inline-flex;align-items:center;gap:6px;font-size:14px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.ac svg{width:16px;height:16px;stroke:var(--c)}
+.py{color:var(--mut);font-size:15px;line-height:1.4}
+.cad{grid-column:2/-1;display:flex;align-items:center;gap:0;margin-top:-4px;padding:0 0 4px}
+.cad .ln{flex:1;height:4px;background:color-mix(in srgb,var(--c) 40%,transparent);border-radius:2px}
+.cad .pt{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:12px;color:var(--mut);padding:0 6px}
+.cad .pt i{width:14px;height:14px;border-radius:50%;background:var(--c)}
+.cad .pt.st i{background:none;border:3px solid var(--c)}
+.cad .pt.end i{background:#ff8b7d}
+@media(max-width:900px){.colh{display:none}.ar{grid-template-columns:minmax(0,1fr);gap:10px}.arr{display:none}.cad{grid-column:1}}
 /* regras */
 .rules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:40px}
 .rl{background:var(--card);border-radius:20px;padding:22px 20px;display:grid;gap:12px;align-content:start}
@@ -163,8 +185,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
 </head>
 <body>
 <header class="bar"><div class="w">
- <div class="logo">Ox<b>Brand</b></div>
- <nav class="nav" aria-label="Seções"><a href="#mapa">Mapa</a><a href="#hoje">Antes e depois</a><a href="#funis">Funis</a><a href="#regras">Regras</a><a href="#tags">Tags e campos</a><a href="#decisoes">Decisões</a><a href="#implantacao">Implantação</a><a href="#enviar" class="go" id="navgo">Enviar respostas</a></nav>
+ <a class="logo" href="https://www.oxbrand.com.br" aria-label="OxBrand"><img src="/images/oxbrand-logo.webp" alt="OxBrand" width="120" height="28"></a>
+ <nav class="nav" aria-label="Seções"><a href="#mapa">Mapa</a><a href="#hoje">Antes e depois</a><a href="#funis">Funis</a><a href="#automacoes">Automações</a><a href="#regras">Regras</a><a href="#tags">Tags e campos</a><a href="#decisoes">Decisões</a><a href="#implantacao">Implantação</a><a href="#enviar" class="go" id="navgo">Enviar respostas</a></nav>
 </div></header>
 
 <main>
@@ -194,14 +216,22 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
  <div id="fun"></div>
 </div></section>
 
-<section class="sec" id="regras" style="background:#191919"><div class="w">
+<section class="sec" id="automacoes" style="background:#191919"><div class="w">
+ <div class="eb">Automações</div>
+ <h2>Quando acontece, o que o robô faz e por quê.</h2>
+ <p class="sub">Cada linha mostra todas as automações dela, na ordem em que o lead passa.</p>
+ <div class="tabs" role="tablist" id="atabs"></div>
+ <div id="aut"></div>
+</div></section>
+
+<section class="sec" id="regras"><div class="w">
  <div class="eb">Regras da casa</div>
  <h2>Dez regras que valem para todos os robôs.</h2>
  <div class="rules" id="rules"></div>
  <div class="boxap" id="ap-regras"></div>
 </div></section>
 
-<section class="sec" id="tags"><div class="w">
+<section class="sec" id="tags" style="background:#191919"><div class="w">
  <div class="eb">Tags, motivos de perda e campos</div>
  <h2>Um nome para cada coisa.</h2>
  <div class="lib">
@@ -223,19 +253,19 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
  <div class="boxap" id="ap-lib"></div>
 </div></section>
 
-<section class="sec" id="decisoes" style="background:#191919"><div class="w">
+<section class="sec" id="decisoes"><div class="w">
  <div class="eb">Decisões suas</div>
  <h2>Seis respostas que só você pode dar.</h2>
  <div class="dq" id="dq"></div>
 </div></section>
 
-<section class="sec" id="implantacao"><div class="w">
+<section class="sec" id="implantacao" style="background:#191919"><div class="w">
  <div class="eb">Implantação</div>
  <h2>Construído ao lado, virado com segurança.</h2>
  <div class="road" id="road"></div>
 </div></section>
 
-<section class="sec" id="enviar" style="background:#191919"><div class="w">
+<section class="sec" id="enviar"><div class="w">
  <div class="eb">Enviar</div>
  <h2>Pronto? Manda para a gente.</h2>
  <div class="send">
@@ -256,7 +286,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-siz
 </div></section>
 </main>
 
-<footer><div class="w">Proposta da OxBrand · Engenharia de Performance para Daniela Rocha Advocacia · números levantados na Kommo em 18/11/2026.</div></footer>
+<footer><div class="w" style="display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center"><img src="/images/oxbrand-logo.webp" alt="OxBrand" width="104" height="24" style="height:24px;width:auto"><span>Proposta da OxBrand · Engenharia de Performance para Daniela Rocha Advocacia · números levantados na Kommo em 18/11/2026.</span></div></footer>
 
 <script>
 {
@@ -336,6 +366,63 @@ const DQ=[['Outros assuntos é produto ou ruído?','Produto ganha equipe e meta.
 
 const ROAD=[['Aprovação','Você aprova esta página.'],['Construção','Tudo montado ao lado, com os robôs desligados.'],['Mensagens','Revisão anti spam e jurídica, depois aprovação da Meta.'],['Virada','Linha por linha, com lead de teste. Robôs antigos pausados, não apagados.'],['Ajuste fino','Duas semanas medindo antes de remover o que saiu.']];
 
+const AI={
+ msg:'<svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>',
+ task:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8 12 3 3 5-6"/></svg>',
+ move:'<svg viewBox="0 0 24 24"><path d="M4 12h14"/><path d="m12 6 6 6-6 6"/></svg>',
+ tag:'<svg viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9Z"/><circle cx="8" cy="8" r="1.5"/></svg>',
+ ia:'<svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8Z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8Z"/></svg>',
+ field:'<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 12h6"/></svg>',
+ lock:'<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>',
+ end:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg>',
+ user:'<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>'
+};
+const BOLT='<svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7Z"/></svg>';
+const ARR='<svg viewBox="0 0 24 24"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg>';
+/* [etapa, quando, [[ícone, ação]], por quê, cadência] */
+const AUT={
+TR:[
+ ['Novo contato','Chega uma conversa nova',[['tag','Marca a origem'],['msg','Boas vindas'],['move','Triagem em 1 min']],'Saber de onde veio cada lead desde o primeiro segundo.'],
+ ['Triagem','O lead entra na etapa',[['msg','Lista com 3 opções'],['msg','Pergunta se é do RS']],'Uma pergunta só separa venda, outro assunto e cliente.'],
+ ['Triagem','Responde fora da lista',[['msg','Repete uma vez'],['task','Na segunda, tarefa para a equipe']],'Ninguém fica preso num robô que não entende.'],
+ ['Triagem','Não é do RS',[['msg','Resposta educada'],['end','Perdido: Fora da área']],'Não gastar mensagem com quem não pode ser atendido.']
+],
+RV:[
+ ['Qualificação','O lead entra na etapa',[['msg','Perguntas com botões'],['field','Grava nos campos']],'Os dados chegam prontos para a análise.'],
+ ['Qualificação','2h sem responder',[['move','Em atendimento com o que já tem']],'A equipe assume em vez de o lead travar.'],
+ ['Em atendimento','O lead entra na etapa',[['user','Roleta escolhe a atendente'],['task','Uma tarefa: ligar hoje']],'Uma tarefa só, que dá para cumprir no dia.'],
+ ['Proposta enviada','Campo Proposta preenchido',[['move','Proposta enviada']],'Medir quantas propostas viram contrato.'],
+ ['Proposta enviada','O lead responde',[['task','Tarefa para a atendente']],'Resposta quente vira ação na hora.'],
+ ['Sem retorno','24h sem resposta',[['msg','3 mensagens, cada uma com um motivo']],'Insistir pouco, e com um motivo novo a cada vez.',['Dia 1','Dia 3','Dia 7']],
+ ['Sem retorno','O lead responde',[['move','Volta para onde estava'],['task','Tarefa']],'Quem volta é atendido, não recebe mais robô.'],
+ ['Sem retorno','Nada até o dia 7',[['end','Perdido: Parou de responder']],'Funil limpo, sem lead parado para sempre.'],
+ ['Negociação','48h sem movimento',[['task','Lembrete para a atendente']],'Negociação não esfria esquecida.'],
+ ['Contrato enviado','O contrato sai para assinar',[['msg','3 lembretes de assinatura']],'Contrato enviado é contrato quase ganho.',['Dia 1','Dia 3','Dia 5']],
+ ['Assinado','Assinatura finalizada',[['field','Exige o valor'],['move','Abre em Clientes']],'Saber quanto cada mês faturou.'],
+ ['Perdido','Marcado como perdido',[['field','Exige o motivo'],['lock','Recuperação só se o motivo permitir']],'Só volta a receber mensagem quem pode voltar.']
+],
+OA:[
+ ['Assunto','O lead entra na etapa',[['msg','Lista de assuntos'],['field','Grava o Assunto'],['tag','Tag do assunto']],'O assunto vira dado, não etapa.'],
+ ['Qualificação IA','O lead entra na etapa',[['ia','Agente 7Club conversa'],['field','Resumo do caso na nota'],['move','Qualificado ou não']],'A IA filtra o volume que hoje trava a equipe.'],
+ ['Qualificação IA','A equipe assume',[['lock','Pausar IA desliga o agente']],'Nunca IA e pessoa falando ao mesmo tempo.'],
+ ['Em atendimento','O lead entra na etapa',[['user','Distribui na equipe'],['task','Uma tarefa: responder hoje']],'Cada lead tem dono.'],
+ ['Sem retorno','24h sem resposta',[['msg','3 mensagens']],'A mesma régua do Revisional.',['Dia 1','Dia 3','Dia 7']],
+ ['Documentos','Documentos pedidos',[['msg','3 lembretes'],['task','Chegou arquivo: tarefa']],'Documento é o que mais trava esse funil.',['Dia 1','Dia 3','Dia 7']],
+ ['Análise jurídica','Documentos completos',[['task','Tarefa com prazo para a advogada']],'A análise tem data para acontecer.'],
+ ['Contrato','Caso aprovado',[['msg','3 lembretes de assinatura']],'Fechar o que já foi aprovado.',['Dia 1','Dia 3','Dia 5']]
+],
+CL:[
+ ['Nova solicitação','Cliente escreveu',[['user','Vai para a responsável do caso'],['task','Responder hoje']],'Cliente não espera na fila de lead novo.'],
+ ['Em andamento','3 dias sem movimento',[['task','Lembrete para a equipe']],'Cliente sempre sabe em que pé está.'],
+ ['Resolvido','A equipe resolve',[['end','Fecha a conversa']],'Caixa de entrada limpa.']
+],
+RC:[
+ ['Toques 1 a 4','15 dias depois da perda',[['msg','Uma mensagem por toque']],'Poucas mensagens, espaçadas, cada uma com um motivo.',['Dia 15','Dia 45','Dia 75','Dia 105']],
+ ['Qualquer toque','O lead responde',[['move','Em atendimento da linha de origem'],['task','Tarefa']],'Quem volta cai direto com uma pessoa.'],
+ ['Qualquer toque','Pede para parar',[['tag','Não contatar'],['end','Sai da recuperação']],'Respeito e proteção do número de WhatsApp.'],
+ ['Toque 4','Sem resposta',[['end','Não recuperado, sem novos envios']],'Ciclo encerrado de verdade.']
+]};
+
 /* ---------- estado ---------- */
 const KEY='ox-kommo-dani-3';
 let A={};try{A=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
@@ -412,6 +499,18 @@ tabs.addEventListener('click',e=>{const t=e.target.closest('.tab');if(t)showF(+t
 document.getElementById('fun').addEventListener('click',e=>{const b=e.target.closest('.sn');if(!b)return;curS=+b.dataset.s;document.querySelectorAll('.sn').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('det').innerHTML=det(F[cur],curS)});
 F.forEach(f=>LBL['F-'+f.id]='Linha '+f.nome);
 showF(0);
+
+/* ---------- automações ---------- */
+const atabs=document.getElementById('atabs');
+atabs.innerHTML=F.map((f,i)=>`<button class="tab" role="tab" type="button" aria-selected="false" data-f="${i}"><i style="background:${COL[f.id]}"></i>${f.nome}</button>`).join('');
+function showA(fi){
+ const f=F[fi],L=AUT[f.id];[...atabs.children].forEach((t,i)=>t.setAttribute('aria-selected',i===fi));
+ const cad=c=>c?`<div class="cad"><div class="pt st"><i></i>Início</div>${c.map((d,i)=>`<div class="ln"></div><div class="pt${i===c.length-1?' end':''}"><i></i>${d}</div>`).join('')}</div>`:'';
+ document.getElementById('aut').innerHTML=`<div class="au" style="--c:${COL[f.id]}"><div class="auh"><h3>${f.nome}</h3><span class="pill">${L.length} automações</span></div><div class="colh"><span>Etapa</span><span>Quando</span><span></span><span>O robô faz</span><span>Por quê</span></div>${L.map(a=>`<div class="ar"><span class="et">${esc(a[0])}</span><div class="wh">${BOLT}<span>${esc(a[1])}</span></div><div class="arr">${ARR}</div><div class="acs">${a[2].map(x=>`<span class="ac">${AI[x[0]]}${esc(x[1])}</span>`).join('')}</div><div class="py">${esc(a[3])}</div>${cad(a[4])}</div>`).join('')}${apHTML('AU-'+f.id,'Automações da linha '+f.nome,'Estas automações estão boas?')}</div>`;
+}
+atabs.addEventListener('click',e=>{const t=e.target.closest('.tab');if(t)showA(+t.dataset.f)});
+F.forEach(f=>LBL['AU-'+f.id]='Automações da linha '+f.nome);
+showA(1);
 
 /* ---------- regras, tags, decisões, implantação ---------- */
 document.getElementById('rules').innerHTML=RULES.map(r=>`<div class="rl"><div class="ic">${RI[r[0]]}</div><b>${r[1]}</b><span>${r[2]}</span></div>`).join('');
