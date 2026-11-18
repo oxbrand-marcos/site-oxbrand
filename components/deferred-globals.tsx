@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
+import { usePathname } from 'next/navigation'
 
 // Globais nao-criticos: carregados fora do caminho critico para reduzir o
 // Total Blocking Time. O consent default do GTM ja e aplicado inline no <head>,
@@ -20,6 +21,9 @@ const SpeedInsights = dynamic(() => import('@vercel/speed-insights/next').then((
  */
 export function DeferredGlobals() {
   const [ready, setReady] = useState(false)
+  // Briefings (/briefing/*) sao respondidos por clientes que ja fecharam:
+  // nada de popup de diagnostico nem botao flutuante por cima do fluxo.
+  const isBriefing = (usePathname() ?? '').startsWith('/briefing')
 
   useEffect(() => {
     const w = window as typeof window & {
@@ -39,8 +43,8 @@ export function DeferredGlobals() {
   return (
     <>
       <ConsentBanner />
-      <PopupDiagnostico />
-      <FloatingActions />
+      {!isBriefing && <PopupDiagnostico />}
+      {!isBriefing && <FloatingActions />}
       <Analytics />
       <SpeedInsights />
     </>
