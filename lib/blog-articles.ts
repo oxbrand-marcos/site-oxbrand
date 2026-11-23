@@ -24,6 +24,183 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'google-ads-para-advogados',
+    metaTitle: 'Google Ads para advogados: como anunciar dentro da OAB',
+    metaDescription: 'Google Ads para advogados: o que o Provimento 205/2021 permite, como escolher palavras, negativar buscas, montar a página e medir contrato fechado.',
+    title: 'Google Ads para advogados: como anunciar sem ferir a OAB',
+    subtitle: 'A OAB permite anúncio por termo de busca quando ele responde a uma busca feita pelo próprio cliente. Esse detalhe define como a campanha precisa ser montada, do termo comprado até a página de destino.',
+    tag: 'Tráfego & Aquisição',
+    breadcrumb: 'Tráfego Pago',
+    dateISO: '2026-11-23',
+    coverAlt: 'Google Ads para advogados: campanha de pesquisa organizada por área do direito dentro das regras da OAB',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">De todos os canais pagos, o Google Ads é o que mais combina com a advocacia. A pessoa já tem o problema, já está procurando ajuda e digita isso na busca. O anúncio aparece como resposta, não como interrupção. É exatamente esse formato que o Provimento 205/2021 da OAB autoriza.</p>
+<p>Este guia é específico sobre Google Ads. Para a visão geral de canais (Meta, YouTube, conteúdo), veja o nosso guia de <a href="/blog/trafego-pago-para-advogados">tráfego pago para advogados</a>.</p>
+<h2>O que a OAB diz sobre Google Ads</h2>
+<p>O Anexo Único do <a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" target="_blank" rel="noopener noreferrer">Provimento 205/2021</a> trata do tema de forma direta: a compra de termos de busca, a exemplo do Google Ads, é permitida quando responde a uma busca iniciada pelo potencial cliente, e as palavras escolhidas precisam respeitar as regras éticas. No mesmo item, a OAB proíbe anúncios ostensivos em plataformas de vídeo.</p>
+<p>Na prática, isso desenha três limites para a campanha:</p>
+<ul>
+<li><strong>Campanha de pesquisa, não de exibição.</strong> O anúncio aparece para quem buscou. Banner perseguindo a pessoa pela internet e anúncio em vídeo antes do conteúdo ficam de fora.</li>
+<li><strong>Texto informativo.</strong> Sem promessa de resultado, sem citar valor de honorários, desconto ou gratuidade (art. 3º e art. 6º).</li>
+<li><strong>Sem captação ativa.</strong> O anúncio informa quem é o escritório e em que ele atua. A decisão de entrar em contato é da pessoa.</li>
+</ul>
+<h2>Como escolher os termos de busca</h2>
+<p>A escolha começa pela área de atuação, não pelo volume de busca. Um escritório trabalhista compra termos trabalhistas. Parece óbvio, e é onde a maior parte do orçamento se perde.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Tipo de termo</th><th>Exemplo</th><th>O que fazer</th></tr></thead>
+<tbody>
+<tr><td>Área e serviço</td><td>advogado trabalhista em Mogi das Cruzes</td><td>Comprar. É a busca de quem precisa de um advogado.</td></tr>
+<tr><td>Problema concreto</td><td>demissão por justa causa o que fazer</td><td>Comprar com página que explica o tema e convida para a consulta.</td></tr>
+<tr><td>Informação gratuita</td><td>modelo de petição, como fazer sozinho</td><td>Negativar. Quem busca isso não quer contratar.</td></tr>
+<tr><td>Concurso e estudo</td><td>OAB exame, curso de direito, estágio</td><td>Negativar.</td></tr>
+<tr><td>Nome de outro escritório</td><td>nome de concorrente</td><td>Não comprar. Além de caro, entra em zona ética cinzenta.</td></tr>
+</tbody>
+</table></div>
+<p>A lista de palavras negativas é tão importante quanto a de palavras compradas. Em escritórios que atendemos, ela passa de cem termos nos primeiros meses, alimentada pelo relatório de termos de pesquisa toda semana.</p>
+<h2>Como estruturar a conta</h2>
+<ul>
+<li><strong>Uma campanha por área.</strong> Trabalhista, família, previdenciário e empresarial têm custo por clique, tempo de decisão e ticket diferentes. Misturar tudo esconde qual área paga a conta.</li>
+<li><strong>Região bem delimitada.</strong> Escritório que atende presencialmente anuncia para onde consegue atender. Atendimento online permite ampliar, mas o raio precisa ser decisão consciente.</li>
+<li><strong>Horário de veiculação.</strong> Se ninguém responde à noite e no fim de semana, o clique desse horário custa o mesmo e converte menos.</li>
+</ul>
+<h2>O texto do anúncio</h2>
+<p>O anúncio precisa ser claro sobre o que o escritório faz e onde atua, e só. Exemplos do que funciona dentro das regras: área de atuação, cidade, tempo de experiência, atendimento presencial ou online, credenciais (OAB, especializações, participação em comissões). Exemplos do que fica fora: "ganhe sua causa", "primeira consulta grátis", "resultado garantido", qualquer valor.</p>
+<h2>A página para onde o anúncio leva</h2>
+<p>É onde a maioria das campanhas jurídicas perde dinheiro. O anúncio leva para a home do escritório, a pessoa não encontra a área que buscou e volta para o Google. A página certa:</p>
+<ul>
+<li>Fala da área que a pessoa buscou, com o mesmo termo do anúncio.</li>
+<li>Explica, em linguagem simples, como funciona o atendimento e o que levar para a primeira conversa.</li>
+<li>Mostra credenciais dos advogados. Depoimento de cliente e resultado de caso não entram (art. 6º).</li>
+<li>Tem um caminho de contato curto: WhatsApp e formulário, carregando a origem do clique.</li>
+</ul>
+<p>Sobre o que deve ter uma página que converte, veja o nosso guia de <a href="/blog/landing-page">landing page</a>.</p>
+<h2>Como medir: clique não é cliente</h2>
+<p>O painel do Google Ads mostra cliques e conversões (formulário enviado, clique no WhatsApp). O escritório precisa saber outra coisa: quantos contratos vieram de cada campanha. Isso só aparece quando cada contato que chega é registrado com a origem, e o contrato fechado é ligado a ele. É o papel do <a href="/blog/crm-para-advogados">CRM para advogados</a>, e é o que permite calcular quanto custa um contrato por área, a conta que realmente decide onde investir (detalhes no nosso texto sobre <a href="/blog/como-calcular-roas">como calcular ROAS</a>).</p>
+<h2>Quanto investir</h2>
+<p>Não existe valor fixo. O custo por clique varia muito por área e por cidade: termos de direito previdenciário e trabalhista em capitais costumam ser mais disputados que termos de nicho em cidades médias. O caminho seguro é começar com uma área só, com verba suficiente para gerar algumas dezenas de cliques por semana, medir quantos viram consulta e contrato, e só então ampliar.</p>
+<div class="callout"><p>A OxBrand monta campanhas de Google Ads para escritórios de advocacia dentro do Provimento 205/2021: estrutura por área, palavras negativas revisadas toda semana, página de destino por especialidade e CRM ligado à origem de cada contrato. Veja como trabalhamos o <a href="/marketing-para-advogados">marketing para advogados</a> e solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'Advogado pode anunciar no Google Ads?', a: 'Pode. O Anexo Único do Provimento 205/2021 da OAB permite a compra de termos de busca, a exemplo do Google Ads, quando o anúncio responde a uma busca feita pelo potencial cliente e o texto respeita as regras éticas.' },
+      { q: 'O que não pode ter no anúncio do advogado?', a: 'Promessa de resultado, referência a valores de honorários, descontos ou gratuidade, e qualquer mensagem de captação ativa. O Provimento também proíbe anúncios ostensivos em plataformas de vídeo.' },
+      { q: 'Quais termos negativar em campanhas jurídicas?', a: 'Termos de quem não quer contratar: modelos de petição, como fazer sozinho, exame da OAB, cursos, estágio e vagas. A lista cresce toda semana com base no relatório de termos de pesquisa.' },
+      { q: 'Quanto um escritório deve investir em Google Ads?', a: 'Depende da área e da cidade. O recomendado é começar com uma área, com verba que gere algumas dezenas de cliques por semana, medir consultas e contratos no CRM e só depois ampliar.' },
+    ],
+  },
+  {
+    slug: 'marketing-juridico',
+    metaTitle: 'Marketing jurídico: o que a OAB permite e como fazer',
+    metaDescription: 'Marketing jurídico em 2026: o que o Provimento 205/2021 permite e proíbe, quais canais funcionam para escritórios e como transformar contato em contrato.',
+    title: 'Marketing jurídico: o que a OAB permite e como fazer funcionar',
+    subtitle: 'Marketing jurídico não é propaganda de escritório. É organizar a informação que o cliente procura, nos lugares onde ele procura, dentro de regras éticas bem claras. Este guia junta as duas coisas.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Estratégia',
+    dateISO: '2026-11-23',
+    coverAlt: 'Marketing jurídico: estratégia de conteúdo, busca e atendimento para escritórios de advocacia',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">A maior parte dos escritórios ainda cresce por indicação. Funciona, até o dia em que para de funcionar e ninguém sabe dizer de onde viria o próximo cliente. Marketing jurídico é a forma de construir um segundo caminho, previsível, sem ferir o Código de Ética e o Provimento 205/2021 da OAB.</p>
+<h2>O que é marketing jurídico</h2>
+<p>É o conjunto de ações que tornam o escritório encontrável e confiável para quem precisa de um advogado: conteúdo que explica temas jurídicos, presença no Google, redes sociais com caráter informativo e um atendimento organizado para responder rápido. A regra que guia tudo, nas palavras do próprio Provimento, é o caráter informativo e a sobriedade.</p>
+<h2>O que a OAB permite e o que proíbe</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Permitido</th><th>Proibido</th></tr></thead>
+<tbody>
+<tr><td>Conteúdo jurídico informativo em site, blog e redes sociais</td><td>Promessa de resultado ou uso de casos concretos para oferecer serviço (art. 6º)</td></tr>
+<tr><td>Anúncio por termo de busca que responde a uma busca, como no Google Ads</td><td>Referência a valores de honorários, descontos ou gratuidade (art. 3º, I)</td></tr>
+<tr><td>Impulsionamento de conteúdo, desde que não seja oferta de serviço</td><td>Anúncios ostensivos em plataformas de vídeo</td></tr>
+<tr><td>Chatbot para facilitar a comunicação e coletar dados</td><td>Pagar para aparecer em rankings e prêmios (art. 5º, § 1º)</td></tr>
+<tr><td>Credenciais, especializações, publicações e participação em comissões</td><td>Mala direta e envio em massa para coletivos</td></tr>
+</tbody>
+</table></div>
+<p>A leitura completa está no <a href="https://www.oab.org.br/leisnormas/legislacao/provimentos/205-2021" target="_blank" rel="noopener noreferrer">texto do Provimento 205/2021</a>. Para o detalhamento de anúncios pagos, veja o nosso guia de <a href="/blog/trafego-pago-para-advogados">tráfego pago para advogados</a>.</p>
+<h2>Os canais que funcionam para escritórios</h2>
+<p><strong>1. Perfil da Empresa no Google.</strong> É o primeiro lugar que aparece quando alguém busca "advogado" mais a cidade. Categoria correta, endereço verificado, horário, fotos reais do escritório e avaliações respondidas. Custo zero e impacto alto. O passo a passo está no nosso texto sobre <a href="/blog/como-colocar-empresa-no-google-maps">como colocar a empresa no Google Maps</a>.</p>
+<p><strong>2. Site com páginas por área.</strong> Uma página para cada área de atuação, explicando como o escritório trabalha aquele tema. É a base para aparecer no Google e para receber o tráfego pago.</p>
+<p><strong>3. Conteúdo que responde dúvidas reais.</strong> As perguntas que chegam no WhatsApp todo dia viram artigos e vídeos. Isso alimenta a busca orgânica e também as respostas de assistentes de IA, que citam fontes claras e diretas.</p>
+<p><strong>4. Google Ads de pesquisa.</strong> Para quem tem urgência e já está procurando. Detalhes no guia de <a href="/blog/google-ads-para-advogados">Google Ads para advogados</a>.</p>
+<p><strong>5. Redes sociais com caráter informativo.</strong> Instagram e LinkedIn funcionam como prova de autoridade: quem chegou por indicação confere o perfil antes de chamar.</p>
+<h2>O ponto que quase todo escritório ignora: o atendimento</h2>
+<p>Marketing traz o contato. Quem fecha o contrato é o atendimento. E é aí que a maioria perde: mensagem respondida no dia seguinte, consulta sem retorno, nenhuma ideia de qual canal trouxe cada cliente. Um <a href="/blog/crm-para-advogados">CRM para advogados</a> organiza essa entrada, registra a origem de cada contato e mostra quanto custa cada contrato por canal. Sem isso, o escritório investe sem saber o que funciona.</p>
+<h2>Por onde começar</h2>
+<ul>
+<li>Arrume o Perfil da Empresa no Google e peça avaliações a clientes atuais.</li>
+<li>Crie uma página no site para cada área de atuação.</li>
+<li>Liste as dez perguntas mais frequentes que chegam no WhatsApp e transforme em conteúdo.</li>
+<li>Organize o atendimento em um CRM antes de investir em anúncio.</li>
+<li>Só então teste Google Ads, uma área por vez.</li>
+</ul>
+<div class="callout"><p>A OxBrand estrutura marketing jurídico do conteúdo ao contrato: presença no Google, páginas por área, campanhas dentro do Provimento 205/2021 e CRM com origem de cada cliente. Veja como trabalhamos o <a href="/marketing-para-advogados">marketing para advogados</a> e solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'O que é marketing jurídico?', a: 'É o conjunto de ações que tornam o escritório encontrável e confiável para quem precisa de um advogado: conteúdo informativo, presença no Google, redes sociais e atendimento organizado, sempre dentro do Código de Ética e do Provimento 205/2021 da OAB.' },
+      { q: 'Advogado pode fazer marketing digital?', a: 'Pode, com caráter informativo e sobriedade. O Provimento 205/2021 permite conteúdo jurídico, impulsionamento que não seja oferta de serviço e anúncio por termo de busca que responde a uma busca. Proíbe promessa de resultado e referência a honorários.' },
+      { q: 'Advogado pode impulsionar post no Instagram?', a: 'Pode impulsionar conteúdo informativo. O Anexo Único do Provimento 205/2021 permite patrocínio e impulsionamento nas redes sociais desde que não se trate de publicidade contendo oferta de serviços jurídicos.' },
+      { q: 'Por onde um escritório deve começar o marketing jurídico?', a: 'Pelo Perfil da Empresa no Google e por páginas no site para cada área de atuação. Depois, conteúdo que responde às dúvidas frequentes, atendimento organizado em CRM e, por último, anúncio no Google.' },
+    ],
+  },
+  {
+    slug: 'como-colocar-empresa-no-google-maps',
+    metaTitle: 'Como colocar sua empresa no Google Maps e aparecer mais',
+    metaDescription: 'Como colocar a empresa no Google Maps pelo Perfil da Empresa: cadastro, verificação e o que faz aparecer nas primeiras posições da busca local.',
+    title: 'Como colocar sua empresa no Google Maps (e aparecer nas primeiras posições)',
+    subtitle: 'Cadastrar a empresa no Google Maps leva poucos minutos. Aparecer no topo quando alguém busca o seu serviço na sua cidade é outra conversa, e depende de três fatores que o próprio Google explica.',
+    tag: 'Estratégia & Gestão',
+    breadcrumb: 'Estratégia',
+    dateISO: '2026-11-23',
+    coverAlt: 'Como colocar a empresa no Google Maps: perfil de empresa com localização, avaliações e horário em destaque no mapa',
+    author: 'Marcos Blaustein',
+    bodyHtml: `
+<p class="lead">Para negócios locais, o mapa que aparece no topo da busca do Google é a vitrine mais valiosa da internet. Quem busca "dentista perto de mim" ou "agência de marketing em Mogi das Cruzes" escolhe ali mesmo, entre três empresas, sem rolar a página. Este guia mostra como entrar nesse mapa e como subir nele.</p>
+<h2>Passo a passo para colocar a empresa no Google Maps</h2>
+<p>A presença no Maps vem do <strong>Perfil da Empresa no Google</strong> (antigo Google Meu Negócio). O cadastro é gratuito e feito em <a href="https://www.google.com/business/" target="_blank" rel="noopener noreferrer">google.com/business</a>.</p>
+<ol>
+<li><strong>Entre com a conta Google da empresa.</strong> Use um email que pertença à empresa, não a uma pessoa que pode sair.</li>
+<li><strong>Informe o nome real da empresa.</strong> O mesmo que aparece na fachada e nos documentos. Colocar termos de busca no nome viola as diretrizes e pode suspender o perfil.</li>
+<li><strong>Escolha a categoria principal.</strong> É o campo que mais pesa para aparecer nas buscas certas. Escolha a mais específica possível.</li>
+<li><strong>Defina endereço ou área de atendimento.</strong> Quem recebe clientes no local mostra o endereço. Quem atende na casa do cliente esconde o endereço e define as cidades atendidas.</li>
+<li><strong>Adicione telefone, site e horário.</strong></li>
+<li><strong>Verifique o perfil.</strong> O Google pede verificação por vídeo, telefone, email ou correspondência, conforme o caso. Sem verificação, o perfil não aparece por completo.</li>
+</ol>
+<h2>O que faz uma empresa aparecer no topo do mapa</h2>
+<p>O próprio Google resume a classificação local em <a href="https://support.google.com/business/answer/7091" target="_blank" rel="noopener noreferrer">três fatores</a>:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Fator</th><th>O que é</th><th>O que você controla</th></tr></thead>
+<tbody>
+<tr><td>Relevância</td><td>O quanto o perfil corresponde ao que a pessoa buscou</td><td>Categoria, serviços, descrição e informações completas</td></tr>
+<tr><td>Distância</td><td>A distância entre a empresa e quem busca</td><td>Endereço correto (não dá para "mudar" a distância)</td></tr>
+<tr><td>Destaque</td><td>O quanto a empresa é conhecida, online e offline</td><td>Avaliações, citações em outros sites, links e o próprio site</td></tr>
+</tbody>
+</table></div>
+<h2>Como melhorar o destaque (o fator que mais dá trabalho e mais retorna)</h2>
+<ul>
+<li><strong>Avaliações constantes.</strong> Mais importante que a nota é o fluxo: avaliações chegando todo mês. Peça ao cliente logo depois de uma entrega boa, com um link direto.</li>
+<li><strong>Responda todas as avaliações.</strong> As boas e, principalmente, as ruins, com educação e solução.</li>
+<li><strong>Fotos reais.</strong> Fachada, interior, equipe e trabalho entregue. Atualize ao longo do ano.</li>
+<li><strong>Dados iguais em todo lugar.</strong> Nome, endereço e telefone idênticos no site, nas redes sociais e em diretórios. Divergência confunde o Google. Quando a OxBrand mudou de sala em outubro, atualizamos o endereço no site, no perfil, no LinkedIn, no Facebook e no Instagram no mesmo dia por esse motivo.</li>
+<li><strong>Site com página local.</strong> Uma página no site que fale do serviço na cidade, com o mesmo endereço do perfil, reforça a relevância.</li>
+<li><strong>Posts e produtos no perfil.</strong> Mostram que a empresa está ativa e ampliam os termos pelos quais ela pode aparecer.</li>
+</ul>
+<h2>Erros que derrubam o perfil</h2>
+<ul>
+<li>Termo de busca no nome da empresa ("Pizzaria X Melhor Pizza de Mogi").</li>
+<li>Endereço de coworking ou caixa postal sem atendimento real no local.</li>
+<li>Comprar avaliações ou oferecer brinde em troca de nota. O Google remove e pode suspender.</li>
+<li>Criar mais de um perfil para a mesma empresa no mesmo endereço.</li>
+</ul>
+<h2>E depois que o perfil está no ar?</h2>
+<p>O Perfil da Empresa mostra quantas pessoas viram a empresa, pediram rota, ligaram ou clicaram no site. Acompanhe esses números todo mês e ligue o telefone e o WhatsApp a um CRM para saber quantos desses contatos viraram venda. É o mesmo raciocínio de qualquer canal: o que importa não é a visualização, é o cliente.</p>
+<div class="callout"><p>A OxBrand cuida da presença local de empresas no Google: perfil completo e verificado, rotina de avaliações, páginas locais no site e monitoramento de posição cidade a cidade. Veja como trabalhamos o <a href="/solucoes/inbound-marketing">inbound marketing e SEO</a> e solicite um <a href="/diagnostico">diagnóstico gratuito</a>.</p></div>
+`,
+    faq: [
+      { q: 'Como colocar minha empresa no Google Maps?', a: 'Pelo Perfil da Empresa no Google, em google.com/business: informe o nome real, a categoria principal, o endereço ou a área de atendimento, telefone, site e horário, e conclua a verificação que o Google pedir.' },
+      { q: 'Quanto custa colocar a empresa no Google Maps?', a: 'O cadastro no Perfil da Empresa no Google é gratuito. Custos aparecem apenas se a empresa decidir anunciar no Google Ads ou contratar alguém para cuidar da presença local.' },
+      { q: 'Por que minha empresa não aparece no Google Maps?', a: 'Os motivos mais comuns são perfil não verificado, categoria pouco específica, informações incompletas, poucas avaliações ou dados diferentes entre o site, o perfil e outros diretórios.' },
+      { q: 'Como subir no ranking do Google Maps?', a: 'O Google classifica por relevância, distância e destaque. O que a empresa controla: perfil completo com a categoria certa, avaliações chegando todo mês e respondidas, fotos reais, dados iguais em todos os canais e uma página local no site.' },
+    ],
+  },
+  {
     slug: 'crm-para-advogados',
     metaTitle: 'CRM para advogados: como organizar a captação do escritório',
     metaDescription: 'CRM para escritório de advocacia: funil por área, triagem no WhatsApp, origem do contato e regras da OAB. Diferença entre CRM e software jurídico.',
