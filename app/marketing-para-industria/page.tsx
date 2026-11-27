@@ -48,6 +48,7 @@ export default function Page() {
         ],
       }}
       relatedLinks={[
+        { label: 'Agência de Marketing B2B', href: '/agencia-de-marketing-b2b' },
         { label: 'Gestão de Tráfego Pago', href: '/solucoes/gestao-de-trafego-pago' },
         { label: 'Inbound Marketing', href: '/solucoes/inbound-marketing' },
         { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },

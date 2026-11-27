@@ -42,4 +42,12 @@ export const faqItems = [
     q: 'Qual é o próximo passo para implementar o Kommo?',
     a: 'O próximo passo é solicitar um diagnóstico gratuito. Nosso time de especialistas irá analisar o seu processo de vendas e funil, para então criar um plano de implementação personalizado e mostrar como o Kommo pode transformar a sua gestão de clientes.',
   },
+  {
+    q: 'A OxBrand é parceira oficial da Kommo no Brasil?',
+    a: 'Sim. A OxBrand é parceira oficial da Kommo e está entre os 5% melhores parceiros do Brasil. Implantamos o Kommo para empresas de todo o país, de forma remota, a partir de Mogi das Cruzes (SP).',
+  },
+  {
+    q: 'Qual a diferença entre contratar o Kommo direto e por um parceiro?',
+    a: 'A licença é a mesma. O que muda é a implantação: o parceiro desenha o funil a partir do seu processo comercial, configura WhatsApp, Instagram, formulários e automações, cria os Salesbots e treina o time. Quem contrata sozinho costuma levar meses para chegar ao mesmo ponto, e muitas vezes desiste no meio. Os valores das licenças estão no nosso artigo Kommo planos e preços, no blog.',
+  },
 ]

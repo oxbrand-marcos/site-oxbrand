@@ -19,6 +19,8 @@ const staticPages: MetadataRoute.Sitemap = [
   { url: `${BASE}/solucoes/copywriting-e-redacao`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/solucoes/inbound-marketing`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/solucoes/crm-kommo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+  { url: `${BASE}/solucoes/seo`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+  { url: `${BASE}/agencia-de-marketing-b2b`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
   { url: `${BASE}/portfolio`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/nossos-clientes`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
@@ -47,7 +49,7 @@ const staticPages: MetadataRoute.Sitemap = [
 const staticPosts: MetadataRoute.Sitemap = [
   ...ARTICLES.map((a) => ({
     url: `${BASE}/blog/${a.slug}`,
-    lastModified: new Date(a.dateISO),
+    lastModified: new Date(a.updatedISO ?? a.dateISO),
     changeFrequency: 'monthly' as const,
     priority: 0.75,
   })),

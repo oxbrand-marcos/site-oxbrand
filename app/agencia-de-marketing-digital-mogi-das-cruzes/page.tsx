@@ -58,9 +58,9 @@ const servicos = [
     href: '/solucoes/desenvolvimento-de-sites',
   },
   {
-    titulo: 'Conteúdo e SEO',
-    desc: 'Para sua empresa ser encontrada em Mogi das Cruzes sem depender só de verba de anúncio.',
-    href: '/blog',
+    titulo: 'SEO, Google Maps e IA',
+    desc: 'Para sua empresa ser encontrada em Mogi das Cruzes no Google, no Maps e nas respostas de IA, sem depender só de anúncio.',
+    href: '/solucoes/seo',
   },
 ]
 

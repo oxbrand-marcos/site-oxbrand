@@ -4,8 +4,8 @@ import { serviceSchema, breadcrumbSchema, faqPageSchema, jsonLd } from '@/lib/js
 import { CRM_KOMMO_NAME, CRM_KOMMO_DESCRIPTION, faqItems } from './data'
 
 export const metadata: Metadata = {
-  title: 'CRM Kommo: implementação em 15 dias | OxBrand, Top 5% Brasil',
-  description: 'Implementação completa do CRM Kommo em 15 dias por parceiro certificado Top 5% no Brasil: funil, integração de canais, automações e treinamento.',
+  title: 'Parceiro Kommo Top 5% no Brasil: implantação em 15 dias | OxBrand',
+  description: 'Agência parceira oficial Kommo, Top 5% no Brasil. Implantação do Kommo CRM em 15 dias: funil, WhatsApp, automações, Salesbot e treinamento do time.',
   ...pageOg({
     title: 'CRM Kommo · Implementação em 15 dias',
     description: 'Pare de perder vendas no WhatsApp. Parceiro Kommo certificado Top 5% no Brasil.',
