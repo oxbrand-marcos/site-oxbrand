@@ -28,6 +28,12 @@ export default function InboundMarketingPage() {
       stepsImage="/images/solucoes/inbound-processo.jpg"
       stepsAlt="Método de inbound marketing da OxBrand em 6 etapas"
       ctaHeading="Tráfego que continua chegando quando você para de pagar."
+      relatedLinks={[
+        { label: 'Agência de Marketing B2B', href: '/agencia-de-marketing-b2b' },
+        { label: 'SEO e GEO', href: '/solucoes/seo' },
+        { label: 'Inbound Marketing B2B: guia', href: '/blog/inbound-marketing-b2b' },
+        { label: 'Como escolher uma agência de inbound', href: '/blog/como-escolher-agencia-de-inbound-marketing' },
+      ]}
       faqItems={[
         {
           q: 'Em quanto tempo o inbound começa a dar retorno?',

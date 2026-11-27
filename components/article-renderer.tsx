@@ -43,7 +43,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
         slug: article.slug,
         coverUrl: cover,
         datePublished: article.dateISO,
-        dateModified: article.dateISO,
+        dateModified: article.updatedISO ?? article.dateISO,
         authorName: article.author ?? 'OxBrand',
         tags: [article.tag],
       })) }} />
@@ -68,7 +68,7 @@ export function ArticleRenderer({ article }: { article: Article }) {
               <span className="mono-tag text-muted-foreground/20">/</span>
               <span className="mono-tag text-primary/70">{article.breadcrumb}</span>
             </nav>
-            <span className="mono-tag text-primary/60 tracking-[0.2em]">{article.tag} · {formatDate(article.dateISO)}</span>
+            <span className="mono-tag text-primary/60 tracking-[0.2em]">{article.tag} · {article.updatedISO ? `Atualizado em ${formatDate(article.updatedISO)}` : formatDate(article.dateISO)}</span>
             <span className="mono-tag text-muted-foreground/50">OxBrand · {mins} min de leitura</span>
             <h1 className="text-[clamp(1.8rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight text-foreground text-balance max-w-4xl">{article.title}</h1>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-2xl text-balance">{article.subtitle}</p>

@@ -16,6 +16,8 @@ export interface Article {
   tag: string
   breadcrumb: string
   dateISO: string
+  /** Data da ultima revisao de conteudo (vai para dateModified, sitemap e selo 'Atualizado em') */
+  updatedISO?: string
   coverAlt: string
   bodyHtml: string
   faq: { q: string; a: string }[]
@@ -23,6 +25,201 @@ export interface Article {
 }
 
 export const ARTICLES: Article[] = [
+  {
+    slug: 'quanto-custa-uma-agencia-de-marketing-digital',
+    metaTitle: 'Quanto custa uma agência de marketing digital em 2026?',
+    metaDescription: 'Quanto custa contratar uma agência de marketing digital: modelos de cobrança, o que entra no fee, quanto separar para mídia e como saber se o investimento se paga.',
+    title: 'Quanto custa uma agência de marketing digital (e como saber se vale o preço)',
+    subtitle: 'O valor da mensalidade é só uma parte da conta. O que decide se o investimento se paga é o que está incluído, quanto vai para mídia e como o resultado é medido. É isso que este guia organiza.',
+    tag: 'Gestão & Estratégia',
+    breadcrumb: 'Gestão',
+    dateISO: '2026-11-27',
+    coverAlt: 'Quanto custa uma agência de marketing digital: composição do investimento entre fee, mídia e ferramentas',
+    author: 'Marcos Blaustein',
+    faq: [
+      { q: 'Quanto custa uma agência de marketing digital por mês?', a: 'Depende do escopo. Pacotes de entrada, com uma ou duas frentes, costumam ficar na casa de poucos milhares de reais por mês; operações completas, com tráfego, conteúdo, site e CRM integrados, custam mais. Além do fee da agência, a empresa paga a mídia (o dinheiro que vai para Google e Meta) e as ferramentas.' },
+      { q: 'O valor dos anúncios está incluído no preço da agência?', a: 'Na maioria das agências sérias, não. O fee remunera o trabalho da agência; a verba de mídia é paga direto às plataformas, no cartão ou boleto da empresa. Desconfie de pacote que mistura os dois sem mostrar quanto vai para cada lado.' },
+      { q: 'Vale mais a pena contratar agência ou montar um time interno?', a: 'Um time interno com gestor de tráfego, designer, redator e analista custa salários, encargos e ferramentas, e depende de você gerir cada pessoa. A agência entrega especialistas por frente por um custo menor que a soma das contratações. O time interno passa a fazer sentido quando o volume justifica dedicação exclusiva em cada área.' },
+      { q: 'Em quanto tempo o investimento em agência se paga?', a: 'Tráfego pago costuma dar sinais nas primeiras semanas e resultado comercial a partir do segundo ou terceiro mês, conforme o ciclo de venda. SEO e conteúdo levam de 6 a 12 meses para virar canal consistente. Por isso o contrato precisa ter metas por etapa, não uma promessa única.' },
+      { q: 'Quanto custa uma agência de marketing em Mogi das Cruzes?', a: 'Os modelos de cobrança são os mesmos de São Paulo, e o que muda o preço é o escopo, não o CEP. A vantagem de uma agência local é poder fazer reuniões presenciais e conhecer o mercado da região. A OxBrand tem sede em Mogi das Cruzes e monta a proposta a partir de um diagnóstico gratuito.' },
+    ],
+    bodyHtml: `
+<p class="lead">Quem pesquisa quanto custa uma agência de marketing digital encontra faixas que vão de algumas centenas a dezenas de milhares de reais por mês. As duas pontas são verdadeiras, porque estão falando de coisas diferentes. Antes de comparar preço, é preciso comparar o que está sendo comprado.</p>
+<p><strong>Resposta direta:</strong> o investimento em marketing digital tem três partes. O <strong>fee da agência</strong> (o trabalho), a <strong>verba de mídia</strong> (o que vai para Google, Meta e outras plataformas) e as <strong>ferramentas</strong> (CRM, automação, hospedagem). Pacotes de entrada, com uma ou duas frentes, ficam em poucos milhares de reais de fee por mês. Operações completas, que integram tráfego, conteúdo, site e CRM, custam mais, e devem ser avaliadas pelo custo por venda que geram, não pela mensalidade.</p>
+<h2>Os três blocos do investimento</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Bloco</th><th>O que é</th><th>Quem recebe</th></tr></thead>
+<tbody>
+<tr><td>Fee da agência</td><td>Estratégia, gestão de campanhas, criação, conteúdo, relatórios e reuniões</td><td>A agência</td></tr>
+<tr><td>Verba de mídia</td><td>O valor pago pelos anúncios, por clique, impressão ou lead</td><td>Google, Meta, LinkedIn, TikTok</td></tr>
+<tr><td>Ferramentas</td><td>CRM, automação, hospedagem do site, softwares de análise</td><td>Os fornecedores de cada ferramenta</td></tr>
+</tbody>
+</table></div>
+<p>O erro mais comum na hora de orçar é olhar só o fee. Uma agência barata com verba de mídia mal distribuída custa mais caro, no fim do mês, que uma agência mais cara que corta desperdício. O número que importa é o total, comparado com o que ele gera.</p>
+<h2>Modelos de cobrança mais comuns</h2>
+<ul>
+<li><strong>Fee mensal fixo.</strong> O mais comum. Um valor por mês para um escopo definido (quantidade de campanhas, peças, conteúdos, reuniões). Dá previsibilidade para os dois lados.</li>
+<li><strong>Fee fixo mais variável.</strong> Uma parte fixa e outra ligada a meta (leads, vendas, faturamento). Alinha interesses, mas só funciona quando a empresa mede venda com rigor, porque a agência precisa enxergar o resultado.</li>
+<li><strong>Percentual sobre a mídia.</strong> A agência cobra uma porcentagem da verba investida. Simples, mas cria um incentivo ruim: quanto mais você gasta, mais a agência ganha, mesmo que o gasto não traga retorno.</li>
+<li><strong>Por projeto.</strong> Site, landing page, identidade visual, implantação de CRM. Valor fechado, com entrega e prazo definidos. Veja, por exemplo, <a href="/blog/quanto-custa-criar-um-site">quanto custa criar um site</a> e <a href="/blog/quanto-custa-uma-landing-page">quanto custa uma landing page</a>.</li>
+</ul>
+<h2>O que faz o preço subir ou descer</h2>
+<ul>
+<li><strong>Número de frentes.</strong> Só tráfego pago é um escopo. Tráfego, redes sociais, conteúdo para SEO, site e CRM é outro, com mais especialistas envolvidos.</li>
+<li><strong>Número de canais e contas.</strong> Google e Meta exigem gestões diferentes. Cada unidade, marca ou produto com campanha própria aumenta o trabalho.</li>
+<li><strong>Volume de criação.</strong> Quantidade de criativos, vídeos e textos por mês pesa direto no fee.</li>
+<li><strong>Profundidade da mensuração.</strong> Medir clique é simples. Medir venda exige rastreamento de origem, integração com CRM e relatório que liga anúncio a contrato fechado.</li>
+<li><strong>Senioridade do time.</strong> Uma conta tocada por um único generalista custa menos que uma conta com especialista em cada frente, e entrega de acordo.</li>
+</ul>
+<h2>Quanto separar para mídia</h2>
+<p>A verba de mídia deve sair da meta, não do que sobrou no caixa. A conta é de trás para frente: quantas vendas você precisa, qual a sua taxa de fechamento, quantos leads isso exige e quanto custa cada lead no seu mercado. Explicamos essa conta passo a passo em <a href="/blog/quanto-custa-gestao-de-trafego-pago">quanto custa gestão de tráfego pago</a>, e o jeito de medir se ela fecha em <a href="/blog/como-calcular-roas">como calcular ROAS</a>.</p>
+<p>Uma regra prática que usamos: se a verba de mídia é muito menor que o fee da agência, provavelmente o problema não é agência, é volume. Com pouca verba, a campanha não gera dado suficiente para ser otimizada, e o fee vira custo fixo sem alavanca.</p>
+<h2>Agência ou time interno?</h2>
+<p>Montar um time interno completo significa contratar, no mínimo, gestor de tráfego, designer, redator e alguém para analisar dados e cuidar do CRM. São salários, encargos, ferramentas e a gestão de cada pessoa. A agência entrega especialistas por frente por uma fração disso, com a vantagem de já ter processo rodando em outros clientes.</p>
+<p>O time interno passa a fazer sentido quando o volume justifica dedicação exclusiva em cada área. Muitas empresas chegam num modelo híbrido: uma pessoa interna que conhece o negócio e faz a ponte, e a agência com os especialistas.</p>
+<h2>Como saber se o preço está justo</h2>
+<p>Preço justo é o que se paga. Para avaliar isso antes de assinar, faça cinco perguntas a qualquer agência:</p>
+<ul>
+<li>O que exatamente está incluído no fee, em quantidade (campanhas, peças, conteúdos, reuniões)?</li>
+<li>A verba de mídia é paga direto às plataformas, na conta da minha empresa?</li>
+<li>Os acessos às contas de anúncio, ao site e ao CRM ficam no meu nome?</li>
+<li>Como vocês medem venda, não só lead e clique?</li>
+<li>Quais metas por etapa vamos acompanhar nos primeiros 90 dias?</li>
+</ul>
+<p>Agência que não responde com clareza a essas perguntas está vendendo execução, não resultado. Para um roteiro completo de avaliação, veja também o nosso texto sobre <a href="/blog/consultoria-de-marketing-digital">consultoria de marketing digital</a>.</p>
+<h2>E em Mogi das Cruzes e no Alto Tietê?</h2>
+<p>Os modelos de cobrança são os mesmos da capital. O que muda o preço é o escopo, não o endereço. A diferença de contratar uma agência da região é prática: reunião presencial quando precisa, conhecimento do mercado local e da concorrência que disputa o mesmo cliente.</p>
+<p>A OxBrand é uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a> com atuação nacional, mais de 450 marcas atendidas e mais de R$ 258 milhões em faturamento gerado para clientes. Nossa proposta nasce de um <a href="/diagnostico">diagnóstico gratuito</a>: primeiro entendemos onde está o gargalo, depois dizemos quanto custa resolver. Se o problema principal for anúncio, conheça também a nossa <a href="/trafego-pago-mogi-das-cruzes">gestão de tráfego pago em Mogi das Cruzes</a>.</p>
+`,
+  },
+  {
+    slug: 'kommo-vale-a-pena',
+    metaTitle: 'Kommo vale a pena? Para quem serve e para quem não serve',
+    metaDescription: 'Kommo vale a pena para pequena empresa? Quando o CRM se paga, quando ainda não é hora, quanto custa e os erros que fazem a ferramenta virar custo parado.',
+    title: 'Kommo vale a pena? Para quem serve e para quem ainda não é hora',
+    subtitle: 'A resposta honesta de quem implanta Kommo toda semana: para um perfil claro de empresa, o CRM se paga rápido. Para outros, ainda não. Este guia ajuda a saber de que lado você está.',
+    tag: 'CRM & Vendas',
+    breadcrumb: 'CRM',
+    dateISO: '2026-11-27',
+    coverAlt: 'Kommo vale a pena: balança entre o custo do CRM e as vendas recuperadas no WhatsApp',
+    author: 'Marcos Blaustein',
+    faq: [
+      { q: 'O Kommo vale a pena para pequena empresa?', a: 'Vale quando a empresa recebe leads pelo WhatsApp ou Instagram, tem pelo menos duas pessoas atendendo e hoje não sabe quantos contatos entraram e quantos viraram venda no mês. Para uma pessoa só atendendo poucos contatos, o WhatsApp Business ainda dá conta.' },
+      { q: 'Qual o plano do Kommo mais indicado para começar?', a: 'Para a maioria das pequenas empresas, o Básico resolve o essencial (funil, WhatsApp, Instagram e histórico). Quem já precisa de Salesbot, automações e disparos deve começar no Avançado.' },
+      { q: 'O Kommo substitui o WhatsApp Business?', a: 'Ele usa o seu número de WhatsApp, mas organiza as conversas num funil de vendas, com responsável, etapa, tarefas e histórico. A conversa continua no WhatsApp para o cliente; para o time, tudo fica registrado no CRM.' },
+      { q: 'Quanto tempo leva para implantar o Kommo?', a: 'Uma implantação bem feita, com funil desenhado, canais conectados, automações e treinamento, leva cerca de 15 dias. Sozinha, a empresa costuma levar meses para chegar ao mesmo ponto.' },
+      { q: 'Kommo ou RD Station CRM?', a: 'O Kommo é mais forte para quem vende por conversa no WhatsApp. O RD Station faz mais sentido para quem nutre leads por email e automação de marketing. Fizemos o comparativo completo no artigo Kommo vs RD Station.' },
+    ],
+    bodyHtml: `
+<p class="lead">Somos Top 5% dos parceiros Kommo no Brasil, e mesmo assim a primeira coisa que perguntamos numa reunião não é qual plano a empresa quer. É quantos contatos chegam por mês e o que acontece com eles. Porque o Kommo vale muito a pena para algumas empresas e é custo parado para outras.</p>
+<p><strong>Resposta direta:</strong> o Kommo vale a pena quando a empresa recebe leads por WhatsApp ou Instagram, tem mais de uma pessoa atendendo e não consegue dizer, hoje, quantos contatos entraram e quantos viraram venda no mês. Nesse cenário, o custo do CRM (a partir de US$ 20 por usuário/mês) é pequeno perto do que se perde em lead esquecido. Ainda não vale quando chegam poucos contatos e uma pessoa dá conta com folga: aí o problema é gerar demanda, não organizar.</p>
+<h2>Sinais de que o Kommo vai se pagar</h2>
+<ul>
+<li><strong>Lead sem resposta.</strong> Contatos que chegam à noite, no fim de semana ou num dia cheio e só são respondidos horas depois, ou nunca.</li>
+<li><strong>Ninguém sabe quantos contatos entraram.</strong> O número de leads do mês é um chute, e o de vendas por origem, um mistério.</li>
+<li><strong>Vendedor que sai leva a carteira.</strong> As conversas estão no celular da pessoa, não na empresa.</li>
+<li><strong>Follow up depende de memória.</strong> Orçamento enviado e nunca cobrado, porque ninguém lembrou.</li>
+<li><strong>Investimento em anúncio sem saber o retorno.</strong> A empresa paga tráfego, recebe mensagens e não consegue ligar uma coisa à outra.</li>
+</ul>
+<p>Se três ou mais desses sinais aparecem na sua operação, o Kommo tende a se pagar nos primeiros meses, só com as vendas que deixam de escapar.</p>
+<h2>Quando ainda não é hora</h2>
+<ul>
+<li><strong>Volume muito baixo.</strong> Poucos contatos por semana, uma pessoa atendendo e tempo de sobra. O WhatsApp Business com etiquetas resolve por enquanto.</li>
+<li><strong>Sem processo comercial nenhum.</strong> CRM organiza um processo; ele não inventa um. Se ninguém sabe quais são as etapas da venda, o primeiro passo é desenhá-las.</li>
+<li><strong>Ninguém vai usar.</strong> Se o time não vai registrar e mover os leads, a ferramenta vira um painel vazio. A decisão de adotar CRM é de gestão, não de software.</li>
+</ul>
+<h2>Quanto custa, na conta real</h2>
+<p>O Kommo cobra por usuário/mês, em ciclos de no mínimo 6 meses: US$ 20 no Básico, US$ 30 no Avançado e US$ 45 no Pro (tabela em português, novembro de 2026). Um time de 2 pessoas no Básico paga US$ 240 pelo ciclo de 6 meses. A tabela completa, com limites de cada plano e cobrança em real, está no artigo <a href="/blog/kommo-planos-e-precos">Kommo planos e preços</a>.</p>
+<p>Para saber se se paga, faça a conta ao contrário: qual o valor de uma venda sua? Quantas vendas por mês o CRM precisa recuperar para cobrir o custo? Para a maioria das empresas com ticket acima de algumas centenas de reais, uma venda recuperada por mês já paga a licença do time inteiro.</p>
+<h2>Os erros que fazem o Kommo não valer a pena</h2>
+<p>Nas contas que chegam até nós depois de uma primeira tentativa frustrada, os motivos se repetem:</p>
+<ul>
+<li><strong>Funil copiado de modelo.</strong> Etapas que não correspondem ao jeito que a empresa vende. O time não se reconhece e para de usar.</li>
+<li><strong>Automação antes de processo.</strong> Salesbot montado antes de saber quais perguntas qualificam um lead. O bot responde, mas não ajuda a vender.</li>
+<li><strong>Sem origem do lead.</strong> Os contatos entram sem a informação de qual anúncio ou canal os trouxe, e o CRM não ajuda a decidir onde investir.</li>
+<li><strong>Sem treinamento.</strong> Ferramenta nova, rotina antiga.</li>
+</ul>
+<p>Se a sua conta já está nesse ponto, dá para limpar e recomeçar sem perder histórico. O passo a passo está em <a href="/blog/como-zerar-o-kommo-crm">como zerar o Kommo CRM</a>. Para entender a ferramenta do zero, comece por <a href="/blog/como-funciona-o-crm-kommo">como funciona o CRM Kommo</a>.</p>
+<h2>Kommo ou outro CRM?</h2>
+<p>O Kommo foi construído em volta da conversa: WhatsApp, Instagram e Messenger entram direto no funil. Por isso ele se encaixa tão bem no jeito brasileiro de vender. Para operações centradas em email, nutrição longa e automação de marketing, outras ferramentas podem servir melhor. Fizemos essa comparação no artigo <a href="/blog/kommo-vs-rd-station">Kommo vs RD Station</a>, e há um panorama mais amplo em <a href="/blog/crm-integrado-ao-whatsapp">CRM integrado ao WhatsApp</a>.</p>
+<h2>Nossa recomendação</h2>
+<p>Teste antes de contratar: o Kommo tem 14 dias grátis. Mas teste com um funil que represente o seu processo de verdade, não com a conta em branco, senão o teste mede a ferramenta vazia e não a sua operação organizada.</p>
+<p>Na <a href="/solucoes/crm-kommo">implantação de CRM Kommo</a> da OxBrand, desenhamos o funil a partir do seu processo comercial, conectamos os canais, configuramos as automações e treinamos o time em cerca de 15 dias. Se você ainda está decidindo se é hora, agende um <a href="/diagnostico">diagnóstico gratuito</a>: se não for, a gente diz.</p>
+`,
+  },
+  {
+    slug: 'leads-para-construtoras',
+    metaTitle: 'Leads para construtoras: como gerar contatos que viram venda',
+    metaDescription: 'Como gerar leads para construtoras e incorporadoras: canais que funcionam, quanto custa um lead, como qualificar no WhatsApp e medir venda, não só cadastro.',
+    title: 'Leads para construtoras: como gerar contatos que viram venda',
+    subtitle: 'Construtora não precisa de mais cadastros. Precisa de contatos com renda, momento e interesse compatíveis com o empreendimento. Este guia mostra como gerar, qualificar e medir esse tipo de lead.',
+    tag: 'Tráfego & Aquisição',
+    breadcrumb: 'Construção Civil',
+    dateISO: '2026-11-27',
+    coverAlt: 'Leads para construtoras: contatos qualificados chegando a um empreendimento em construção',
+    author: 'Walquiria Blaustein',
+    faq: [
+      { q: 'Qual o melhor canal para gerar leads para construtora?', a: 'Não existe canal único. Google Ads capta quem já busca imóvel na região; Meta Ads cria demanda e funciona bem em lançamento; portais imobiliários trazem volume com concorrência alta; e indicação e corretores parceiros fecham a conta. O peso de cada um depende da fase do empreendimento.' },
+      { q: 'Quanto custa um lead para construtora?', a: 'Varia muito com a região, o padrão do imóvel e a fase do empreendimento. Mais importante que o custo do lead é o custo por visita e por venda: um lead barato que nunca agenda visita sai caro. Por isso medimos o funil inteiro, do clique à assinatura.' },
+      { q: 'Como qualificar lead de imóvel no WhatsApp?', a: 'Com poucas perguntas, na ordem certa: região de interesse, faixa de valor ou forma de pagamento, prazo para comprar e uso (moradia ou investimento). Um bot no CRM pode fazer essa triagem em minutos e entregar ao corretor só quem tem perfil.' },
+      { q: 'Comprar lista de leads funciona?', a: 'Não recomendamos. Além do risco com a LGPD, lista comprada é gente que não pediu contato, com taxa de resposta baixíssima. O lead que funciona é o que levantou a mão para o seu empreendimento.' },
+    ],
+    bodyHtml: `
+<p class="lead">Quase toda construtora que nos procura tem o mesmo relato: os leads chegam, os corretores reclamam da qualidade e ninguém sabe dizer quantas vendas vieram do marketing. O problema raramente é volume. É gerar o lead certo, responder rápido e conseguir ligar o anúncio à venda.</p>
+<p>Este guia é sobre o processo completo de geração de leads. Para o detalhe de campanhas no Google e no Meta, veja o nosso guia de <a href="/blog/trafego-pago-para-construcao-civil">tráfego pago para construção civil</a>.</p>
+<h2>O que é um lead bom para construtora</h2>
+<p>Lead bom não é quem preencheu o formulário. É quem tem três coisas compatíveis com o empreendimento:</p>
+<ul>
+<li><strong>Perfil financeiro.</strong> Renda ou capacidade de entrada e financiamento dentro da faixa do imóvel.</li>
+<li><strong>Momento.</strong> Pretende comprar num prazo que conversa com o estágio da obra.</li>
+<li><strong>Interesse real.</strong> Quer aquela região, aquela tipologia, aquele padrão.</li>
+</ul>
+<p>Definir isso por escrito, junto com o time comercial, é o primeiro passo. Sem essa definição, marketing comemora volume e vendas reclama de qualidade, e os dois estão certos.</p>
+<h2>Os canais que geram leads para construtoras</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Canal</th><th>Melhor para</th><th>Atenção</th></tr></thead>
+<tbody>
+<tr><td>Google Ads (pesquisa)</td><td>Quem já busca imóvel na região ou o nome do empreendimento</td><td>Volume limitado ao que é buscado; exige lista de palavras negativas</td></tr>
+<tr><td>Meta Ads (Instagram e Facebook)</td><td>Lançamento, criação de demanda, público por região e interesse</td><td>Gera volume rápido; precisa de qualificação forte</td></tr>
+<tr><td>Portais imobiliários</td><td>Volume de quem está comparando opções</td><td>Seu anúncio ao lado do concorrente; custo por contato alto</td></tr>
+<tr><td>Site e SEO</td><td>Quem pesquisa bairro, tipologia e condições</td><td>Resultado de médio prazo, mas lead mais barato com o tempo</td></tr>
+<tr><td>Indicação e corretores parceiros</td><td>Fechamento, especialmente em médio e alto padrão</td><td>Precisa de regra de comissão e registro de origem</td></tr>
+</tbody>
+</table></div>
+<p>O peso de cada canal muda com a fase. No pré-lançamento, Meta Ads e lista de interessados. No lançamento, todos ao mesmo tempo. Com a obra andando, Google e site ganham peso, porque a pessoa já procura o empreendimento pelo nome.</p>
+<h2>A página para onde o anúncio leva</h2>
+<p>Cada empreendimento precisa de uma página própria, não da home da construtora. Ela responde, logo no início, o que o comprador quer saber: localização, tipologias, metragem, condições de pagamento e estágio da obra. Formulário curto e botão de WhatsApp, os dois carregando a origem do clique. Detalhamos o que faz uma página converter no guia de <a href="/blog/landing-page">landing page</a>.</p>
+<h2>Velocidade de resposta decide a venda</h2>
+<p>Lead de imóvel esfria rápido. A pessoa preencheu três formulários de três construtoras na mesma noite; quem responde primeiro, com informação útil, sai na frente. Na prática:</p>
+<ul>
+<li>Resposta automática imediata no WhatsApp, com as informações principais do empreendimento.</li>
+<li>Triagem com poucas perguntas: região, faixa de valor ou forma de pagamento, prazo e uso.</li>
+<li>Distribuição para o corretor certo, com o histórico da conversa.</li>
+<li>Tarefa de follow up automática para quem não respondeu.</li>
+</ul>
+<p>Isso tudo roda dentro de um CRM integrado ao WhatsApp. É o que usamos com construtoras e incorporadoras que atendemos; veja como funciona em <a href="/blog/crm-integrado-ao-whatsapp">CRM integrado ao WhatsApp</a>.</p>
+<h2>Como medir: cadastro não é venda</h2>
+<p>As métricas que contam, em ordem de importância:</p>
+<ul>
+<li><strong>Custo por venda</strong>, por canal e por campanha.</li>
+<li><strong>Custo por visita ao decorado ou ao stand.</strong> É o melhor indicador antecipado de venda.</li>
+<li><strong>Taxa de qualificação</strong>: quantos leads passaram na triagem.</li>
+<li><strong>Custo por lead</strong>, só depois dos outros três.</li>
+</ul>
+<p>Sem origem registrada em cada contato e sem o corretor movendo o lead no funil até a assinatura, nenhum desses números existe. É por isso que, em construção civil, marketing e comercial precisam operar como um sistema só.</p>
+<h2>Erros que mais desperdiçam verba</h2>
+<ul>
+<li>Anunciar para a cidade inteira um empreendimento que atende um raio de poucos quilômetros.</li>
+<li>Criativo bonito sem preço, metragem ou condição, que gera curiosidade e não intenção.</li>
+<li>Lead que espera horas pela primeira resposta.</li>
+<li>Avaliar campanha pelo custo por lead e cortar justamente a que trazia comprador.</li>
+<li>Comprar listas de contatos. Além do risco com a <a href="/blog/lgpd-no-marketing">LGPD</a>, é gente que nunca pediu para ser procurada.</li>
+</ul>
+<h2>Como a OxBrand trabalha com construtoras</h2>
+<p>Construção civil, incorporação e mercado imobiliário estão entre os segmentos que mais atendemos. A Walquiria Blaustein, sócia e COO da OxBrand, tem mais de dez anos de atuação no setor imobiliário. O trabalho junta tráfego pago por empreendimento, páginas de conversão, CRM com triagem no WhatsApp e relatório que vai do clique à assinatura.</p>
+<p>Conheça o nosso trabalho de <a href="/marketing-para-incorporadoras">marketing para incorporadoras</a> e de <a href="/marketing-imobiliario">marketing imobiliário</a>, ou agende um <a href="/diagnostico">diagnóstico gratuito</a> do seu funil de vendas.</p>
+`,
+  },
   {
     slug: 'google-ads-para-advogados',
     metaTitle: 'Google Ads para advogados: como anunciar dentro da OAB',
@@ -1439,19 +1636,23 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: 'kommo-planos-e-precos',
-    metaTitle: 'Kommo: planos e preços 2026 (Básico, Avançado, Pro)',
-    metaDescription: 'Quanto custa o Kommo em 2026: Básico US$ 20, Avançado US$ 30 e Pro US$ 45 por usuário/mês na tabela Brasil. Exemplo de conta e qual plano escolher.',
+    metaTitle: 'Kommo planos e preços 2026: valores, limites e qual escolher',
+    metaDescription: 'Kommo em novembro de 2026: Básico US$ 20, Avançado US$ 30 e Pro US$ 45 por usuário/mês, cobrança em dólar ou real, limites de leads e IA e qual plano escolher.',
     title: 'Kommo: planos e preços (e qual escolher para a sua empresa)',
     subtitle: 'Quanto custa, quais são os planos e qual faz sentido para o seu tamanho de operação. O comparativo direto de quem é Top 5% parceiro Kommo no Brasil, sem empurrar o plano mais caro.',
     tag: 'CRM & Vendas',
     breadcrumb: 'CRM',
     dateISO: '2026-07-24',
+    updatedISO: '2026-11-27',
     coverAlt: 'Comparativo de planos e preços do Kommo CRM',
     author: 'Marcos Blaustein',
     faq: [
       { q: 'Quanto custa o Kommo?', a: 'Na tabela em português de novembro de 2026, o Kommo custa US$ 20 por usuário/mês no Básico, US$ 30 no Avançado e US$ 45 no Pro. O Empresarial é sob medida. Não existe pagamento mensal: a assinatura mínima é de 6 meses. Em real, depende da cotação do dólar.' },
       { q: 'Qual o melhor plano do Kommo?', a: 'Para a maioria das empresas que já vendem por WhatsApp, o plano Avançado é o ponto de equilíbrio entre automação e custo. Times pequenos começam bem no Básico; operações maduras vão para o Pro, e o Empresarial é sob medida.' },
       { q: 'O Kommo tem plano gratuito?', a: 'O Kommo trabalha com teste gratuito por tempo limitado, não com um plano gratuito permanente. Dá para testar antes de decidir, e é o que recomendamos, para o time sentir a ferramenta antes de contratar.' },
+      { q: 'O Kommo cobra em reais?', a: 'O Kommo cobra em dólar (USD) ou em real (BRL), à escolha na contratação, e permite parcelar a assinatura em pagamentos mensais. A tabela pública mostra o preço em dólar; o valor em real acompanha o câmbio e é confirmado no momento da compra.' },
+      { q: 'Quanto custa o Kommo por mês?', a: 'O preço é por usuário/mês, mas a cobrança é por período: no ciclo mínimo de 6 meses, cada usuário custa US$ 120 no Básico, US$ 180 no Avançado e US$ 270 no Pro. Um time de 3 pessoas no Avançado paga US$ 540 pelos 6 meses.' },
+      { q: 'Quem já é cliente paga o preço novo?', a: 'Não. O reajuste de 1º de setembro de 2026 vale só para novos clientes nos planos Básico e Avançado. Quem já assinava mantém o preço anterior enquanto continuar no mesmo plano.' },
       { q: 'Vale a pena contratar com uma agência parceira?', a: 'Se você quer a configuração certa desde o início (funil, automações e integrações), sim. Uma implementação parceira poupa meses de tentativa e erro. Somos Top 5% dos parceiros Kommo no Brasil.' },
     ],
     bodyHtml: `
@@ -1468,6 +1669,22 @@ export const ARTICLES: Article[] = [
 </tbody>
 </table></div>
 <p><strong>Exemplo de conta:</strong> um time de 3 vendedores no Avançado paga 3 × US$ 30 = US$ 90 por mês, o que dá US$ 540 no ciclo mínimo de 6 meses e US$ 1.080 em 12 meses. Em real, multiplique pela cotação do dólar no dia da contratação.</p>
+<h2>Limites de cada plano do Kommo</h2>
+<p>O preço é só metade da decisão. A outra metade são os limites, e é aqui que muita empresa descobre, depois de contratar, que o plano mais barato não comporta a operação.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Limite (por licença)</th><th>Básico</th><th>Avançado</th><th>Pro</th></tr></thead>
+<tbody>
+<tr><td>Leads ativos</td><td>2.500</td><td>5.000</td><td>10.000</td></tr>
+<tr><td>Contatos</td><td>12.500</td><td>25.000</td><td>50.000</td></tr>
+<tr><td>Créditos de IA por mês</td><td>750</td><td>1.250</td><td>2.250</td></tr>
+<tr><td>Números de WhatsApp</td><td>1, mais 1 por usuário</td><td>3, mais 1 por usuário</td><td>Ilimitados</td></tr>
+<tr><td>Contas de Instagram</td><td>1, mais 1 por usuário</td><td>3, mais 1 por usuário</td><td>Ilimitadas</td></tr>
+<tr><td>Valor no ciclo de 6 meses</td><td>US$ 120</td><td>US$ 180</td><td>US$ 270</td></tr>
+</tbody>
+</table></div>
+<p>Os créditos de IA são multiplicados pelo número de licenças, renovam todo mês e não acumulam. Todos os usuários da conta precisam estar no mesmo plano: não dá para colocar o gestor no Pro e o resto do time no Básico.</p>
+<h2>Kommo em dólar ou em real?</h2>
+<p>O Kommo cobra em dólar ou em real e permite parcelar a assinatura em pagamentos mensais. A tabela pública mostra o valor em dólar; em real, o preço acompanha o câmbio e é fechado no momento da contratação. Para orçamento interno, a conta segura é: usuários × preço do plano × meses do ciclo × cotação do dia, com margem para a variação do dólar.</p>
 <p>Valores conferidos em novembro de 2026 na tabela em português do site oficial do Kommo. Atenção a uma diferença que confunde: a tabela internacional, em inglês, cobra mais (US$ 25 no Básico e US$ 35 no Avançado). O Kommo reajusta preços periodicamente, então confirme o valor vigente antes de fechar. Abaixo, a lógica de qual plano serve para quem, que é o que mais pesa no resultado.</p>
 <h2>Como o Kommo cobra (o modelo, antes do preço)</h2>
 <ul>
@@ -1495,7 +1712,7 @@ export const ARTICLES: Article[] = [
 <h2>Preço não é o que decide o resultado</h2>
 <p>Depois de implementar Kommo em dezenas de operações, a conclusão é sempre a mesma: o que separa quem cresce de quem desiste não é o plano contratado, é a configuração. Funil desenhado para o seu processo, automações que fazem sentido e um time treinado valem mais que qualquer recurso extra do plano premium.</p>
 <p>É por isso que, mais do que contratar o Kommo, o que muda o jogo é implementá-lo bem. Se você quer entender qual plano e qual configuração servem para a sua operação, essa é a conversa do nosso serviço de <a href="/solucoes/crm-kommo">CRM Kommo</a>. E se ainda está entendendo como o CRM se conecta ao WhatsApp, comece por <a href="/blog/crm-integrado-ao-whatsapp">este guia</a>.</p>
-<div class="callout"><p>Conteúdo atualizado em outubro de 2026. Os planos e preços do Kommo mudam periodicamente; confira sempre os valores vigentes no site oficial do Kommo antes de decidir.</p></div>
+<div class="callout"><p>Conteúdo atualizado em 27 de novembro de 2026. Os planos e preços do Kommo mudam periodicamente; confira sempre os valores vigentes no site oficial do Kommo antes de decidir.</p></div>
 <p>A OxBrand implementa o Kommo com método: o plano certo para o seu tamanho e a configuração que faz o time realmente usar. Somos uma <a href="/agencia-de-marketing-digital-mogi-das-cruzes">agência de marketing digital em Mogi das Cruzes</a>, Top 5% dos parceiros Kommo no Brasil, com atuação nacional. Agende um <a href="/diagnostico">diagnóstico gratuito</a>.</p>
 `,
   },
@@ -1828,13 +2045,14 @@ export const ARTICLES: Article[] = [
   {
     slug: 'como-funciona-o-crm-kommo',
     author: 'Marcos Blaustein',
-    metaTitle: 'Kommo CRM: O Que É, Como Funciona e Para Quem Serve',
+    metaTitle: 'Como funciona o CRM Kommo: funil, WhatsApp e bots na prática',
     metaDescription: 'Entenda o Kommo (antigo amoCRM): funil de vendas, WhatsApp integrado, bots e automações. Guia prático de quem implanta o Kommo para empresas.',
     title: 'Como Funciona o CRM Kommo na Prática: Guia 2026',
     subtitle: 'WhatsApp no centro, funil visual, Salesbot e integração com anúncios. Veja como o CRM conversacional funciona na prática, os planos e para quem ele realmente entrega.',
     tag: 'CRM & Vendas',
     breadcrumb: 'CRM',
     dateISO: '2026-07-19',
+    updatedISO: '2026-11-27',
     coverAlt: 'Como funciona o CRM Kommo: caixa de entrada unificada',
     faq: [
       { q: 'O Kommo funciona com WhatsApp normal ou só API?', a: 'Funciona com os dois: WhatsApp Lite (via QR code) para operações menores e WhatsApp Cloud API (oficial) para escala, automações avançadas e múltiplos atendentes.' },
@@ -1864,7 +2082,8 @@ export const ARTICLES: Article[] = [
 <p>A regra que aplicamos: automatizar o processo, não a relação. O robô qualifica e organiza; o vendedor conduz e fecha.</p>
 <p><strong>4. Integração com marketing e anúncios.</strong> O Kommo se conecta a mais de 200 ferramentas. Nas nossas implantações, as integrações mais importantes são com formulários de landing page, anúncios de cadastro do Meta e rastreamento de origem: cada lead chega ao funil com a informação de qual campanha de <a href="/blog/quanto-custa-gestao-de-trafego-pago">tráfego pago</a> o gerou. É isso que permite calcular o custo por venda, não só por lead, de cada canal.</p>
 <p><strong>5. Relatórios e gestão.</strong> Painéis de conversão por etapa, desempenho por vendedor, tempo de resposta e motivos de perda. O dado que mais muda operações no primeiro mês: tempo de primeira resposta. Leads atendidos em minutos convertem em taxas muito superiores aos atendidos em horas.</p>
-<h2>Kommo planos e preços em 2026</h2>
+<h2>Quanto custa o Kommo (resumo)</h2>
+<p>O resumo abaixo serve para situar o investimento. A tabela completa, com limites de cada plano, cobrança em real e exemplo de conta, está no artigo <a href="/blog/kommo-planos-e-precos">Kommo planos e preços</a>.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>Plano</th><th>Preço (por usuário/mês)</th><th>Para quem</th></tr></thead>
 <tbody>
@@ -1880,6 +2099,7 @@ export const ARTICLES: Article[] = [
 <h2>O que o Kommo não resolve sozinho</h2>
 <div class="callout"><p>CRM não organiza empresa desorganizada. Ele expõe a desorganização.</p></div>
 <p>Sem funil desenhado, sem padrão de atendimento e sem rotina de gestão, o Kommo vira um repositório caro de conversas. É por isso que a implantação importa mais que a ferramenta: desenho do funil de vendas, regras de qualificação, automações, treinamento do time e rotina de leitura dos dados.</p>
+<p>Se a sua conta já foi configurada às pressas e virou bagunça, dá para limpar e recomeçar sem perder histórico: o passo a passo está em <a href="/blog/como-zerar-o-kommo-crm">como zerar o Kommo CRM</a>.</p>
 <h2>Como a OxBrand implanta o Kommo</h2>
 <p>Nossa <a href="/solucoes/crm-kommo">implantação de CRM</a> segue o método OX Growth Engineering:</p>
 <ul>

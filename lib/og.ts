@@ -48,6 +48,7 @@ export function articleOg({
   slug,
   coverUrl,
   datePublished,
+  dateModified,
   authorName = 'OxBrand',
 }: {
   title: string
@@ -55,6 +56,7 @@ export function articleOg({
   slug: string
   coverUrl?: string | null
   datePublished: string
+  dateModified?: string
   authorName?: string
 }) {
   const path = `/blog/${slug}`
@@ -70,6 +72,7 @@ export function articleOg({
       locale: 'pt_BR',
       type: 'article' as const,
       publishedTime: datePublished,
+      ...(dateModified ? { modifiedTime: dateModified } : {}),
       authors: [authorName],
       images: [{ url: ogImageUrl, width: 1200, height: 630, alt: title }],
     },

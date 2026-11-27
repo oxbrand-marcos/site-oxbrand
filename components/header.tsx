@@ -22,6 +22,7 @@ const navLinks: NavItem[] = [
       { label: 'Desenvolvimento de Sites', href: '/solucoes/desenvolvimento-de-sites' },
       { label: 'Gestão de Tráfego Pago', href: '/solucoes/gestao-de-trafego-pago' },
       { label: 'Inbound Marketing', href: '/solucoes/inbound-marketing' },
+      { label: 'SEO e GEO', href: '/solucoes/seo' },
       { label: 'CRM Kommo', href: '/solucoes/crm-kommo' },
     ],
   },
